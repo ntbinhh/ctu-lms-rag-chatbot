@@ -1,0 +1,69 @@
+.facilities-list-page {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.facilities-list-page h2 {
+  color: #1e3a8a;
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.facility-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.facility-table th,
+.facility-table td {
+  border: 1px solid #e5e7eb;
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.facility-table th {
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 600;
+}
+
+.facility-table tr:nth-child(even) {
+  background-color: #f9fafb;
+}
+
+.delete-btn {
+  background-color: #dc2626;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c;
+}
+
+.error {
+  color: #b91c1c;
+  margin-bottom: 12px;
+  text-align: center;
+  font-weight: 500;
+}
+.alert.success {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 10px 16px;
+  margin-bottom: 16px;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+}

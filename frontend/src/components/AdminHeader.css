@@ -22,24 +22,34 @@
 .admin-header__title {
   font-size: 18px;
   font-weight: 600;
-  color: #1e3a8a; /* Tailwind blue-900 */
+  color: #1e3a8a;
   letter-spacing: 0.5px;
 }
 
 .admin-header__nav {
   display: flex;
+  align-items: center;
   gap: 32px;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.admin-header__nav a {
+.admin-header__nav a,
+.dropdown-toggle {
   text-decoration: none;
-  color: #374151; /* Tailwind gray-700 */
+  color: #374151;
   font-weight: 500;
+  font-size: 16px;
+  background: none;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  font-family: 'Segoe UI', sans-serif;
   transition: color 0.3s ease;
 }
 
-.admin-header__nav a:hover {
-  color: #1e40af; /* Tailwind blue-800 */
+.admin-header__nav a:hover,
+.dropdown-toggle:hover {
+  color: #1e40af;
 }
 
 .admin-header__logout {
@@ -51,8 +61,45 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .admin-header__logout:hover {
   background-color: #1e40af;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  min-width: 200px;
+  background-color: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  color: #1f2937;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.2s;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f3f4f6;
 }

@@ -4,13 +4,10 @@ import "./AdminHeader.css";
 const AdminHeader = () => {
   const handleLogout = () => {
     try {
-      // ✅ Xóa token và thông tin người dùng
       localStorage.removeItem("token");
       localStorage.removeItem("user_id");
       localStorage.removeItem("username");
       localStorage.removeItem("role");
-
-      // ✅ Chuyển hướng về trang đăng nhập
       window.location.href = "/login";
     } catch (error) {
       console.error("Logout failed:", error);
@@ -30,6 +27,14 @@ const AdminHeader = () => {
         <a href="/admin/users">Quản lý người dùng</a>
         <a href="/admin/settings">Cài đặt</a>
         <a href="/admin/reports">Báo cáo</a>
+
+        <div className="dropdown">
+          <button className="dropdown-toggle">Cơ sở liên kết ▾</button>
+          <div className="dropdown-menu">
+            <a href="/admin/facilities">➕ Thêm CSLK</a>
+            <a href="/admin/facilities/list">📋 Danh sách CSLK</a>
+          </div>
+        </div>
       </nav>
 
       <div>

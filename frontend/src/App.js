@@ -7,6 +7,9 @@ import DashboardAdmin from "./pages/DashboardAdmin";
 import DashboardTeacher from "./pages/DashboardTeacher";
 import DashboardStudent from "./pages/DashboardStudent";
 import './index.css';
+import FacilitiesPage from "./components/FacilitiesPage";
+import FacilitiesListPage from "./components/FacilitiesListPage"; // Trang danh sách cơ sở đào tạo
+
 // Import các trang cần thiết
 function App() {
   return (
@@ -18,6 +21,8 @@ function App() {
         <Route path="/admin" element={<DashboardAdmin />} />
         <Route path="/teacher" element={<DashboardTeacher />} />
         <Route path="/student" element={<DashboardStudent />} />
+        <Route path="/admin/facilities" element={<FacilitiesPage />} />
+        <Route path="/admin/facilities/list" element={<FacilitiesListPage />} />
       </Routes>
     </Router>
   );

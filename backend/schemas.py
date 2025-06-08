@@ -15,3 +15,17 @@ class UserOut(BaseModel):
     role: str  # trả về role
     class Config:
         orm_mode = True
+
+class CoSoLienKetCreate(BaseModel):
+    name: str
+    address: str
+    phone: str
+
+class CoSoLienKetOut(BaseModel):
+    id: int
+    name: str
+    address: str
+    phone: str
+
+    class Config:
+        orm_mode = True
