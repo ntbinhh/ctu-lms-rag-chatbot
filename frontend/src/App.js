@@ -6,7 +6,8 @@ import Register from "./pages/Register";
 import DashboardAdmin from "./pages/DashboardAdmin";
 import DashboardTeacher from "./pages/DashboardTeacher";
 import DashboardStudent from "./pages/DashboardStudent";
-
+import './index.css';
+// Import các trang cần thiết
 function App() {
   return (
     <Router>
