@@ -4,7 +4,7 @@ import axios from "axios";
 import "./Login.css";
 
 function Login() {
-  const [username, setUsername] = useState(""); // Đổi từ email -> username
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -19,16 +19,19 @@ function Login() {
         password,
       });
 
-      const user = res.data;
+      const { access_token, user_id, username: name, role } = res.data;
 
-      // Lưu thông tin vào localStorage
-      localStorage.setItem("user", JSON.stringify(user));
+      // Lưu token và thông tin người dùng vào localStorage
+      localStorage.setItem("token", access_token);
+      localStorage.setItem("user_id", user_id);
+      localStorage.setItem("username", name);
+      localStorage.setItem("role", role);
 
       // Điều hướng theo role
-      if (user.role === "admin") navigate("/admin");
-      else if (user.role === "teacher") navigate("/teacher");
-      else if (user.role === "student") navigate("/student");
-      else navigate("/dashboard");
+      if (role === "admin") navigate("/admin");
+      else if (role === "teacher") navigate("/teacher");
+      else if (role === "student") navigate("/student");
+      else navigate("/");
 
     } catch (err) {
       setError(err.response?.data?.detail || "Lỗi đăng nhập");
@@ -84,8 +87,6 @@ function Login() {
           <button type="submit" className="login-button">
             ĐĂNG NHẬP
           </button>
-
-          
         </form>
       </div>
     </div>
