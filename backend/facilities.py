@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from database import SessionLocal
 import models, schemas
@@ -15,6 +15,14 @@ def get_db():
 
 @router.post("/admin/facilities", response_model=schemas.CoSoLienKetOut)
 def create_facility(facility: schemas.CoSoLienKetCreate, db: Session = Depends(get_db)):
+    # Kiểm tra trùng tên + địa chỉ
+    existing = db.query(models.CoSoLienKet).filter(
+        models.CoSoLienKet.name == facility.name,
+        models.CoSoLienKet.address == facility.address
+    ).first()
+    if existing:
+        raise HTTPException(status_code=400, detail="Cơ sở đã tồn tại")
+
     new_facility = models.CoSoLienKet(**facility.dict())
     db.add(new_facility)
     db.commit()
