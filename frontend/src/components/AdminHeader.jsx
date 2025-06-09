@@ -1,48 +1,79 @@
 import React from "react";
+import { Menubar } from "primereact/menubar";
+import { Button } from "primereact/button";
+import { useNavigate } from "react-router-dom";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import "./AdminHeader.css";
 
 const AdminHeader = () => {
+  const navigate = useNavigate();
+
   const handleLogout = () => {
-    try {
-      localStorage.removeItem("token");
-      localStorage.removeItem("user_id");
-      localStorage.removeItem("username");
-      localStorage.removeItem("role");
-      window.location.href = "/login";
-    } catch (error) {
-      console.error("Logout failed:", error);
-    }
+    localStorage.removeItem("token");
+    localStorage.removeItem("user_id");
+    localStorage.removeItem("username");
+    localStorage.removeItem("role");
+    navigate("/login");
   };
 
+  const menuItems = [
+    {
+      label: "Người dùng",
+      icon: "pi pi-users",
+      command: () => navigate("/admin/users"),
+    },
+    {
+      label: "Cơ sở liên kết",
+      icon: "pi pi-building",
+      items: [
+        {
+          label: "Thêm CSLK",
+          icon: "pi pi-plus",
+          command: () => navigate("/admin/facilities"),
+        },
+        {
+          label: "Danh sách CSLK",
+          icon: "pi pi-list",
+          command: () => navigate("/admin/facilities/list"),
+        },
+      ],
+    },
+    {
+      label: "Cài đặt",
+      icon: "pi pi-cog",
+      command: () => navigate("/admin/settings"),
+    },
+    {
+      label: "Báo cáo",
+      icon: "pi pi-chart-bar",
+      command: () => navigate("/admin/reports"),
+    },
+  ];
+
+  const start = (
+    <img
+      src="/logo.png"
+      alt="Logo"
+      className="admin-header__logo"
+      style={{ height: "32px", cursor: "pointer" }}
+      onClick={() => navigate("/")}
+    />
+  );
+
+  const end = (
+    <Button
+      label="Đăng xuất"
+      icon="pi pi-sign-out"
+      className="p-button-danger p-button-sm"
+      onClick={handleLogout}
+    />
+  );
+
   return (
-    <header className="admin-header">
-      <div className="admin-header__left">
-        <a href="/">
-          <img src="/logo.png" alt="Logo" className="admin-header__logo" />
-        </a>
-        <span className="admin-header__title">Admin Dashboard</span>
-      </div>
-
-      <nav className="admin-header__nav">
-        <a href="/admin/users">Quản lý người dùng</a>
-        <a href="/admin/settings">Cài đặt</a>
-        <a href="/admin/reports">Báo cáo</a>
-
-        <div className="dropdown">
-          <button className="dropdown-toggle">Cơ sở liên kết ▾</button>
-          <div className="dropdown-menu">
-            <a href="/admin/facilities">➕ Thêm CSLK</a>
-            <a href="/admin/facilities/list">📋 Danh sách CSLK</a>
-          </div>
-        </div>
-      </nav>
-
-      <div>
-        <button className="admin-header__logout" onClick={handleLogout}>
-          Đăng xuất
-        </button>
-      </div>
-    </header>
+    <div className="admin-header">
+      <Menubar model={menuItems} start={start} end={end} />
+    </div>
   );
 };
 

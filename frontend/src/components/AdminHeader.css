@@ -1,13 +1,13 @@
 .admin-header {
+  width: 100%;
   background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid #e5e7eb;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  padding: 12px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: 'Segoe UI', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 
 .admin-header__left {
   display: flex;
@@ -103,3 +103,4 @@
 .dropdown-menu a:hover {
   background-color: #f3f4f6;
 }
+

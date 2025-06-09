@@ -6,8 +6,8 @@ import AdminFooter from "../components/AdminFooter";
 const FacilitiesPage = () => {
   return (
     <div className="facilities-page">
-        <AdminHeader />
-      <h1>Danh sách Cơ sở liên kết đào tạo</h1>
+      <AdminHeader />
+      
       <AddTrainingFacilityForm />
       <AdminFooter />
     </div>

@@ -3,6 +3,8 @@ import axios from "axios";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { FilterMatchMode } from "primereact/api";
+import { InputText } from "primereact/inputtext";
+import { FloatLabel } from "primereact/floatlabel";
 import "primereact/resources/themes/lara-light-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
@@ -39,7 +41,7 @@ const FacilitiesListPage = () => {
       await axios.delete(`http://localhost:8000/admin/facilities/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
-      setFacilities(facilities.filter(f => f.id !== id));
+      setFacilities(facilities.filter((f) => f.id !== id));
       setSuccess("✅ Đã xóa cơ sở thành công!");
     } catch (err) {
       alert("Xóa thất bại.");
@@ -59,21 +61,6 @@ const FacilitiesListPage = () => {
     });
   };
 
-  const renderHeader = () => {
-    return (
-      <div className="table-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <h3 style={{ margin: 0 }}> Danh sách Cơ sở liên kết</h3>
-        <input
-          type="text"
-          placeholder="Search"
-          value={globalFilterValue}
-          onChange={onGlobalFilterChange}
-          className="search-box"
-        />
-      </div>
-    );
-  };
-
   const actionBodyTemplate = (rowData) => {
     return (
       <button className="delete-btn" onClick={() => handleDelete(rowData.id)}>
@@ -83,34 +70,69 @@ const FacilitiesListPage = () => {
   };
 
   return (
-    <div className="facilities-list-page">
+    <>
       <AdminHeader />
 
-      {success && <div className="alert success">{success}</div>}
-      {error && <div className="error">{error}</div>}
+      <main className="facilities-page-container">
+        <div className="facilities-list-page">
+          {success && <div className="alert success">{success}</div>}
+          {error && <div className="error">{error}</div>}
 
-      <div className="data-table-wrapper">
-        <DataTable
-          removableSort 
-          value={facilities}
-          paginator
-          rows={10}
-          responsiveLayout="scroll"
-          stripedRows
-          filters={filters}
-          globalFilterFields={["name", "address", "phone"]}
-          header={renderHeader()}
-        >
-          <Column header="STT" body={(_, { rowIndex }) => rowIndex + 1} style={{ width: '80px' }}></Column>
-          <Column field="name" header="Tên đơn vị" sortable></Column>
-          <Column field="address" header="Địa chỉ"></Column>
-          <Column field="phone" header="Điện thoại" style={{ width: '150px' }}></Column>
-          <Column body={actionBodyTemplate} header="Hành động" style={{ width: '100px' }}></Column>
-        </DataTable>
-      </div>
+          <div
+            className="table-header"
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginBottom: "12px",
+            }}
+          >
+            <h2 style={{ margin: 0 }}>Danh sách các Cơ sở liên kết Đào tạo</h2>
+            <FloatLabel>
+              <InputText
+                id="search"
+                value={globalFilterValue}
+                onChange={onGlobalFilterChange}
+              />
+              <label htmlFor="search">Tìm kiếm</label>
+            </FloatLabel>
+          </div>
+
+          <div className="data-table-wrapper">
+            <DataTable
+              value={facilities}
+              paginator
+              rows={10}
+              rowsPerPageOptions={[5, 10, 25, 50]}
+              responsiveLayout="scroll"
+              stripedRows
+              filters={filters}
+              globalFilterFields={["name", "address", "phone"]}
+            >
+              <Column
+                header="STT"
+                body={(_, { rowIndex }) => rowIndex + 1}
+                style={{ width: "80px" }}
+              />
+              <Column field="name" header="Tên đơn vị" sortable />
+              <Column field="address" header="Địa chỉ" />
+              <Column
+                field="phone"
+                header="Điện thoại"
+                style={{ width: "150px" }}
+              />
+              <Column
+                body={actionBodyTemplate}
+                header="Hành động"
+                style={{ width: "100px" }}
+              />
+            </DataTable>
+          </div>
+        </div>
+      </main>
 
       <AdminFooter />
-    </div>
+    </>
   );
 };
 
