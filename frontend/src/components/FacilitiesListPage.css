@@ -67,3 +67,15 @@
   border: 1px solid #bbf7d0;
   border-radius: 6px;
 }
+.data-table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+.search-box {
+  margin: 12px 0;
+  padding: 8px 12px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}

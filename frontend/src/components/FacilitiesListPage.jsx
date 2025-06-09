@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { DataTable } from "primereact/datatable";
+import { Column } from "primereact/column";
+import { FilterMatchMode } from "primereact/api";
+import "primereact/resources/themes/lara-light-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import "./FacilitiesListPage.css";
 import AdminHeader from "../components/AdminHeader";
 import AdminFooter from "../components/AdminFooter";
@@ -8,6 +14,10 @@ const FacilitiesListPage = () => {
   const [facilities, setFacilities] = useState([]);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
+  const [filters, setFilters] = useState({
+    global: { value: null, matchMode: FilterMatchMode.CONTAINS },
+  });
+  const [globalFilterValue, setGlobalFilterValue] = useState("");
 
   const fetchFacilities = async () => {
     try {
@@ -40,45 +50,64 @@ const FacilitiesListPage = () => {
     fetchFacilities();
   }, []);
 
+  const onGlobalFilterChange = (e) => {
+    const value = e.target.value;
+    setGlobalFilterValue(value);
+    setFilters({
+      ...filters,
+      global: { value, matchMode: FilterMatchMode.CONTAINS },
+    });
+  };
+
+  const renderHeader = () => {
+    return (
+      <div className="table-header" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <h3 style={{ margin: 0 }}> Danh sách Cơ sở liên kết</h3>
+        <input
+          type="text"
+          placeholder="Search"
+          value={globalFilterValue}
+          onChange={onGlobalFilterChange}
+          className="search-box"
+        />
+      </div>
+    );
+  };
+
+  const actionBodyTemplate = (rowData) => {
+    return (
+      <button className="delete-btn" onClick={() => handleDelete(rowData.id)}>
+        Xóa
+      </button>
+    );
+  };
+
   return (
     <div className="facilities-list-page">
       <AdminHeader />
 
-      <h2>📋 Danh sách Cơ sở liên kết</h2>
       {success && <div className="alert success">{success}</div>}
       {error && <div className="error">{error}</div>}
 
-      <table className="facility-table">
-        <thead>
-          <tr>
-            <th>STT</th>
-            <th>Tên đơn vị</th>
-            <th>Địa chỉ</th>
-            <th>Điện thoại</th>
-            <th>Hành động</th>
-          </tr>
-        </thead>
-        <tbody>
-          {facilities.map((f, idx) => (
-            <tr key={f.id}>
-              <td>{idx + 1}</td>
-              <td>{f.name}</td>
-              <td>{f.address}</td>
-              <td>{f.phone}</td>
-              <td>
-                <button className="delete-btn" onClick={() => handleDelete(f.id)}>
-                  Xóa
-                </button>
-              </td>
-            </tr>
-          ))}
-          {facilities.length === 0 && (
-            <tr>
-              <td colSpan="5" style={{ textAlign: "center" }}>Không có dữ liệu</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+      <div className="data-table-wrapper">
+        <DataTable
+          removableSort 
+          value={facilities}
+          paginator
+          rows={10}
+          responsiveLayout="scroll"
+          stripedRows
+          filters={filters}
+          globalFilterFields={["name", "address", "phone"]}
+          header={renderHeader()}
+        >
+          <Column header="STT" body={(_, { rowIndex }) => rowIndex + 1} style={{ width: '80px' }}></Column>
+          <Column field="name" header="Tên đơn vị" sortable></Column>
+          <Column field="address" header="Địa chỉ"></Column>
+          <Column field="phone" header="Điện thoại" style={{ width: '150px' }}></Column>
+          <Column body={actionBodyTemplate} header="Hành động" style={{ width: '100px' }}></Column>
+        </DataTable>
+      </div>
 
       <AdminFooter />
     </div>
