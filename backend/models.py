@@ -8,7 +8,9 @@ class User(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String, unique=True, index=True)
     password = Column(String)
-    role = Column(String)  # Thêm role: "student", "teacher", "admin"
+    role = Column(String)  # Thêm role: "student", "teacher", "admin", "manager"
+    # Thêm trường status để quản lý trạng thái người dùng
+    status = Column(String, default="active")
 
 class CoSoLienKet(Base):
     __tablename__ = "co_so_lien_ket"

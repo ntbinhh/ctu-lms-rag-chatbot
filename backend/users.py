@@ -19,8 +19,13 @@ def get_db():
 @router.post("/login")
 def login(user: schemas.UserLogin, db: Session = Depends(get_db)):
     db_user = db.query(models.User).filter(models.User.username == user.username).first()
+    
     if not db_user or not bcrypt.verify(user.password, db_user.password):
         raise HTTPException(status_code=400, detail="Invalid username or password")
+
+    # ✅ Kiểm tra trạng thái tài khoản
+    if db_user.status != "active":
+        raise HTTPException(status_code=403, detail="Tài khoản đã bị khóa hoặc không hoạt động")
 
     access_token = create_access_token(data={"sub": db_user.username})
     return {

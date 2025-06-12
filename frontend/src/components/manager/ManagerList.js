@@ -8,9 +8,10 @@ import { FloatLabel } from "primereact/floatlabel";
 import "primereact/resources/themes/lara-light-blue/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
-import "../FacilitiesListPage.css"; // tái sử dụng CSS sẵn có
+import "../FacilitiesListPage.css"; // Tái sử dụng CSS có sẵn
 import AdminHeader from "../AdminHeader";
 import AdminFooter from "../Footer";
+import { Button } from "primereact/button";
 
 const ManagerListPage = () => {
   const [managers, setManagers] = useState([]);
@@ -30,7 +31,21 @@ const ManagerListPage = () => {
       });
       setManagers(res.data);
     } catch (err) {
+      console.error("❌ Không thể tải danh sách quản lý:", err);
       setError("Không thể tải danh sách quản lý.");
+    }
+  };
+
+  const handleToggleStatus = async (id) => {
+    try {
+      const token = localStorage.getItem("token");
+      await axios.put(`http://localhost:8000/admin/users/managers/${id}/status`, {}, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      fetchManagers(); // Tải lại sau khi cập nhật
+    } catch (err) {
+      console.error("Lỗi đổi trạng thái:", err);
+      alert("Không thể thay đổi trạng thái.");
     }
   };
 
@@ -94,6 +109,30 @@ const ManagerListPage = () => {
               <Column field="full_name" header="Họ tên" sortable />
               <Column field="phone" header="Số điện thoại" />
               <Column field="facility_name" header="Cơ sở liên kết" sortable />
+              <Column
+                field="status"
+                header="Trạng thái"
+                body={(rowData) =>
+                  rowData.status === "active" ? "Hoạt động" : "Bị khóa"
+                }
+              />
+              <Column
+                header="Hành động"
+                body={(rowData) => (
+                    <Button
+                    label={rowData.status === "active" ? "Khóa" : "Mở"}
+                    icon={rowData.status === "active" ? "pi pi-lock" : "pi pi-lock-open"}
+                    className={
+                        rowData.status === "active"
+                        ? "p-button-warning p-button-sm"
+                        : "p-button-success p-button-sm"
+                    }
+                    onClick={() => handleToggleStatus(rowData.id)}
+                    />
+                )}
+                style={{ width: "140px" }}
+                />
+
             </DataTable>
           </div>
         </div>

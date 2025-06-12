@@ -11,6 +11,7 @@ import "primeicons/primeicons.css";
 import "./FacilitiesListPage.css";
 import AdminHeader from "../components/AdminHeader";
 import AdminFooter from "../components/AdminFooter";
+import { Button } from "primereact/button";
 
 const FacilitiesListPage = () => {
   const [facilities, setFacilities] = useState([]);
@@ -62,12 +63,16 @@ const FacilitiesListPage = () => {
   };
 
   const actionBodyTemplate = (rowData) => {
-    return (
-      <button className="delete-btn" onClick={() => handleDelete(rowData.id)}>
-        Xóa
-      </button>
-    );
-  };
+  return (
+    <Button
+      label="Xóa"
+      icon="pi pi-trash"
+      className="p-button-danger p-button-sm"
+      onClick={() => handleDelete(rowData.id)}
+    />
+  );
+};
+
 
   return (
     <>
