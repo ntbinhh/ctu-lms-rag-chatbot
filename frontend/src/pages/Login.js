@@ -1,18 +1,27 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { InputText } from "primereact/inputtext";
+import { Password } from "primereact/password";
+import { Button } from "primereact/button";
+import { Checkbox } from "primereact/checkbox";
+import { Card } from "primereact/card";
+import { Message } from "primereact/message";
+import "primereact/resources/themes/lara-light-blue/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 import "./Login.css";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [remember, setRemember] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
-
     try {
       const res = await axios.post("http://localhost:8000/login", {
         username,
@@ -20,75 +29,72 @@ function Login() {
       });
 
       const { access_token, user_id, username: name, role } = res.data;
-
-      // Lưu token và thông tin người dùng vào localStorage
       localStorage.setItem("token", access_token);
       localStorage.setItem("user_id", user_id);
       localStorage.setItem("username", name);
       localStorage.setItem("role", role);
 
-      // Điều hướng theo role
       if (role === "admin") navigate("/admin");
       else if (role === "teacher") navigate("/teacher");
       else if (role === "student") navigate("/student");
       else navigate("/");
-
     } catch (err) {
       setError(err.response?.data?.detail || "Lỗi đăng nhập");
     }
   };
 
   return (
-    <div className="login-page">
-      <div className="login-left">
-        <h1>🎓 Trường Đại học Cần Thơ</h1>
-        <p>Chào mừng bạn đến với hệ thống học tập trực tuyến.</p>
-        <img
-          src="/background-cantho.png"
-          alt="CTU Background"
-          className="login-background"
-        />
-      </div>
+    <div className="login-container">
+      <Card title="🎓 Đăng nhập hệ thống" className="login-card">
+        <p className="login-subtitle">Trường Đại học Cần Thơ</p>
+        <form onSubmit={handleLogin} className="p-fluid">
+          {error && (
+            <Message severity="error" text={error} style={{ marginBottom: "1rem" }} />
+          )}
 
-      <div className="login-right">
-        <form onSubmit={handleLogin} className="login-form">
-          <h2>Đăng nhập</h2>
-
-          {error && <div className="error">{error}</div>}
-
-          <label>Tên đăng nhập</label>
-          <input
-            type="text"
-            placeholder="Nhập tên đăng nhập"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            required
-          />
-
-          <label>Mật khẩu</label>
-          <input
-            type="password"
-            placeholder="Nhập mật khẩu tại đây"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-
-          <div className="options">
-            <label>
-              <input type="checkbox" />
-              Ghi nhớ mật khẩu
-            </label>
-            <a href="#" className="forgot-link">
-              Quên mật khẩu
-            </a>
+          <div className="p-field">
+            <label htmlFor="username">Tên đăng nhập</label>
+            <InputText
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Tên đăng nhập"
+              required
+            />
           </div>
 
-          <button type="submit" className="login-button">
-            ĐĂNG NHẬP
-          </button>
+          <div className="p-field">
+            <label htmlFor="password">Mật khẩu</label>
+            <Password
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Mật khẩu"
+              toggleMask
+              feedback={false}
+              required
+            />
+          </div>
+
+          <div className="p-field-checkbox" style={{ margin: "1rem 0" }}>
+            <Checkbox
+              inputId="remember"
+              checked={remember}
+              onChange={(e) => setRemember(e.checked)}
+            />
+            <label htmlFor="remember" style={{ marginLeft: "0.5rem" }}>
+              Ghi nhớ mật khẩu
+            </label>
+          </div>
+
+          <Button
+            label="Đăng nhập"
+            icon="pi pi-sign-in"
+            className="p-button-primary"
+            type="submit"
+          />
         </form>
-      </div>
+      </Card>
     </div>
   );
 }

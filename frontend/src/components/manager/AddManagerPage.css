@@ -1,0 +1,23 @@
+.add-manager-page {
+  max-width: 500px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+}
+
+.add-manager-page h2 {
+  margin-bottom: 1.5rem;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.manager-form .field {
+  margin-bottom: 1.5rem;
+}
+
+.manager-form .p-inputtext,
+.manager-form .p-password {
+  width: 100%;
+}
