@@ -10,7 +10,7 @@ import './index.css';
 import FacilitiesPage from "./components/FacilitiesPage";
 import FacilitiesListPage from "./components/FacilitiesListPage"; // Trang danh sách cơ sở đào tạo
 import AddManagerForm from "./components/manager/AddManagerForm";
-
+import ManagerList from "./components/manager/ManagerList";
 
 // Import các trang cần thiết
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/admin/facilities" element={<FacilitiesPage />} />
         <Route path="/admin/facilities/list" element={<FacilitiesListPage />} />
         <Route path="/admin/users/managers/add" element={<AddManagerForm />} />
-
+        <Route path="/admin/users/managers" element={<ManagerList />} />
       </Routes>
     </Router>
   );

@@ -38,3 +38,33 @@ def create_manager(manager: schemas.ManagerCreate, db: Session = Depends(get_db)
     db.commit()
 
     return {"username": username, "default_password": "123"}
+
+@router.get("/admin/users/managers")
+def list_managers(db: Session = Depends(get_db)):
+    managers = db.query(models.ManagerProfile).all()
+    result = []
+    for m in managers:
+        facility = db.query(models.CoSoLienKet).filter_by(id=m.facility_id).first()
+        result.append({
+            "id": m.id,
+            "full_name": m.full_name,
+            "phone": m.phone,
+            "facility_name": facility.name if facility else "Không rõ"
+        })
+    return result
+
+
+@router.delete("/admin/users/managers/{id}")
+def delete_manager(id: int, db: Session = Depends(get_db)):
+    profile = db.query(models.ManagerProfile).filter(models.ManagerProfile.id == id).first()
+    if not profile:
+        raise HTTPException(status_code=404, detail="Manager not found")
+
+    # Xóa user liên quan
+    user = db.query(models.User).filter(models.User.id == profile.user_id).first()
+    if user:
+        db.delete(user)
+
+    db.delete(profile)
+    db.commit()
+    return {"message": "Manager deleted successfully"}
