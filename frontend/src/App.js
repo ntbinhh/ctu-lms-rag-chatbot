@@ -9,7 +9,8 @@ import DashboardStudent from "./pages/DashboardStudent";
 import './index.css';
 import FacilitiesPage from "./components/FacilitiesPage";
 import FacilitiesListPage from "./components/FacilitiesListPage"; // Trang danh sách cơ sở đào tạo
-import AddManagerPage from "./components/manager/AddManagerPage"; // hoặc đúng path bạn lưu
+import AddManagerForm from "./components/manager/AddManagerForm";
+
 
 // Import các trang cần thiết
 function App() {
@@ -24,7 +25,8 @@ function App() {
         <Route path="/student" element={<DashboardStudent />} />
         <Route path="/admin/facilities" element={<FacilitiesPage />} />
         <Route path="/admin/facilities/list" element={<FacilitiesListPage />} />
-        <Route path="/admin/users/admins/add" element={<AddManagerPage />} />
+        <Route path="/admin/users/managers/add" element={<AddManagerForm />} />
+
       </Routes>
     </Router>
   );

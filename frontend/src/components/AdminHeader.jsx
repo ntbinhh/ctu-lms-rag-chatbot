@@ -25,12 +25,12 @@ const AdminHeader = () => {
         {
           label: "Thêm quản lý",
           icon: "pi pi-user-plus",
-          command: () => navigate("/admin/users/admins/add"),
+          command: () => navigate("/admin/users/managers/add"),
         },
         {
           label: "Danh sách quản lý",
           icon: "pi pi-users",
-          command: () => navigate("/admin/users/admins"),
+          command: () => navigate("/admin/users/managers"),
         },
       ],
     },

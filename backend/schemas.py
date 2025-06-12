@@ -29,3 +29,8 @@ class CoSoLienKetOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+class ManagerCreate(BaseModel):
+    full_name: str
+    phone: str
+    facility_id: int
