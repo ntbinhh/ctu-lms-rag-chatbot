@@ -43,3 +43,15 @@ class FacultyOut(FacultyCreate):
 
     class Config:
         orm_mode = True
+
+class TrainingMajorCreate(BaseModel):
+    name: str
+    faculty_id: int
+
+class TrainingMajorOut(BaseModel):
+    id: int
+    name: str
+    faculty_id: int
+    class Config:
+        orm_mode = True
+

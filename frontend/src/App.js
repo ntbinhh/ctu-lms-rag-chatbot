@@ -13,6 +13,8 @@ import AddManagerForm from "./components/manager/AddManagerForm";
 import ManagerList from "./components/manager/ManagerList";
 import AddFacultyForm from "./components/faculty/AddFacultyForm";
 import FacultyList from "./components/faculty/FacultyListPage";
+import AddMajorForm from "./components/training/AddMajorForm";
+import MajorListPage from "./components/training/MajorListPage";
 // Import các trang cần thiết
 function App() {
   return (
@@ -30,7 +32,9 @@ function App() {
         <Route path="/admin/users/managers" element={<ManagerList />} />
         <Route path="/admin/faculties/add" element={<AddFacultyForm />} />
         <Route path="/admin/faculties/list" element={<FacultyList />} />
-
+        <Route path="/admin/majors/add" element={<AddMajorForm />} />
+        <Route path="/admin/majors/list" element={<MajorListPage />} />
+        {/* Thêm các route khác nếu cần */}
       </Routes>
     </Router>
   );

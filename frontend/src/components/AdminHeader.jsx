@@ -10,6 +10,7 @@ import "./AdminHeader.css";
 const AdminHeader = () => {
   const navigate = useNavigate();
   const userMenuRef = useRef(null);
+  const daoTaoMenuRef = useRef(null); // Thêm ref cho Đào Tạo
 
   const handleLogout = () => {
     localStorage.clear();
@@ -68,11 +69,47 @@ const AdminHeader = () => {
     },
   ];
 
+  // Tiered menu for Đào Tạo
+  const tieredDaoTaoMenu = [
+    {
+      label: "Ngành đào tạo",
+      icon: "pi pi-bookmark",
+      items: [
+        {
+          label: "Thêm",
+          icon: "pi pi-plus-circle",
+          command: () => navigate("/admin/majors/add"),
+        },
+        {
+          label: "Danh sách",
+          icon: "pi pi-list",
+          command: () => navigate("/admin/majors/list"),
+        },
+      ],
+    },
+    {
+      label: "Chương trình đào tạo",
+      icon: "pi pi-file",
+      items: [
+        {
+          label: "Thêm",
+          icon: "pi pi-plus-circle",
+          command: () => navigate("/admin/programs/add"),
+        },
+      ],
+    },
+  ];
+
   const menuItems = [
     {
       label: "Người dùng",
       icon: "pi pi-users",
       command: (e) => userMenuRef.current.toggle(e.originalEvent),
+    },
+    {
+      label: "Đào Tạo",
+      icon: "pi pi-book",
+      command: (e) => daoTaoMenuRef.current.toggle(e.originalEvent),
     },
     {
       label: "Cơ sở liên kết",
@@ -106,7 +143,6 @@ const AdminHeader = () => {
         },
       ],
     },
-
     {
       label: "Cài đặt",
       icon: "pi pi-cog",
@@ -141,6 +177,7 @@ const AdminHeader = () => {
     <div className="admin-header" style={{ position: "relative", zIndex: 1000 }}>
       <Menubar model={menuItems} start={start} end={end} />
       <TieredMenu model={tieredUserMenu} popup ref={userMenuRef} breakpoint="767px" />
+      <TieredMenu model={tieredDaoTaoMenu} popup ref={daoTaoMenuRef} breakpoint="767px" />
     </div>
   );
 };

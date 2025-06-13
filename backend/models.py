@@ -36,3 +36,12 @@ class Faculty(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False, unique=True)
+
+class TrainingMajor(Base):
+    __tablename__ = "training_majors"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False, unique=True)
+    faculty_id = Column(Integer, ForeignKey("faculties.id"))
+    
+    faculty = relationship("Faculty")
