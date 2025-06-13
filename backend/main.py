@@ -6,6 +6,8 @@ from manager import router as manager_router
 from faculty import router as faculty_router
 from training_major import router as major_router
 from courses_routes import router as courses_router
+from training_program import router as program_router
+from program_view import router as program_view_router
 
 app = FastAPI()
 
@@ -23,3 +25,5 @@ app.include_router(manager_router)  # Đăng ký router cho quản lý
 app.include_router(faculty_router)  # Đăng ký router cho khoa
 app.include_router(major_router)  # Đăng ký router cho ngành đào tạo
 app.include_router(courses_router)
+app.include_router(program_router)
+app.include_router(program_view_router)

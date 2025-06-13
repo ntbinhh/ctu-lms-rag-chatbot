@@ -53,4 +53,22 @@ class Course(Base):
     name = Column(String, nullable=False)
     credit = Column(Integer, nullable=False)
     syllabus_url = Column(String)  # 🆕 Link đề cương chi tiết
+    programs = relationship("TrainingProgram", secondary="program_courses", back_populates="courses")
 
+
+class TrainingProgram(Base):
+    __tablename__ = "training_programs"
+
+    id = Column(Integer, primary_key=True, index=True)
+    khoa = Column(String, nullable=False)
+    major_id = Column(Integer, ForeignKey("training_majors.id"))
+
+    major = relationship("TrainingMajor")
+    courses = relationship("Course", secondary="program_courses", back_populates="programs")
+
+
+class ProgramCourse(Base):
+    __tablename__ = "program_courses"
+
+    program_id = Column(Integer, ForeignKey("training_programs.id"), primary_key=True)
+    course_code = Column(String, ForeignKey("courses.code"), primary_key=True)

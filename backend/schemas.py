@@ -68,3 +68,19 @@ class CourseCreate(BaseModel):
 class CourseOut(CourseCreate):
     class Config:
         from_attributes = True
+
+# -------- TRAINING PROGRAMS --------
+class ProgramCreate(BaseModel):
+    khoa: str
+    major_id: int
+    course_codes: list[str]
+
+class ProgramOut(BaseModel):
+    id: int
+    khoa: str
+    major_id: int
+    course_codes: list[str]
+
+    class Config:
+        from_attributes = True
+
