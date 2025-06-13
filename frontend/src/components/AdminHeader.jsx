@@ -1,6 +1,5 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Menubar } from "primereact/menubar";
-import { TieredMenu } from "primereact/tieredmenu";
 import { Button } from "primereact/button";
 import { useNavigate } from "react-router-dom";
 import "primereact/resources/primereact.min.css";
@@ -9,107 +8,66 @@ import "./AdminHeader.css";
 
 const AdminHeader = () => {
   const navigate = useNavigate();
-  const userMenuRef = useRef(null);
-  const daoTaoMenuRef = useRef(null); // Thêm ref cho Đào Tạo
 
   const handleLogout = () => {
     localStorage.clear();
     navigate("/login");
   };
 
-  // Tiered menu for Người dùng
-  const tieredUserMenu = [
-    {
-      label: "Quản lý",
-      icon: "pi pi-briefcase",
-      items: [
-        {
-          label: "Thêm quản lý",
-          icon: "pi pi-user-plus",
-          command: () => navigate("/admin/users/managers/add"),
-        },
-        {
-          label: "Danh sách quản lý",
-          icon: "pi pi-users",
-          command: () => navigate("/admin/users/managers"),
-        },
-      ],
-    },
-    {
-      label: "Giáo viên",
-      icon: "pi pi-user-edit",
-      items: [
-        {
-          label: "Thêm giáo viên",
-          icon: "pi pi-user-plus",
-          command: () => navigate("/admin/users/teachers/add"),
-        },
-        {
-          label: "Danh sách giáo viên",
-          icon: "pi pi-users",
-          command: () => navigate("/admin/users/teachers"),
-        },
-      ],
-    },
-    {
-      label: "Học viên",
-      icon: "pi pi-user",
-      items: [
-        {
-          label: "Thêm học viên",
-          icon: "pi pi-user-plus",
-          command: () => navigate("/admin/users/students/add"),
-        },
-        {
-          label: "Danh sách học viên",
-          icon: "pi pi-users",
-          command: () => navigate("/admin/users/students"),
-        },
-      ],
-    },
-  ];
-
-  // Tiered menu for Đào Tạo
-  const tieredDaoTaoMenu = [
-    {
-      label: "Ngành đào tạo",
-      icon: "pi pi-bookmark",
-      items: [
-        {
-          label: "Thêm",
-          icon: "pi pi-plus-circle",
-          command: () => navigate("/admin/majors/add"),
-        },
-        {
-          label: "Danh sách",
-          icon: "pi pi-list",
-          command: () => navigate("/admin/majors/list"),
-        },
-      ],
-    },
-    {
-      label: "Chương trình đào tạo",
-      icon: "pi pi-file",
-      items: [
-        {
-          label: "Thêm",
-          icon: "pi pi-plus-circle",
-          command: () => navigate("/admin/programs/add"),
-        },
-      ],
-    },
-  ];
-
   const menuItems = [
     {
       label: "Người dùng",
       icon: "pi pi-users",
-      command: (e) => userMenuRef.current.toggle(e.originalEvent),
-    },
-    {
-      label: "Đào Tạo",
-      icon: "pi pi-book",
-      command: (e) => daoTaoMenuRef.current.toggle(e.originalEvent),
+      items: [
+        {
+          label: "Quản lý",
+          icon: "pi pi-briefcase",
+          items: [
+            {
+              label: "Thêm quản lý",
+              icon: "pi pi-user-plus",
+              command: () => navigate("/admin/users/managers/add"),
+            },
+            {
+              label: "Danh sách quản lý",
+              icon: "pi pi-users",
+              command: () => navigate("/admin/users/managers"),
+            },
+          ],
+        },
+        {
+          label: "Giáo viên",
+          icon: "pi pi-user-edit",
+          items: [
+            {
+              label: "Thêm giáo viên",
+              icon: "pi pi-user-plus",
+              command: () => navigate("/admin/users/teachers/add"),
+            },
+            {
+              label: "Danh sách giáo viên",
+              icon: "pi pi-users",
+              command: () => navigate("/admin/users/teachers"),
+            },
+          ],
+        },
+        {
+          label: "Học viên",
+          icon: "pi pi-user",
+          items: [
+            {
+              label: "Thêm học viên",
+              icon: "pi pi-user-plus",
+              command: () => navigate("/admin/users/students/add"),
+            },
+            {
+              label: "Danh sách học viên",
+              icon: "pi pi-users",
+              command: () => navigate("/admin/users/students"),
+            },
+          ],
+        },
+      ],
     },
     {
       label: "Cơ sở liên kết",
@@ -128,19 +86,73 @@ const AdminHeader = () => {
       ],
     },
     {
-      label: "Khoa",
-      icon: "pi pi-sitemap",
+      label: "Đào tạo",
+      icon: "pi pi-book",
       items: [
         {
-          label: "Thêm khoa",
-          icon: "pi pi-plus-circle",
-          command: () => navigate("/admin/faculties/add"),
+          label: "Khoa",
+          icon: "pi pi-sitemap",
+          items: [
+            {
+              label: "Thêm khoa",
+              icon: "pi pi-plus",
+              command: () => navigate("/admin/faculties/add"),
+            },
+            {
+              label: "Danh sách khoa",
+              icon: "pi pi-list",
+              command: () => navigate("/admin/faculties/list"),
+            },
+          ],
         },
         {
-          label: "Danh sách khoa",
-          icon: "pi pi-list",
-          command: () => navigate("/admin/faculties/list"),
+          label: "Ngành đào tạo",
+          icon: "pi pi-briefcase",
+          items: [
+            {
+              label: "Thêm ngành",
+              icon: "pi pi-plus",
+              command: () => navigate("/admin/majors/add"),
+            },
+            {
+              label: "Danh sách ngành",
+              icon: "pi pi-list",
+              command: () => navigate("/admin/majors/list"),
+            },
+          ],
         },
+        {
+          label: "Học phần",
+          icon: "pi pi-file",
+          items: [
+            {
+              label: "Thêm học phần",
+              icon: "pi pi-plus",
+              command: () => navigate("/admin/courses/add"),
+            },
+            {
+              label: "Danh sách học phần",
+              icon: "pi pi-list",
+              command: () => navigate("/admin/courses/list"),
+            },
+          ],
+        },
+        {
+      label: "Chương trình đào tạo",
+      icon: "pi pi-bookmark",
+      items: [
+        {
+          label: "Thêm chương trình",
+          icon: "pi pi-plus",
+          command: () => navigate("/admin/programs/add"),
+        },
+        {
+          label: "Danh sách chương trình",
+          icon: "pi pi-list",
+          command: () => navigate("/admin/programs/list"),
+        },
+      ],
+    },
       ],
     },
     {
@@ -176,8 +188,6 @@ const AdminHeader = () => {
   return (
     <div className="admin-header" style={{ position: "relative", zIndex: 1000 }}>
       <Menubar model={menuItems} start={start} end={end} />
-      <TieredMenu model={tieredUserMenu} popup ref={userMenuRef} breakpoint="767px" />
-      <TieredMenu model={tieredDaoTaoMenu} popup ref={daoTaoMenuRef} breakpoint="767px" />
     </div>
   );
 };

@@ -1,0 +1,895 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin:0 1px 0 0">
+      <tbody><tr>
+        <td class="sbj-title" width="8%">Stt</td>
+        <td class="sbj-title" width="11%">Mã học phần</td>
+        <td class="sbj-title" width="65%">Tên học phần</td>
+        <td class="sbj-title" width="16%">Số tín chỉ</td>
+        <!--<td class="sbj-title" width="8%">BB</td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">1</td>
+        <td class="sbj-ct" align="center">QP010E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://daa.ctu.edu.vn/images/upload/decuong/QP010E.pdf" target="_blank">Giáo dục quốc phòng và An ninh 1 (*)</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">2</td>
+        <td class="sbj-ct" align="center">QP011E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://daa.ctu.edu.vn/images/upload/decuong/QP011E.pdf" target="_blank">Giáo dục quốc phòng và An ninh 2 (*)</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">3</td>
+        <td class="sbj-ct" align="center">QP012</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://daa.ctu.edu.vn/images/upload/decuong/QP012.pdf" target="_blank">Giáo dục quốc phòng và An ninh 3 (*)</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">4</td>
+        <td class="sbj-ct" align="center">QP013</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://daa.ctu.edu.vn/images/upload/decuong/QP013.pdf" target="_blank">Giáo dục quốc phòng và An ninh 4 (*)</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">5</td>
+        <td class="sbj-ct" align="center">TC009</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC009.pdf" target="_blank">Bóng bàn 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">6</td>
+        <td class="sbj-ct" align="center">TC010</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC010.pdf" target="_blank">Bóng bàn 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">7</td>
+        <td class="sbj-ct" align="center">TC022</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC022.pdf" target="_blank">Bóng bàn 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">8</td>
+        <td class="sbj-ct" align="center">TC005</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC005.pdf" target="_blank">Bóng chuyền 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">9</td>
+        <td class="sbj-ct" align="center">TC006</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC006.pdf" target="_blank">Bóng chuyền 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">10</td>
+        <td class="sbj-ct" align="center">TC020</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC020.pdf" target="_blank">Bóng chuyền 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">11</td>
+        <td class="sbj-ct" align="center">TC007</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC007.pdf" target="_blank">Bóng đá 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">12</td>
+        <td class="sbj-ct" align="center">TC008</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC008.pdf" target="_blank">Bóng đá 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">13</td>
+        <td class="sbj-ct" align="center">TC021</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC021.pdf" target="_blank">Bóng đá 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">14</td>
+        <td class="sbj-ct" align="center">TC028</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC028.pdf" target="_blank">Bóng rổ 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">15</td>
+        <td class="sbj-ct" align="center">TC029</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC029.pdf" target="_blank">Bóng rổ 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">16</td>
+        <td class="sbj-ct" align="center">TC030</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC030.pdf" target="_blank">Bóng rổ 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">17</td>
+        <td class="sbj-ct" align="center">TC011</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC011.pdf" target="_blank">Cầu lông 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">18</td>
+        <td class="sbj-ct" align="center">TC012</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC012.pdf" target="_blank">Cầu lông 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">19</td>
+        <td class="sbj-ct" align="center">TC023</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC023.pdf" target="_blank">Cầu lông 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">20</td>
+        <td class="sbj-ct" align="center">TC025</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC025.pdf" target="_blank">Cờ vua 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">21</td>
+        <td class="sbj-ct" align="center">TC026</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC026.pdf" target="_blank">Cờ vua 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">22</td>
+        <td class="sbj-ct" align="center">TC027</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC027.pdf" target="_blank">Cờ vua 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">23</td>
+        <td class="sbj-ct" align="center">TC001</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC001.pdf" target="_blank">Điền kinh 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">24</td>
+        <td class="sbj-ct" align="center">TC002</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC002.pdf" target="_blank">Điền kinh 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">25</td>
+        <td class="sbj-ct" align="center">TC024</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC024.pdf" target="_blank">Điền kinh 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">26</td>
+        <td class="sbj-ct" align="center">TC003</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC003.pdf" target="_blank">Taekwondo 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">27</td>
+        <td class="sbj-ct" align="center">TC004</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC004.pdf" target="_blank">Taekwondo 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">28</td>
+        <td class="sbj-ct" align="center">TC019</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC019.pdf" target="_blank">Taekwondo 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">29</td>
+        <td class="sbj-ct" align="center">TC031</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC031.pdf" target="_blank">Tennis 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">30</td>
+        <td class="sbj-ct" align="center">TC032</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC032.pdf" target="_blank">Tennis 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">31</td>
+        <td class="sbj-ct" align="center">TC033</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC033.pdf" target="_blank">Tennis 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">32</td>
+        <td class="sbj-ct" align="center">TC016</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC016.pdf" target="_blank">Thể dục nhịp điệu 1 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">33</td>
+        <td class="sbj-ct" align="center">TC017</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC017.pdf" target="_blank">Thể dục nhịp điệu 2 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">34</td>
+        <td class="sbj-ct" align="center">TC018</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://dpe.ctu.edu.vn/images/upload/daotao/decuong/TC018.pdf" target="_blank">Thể dục nhịp điệu 3 (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">35</td>
+        <td class="sbj-ct" align="center">XH023</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/XH023.pdf" target="_blank">Anh văn căn bản 1 (*)</a></td>
+        <td class="sbj-ct" align="center">4</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">36</td>
+        <td class="sbj-ct" align="center">XH024</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/XH024.pdf" target="_blank">Anh văn căn bản 2 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">37</td>
+        <td class="sbj-ct" align="center">XH025</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/XH025.pdf" target="_blank">Anh văn căn bản 3 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">38</td>
+        <td class="sbj-ct" align="center">XH031</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/XH031.pdf" target="_blank">Anh văn tăng cường 1 (*)</a></td>
+        <td class="sbj-ct" align="center">4</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">39</td>
+        <td class="sbj-ct" align="center">XH032</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/XH032.pdf" target="_blank">Anh văn tăng cường 2 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">40</td>
+        <td class="sbj-ct" align="center">XH033</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/XH033.pdf" target="_blank">Anh văn tăng cường 3 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">41</td>
+        <td class="sbj-ct" align="center">FL001</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/FL001.pdf" target="_blank">Pháp văn căn bản 1 (*)</a></td>
+        <td class="sbj-ct" align="center">4</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">42</td>
+        <td class="sbj-ct" align="center">FL002</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/FL002.pdf" target="_blank">Pháp văn căn bản 2 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">43</td>
+        <td class="sbj-ct" align="center">FL003</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/FL003.pdf" target="_blank">Pháp văn căn bản 3 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">44</td>
+        <td class="sbj-ct" align="center">FL007</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/FL007.pdf" target="_blank">Pháp văn tăng cường 1 (*)</a></td>
+        <td class="sbj-ct" align="center">4</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">45</td>
+        <td class="sbj-ct" align="center">FL008</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/FL008.pdf" target="_blank">Pháp văn tăng cường 2 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">46</td>
+        <td class="sbj-ct" align="center">FL009</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sfl.ctu.edu.vn/images/upload/daotao/decuong/FL009.pdf" target="_blank">Pháp văn tăng cường 3 (*)</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">47</td>
+        <td class="sbj-ct" align="center">TN033</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="http://www.cit.ctu.edu.vn/decuong/TN033.pdf" target="_blank">Tin học căn bản (*)</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">48</td>
+        <td class="sbj-ct" align="center">TN034</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="http://www.cit.ctu.edu.vn/decuong/TN034.pdf" target="_blank">Thực hành Tin học căn bản (*)</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">49</td>
+        <td class="sbj-ct" align="center">ML014</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sps.ctu.edu.vn/images/upload/daotao/decuong/ML014.pdf" target="_blank">Triết học Mác - Lênin</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">50</td>
+        <td class="sbj-ct" align="center">ML016</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sps.ctu.edu.vn/images/upload/daotao/decuong/ML016.pdf" target="_blank">Kinh tế chính trị Mác - Lênin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">51</td>
+        <td class="sbj-ct" align="center">ML018</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sps.ctu.edu.vn/images/upload/daotao/decuong/ML018.pdf" target="_blank">Chủ nghĩa xã hội khoa học</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">52</td>
+        <td class="sbj-ct" align="center">ML019</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sps.ctu.edu.vn/images/upload/daotao/decuong/ML019.pdf" target="_blank">Lịch sử Đảng Cộng sản Việt Nam</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">53</td>
+        <td class="sbj-ct" align="center">ML021</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sps.ctu.edu.vn/images/upload/daotao/decuong/ML021.pdf" target="_blank">Tư tưởng Hồ Chí Minh</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">54</td>
+        <td class="sbj-ct" align="center">KL001E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sl.ctu.edu.vn/images/upload/daotao/decuong/KL001E.pdf" target="_blank">Pháp luật đại cương</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">55</td>
+        <td class="sbj-ct" align="center">ML007</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sps.ctu.edu.vn/images/upload/daotao/decuong/ML007.pdf" target="_blank">Logic học đại cương</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">56</td>
+        <td class="sbj-ct" align="center">XH028</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/XH028.pdf" target="_blank">Xã hội học đại cương</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">57</td>
+        <td class="sbj-ct" align="center">XH011E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://se.ctu.edu.vn/images/upload/daotao/decuong/XH011E.pdf" target="_blank">Cơ sở văn hóa Việt Nam</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">58</td>
+        <td class="sbj-ct" align="center">XH012</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://se.ctu.edu.vn/images/upload/daotao/decuong/XH012.pdf" target="_blank">Tiếng Việt thực hành</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">59</td>
+        <td class="sbj-ct" align="center">XH014</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/XH014.pdf" target="_blank">Văn bản và lưu trữ học đại cương</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">60</td>
+        <td class="sbj-ct" align="center">KN001E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://scs.ctu.edu.vn//images/upload/decuong/KN001E.pdf" target="_blank">Kỹ năng mềm</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">61</td>
+        <td class="sbj-ct" align="center">KN002E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://scs.ctu.edu.vn//images/upload/decuong/KN002E.pdf" target="_blank">Đổi mới sáng tạo và khởi nghiệp</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">62</td>
+        <td class="sbj-ct" align="center">TN011</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://cns.ctu.edu.vn/images/upload/daotao/decuong/TN011.pdf" target="_blank">Thống kê xã hội học</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">63</td>
+        <td class="sbj-ct" align="center">SP009</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://se.ctu.edu.vn/images/upload/daotao/decuong/SP009.pdf" target="_blank">Tâm lý học đại cương</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">64</td>
+        <td class="sbj-ct" align="center">CT200</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="http://www.cit.ctu.edu.vn/decuong/CT200.pdf" target="_blank">Nền tảng Công nghệ thông tin</a></td>
+        <td class="sbj-ct" align="center">4</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">65</td>
+        <td class="sbj-ct" align="center">TV101</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV101.pdf" target="_blank">Xã hội thông tin</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">66</td>
+        <td class="sbj-ct" align="center">TV114</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV114.pdf" target="_blank">Xác định và đánh giá nguồn tài nguyên thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">67</td>
+        <td class="sbj-ct" align="center">TV115</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV115.pdf" target="_blank">Cấu trúc và tổ chức thông tin</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">68</td>
+        <td class="sbj-ct" align="center">TV104E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV104E.pdf" target="_blank">Công nghệ và các hệ thống thông tin</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">69</td>
+        <td class="sbj-ct" align="center">TV137</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV137.pdf" target="_blank">Nhập môn công tác quản lý trong các cơ quan thông tin</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">70</td>
+        <td class="sbj-ct" align="center">TV117</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV117.pdf" target="_blank">Quản lý nguồn tài nguyên thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">71</td>
+        <td class="sbj-ct" align="center">TV122</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV122.pdf" target="_blank">Phương pháp nghiên cứu khoa học thông tin thư viện</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">72</td>
+        <td class="sbj-ct" align="center">TV132</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV132.pdf" target="_blank">Kỹ năng thông tin căn bản</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">73</td>
+        <td class="sbj-ct" align="center">TV111</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV111.pdf" target="_blank">Anh văn chuyên ngành TT-TV 1</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">74</td>
+        <td class="sbj-ct" align="center">TV112</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV112.pdf" target="_blank">Anh văn chuyên ngành TT-TV 2</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">75</td>
+        <td class="sbj-ct" align="center">TV123</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV123.pdf" target="_blank">Giao tiếp trong công sở</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">76</td>
+        <td class="sbj-ct" align="center">CT179</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="http://www.cit.ctu.edu.vn/decuong/CT179.pdf" target="_blank">Quản trị hệ thống</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">77</td>
+        <td class="sbj-ct" align="center">TV140</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV140.pdf" target="_blank">Nhập môn e-learning</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">78</td>
+        <td class="sbj-ct" align="center">TV109E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV109E.pdf" target="_blank">Các hệ thống tổ chức và truy cập thông tin</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">79</td>
+        <td class="sbj-ct" align="center">TV124</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV124.pdf" target="_blank">Định chủ đề</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">80</td>
+        <td class="sbj-ct" align="center">TV125</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV125.pdf" target="_blank">Phân loại tài liệu&nbsp;</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">81</td>
+        <td class="sbj-ct" align="center">TV301</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV301.pdf" target="_blank">Thiết kế Web</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">82</td>
+        <td class="sbj-ct" align="center">TV126</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV126.pdf" target="_blank">Marketing trong thư viện và cơ quan thông tin</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">83</td>
+        <td class="sbj-ct" align="center">TV262E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV262E.pdf" target="_blank">Tự động hóa hoạt động thư viện</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">84</td>
+        <td class="sbj-ct" align="center">TV256</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV256.pdf" target="_blank">Quản lý nội dung Web</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">85</td>
+        <td class="sbj-ct" align="center">TV326</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV326.pdf" target="_blank">Quản lý nguồn nhân lực và các tổ chức TT-TV</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">86</td>
+        <td class="sbj-ct" align="center">TV327</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV327.pdf" target="_blank">Chính sách thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">87</td>
+        <td class="sbj-ct" align="center">TV235</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV235.pdf" target="_blank">Thực tế TT-TV</a></td>
+        <td class="sbj-ct" align="center">1</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">88</td>
+        <td class="sbj-ct" align="center">TV236</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV236.pdf" target="_blank">Thực tập thông tin thư viện</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">89</td>
+        <td class="sbj-ct" align="center">TV311</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV311.pdf" target="_blank">Bảo quản tài liệu trong thư viện và cơ quan thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">90</td>
+        <td class="sbj-ct" align="center">TV128</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV128.pdf" target="_blank">Nguồn thông tin kinh tế</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">91</td>
+        <td class="sbj-ct" align="center">TV129</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV129.pdf" target="_blank">Nguồn thông tin y tế</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">92</td>
+        <td class="sbj-ct" align="center">TV130</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV130.pdf" target="_blank">Nguồn thông tin khoa học công nghệ</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">93</td>
+        <td class="sbj-ct" align="center">TV329</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV329.pdf" target="_blank">Mô tả tài liệu</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">94</td>
+        <td class="sbj-ct" align="center">TV131</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV131.pdf" target="_blank">Tạo lập cơ sở dữ liệu TT - TV</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">95</td>
+        <td class="sbj-ct" align="center">TV314E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV314E.pdf" target="_blank">Đào tạo kỹ năng thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">96</td>
+        <td class="sbj-ct" align="center">TV331</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV331.pdf" target="_blank">Công tác phục vụ bạn đọc</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">97</td>
+        <td class="sbj-ct" align="center">TN211</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="http://www.cit.ctu.edu.vn/decuong/TN211.pdf" target="_blank">Nhập môn hệ thống thông tin địa lý</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">98</td>
+        <td class="sbj-ct" align="center">TV257</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV257.pdf" target="_blank">Siêu dữ liệu ứng dụng</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">99</td>
+        <td class="sbj-ct" align="center">TV302E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV302E.pdf" target="_blank">Quản lý nguồn tài liệu số</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">100</td>
+        <td class="sbj-ct" align="center">TN205</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="http://www.cit.ctu.edu.vn/decuong/TN205.pdf" target="_blank">Hệ thống mạng máy tính căn bản</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">101</td>
+        <td class="sbj-ct" align="center">TV263</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV263.pdf" target="_blank">Ứng dụng nghiệp vụ chuyên môn</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">102</td>
+        <td class="sbj-ct" align="center">KT337</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://ce.ctu.edu.vn/images/upload/daotao/decuong/KT337.pdf" target="_blank">Thương mại điện tử</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">103</td>
+        <td class="sbj-ct" align="center">TV334E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV334E.pdf" target="_blank">Internet và các công nghệ trên Internet</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">104</td>
+        <td class="sbj-ct" align="center">XN223</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/XN223.pdf" target="_blank">Tạo lập văn bản và giao tiếp hành chính</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">105</td>
+        <td class="sbj-ct" align="center">TV133</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV133.pdf" target="_blank">Chuyên đề thông tin - thư viện</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">106</td>
+        <td class="sbj-ct" align="center">TV323</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV323.pdf" target="_blank">Luận văn tốt nghiệp - TT&amp;TV</a></td>
+        <td class="sbj-ct" align="center">10</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">107</td>
+        <td class="sbj-ct" align="center">TV322</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV322.pdf" target="_blank">Tiểu luận tốt nghiệp - TT&amp;TV</a></td>
+        <td class="sbj-ct" align="center">4</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">108</td>
+        <td class="sbj-ct" align="center">CT272</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="http://www.cit.ctu.edu.vn/decuong/CT272.pdf" target="_blank">Thương mại điện tử - CNTT</a></td>
+        <td class="sbj-ct" align="center">3</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">109</td>
+        <td class="sbj-ct" align="center">KT314E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://ce.ctu.edu.vn/images/upload/daotao/decuong/KT314E.pdf" target="_blank">Hệ thống thông tin kinh tế</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">110</td>
+        <td class="sbj-ct" align="center">TV261</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV261.pdf" target="_blank">Quản trị văn phòng trong các cơ quan thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">111</td>
+        <td class="sbj-ct" align="center">TV134E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV134E.pdf" target="_blank">Môi giới thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">112</td>
+        <td class="sbj-ct" align="center">TV135</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV135.pdf" target="_blank">Quản lý dự án thư viện và các cơ quan thông tin</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">113</td>
+        <td class="sbj-ct" align="center">TV136</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV136.pdf" target="_blank">Dịch vụ thư viện dành cho trẻ em</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">114</td>
+        <td class="sbj-ct" align="center">TV310</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV310.pdf" target="_blank">Hệ thống thông tin thư viện các nước</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">115</td>
+        <td class="sbj-ct" align="center">TV316E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV316E.pdf" target="_blank">Công tác địa chí</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">116</td>
+        <td class="sbj-ct" align="center">TV319E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV319E.pdf" target="_blank">Kinh doanh xuất bản phẩm</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">117</td>
+        <td class="sbj-ct" align="center">TV332E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV332E.pdf" target="_blank">Các dịch vụ thư viện đặc biệt</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-2">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">118</td>
+        <td class="sbj-ct" align="center">TV333E</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/TV333E.pdf" target="_blank">Xuất bản điện tử</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-1">
+        <td class="sbj-ct" style="text-align:right; padding-right:13px;">119</td>
+        <td class="sbj-ct" align="center">XN110</td>
+        <td class="sbj-ct" style="padding-left:13px"><a href="https://sss.ctu.edu.vn/images/upload/daotao/decuong/XN110.pdf" target="_blank">Kỹ thuật nhiếp ảnh và quay video</a></td>
+        <td class="sbj-ct" align="center">2</td>
+       <!-- <td class="sbj-ct" align="center"></td>-->
+      </tr>
+            <tr class="sbj-row-3">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="sbj-row-3">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td style="text-align:right; padding-right:15px; font-weight:bold;">Tổng số học phần:</td>
+        <td><strong>119</strong></td>
+        <td>&nbsp;</td>
+      </tr>
+      <!--<tr class="sbj-row-3">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td style="text-align:right; padding-right:15px; font-weight:bold;">Tổng số tín chỉ:</td>
+        <td><strong>253</strong></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="sbj-row-3">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td style="text-align:right; padding-right:15px; font-weight:bold;">Số tín chỉ bắt buộc:</td>
+        <td><strong>0</strong></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr class="sbj-row-3">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td style="text-align:right; padding-right:15px; font-weight:bold;">Số tín chỉ tự chọn:</td>
+        <td><strong>253</strong></td>
+        <td>&nbsp;</td>
+      </tr> -->
+
+ <tr class="sbj-row-3">
+        <td colspan="5" align="center"><a href="https://www.ctu.edu.vn/ctdt/k50/11_7320201_ThongTin-ThuVien.pdf" target="_blank"><strong>Download CTĐT dạng file .PDF</strong></a></td>
+      </tr>
+
+     
+
+<tr class="sbj-row-3">
+      <td colspan="5" align="center"><a href="https://www.ctu.edu.vn/ctdt/k50/mota/MT_11_7320201_ThongTin-ThuVien.pdf" target="_blank"><strong>Bản mô tả chương trình đào tạo và chương trình dạy học</strong></a></td>
+      </tr>
+      <tr class="sbj-row-3">
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+ <!--?php// }?-->
+	</tbody></table>

@@ -45,3 +45,12 @@ class TrainingMajor(Base):
     faculty_id = Column(Integer, ForeignKey("faculties.id"))
     
     faculty = relationship("Faculty")
+
+class Course(Base):
+    __tablename__ = "courses"
+
+    code = Column(String, primary_key=True)
+    name = Column(String, nullable=False)
+    credit = Column(Integer, nullable=False)
+    syllabus_url = Column(String)  # 🆕 Link đề cương chi tiết
+

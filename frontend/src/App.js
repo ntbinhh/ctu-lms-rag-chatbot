@@ -15,6 +15,10 @@ import AddFacultyForm from "./components/faculty/AddFacultyForm";
 import FacultyList from "./components/faculty/FacultyListPage";
 import AddMajorForm from "./components/training/AddMajorForm";
 import MajorListPage from "./components/training/MajorListPage";
+import AddCourseForm from "./components/hocphan/AddCourseForm";
+import CourseListPage from "./components/hocphan/CourseListPage"; // Trang danh sách học phần
+import AddProgramForm from "./components/program/AddProgramForm"; // Trang thêm chương trình đào tạo
+import ProgramListPage from "./components/program/ProgramListPage"; // Trang danh sách chương trình đào tạo
 // Import các trang cần thiết
 function App() {
   return (
@@ -34,6 +38,10 @@ function App() {
         <Route path="/admin/faculties/list" element={<FacultyList />} />
         <Route path="/admin/majors/add" element={<AddMajorForm />} />
         <Route path="/admin/majors/list" element={<MajorListPage />} />
+        <Route path="/admin/courses/add" element={<AddCourseForm />} />
+        <Route path="/admin/courses/list" element={<CourseListPage />} /> {/* Trang danh sách học phần */}
+        <Route path="/admin/programs/add" element={<AddProgramForm />} /> {/* Trang thêm chương trình đào tạo */}
+        <Route path="/admin/programs/list" element={<ProgramListPage />} /> {/* Trang danh sách chương trình đào tạo */}
         {/* Thêm các route khác nếu cần */}
       </Routes>
     </Router>
