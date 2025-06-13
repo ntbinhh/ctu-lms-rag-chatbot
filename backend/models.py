@@ -30,3 +30,9 @@ class ManagerProfile(Base):
 
     facility = relationship("CoSoLienKet")
     user = relationship("User")
+
+class Faculty(Base):
+    __tablename__ = "faculties"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False, unique=True)

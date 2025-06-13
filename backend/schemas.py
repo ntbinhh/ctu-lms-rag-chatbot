@@ -34,3 +34,12 @@ class ManagerCreate(BaseModel):
     full_name: str
     phone: str
     facility_id: int
+
+class FacultyCreate(BaseModel):
+    name: str
+
+class FacultyOut(FacultyCreate):
+    id: int
+
+    class Config:
+        orm_mode = True

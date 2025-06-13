@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from users import router  
 from facilities import router as facility_router
 from manager import router as manager_router
+from faculty import router as faculty_router
 
 app = FastAPI()
 
@@ -17,3 +18,4 @@ app.add_middleware(
 app.include_router(router)  # Đăng ký router cho người dùng
 app.include_router(facility_router)   # Đăng ký router cho cơ sở liên kết
 app.include_router(manager_router)  # Đăng ký router cho quản lý
+app.include_router(faculty_router)  # Đăng ký router cho khoa

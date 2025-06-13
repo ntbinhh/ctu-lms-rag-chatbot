@@ -11,7 +11,8 @@ import FacilitiesPage from "./components/FacilitiesPage";
 import FacilitiesListPage from "./components/FacilitiesListPage"; // Trang danh sách cơ sở đào tạo
 import AddManagerForm from "./components/manager/AddManagerForm";
 import ManagerList from "./components/manager/ManagerList";
-
+import AddFacultyForm from "./components/faculty/AddFacultyForm";
+import FacultyList from "./components/faculty/FacultyListPage";
 // Import các trang cần thiết
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         <Route path="/admin/facilities/list" element={<FacilitiesListPage />} />
         <Route path="/admin/users/managers/add" element={<AddManagerForm />} />
         <Route path="/admin/users/managers" element={<ManagerList />} />
+        <Route path="/admin/faculties/add" element={<AddFacultyForm />} />
+        <Route path="/admin/faculties/list" element={<FacultyList />} />
+
       </Routes>
     </Router>
   );

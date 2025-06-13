@@ -91,6 +91,23 @@ const AdminHeader = () => {
       ],
     },
     {
+      label: "Khoa",
+      icon: "pi pi-sitemap",
+      items: [
+        {
+          label: "Thêm khoa",
+          icon: "pi pi-plus-circle",
+          command: () => navigate("/admin/faculties/add"),
+        },
+        {
+          label: "Danh sách khoa",
+          icon: "pi pi-list",
+          command: () => navigate("/admin/faculties/list"),
+        },
+      ],
+    },
+
+    {
       label: "Cài đặt",
       icon: "pi pi-cog",
       command: () => navigate("/admin/settings"),
