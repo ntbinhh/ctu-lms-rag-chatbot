@@ -7,6 +7,8 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Dialog } from "primereact/dialog";
 import { InputText } from "primereact/inputtext";
+import { MultiSelect } from "primereact/multiselect";
+import { Tooltip } from "primereact/tooltip";
 import AdminHeader from "../AdminHeader";
 import AdminFooter from "../Footer";
 
@@ -26,6 +28,10 @@ const ProgramListPage = () => {
   const [editName, setEditName] = useState("");
   const [editCredit, setEditCredit] = useState(0);
   const [editUrl, setEditUrl] = useState("");
+
+  const [addDialogVisible, setAddDialogVisible] = useState(false);
+  const [allCourses, setAllCourses] = useState([]);
+  const [selectedCourseCodes, setSelectedCourseCodes] = useState([]);
 
   const handleDeleteCourse = async (code) => {
     if (!window.confirm("Bạn có chắc chắn muốn xóa học phần này khỏi chương trình?")) return;
@@ -49,6 +55,38 @@ const ProgramListPage = () => {
       }));
     } catch (err) {
       alert("❌ Xóa học phần thất bại.");
+    }
+  };
+
+  const handleAddExistingCourses = async () => {
+    try {
+      await axios.post("http://localhost:8000/admin/programs/add_courses", {
+        khoa: selectedKhoa,
+        major_id: selectedMajor,
+        course_codes: selectedCourseCodes
+      }, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json"
+        }
+      });
+
+      const addedCourses = allCourses.filter(c => selectedCourseCodes.includes(c.value));
+
+      setProgram(prev => ({
+        ...prev,
+        courses: [...prev.courses, ...addedCourses.map(c => ({
+          code: c.value,
+          name: c.name,
+          credit: c.credit,
+          syllabus_url: c.syllabus_url
+        }))]
+      }));
+
+      setAddDialogVisible(false);
+      setSelectedCourseCodes([]);
+    } catch (err) {
+      alert("❌ Thêm học phần thất bại.");
     }
   };
 
@@ -87,6 +125,18 @@ const ProgramListPage = () => {
       axios.get(`http://localhost:8000/programs/by_major?khoa=${selectedKhoa}&major_id=${selectedMajor}`)
         .then(res => setProgram(res.data))
         .catch(() => setError("Không thể tải chương trình đào tạo"));
+
+      axios.get("http://localhost:8000/admin/courses", {
+        headers: { Authorization: `Bearer ${localStorage.getItem("token")}` }
+      }).then(res => {
+        setAllCourses(res.data.map(c => ({
+          label: `${c.code} - ${c.name}`,
+          value: c.code,
+          name: c.name,
+          credit: c.credit,
+          syllabus_url: c.syllabus_url
+        })));
+      });
     }
   }, [selectedMajor]);
 
@@ -153,10 +203,7 @@ const ProgramListPage = () => {
       <AdminHeader />
       <main
         className="facilities-page-container"
-        style={{
-          fontFamily: "'Segoe UI', Roboto, Inter, sans-serif",
-          fontWeight: 600
-        }}
+        style={{ fontFamily: "'Segoe UI', Roboto, Inter, sans-serif", fontWeight: 600 }}
       >
         <div className="facilities-list-page">
           <h2>Chương Trình Đào Tạo</h2>
@@ -205,7 +252,15 @@ const ProgramListPage = () => {
 
           {program && (
             <>
-              <h3>Chương Trình Đào Tạo - Khóa {program.khoa}</h3>
+              <div className="form-step" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
+                <h3 style={{ margin: 0 }}>Chương Trình Đào Tạo - Khóa {program.khoa}</h3>
+                <Button
+                  icon="pi pi-plus"
+                  className="p-button-rounded p-button-text"
+                  onClick={() => setAddDialogVisible(true)}
+                  tooltip="Thêm học phần từ CSDL"
+                />
+              </div>
 
               <DataTable
                 value={program.courses}
@@ -235,6 +290,13 @@ const ProgramListPage = () => {
                   </div>
                 )} />
               </DataTable>
+
+              <Dialog header="Thêm học phần từ CSDL" visible={addDialogVisible} style={{ width: '40vw' }} onHide={() => setAddDialogVisible(false)} modal>
+                <MultiSelect value={selectedCourseCodes} options={allCourses} onChange={(e) => setSelectedCourseCodes(e.value)} display="chip" placeholder="Chọn học phần" style={{ width: '100%' }} filter />
+                <div style={{ marginTop: "1rem", textAlign: "right" }}>
+                  <Button label="Thêm vào chương trình" className="p-button-sm" onClick={handleAddExistingCourses} disabled={selectedCourseCodes.length === 0} />
+                </div>
+              </Dialog>
 
               <Dialog
                 header="Chỉnh sửa học phần"

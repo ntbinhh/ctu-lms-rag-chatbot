@@ -92,3 +92,9 @@ class CourseUpdateInProgram(BaseModel):
     credit: int
     syllabus_url: str = ""
 
+from typing import List
+
+class ProgramAddCoursesInput(BaseModel):
+    khoa: str
+    major_id: int
+    course_codes: List[str]

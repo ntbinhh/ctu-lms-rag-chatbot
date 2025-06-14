@@ -5,6 +5,7 @@ import models, schemas
 from schemas import CourseUpdateInProgram
 from pydantic import BaseModel
 router = APIRouter()
+from schemas import ProgramAddCoursesInput
 
 def get_db():
     db = SessionLocal()
@@ -140,3 +141,34 @@ def delete_course_from_program(
     db.delete(course)
     db.commit()
     return {"message": "Đã xóa học phần khỏi chương trình"}
+
+class ProgramCourseCreate(BaseModel):
+    khoa: str
+    major_id: int
+    course_code: str
+    name: str
+    credit: int
+    syllabus_url: str = ""
+
+@router.post("/admin/programs/add_courses")
+def add_multiple_courses_to_program(
+    payload: ProgramAddCoursesInput,
+    db: Session = Depends(get_db)
+):
+    program = db.query(models.TrainingProgram).filter_by(
+        khoa=payload.khoa, major_id=payload.major_id
+    ).first()
+    if not program:
+        raise HTTPException(status_code=404, detail="Không tìm thấy chương trình")
+
+    added_codes = []
+    for code in payload.course_codes:
+        exists = db.query(models.ProgramCourse).filter_by(
+            program_id=program.id, course_code=code
+        ).first()
+        if not exists:
+            db.add(models.ProgramCourse(program_id=program.id, course_code=code))
+            added_codes.append(code)
+
+    db.commit()
+    return {"message": f"Đã thêm {len(added_codes)} học phần vào chương trình"}
