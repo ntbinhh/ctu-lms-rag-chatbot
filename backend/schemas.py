@@ -98,3 +98,8 @@ class ProgramAddCoursesInput(BaseModel):
     khoa: str
     major_id: int
     course_codes: List[str]
+
+class ProgramDeleteInput(BaseModel):
+    khoa: str
+    major_id: int
+

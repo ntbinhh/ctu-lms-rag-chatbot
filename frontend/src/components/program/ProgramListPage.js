@@ -252,14 +252,56 @@ const ProgramListPage = () => {
 
           {program && (
             <>
-              <div className="form-step" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1rem" }}>
-                <h3 style={{ margin: 0 }}>Chương Trình Đào Tạo - Khóa {program.khoa}</h3>
-                <Button
-                  icon="pi pi-plus"
-                  className="p-button-rounded p-button-text"
-                  onClick={() => setAddDialogVisible(true)}
-                  tooltip="Thêm học phần từ CSDL"
-                />
+              <div
+                className="form-step"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  marginBottom: "1rem",
+                  gap: "0.5rem"
+                }}
+              >
+                <h3 style={{ margin: 0 }}>
+                  Chương Trình Đào Tạo - Khóa {program.khoa}
+                </h3>
+                <div style={{ display: "flex", gap: "0.5rem" }}>
+                  <Button
+                    icon="pi pi-plus"
+                    className="p-button-rounded p-button-text"
+                    onClick={() => setAddDialogVisible(true)}
+                    tooltip="Thêm học phần từ CSDL"
+                  />
+                  <Button
+                    icon="pi pi-trash"
+                    className="p-button-rounded p-button-text p-button-danger"
+                    tooltip="Xóa toàn bộ chương trình"
+                    onClick={async () => {
+                      if (
+                        window.confirm(
+                          "Bạn có chắc chắn muốn xóa toàn bộ chương trình đào tạo này?"
+                        )
+                      ) {
+                        try {
+                          await axios.delete("http://localhost:8000/admin/programs/delete_program", {
+                            data: {
+                              khoa: selectedKhoa,
+                              major_id: selectedMajor
+                            },
+                            headers: {
+                              Authorization: `Bearer ${localStorage.getItem("token")}`,
+                              "Content-Type": "application/json"
+                            }
+                          });
+                          setProgram(null);
+                          alert("✅ Đã xóa chương trình đào tạo.");
+                        } catch (err) {
+                          alert("❌ Xóa chương trình thất bại.");
+                        }
+                      }
+                    }}
+                  />
+                </div>
               </div>
 
               <DataTable

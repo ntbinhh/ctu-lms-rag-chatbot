@@ -172,3 +172,19 @@ def add_multiple_courses_to_program(
 
     db.commit()
     return {"message": f"Đã thêm {len(added_codes)} học phần vào chương trình"}
+
+@router.delete("/admin/programs/delete_program")
+def delete_training_program(payload: schemas.ProgramDeleteInput = Body(...), db: Session = Depends(get_db)):
+    program = db.query(models.TrainingProgram).filter_by(
+        khoa=payload.khoa,
+        major_id=payload.major_id
+    ).first()
+
+    if not program:
+        raise HTTPException(status_code=404, detail="Không tìm thấy chương trình")
+
+    db.query(models.ProgramCourse).filter_by(program_id=program.id).delete()
+    db.delete(program)
+    db.commit()
+
+    return {"message": "Đã xóa chương trình đào tạo"}
