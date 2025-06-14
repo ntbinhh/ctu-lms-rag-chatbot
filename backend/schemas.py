@@ -84,3 +84,11 @@ class ProgramOut(BaseModel):
     class Config:
         from_attributes = True
 
+class CourseUpdateInProgram(BaseModel):
+    khoa: str
+    major_id: int
+    course_code: str
+    name: str
+    credit: int
+    syllabus_url: str = ""
+

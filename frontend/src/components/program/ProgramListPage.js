@@ -1,9 +1,12 @@
+// ... (các import không đổi)
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
+import { Dialog } from "primereact/dialog";
+import { InputText } from "primereact/inputtext";
 import AdminHeader from "../AdminHeader";
 import AdminFooter from "../Footer";
 
@@ -17,6 +20,37 @@ const ProgramListPage = () => {
   const [program, setProgram] = useState(null);
   const [error, setError] = useState("");
   const [rowsPerPage, setRowsPerPage] = useState(5);
+
+  const [editVisible, setEditVisible] = useState(false);
+  const [editCourse, setEditCourse] = useState(null);
+  const [editName, setEditName] = useState("");
+  const [editCredit, setEditCredit] = useState(0);
+  const [editUrl, setEditUrl] = useState("");
+
+  const handleDeleteCourse = async (code) => {
+    if (!window.confirm("Bạn có chắc chắn muốn xóa học phần này khỏi chương trình?")) return;
+
+    try {
+      await axios.delete("http://localhost:8000/admin/programs/delete_course", {
+        data: {
+          khoa: selectedKhoa,
+          major_id: selectedMajor,
+          course_code: code
+        },
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+          "Content-Type": "application/json"
+        }
+      });
+
+      setProgram(prev => ({
+        ...prev,
+        courses: prev.courses.filter(c => c.code !== code)
+      }));
+    } catch (err) {
+      alert("❌ Xóa học phần thất bại.");
+    }
+  };
 
   useEffect(() => {
     axios.get("http://localhost:8000/programs/years")
@@ -56,6 +90,49 @@ const ProgramListPage = () => {
     }
   }, [selectedMajor]);
 
+  const handleEditCourse = (course) => {
+    setEditCourse(course);
+    setEditName(course.name);
+    setEditCredit(course.credit);
+    setEditUrl(course.syllabus_url || "");
+    setEditVisible(true);
+  };
+
+  const handleSaveEdit = async () => {
+    try {
+      await axios.put(
+        "http://localhost:8000/admin/programs/update_course",
+        {
+          khoa: selectedKhoa,
+          major_id: selectedMajor,
+          course_code: editCourse.code,
+          name: editName,
+          credit: editCredit,
+          syllabus_url: editUrl
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${localStorage.getItem("token")}`,
+            "Content-Type": "application/json"
+          }
+        }
+      );
+
+      setProgram(prev => ({
+        ...prev,
+        courses: prev.courses.map(c =>
+          c.code === editCourse.code
+            ? { ...c, name: editName, credit: editCredit, syllabus_url: editUrl }
+            : c
+        )
+      }));
+
+      setEditVisible(false);
+    } catch (err) {
+      alert("❌ Cập nhật thất bại.");
+    }
+  };
+
   const nameWithLinkTemplate = (rowData) => {
     return rowData.syllabus_url ? (
       <a
@@ -82,7 +159,7 @@ const ProgramListPage = () => {
         }}
       >
         <div className="facilities-list-page">
-          <h2>📚 Chương Trình Đào Tạo</h2>
+          <h2>Chương Trình Đào Tạo</h2>
           {error && <div className="alert error">{error}</div>}
 
           <div className="form-step">
@@ -141,7 +218,53 @@ const ProgramListPage = () => {
                 <Column field="code" header="Mã học phần" />
                 <Column header="Tên học phần" body={nameWithLinkTemplate} />
                 <Column field="credit" header="Số tín chỉ" />
+                <Column header="Thao tác" body={(rowData) => (
+                  <div style={{ display: "flex", gap: "0.5rem" }}>
+                    <Button
+                      icon="pi pi-pencil"
+                      className="p-button-text p-button-sm"
+                      onClick={() => handleEditCourse(rowData)}
+                      tooltip="Sửa"
+                    />
+                    <Button
+                      icon="pi pi-trash"
+                      className="p-button-text p-button-sm p-button-danger"
+                      onClick={() => handleDeleteCourse(rowData.code)}
+                      tooltip="Xóa"
+                    />
+                  </div>
+                )} />
               </DataTable>
+
+              <Dialog
+                header="Chỉnh sửa học phần"
+                visible={editVisible}
+                style={{ width: '30vw' }}
+                onHide={() => setEditVisible(false)}
+                modal
+              >
+                <div className="p-fluid">
+                  <div className="field">
+                    <label>Tên học phần</label>
+                    <InputText value={editName} onChange={(e) => setEditName(e.target.value)} />
+                  </div>
+                  <div className="field">
+                    <label>Số tín chỉ</label>
+                    <InputText
+                      type="number"
+                      value={editCredit}
+                      onChange={(e) => setEditCredit(Number(e.target.value))}
+                    />
+                  </div>
+                  <div className="field">
+                    <label>Đề cương URL</label>
+                    <InputText value={editUrl} onChange={(e) => setEditUrl(e.target.value)} />
+                  </div>
+                  <div style={{ marginTop: "1rem", textAlign: "right" }}>
+                    <Button label="Lưu thay đổi" className="p-button-sm" onClick={handleSaveEdit} />
+                  </div>
+                </div>
+              </Dialog>
             </>
           )}
         </div>

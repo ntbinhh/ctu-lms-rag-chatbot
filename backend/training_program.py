@@ -1,8 +1,9 @@
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends, HTTPException, Body
 from sqlalchemy.orm import Session
 from database import SessionLocal
 import models, schemas
-
+from schemas import CourseUpdateInProgram
+from pydantic import BaseModel
 router = APIRouter()
 
 def get_db():
@@ -84,3 +85,58 @@ def get_program_detail(id: int, db: Session = Depends(get_db)):
         "major": major.name if major else "Không rõ",
         "courses": courses
     }
+
+@router.put("/admin/programs/update_course")
+def update_course_in_program(
+    payload: CourseUpdateInProgram,
+    db: Session = Depends(get_db)
+):
+    program = db.query(models.TrainingProgram).filter_by(
+        khoa=payload.khoa, major_id=payload.major_id
+    ).first()
+    if not program:
+        raise HTTPException(status_code=404, detail="Không tìm thấy chương trình")
+
+    link = db.query(models.ProgramCourse).filter_by(
+        program_id=program.id, course_code=payload.course_code
+    ).first()
+    if not link:
+        raise HTTPException(status_code=404, detail="Học phần không nằm trong chương trình")
+
+    course = db.query(models.Course).filter_by(code=payload.course_code).first()
+    if not course:
+        raise HTTPException(status_code=404, detail="Không tìm thấy học phần")
+
+    course.name = payload.name
+    course.credit = payload.credit
+    course.syllabus_url = payload.syllabus_url
+    db.commit()
+    return {"message": "Đã cập nhật thành công"}
+class DeleteCourseInput(BaseModel):
+    khoa: str
+    major_id: int
+    course_code: str
+@router.delete("/admin/programs/delete_course")
+def delete_course_from_program(
+    payload: DeleteCourseInput = Body(...),
+    db: Session = Depends(get_db)
+):
+    program = (
+        db.query(models.TrainingProgram)
+        .filter_by(khoa=payload.khoa, major_id=payload.major_id)
+        .first()
+    )
+    if not program:
+        raise HTTPException(status_code=404, detail="Không tìm thấy chương trình")
+
+    course = (
+    db.query(models.ProgramCourse)
+    .filter_by(program_id=program.id, course_code=payload.course_code)
+    .first()
+)
+    if not course:
+        raise HTTPException(status_code=404, detail="Không tìm thấy học phần trong chương trình")
+
+    db.delete(course)
+    db.commit()
+    return {"message": "Đã xóa học phần khỏi chương trình"}
