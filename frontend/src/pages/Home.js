@@ -1,14 +1,25 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
-
+import Header from "../components/Header";
+import SliderSection from "./SliderSection"
 const Home = () => {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      {/* Có thể thêm các section khác như giới thiệu, học tập, nghiên cứu... */}
+    <div className="layout-wrapper">
+      <Header />
+      
+      <main className="layout-main">
+        <section className="static-banner" style={{ textAlign: "center", padding: "2rem 0" }}>
+          <img
+            src="/347.png"
+            alt="Giới thiệu Trung tâm"
+            style={{ maxWidth: "100%", height: "auto" }}
+          />
+        </section>
+        <SliderSection />
+        <HeroSection />
+        {/* Thêm các section khác ở đây nếu cần */}
+      </main>
       <Footer />
     </div>
   );

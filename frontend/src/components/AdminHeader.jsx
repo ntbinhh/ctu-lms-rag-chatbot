@@ -16,6 +16,27 @@ const AdminHeader = () => {
 
   const menuItems = [
     {
+  label: "Trang chủ",
+  icon: "pi pi-home",
+  items: [
+    {
+      label: "Ảnh slider",
+      icon: "pi pi-images",
+      command: () => navigate("/admin/homepage/slider"),
+    },
+    {
+      label: "Video",
+      icon: "pi pi-video",
+      command: () => navigate("/admin/homepage/videos"),
+    },
+    {
+      label: "Bài viết / nội dung",
+      icon: "pi pi-file",
+      command: () => navigate("/admin/homepage/articles"),
+    },
+  ],
+},
+    {
       label: "Người dùng",
       icon: "pi pi-users",
       items: [

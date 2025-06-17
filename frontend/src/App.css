@@ -22,3 +22,17 @@
 .home-container .btn:hover {
   background-color: #0056b3;
 }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* đảm bảo toàn bộ viewport chiều cao */
+}
+
+.layout-main {
+  flex: 1; /* phần nội dung chính sẽ chiếm toàn bộ khoảng trống */
+}

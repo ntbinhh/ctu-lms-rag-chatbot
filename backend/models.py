@@ -1,7 +1,7 @@
-from sqlalchemy import Column, Integer, String, ForeignKey
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
 from database import Base
-
+from datetime import datetime
 class User(Base):
     __tablename__ = "users"
 
@@ -72,3 +72,9 @@ class ProgramCourse(Base):
 
     program_id = Column(Integer, ForeignKey("training_programs.id"), primary_key=True)
     course_code = Column(String, ForeignKey("courses.code"), primary_key=True)
+
+class SliderImage(Base):
+    __tablename__ = "slider_images"
+    id = Column(Integer, primary_key=True, index=True)
+    filename = Column(String, nullable=False)
+    uploaded_at = Column(DateTime, default=datetime.utcnow)

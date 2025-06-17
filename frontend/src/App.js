@@ -19,12 +19,15 @@ import AddCourseForm from "./components/hocphan/AddCourseForm";
 import CourseListPage from "./components/hocphan/CourseListPage"; // Trang danh sách học phần
 import AddProgramForm from "./components/program/AddProgramForm"; // Trang thêm chương trình đào tạo
 import ProgramListPage from "./components/program/ProgramListPage"; // Trang danh sách chương trình đào tạo
+import Layout from "./Layout"; // Layout chung cho ứng dụng
 // Import các trang cần thiết
+import SliderImageUpload from "./components/homepage/SliderImageUpload";
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />           {/* Trang chủ */}
+        
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/admin" element={<DashboardAdmin />} />
@@ -42,7 +45,11 @@ function App() {
         <Route path="/admin/courses/list" element={<CourseListPage />} /> {/* Trang danh sách học phần */}
         <Route path="/admin/programs/add" element={<AddProgramForm />} /> {/* Trang thêm chương trình đào tạo */}
         <Route path="/admin/programs/list" element={<ProgramListPage />} /> {/* Trang danh sách chương trình đào tạo */}
-        {/* Thêm các route khác nếu cần */}
+        <Route path="/admin/homepage/slider" element={<SliderImageUpload />} /> {/* Trang quản lý slider */}
+        
+        {/* Các route khác có thể thêm vào đây */}
+        
+        {/* Sử dụng Layout cho các trang khác nếu cần */}
       </Routes>
     </Router>
   );

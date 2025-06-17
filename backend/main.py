@@ -8,6 +8,8 @@ from training_major import router as major_router
 from courses_routes import router as courses_router
 from training_program import router as program_router
 from program_view import router as program_view_router
+from slider_routes import router as slider_router
+from fastapi.staticfiles import StaticFiles
 
 app = FastAPI()
 
@@ -27,3 +29,5 @@ app.include_router(major_router)  # Đăng ký router cho ngành đào tạo
 app.include_router(courses_router)
 app.include_router(program_router)
 app.include_router(program_view_router)
+app.include_router(slider_router)
+app.mount("/static", StaticFiles(directory="static"), name="static")

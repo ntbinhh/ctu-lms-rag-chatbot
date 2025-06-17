@@ -26,3 +26,30 @@
 .home-container .btn:hover {
   background-color: #0056b3;
 }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-main {
+  flex: 1;
+  padding: 1rem;
+}
+
+#slider-container {
+  box-sizing: content-box;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+
+@media (max-width: 991px) {
+  #slider-container {
+    height: 240px;
+  }
+}

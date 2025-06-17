@@ -103,3 +103,10 @@ class ProgramDeleteInput(BaseModel):
     khoa: str
     major_id: int
 
+class SliderImageOut(BaseModel):
+    id: int
+    url: str
+    uploaded_at: str
+
+    class Config:
+        from_attributes = True
