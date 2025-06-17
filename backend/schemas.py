@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
+from datetime import datetime
 
 # -------- USERS --------
 class UserCreate(BaseModel):
@@ -110,3 +111,18 @@ class SliderImageOut(BaseModel):
 
     class Config:
         from_attributes = True
+
+class NewsCreate(BaseModel):
+    title: str
+    content: str
+    image: Optional[str] = None
+
+class NewsResponse(BaseModel):
+    id: int
+    title: str
+    content: str
+    image: Optional[str] = None
+    created_at: datetime
+
+    class Config:
+        orm_mode = True

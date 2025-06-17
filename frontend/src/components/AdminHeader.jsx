@@ -34,7 +34,24 @@ const AdminHeader = () => {
       icon: "pi pi-file",
       command: () => navigate("/admin/homepage/articles"),
     },
+    {
+  label: "Tin tức",
+  icon: "pi pi-newspaper",
+  items: [
+    {
+      label: "Thêm tin mới",
+      icon: "pi pi-plus",
+      command: () => navigate("/admin/homepage/news/add"),
+    },
+    {
+      label: "Danh sách tin tức",
+      icon: "pi pi-list",
+      command: () => navigate("/admin/homepage/news/list"),
+    },
+  ]
+},
   ],
+  
 },
     {
       label: "Người dùng",

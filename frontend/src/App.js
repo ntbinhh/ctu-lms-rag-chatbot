@@ -22,6 +22,11 @@ import ProgramListPage from "./components/program/ProgramListPage"; // Trang dan
 import Layout from "./Layout"; // Layout chung cho ứng dụng
 // Import các trang cần thiết
 import SliderImageUpload from "./components/homepage/SliderImageUpload";
+import AddNewsForm from "./components/homepage/AddNewsForm"; // Trang thêm bài viết
+import NewsListPage from "./components/homepage/NewsListPage"; // Trang danh sách bài viết
+import NewsDetailPage from "./pages/NewsDetailPage";
+import HomeNewsListPage from "./pages/HomeNewsListPage";
+
 function App() {
   return (
     <Router>
@@ -46,9 +51,11 @@ function App() {
         <Route path="/admin/programs/add" element={<AddProgramForm />} /> {/* Trang thêm chương trình đào tạo */}
         <Route path="/admin/programs/list" element={<ProgramListPage />} /> {/* Trang danh sách chương trình đào tạo */}
         <Route path="/admin/homepage/slider" element={<SliderImageUpload />} /> {/* Trang quản lý slider */}
-        
+        <Route path="/admin/homepage/news/add" element={<AddNewsForm />} /> {/* Trang thêm bài viết */}
+        <Route path="/admin/homepage/news/list" element={<NewsListPage />} /> {/* Trang danh sách bài viết */}
         {/* Các route khác có thể thêm vào đây */}
-        
+        <Route path="/news" element={<HomeNewsListPage />} />
+        <Route path="/news/:id" element={<NewsDetailPage />} /> {/* Trang chi tiết bài viết */}
         {/* Sử dụng Layout cho các trang khác nếu cần */}
       </Routes>
     </Router>

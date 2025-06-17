@@ -3,6 +3,7 @@ import HeroSection from "../components/HeroSection";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SliderSection from "./SliderSection"
+import NewsSection from "./NewsSection";
 const Home = () => {
   return (
     <div className="layout-wrapper">
@@ -18,6 +19,7 @@ const Home = () => {
         </section>
         <SliderSection />
         <HeroSection />
+        <NewsSection />
         {/* Thêm các section khác ở đây nếu cần */}
       </main>
       <Footer />

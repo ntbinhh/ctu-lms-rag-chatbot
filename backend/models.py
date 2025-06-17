@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime
+from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text
 from sqlalchemy.orm import relationship
 from database import Base
 from datetime import datetime
@@ -78,3 +78,12 @@ class SliderImage(Base):
     id = Column(Integer, primary_key=True, index=True)
     filename = Column(String, nullable=False)
     uploaded_at = Column(DateTime, default=datetime.utcnow)
+
+class News(Base):
+    __tablename__ = "news"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String, nullable=False)
+    content = Column(Text, nullable=False)
+    image = Column(String)  # đường dẫn ảnh nếu có
+    created_at = Column(DateTime, default=datetime.utcnow)
