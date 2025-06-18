@@ -33,9 +33,10 @@ const Header = () => {
         { label: "Sứ mạng - Tầm nhìn", command: () => navigate("/mission") },
       ],
     },
-    { label: "Tin tức", icon: "pi pi-calendar", command: () => navigate("/news") },
+    { label: "Tin tức", icon: "pi pi-calendar", command: () => navigate("/news_home") },
     { label: "Tuyển sinh", icon: "pi pi-users", command: () => navigate("/admissions") },
     { label: "Liên hệ", icon: "pi pi-envelope", command: () => navigate("/contact") },
+    { label: "Chương trình đào tạo", icon: "pi pi-book", command: () => navigate("/programs") },
   ];
 
   return (

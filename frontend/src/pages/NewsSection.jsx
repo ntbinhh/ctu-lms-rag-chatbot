@@ -80,7 +80,7 @@ const NewsHomeSection = () => {
           ))}
         </Swiper>
         <div className="see-more-wrapper">
-          <Link to="/news" className="see-more-btn">+ XEM THÊM</Link>
+          <Link to="/news_home" className="see-more-btn">+ XEM THÊM</Link>
         </div>
       </div>
     </section>

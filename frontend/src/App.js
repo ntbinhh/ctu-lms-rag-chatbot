@@ -26,6 +26,7 @@ import AddNewsForm from "./components/homepage/AddNewsForm"; // Trang thêm bài
 import NewsListPage from "./components/homepage/NewsListPage"; // Trang danh sách bài viết
 import NewsDetailPage from "./pages/NewsDetailPage";
 import HomeNewsListPage from "./pages/HomeNewsListPage";
+import PublicProgramView from "./pages/PublicProgramView";
 
 function App() {
   return (
@@ -54,8 +55,10 @@ function App() {
         <Route path="/admin/homepage/news/add" element={<AddNewsForm />} /> {/* Trang thêm bài viết */}
         <Route path="/admin/homepage/news/list" element={<NewsListPage />} /> {/* Trang danh sách bài viết */}
         {/* Các route khác có thể thêm vào đây */}
-        <Route path="/news" element={<HomeNewsListPage />} />
+        <Route path="/news_home" element={<HomeNewsListPage />} />
         <Route path="/news/:id" element={<NewsDetailPage />} /> {/* Trang chi tiết bài viết */}
+        <Route path="/programs" element={<PublicProgramView />} />
+
         {/* Sử dụng Layout cho các trang khác nếu cần */}
       </Routes>
     </Router>
