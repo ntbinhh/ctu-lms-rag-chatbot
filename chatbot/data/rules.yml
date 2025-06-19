@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+- rule: Bắt đầu form chương trình học
+  steps:
+    - intent: request_program
+    - action: program_form
+    - active_loop: program_form
+
+- rule: Gửi chương trình học khi hoàn tất form
+  condition:
+    - active_loop: program_form
+  steps:
+    - action: program_form
+    - active_loop: null
+    - action: action_submit_program

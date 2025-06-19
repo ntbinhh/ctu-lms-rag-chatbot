@@ -12,7 +12,7 @@ const Header = () => {
       style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "1rem" }}
       onClick={() => navigate("/")}
     >
-      <img src="/logo-ctu.png" alt="Logo" height="55" />
+      <img src="/logo192.png" alt="Logo" height="50" />
       <div style={{ lineHeight: "1.2" }}>
         <div style={{ fontSize: "0.85rem", color: "#000000", fontWeight: 500 }}>
           TRUNG TÂM LIÊN KẾT ĐÀO TẠO

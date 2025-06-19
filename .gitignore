@@ -22,4 +22,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 __pycache__/
-
+# Global .gitignore
+**/__pycache__/
+**/.venv/
+**/*.pyc
+chatbot/models/

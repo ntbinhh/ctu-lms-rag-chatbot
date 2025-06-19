@@ -1,0 +1,126 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: request_program
+  examples: |
+    - tôi muốn xem chương trình đào tạo
+    - chương trình học năm 2021
+    - xem ngành học của khoa CNTT
+    - chương trình học ngành toán
+    - tôi muốn tìm chương trình đào tạo của ngành
+    - chương trình học của khoa kinh tế
+    - chương trình học năm 2022
+    - chương trình học năm 2023
+    - chương trình học năm 2024
+    - chương trình học năm 2025
+    - chương trình học năm 2026
+
+- intent: inform_year
+  examples: |
+    - năm 2020
+    - 2021
+    - khóa 2022
+    - tôi muốn xem năm 2023
+
+- intent: inform_faculty
+  examples: |
+    - khoa công nghệ thông tin
+    - khoa kinh tế
+    - CNTT
+    - mình học bên nông nghiệp
+
+- intent: inform_major
+  examples: |
+    - khoa học máy tính
+    - công nghệ phần mềm
+    - tài chính ngân hàng
+    - nông học

@@ -1,0 +1,86 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - request_program
+
+entities:
+  - year
+  - faculty
+  - major
+
+slots:
+  year:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: year
+
+  faculty:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: faculty
+
+  major:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: major
+
+  program_info:
+    type: text
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you?"
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+      image: "https://media.giphy.com/media/l0M682Yh7zVbL6w8o/giphy.gif"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_year:
+    - text: "Bạn muốn xem chương trình của năm nào?"
+
+  utter_ask_faculty:
+    - text: "Bạn thuộc khoa nào?"
+
+  utter_ask_major:
+    - text: "Ngành bạn quan tâm là gì?"
+
+  utter_submit_program:
+    - text: "Đây là chương trình học của bạn:\n{program_info}"
+
+forms:
+  program_form:
+    required_slots:
+      - year
+      - faculty
+      - major
+
+actions:
+  - action_submit_program
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

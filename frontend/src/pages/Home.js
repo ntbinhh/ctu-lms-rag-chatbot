@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SliderSection from "./SliderSection"
 import NewsSection from "./NewsSection";
+import Chatbot from "../components/chatbot/Chatbot";
+import FloatingChatbot from "../components/chatbot/FloatingChatbot";
 const Home = () => {
   return (
     <div className="layout-wrapper">
@@ -20,6 +22,8 @@ const Home = () => {
         <SliderSection />
         <HeroSection />
         <NewsSection />
+        {/* <Chatbot /> */}
+        <FloatingChatbot />
         {/* Thêm các section khác ở đây nếu cần */}
       </main>
       <Footer />
