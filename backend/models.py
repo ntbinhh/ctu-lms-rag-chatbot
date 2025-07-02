@@ -52,7 +52,7 @@ class Course(Base):
     code = Column(String, primary_key=True)
     name = Column(String, nullable=False)
     credit = Column(Integer, nullable=False)
-    syllabus_url = Column(String)  # 🆕 Link đề cương chi tiết
+    syllabus_url = Column(String)  
     programs = relationship("TrainingProgram", secondary="program_courses", back_populates="courses")
 
 

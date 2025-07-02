@@ -1,14 +1,13 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home"; // Trang chủ
+import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import DashboardAdmin from "./pages/DashboardAdmin";
 import DashboardTeacher from "./pages/DashboardTeacher";
 import DashboardStudent from "./pages/DashboardStudent";
-import './index.css';
 import FacilitiesPage from "./components/FacilitiesPage";
-import FacilitiesListPage from "./components/FacilitiesListPage"; // Trang danh sách cơ sở đào tạo
+import FacilitiesListPage from "./components/FacilitiesListPage";
 import AddManagerForm from "./components/manager/AddManagerForm";
 import ManagerList from "./components/manager/ManagerList";
 import AddFacultyForm from "./components/faculty/AddFacultyForm";
@@ -16,50 +15,177 @@ import FacultyList from "./components/faculty/FacultyListPage";
 import AddMajorForm from "./components/training/AddMajorForm";
 import MajorListPage from "./components/training/MajorListPage";
 import AddCourseForm from "./components/hocphan/AddCourseForm";
-import CourseListPage from "./components/hocphan/CourseListPage"; // Trang danh sách học phần
-import AddProgramForm from "./components/program/AddProgramForm"; // Trang thêm chương trình đào tạo
-import ProgramListPage from "./components/program/ProgramListPage"; // Trang danh sách chương trình đào tạo
-import Layout from "./Layout"; // Layout chung cho ứng dụng
-// Import các trang cần thiết
+import CourseListPage from "./components/hocphan/CourseListPage";
+import AddProgramForm from "./components/program/AddProgramForm";
+import ProgramListPage from "./components/program/ProgramListPage";
 import SliderImageUpload from "./components/homepage/SliderImageUpload";
-import AddNewsForm from "./components/homepage/AddNewsForm"; // Trang thêm bài viết
-import NewsListPage from "./components/homepage/NewsListPage"; // Trang danh sách bài viết
+import AddNewsForm from "./components/homepage/AddNewsForm";
+import NewsListPage from "./components/homepage/NewsListPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import HomeNewsListPage from "./pages/HomeNewsListPage";
 import PublicProgramView from "./pages/PublicProgramView";
+import ProtectedRoute from "./components/ProtectedRoute";
+import "./index.css";
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />           {/* Trang chủ */}
-        
+        {/* Public routes */}
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/admin" element={<DashboardAdmin />} />
-        <Route path="/teacher" element={<DashboardTeacher />} />
-        <Route path="/student" element={<DashboardStudent />} />
-        <Route path="/admin/facilities" element={<FacilitiesPage />} />
-        <Route path="/admin/facilities/list" element={<FacilitiesListPage />} />
-        <Route path="/admin/users/managers/add" element={<AddManagerForm />} />
-        <Route path="/admin/users/managers" element={<ManagerList />} />
-        <Route path="/admin/faculties/add" element={<AddFacultyForm />} />
-        <Route path="/admin/faculties/list" element={<FacultyList />} />
-        <Route path="/admin/majors/add" element={<AddMajorForm />} />
-        <Route path="/admin/majors/list" element={<MajorListPage />} />
-        <Route path="/admin/courses/add" element={<AddCourseForm />} />
-        <Route path="/admin/courses/list" element={<CourseListPage />} /> {/* Trang danh sách học phần */}
-        <Route path="/admin/programs/add" element={<AddProgramForm />} /> {/* Trang thêm chương trình đào tạo */}
-        <Route path="/admin/programs/list" element={<ProgramListPage />} /> {/* Trang danh sách chương trình đào tạo */}
-        <Route path="/admin/homepage/slider" element={<SliderImageUpload />} /> {/* Trang quản lý slider */}
-        <Route path="/admin/homepage/news/add" element={<AddNewsForm />} /> {/* Trang thêm bài viết */}
-        <Route path="/admin/homepage/news/list" element={<NewsListPage />} /> {/* Trang danh sách bài viết */}
-        {/* Các route khác có thể thêm vào đây */}
         <Route path="/news_home" element={<HomeNewsListPage />} />
-        <Route path="/news/:id" element={<NewsDetailPage />} /> {/* Trang chi tiết bài viết */}
+        <Route path="/news/:id" element={<NewsDetailPage />} />
         <Route path="/programs" element={<PublicProgramView />} />
 
-        {/* Sử dụng Layout cho các trang khác nếu cần */}
+        {/* Protected routes */}
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <DashboardAdmin />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/facilities"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <FacilitiesPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/facilities/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <FacilitiesListPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/users/managers/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddManagerForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/users/managers"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <ManagerList />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/faculties/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddFacultyForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/faculties/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <FacultyList />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/majors/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddMajorForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/majors/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <MajorListPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/courses/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddCourseForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/courses/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <CourseListPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/programs/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddProgramForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/programs/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <ProgramListPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/homepage/slider"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <SliderImageUpload />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/homepage/news/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddNewsForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/homepage/news/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <NewsListPage />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/teacher"
+          element={
+            <ProtectedRoute allowedRoles={["teacher"]}>
+              <DashboardTeacher />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/student"
+          element={
+            <ProtectedRoute allowedRoles={["student"]}>
+              <DashboardStudent />
+            </ProtectedRoute>
+          }
+        />
+        {/* Nếu có thêm route cho manager thì thêm tương tự như trên */}
       </Routes>
     </Router>
   );
