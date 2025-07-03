@@ -126,3 +126,27 @@ class NewsResponse(BaseModel):
 
     class Config:
         orm_mode = True
+
+class RoomCreate(BaseModel):
+    room_number: str
+    capacity: int
+    type: str  # VD: "theory", "lab", "computer"
+    building: Optional[str] = None
+
+class RoomOut(BaseModel):
+    id: int
+    room_number: str
+    capacity: int
+    type: str
+    facility_id: int
+    building: Optional[str] = None
+
+    class Config:
+        orm_mode = True
+
+class TeacherCreate(BaseModel):
+    name: str
+    code: str
+    email: str
+    phone: str
+    faculty_id: int

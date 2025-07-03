@@ -26,7 +26,11 @@ import HomeNewsListPage from "./pages/HomeNewsListPage";
 import PublicProgramView from "./pages/PublicProgramView";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./index.css";
-
+import DashboardManager from "./pages/DashboardManager";
+import AddRoomForm from "./components/manager/AddRoomForm";
+import RoomListPage from "./components/manager/RoomListPage";
+import AddTeacherForm from "./components/AddTeacherForm";
+import TeacherListPage from "./components/TeacherListPage";
 function App() {
   return (
     <Router>
@@ -185,8 +189,51 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route
+          path="/manager"
+          element={
+            <ProtectedRoute allowedRoles={["manager"]}>
+              <DashboardManager />
+            </ProtectedRoute>
+          }
+        />
         {/* Nếu có thêm route cho manager thì thêm tương tự như trên */}
+        <Route
+          path="/manager/rooms/add"
+          element={
+            <ProtectedRoute allowedRoles={["manager"]}>
+              <AddRoomForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/manager/rooms/list"
+          element={
+            <ProtectedRoute allowedRoles={["manager"]}>
+              <RoomListPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/users/teachers/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddTeacherForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/users/teachers/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <TeacherListPage />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
+      
+        
+      
     </Router>
   );
 }

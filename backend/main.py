@@ -11,6 +11,8 @@ from program_view import router as program_view_router
 from slider_routes import router as slider_router
 from fastapi.staticfiles import StaticFiles
 from news_routes import router as news_router
+from rooms import router as rooms_router
+from teachers import router as teacher_router
 
 app = FastAPI()
 
@@ -33,3 +35,5 @@ app.include_router(program_view_router)
 app.include_router(slider_router)
 app.mount("/static", StaticFiles(directory="static"), name="static")
 app.include_router(news_router)
+app.include_router(rooms_router, prefix="/manager")
+app.include_router(teacher_router)

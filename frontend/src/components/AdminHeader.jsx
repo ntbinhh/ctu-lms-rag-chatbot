@@ -74,18 +74,14 @@ const AdminHeader = () => {
           ],
         },
         {
-          label: "Giáo viên",
+          label: "Giảng viên",
           icon: "pi pi-user-edit",
           items: [
+            { label: "Thêm giảng viên", icon: "pi pi-user-plus", command: () => navigate("/admin/users/teachers/add") },
             {
-              label: "Thêm giáo viên",
-              icon: "pi pi-user-plus",
-              command: () => navigate("/admin/users/teachers/add"),
-            },
-            {
-              label: "Danh sách giáo viên",
+              label: "Danh sách giảng viên",
               icon: "pi pi-users",
-              command: () => navigate("/admin/users/teachers"),
+              command: () => navigate("/admin/users/teachers/list"),
             },
           ],
         },

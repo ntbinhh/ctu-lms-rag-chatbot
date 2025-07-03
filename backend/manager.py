@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from database import SessionLocal
 import models, schemas
 from passlib.hash import bcrypt
-
+from counters import get_next_counter
 router = APIRouter()
 
 def get_db():
@@ -18,7 +18,7 @@ def create_manager(manager: schemas.ManagerCreate, db: Session = Depends(get_db)
     # Tạo username tự động ID001, ID002, ...
     last_user = db.query(models.User).order_by(models.User.id.desc()).first()
     next_id = (last_user.id + 1) if last_user else 1
-    username = f"ID{str(next_id).zfill(3)}"
+    username = f"ID{str(get_next_counter('manager')).zfill(3)}"
     password_hash = bcrypt.hash("123")  # Mật khẩu mặc định
 
     # Tạo user mới

@@ -20,6 +20,8 @@ class CoSoLienKet(Base):
     address = Column(String, nullable=False)
     phone = Column(String, nullable=False)
 
+    rooms = relationship("Room", back_populates="facility")
+
 class ManagerProfile(Base):
     __tablename__ = "manager_profiles"
     id = Column(Integer, primary_key=True, index=True)
@@ -36,6 +38,8 @@ class Faculty(Base):
 
     id = Column(Integer, primary_key=True, index=True)
     name = Column(String, nullable=False, unique=True)
+    
+    teachers = relationship("Teacher", back_populates="faculty")
 
 class TrainingMajor(Base):
     __tablename__ = "training_majors"
@@ -87,3 +91,28 @@ class News(Base):
     content = Column(Text, nullable=False)
     image = Column(String)  # đường dẫn ảnh nếu có
     created_at = Column(DateTime, default=datetime.utcnow)
+
+class Room(Base):
+    __tablename__ = "rooms"
+
+    id = Column(Integer, primary_key=True, index=True)
+    room_number = Column(String, nullable=False)
+    capacity = Column(Integer, nullable=False)
+    type = Column(String, default="theory")  # Các giá trị: theory, lab, computer
+    facility_id = Column(Integer, ForeignKey("co_so_lien_ket.id"), nullable=False)
+    building = Column(String, nullable=True)
+
+    facility = relationship("CoSoLienKet", back_populates="rooms")
+
+class Teacher(Base):
+    __tablename__ = "teachers"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    code = Column(String, unique=True, nullable=False)
+    email = Column(String, unique=True)
+    phone = Column(String)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    faculty_id = Column(Integer, ForeignKey("faculties.id"))  # ✅ thêm dòng này
+
+    user = relationship("User")
+    faculty = relationship("Faculty", back_populates="teachers")

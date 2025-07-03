@@ -37,9 +37,12 @@ def login(user: schemas.UserLogin, db: Session = Depends(get_db)):
     }
 
 @router.get("/me")
-def read_current_user(current_user = Depends(get_current_user)):
+def read_current_user(current_user = Depends(get_current_user), db: Session = Depends(get_db)):
+    profile = db.query(models.ManagerProfile).filter(models.ManagerProfile.user_id == current_user.id).first()
     return {
         "user_id": current_user.id,
         "username": current_user.username,
-        "role": current_user.role
+        "role": current_user.role,
+        "facility_id": profile.facility_id if profile else None
     }
+
