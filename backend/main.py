@@ -14,6 +14,7 @@ from news_routes import router as news_router
 from rooms import router as rooms_router
 from teachers import router as teacher_router
 from classes import router as class_router
+from weeks import router as week_router
 app = FastAPI()
 
 # Cho phép mọi nguồn (trong môi trường dev)
@@ -38,3 +39,4 @@ app.include_router(news_router)
 app.include_router(rooms_router, prefix="/manager")
 app.include_router(teacher_router)
 app.include_router(class_router, prefix="/admin")
+app.include_router(week_router, prefix="/weeks")

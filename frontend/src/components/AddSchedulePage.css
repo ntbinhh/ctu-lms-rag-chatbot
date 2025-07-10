@@ -1,0 +1,110 @@
+
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-row .p-dropdown {
+  flex: 1;
+  min-width: 0; /* ngăn chặn overflow */
+}
+
+
+.timetable-grid table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.timetable-grid th,
+.timetable-grid td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  min-height: 40px;
+  cursor: pointer;
+}
+
+.subject-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.equal-width-button {
+  min-width: 200px;
+  justify-content: center;
+}
+
+.form-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.form-row,
+.form-add-subject,
+.subject-buttons-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.subject-buttons-wrapper {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.equal-width-button {
+  min-width: 220px;
+  justify-content: center;
+  font-size: 0.875rem;
+}
+
+.custom-timetable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-timetable td,
+.custom-timetable th {
+  width: 120px;
+  max-width: 120px;
+  height: 70px;                /* ✅ cố định chiều cao */
+  max-height: 70px;
+  text-align: center;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: normal;
+  word-break: break-word;
+  padding: 4px;
+  position: relative;
+}
+.custom-timetable th {
+  background-color: #f1f3f5;
+  color: #495057;
+}
+
+.custom-timetable td.selected-cell {
+  background-color: #e3f6ff;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.timetable-grid {
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+.p-tag {
+  font-size: 0.7rem;
+  line-height: 1.2;
+  padding: 0.1rem 0.4rem;
+}
