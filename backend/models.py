@@ -116,3 +116,16 @@ class Teacher(Base):
 
     user = relationship("User")
     faculty = relationship("Faculty", back_populates="teachers")
+
+class Class(Base):
+    __tablename__ = "classes"
+
+    id = Column(Integer, primary_key=True, index=True)
+    khoa = Column(String, nullable=False)
+    ma_lop = Column(String, unique=True, nullable=False)
+    facility_id = Column(Integer, ForeignKey("co_so_lien_ket.id"))
+    major_id = Column(Integer, ForeignKey("training_majors.id"))
+    he_dao_tao = Column(String)  # "vhvl", "tu_xa"
+
+    facility = relationship("CoSoLienKet")
+    major = relationship("TrainingMajor")

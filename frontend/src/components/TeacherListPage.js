@@ -6,10 +6,13 @@ import { InputText } from "primereact/inputtext";
 import { FloatLabel } from "primereact/floatlabel";
 import { FilterMatchMode } from "primereact/api";
 import { Button } from "primereact/button";
+import { Dropdown } from "primereact/dropdown";
 import AdminHeader from "../components/AdminHeader";
 
 const TeacherListPage = () => {
   const [teachers, setTeachers] = useState([]);
+  const [faculties, setFaculties] = useState([]);
+  const [selectedFaculty, setSelectedFaculty] = useState(null);
   const [filters, setFilters] = useState({
     global: { value: null, matchMode: FilterMatchMode.CONTAINS },
   });
@@ -26,12 +29,26 @@ const TeacherListPage = () => {
       setTeachers(res.data);
     } catch (err) {
       console.error("Lỗi tải danh sách:", err);
-      setError("❌ Không thể tải danh sách giảng viên.");
+      setError("Không thể tải danh sách giảng viên.");
+    }
+  };
+
+  const fetchFaculties = async () => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await axios.get("http://localhost:8000/admin/faculties", {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      const data = res.data.map((f) => ({ label: f.name, value: f.name }));
+      setFaculties(data);
+    } catch (err) {
+      console.error("Lỗi khi tải danh sách khoa:", err);
     }
   };
 
   useEffect(() => {
     fetchTeachers();
+    fetchFaculties();
   }, []);
 
   const handleDelete = async (id) => {
@@ -42,9 +59,9 @@ const TeacherListPage = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       setTeachers(teachers.filter((t) => t.id !== id));
-      setSuccess("✅ Xoá thành công");
+      setSuccess("Xoá thành công");
     } catch (err) {
-      setError("❌ Xoá thất bại");
+      setError("Xoá thất bại");
     }
   };
 
@@ -55,9 +72,9 @@ const TeacherListPage = () => {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchTeachers();
-      setSuccess("✅ Đã thay đổi trạng thái tài khoản");
+      setSuccess("Đã thay đổi trạng thái tài khoản");
     } catch (err) {
-      setError("❌ Không thể thay đổi trạng thái");
+      setError("Không thể thay đổi trạng thái");
     }
   };
 
@@ -100,6 +117,10 @@ const TeacherListPage = () => {
     );
   };
 
+  const filteredTeachers = selectedFaculty
+    ? teachers.filter((t) => t.faculty === selectedFaculty)
+    : teachers;
+
   return (
     <div>
       <AdminHeader />
@@ -115,10 +136,12 @@ const TeacherListPage = () => {
               justifyContent: "space-between",
               alignItems: "center",
               marginBottom: "12px",
+              flexWrap: "wrap",
+              gap: "1rem",
             }}
           >
             <h2 style={{ margin: 0 }}>Danh sách giảng viên</h2>
-            <div style={{ display: "flex", gap: "1rem" }}>
+            <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <FloatLabel>
                 <InputText
                   id="search"
@@ -127,8 +150,16 @@ const TeacherListPage = () => {
                 />
                 <label htmlFor="search">Tìm kiếm</label>
               </FloatLabel>
+              <Dropdown
+                value={selectedFaculty}
+                options={faculties}
+                onChange={(e) => setSelectedFaculty(e.value)}
+                placeholder="Lọc theo khoa"
+                className="p-dropdown-sm"
+                showClear
+              />
               <Button
-                label="Tải lại danh sách"
+                label="Tải lại"
                 icon="pi pi-refresh"
                 className="p-button-sm p-button-secondary"
                 onClick={fetchTeachers}
@@ -137,7 +168,7 @@ const TeacherListPage = () => {
           </div>
 
           <DataTable
-            value={teachers}
+            value={filteredTeachers}
             paginator
             rows={10}
             filters={filters}

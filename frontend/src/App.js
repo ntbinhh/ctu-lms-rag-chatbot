@@ -31,6 +31,8 @@ import AddRoomForm from "./components/manager/AddRoomForm";
 import RoomListPage from "./components/manager/RoomListPage";
 import AddTeacherForm from "./components/AddTeacherForm";
 import TeacherListPage from "./components/TeacherListPage";
+import AddClassForm from "./components/AddClassForm";
+import ClassListPage from "./components/ClassListPage";
 function App() {
   return (
     <Router>
@@ -227,6 +229,22 @@ function App() {
           element={
             <ProtectedRoute allowedRoles={["admin"]}>
               <TeacherListPage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/classes/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddClassForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/classes/list"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <ClassListPage />
             </ProtectedRoute>
           }
         />

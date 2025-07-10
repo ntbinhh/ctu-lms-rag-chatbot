@@ -13,7 +13,7 @@ from fastapi.staticfiles import StaticFiles
 from news_routes import router as news_router
 from rooms import router as rooms_router
 from teachers import router as teacher_router
-
+from classes import router as class_router
 app = FastAPI()
 
 # Cho phép mọi nguồn (trong môi trường dev)
@@ -37,3 +37,4 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 app.include_router(news_router)
 app.include_router(rooms_router, prefix="/manager")
 app.include_router(teacher_router)
+app.include_router(class_router, prefix="/admin")

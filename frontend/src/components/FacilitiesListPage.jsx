@@ -36,18 +36,21 @@ const FacilitiesListPage = () => {
     }
   };
 
-  const handleDelete = async (id) => {
-    try {
-      const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:8000/admin/facilities/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      setFacilities(facilities.filter((f) => f.id !== id));
-      setSuccess("✅ Đã xóa cơ sở thành công!");
-    } catch (err) {
-      alert("Xóa thất bại.");
-    }
-  };
+const handleDelete = async (id) => {
+  const confirmed = window.confirm("Bạn có chắc muốn xóa cơ sở liên kết này?");
+  if (!confirmed) return;
+
+  try {
+    const token = localStorage.getItem("token");
+    await axios.delete(`http://localhost:8000/admin/facilities/${id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    setFacilities(facilities.filter((f) => f.id !== id));
+    setSuccess("✅ Đã xóa cơ sở thành công!");
+  } catch (err) {
+    alert("❌ Xóa thất bại.");
+  }
+};
 
   useEffect(() => {
     fetchFacilities();

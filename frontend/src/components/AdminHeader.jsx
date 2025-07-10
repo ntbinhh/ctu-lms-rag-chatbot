@@ -190,6 +190,22 @@ const AdminHeader = () => {
       ],
     },
     {
+      label: "Lớp học",
+      icon: "pi pi-school",
+      items: [
+        {
+          label: "Thêm lớp học",
+          icon: "pi pi-plus",
+          command: () => navigate("/admin/classes/add"),
+        },
+        {
+          label: "Danh sách lớp học",
+          icon: "pi pi-list",
+          command: () => navigate("/admin/classes/list"),
+        },
+      ],
+    },
+    {
       label: "Cài đặt",
       icon: "pi pi-cog",
       command: () => navigate("/admin/settings"),

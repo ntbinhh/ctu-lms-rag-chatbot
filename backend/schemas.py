@@ -150,3 +150,17 @@ class TeacherCreate(BaseModel):
     email: str
     phone: str
     faculty_id: int
+
+class ClassCreate(BaseModel):
+    ma_lop: str
+    khoa: str
+    facility_id: int
+    major_id: int
+    he_dao_tao: str
+
+class ClassUpdate(BaseModel):
+    ma_lop: str
+    khoa: str
+    facility_id: int
+    major_id: int
+    he_dao_tao: str
