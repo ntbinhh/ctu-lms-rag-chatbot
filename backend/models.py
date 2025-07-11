@@ -129,3 +129,28 @@ class Class(Base):
 
     facility = relationship("CoSoLienKet")
     major = relationship("TrainingMajor")
+    
+class ScheduleItem(Base):
+    __tablename__ = "schedule_items"
+    id = Column(Integer, primary_key=True, index=True)
+    class_id = Column(Integer, ForeignKey("classes.id"), nullable=False)
+    hoc_ky = Column(String, nullable=False)
+    nam_hoc = Column(Integer, nullable=False)
+    week = Column(Integer, nullable=False)
+    day = Column(String, nullable=False)
+    period = Column(String, nullable=False)
+    subject_id = Column(String, ForeignKey("courses.code"), nullable=False)
+    teacher_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    hinh_thuc = Column(String, nullable=False)
+    room_id = Column(Integer, ForeignKey("rooms.id"), nullable=True)
+    subject = relationship("Course", backref="schedules", lazy="joined")
+    teacher = relationship("User", backref="teaching_schedule", lazy="joined")
+    classroom = relationship("Room", backref="schedules", lazy="joined")
+    lop = relationship("Class", backref="schedule_items", lazy="joined")
+    teacher_profile = relationship(
+        "Teacher",
+        primaryjoin="foreign(ScheduleItem.teacher_id) == Teacher.user_id",
+        lazy="joined",
+        overlaps="teacher,teaching_schedule"
+    )
+    

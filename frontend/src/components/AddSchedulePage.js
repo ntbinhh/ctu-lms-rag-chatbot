@@ -7,6 +7,8 @@ import { Tag } from "primereact/tag";
 import AdminHeader from "../components/AdminHeader";
 import AdminFooter from "../components/AdminFooter";
 import "./AddSchedulePage.css";
+import { useRef } from "react";
+import { Messages } from "primereact/messages";
 
 const days = ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "CN"];
 const periods = ["Sáng", "Chiều", "Tối"];
@@ -32,6 +34,7 @@ const getWeekDates = (startDate) => {
 };
 
 const AddSchedulePage = () => {
+  const msgs = useRef(null);
   const [classes, setClasses] = useState([]);
   const [selectedClass, setSelectedClass] = useState(null);
   const [subjects, setSubjects] = useState([]);
@@ -108,6 +111,7 @@ const AddSchedulePage = () => {
   }, [hocKy, namHoc]);
 
   const handleAddSubject = () => {
+    console.log(" Giảng viên chọn:", selectedTeacher);
     if (!selectedSubject || !selectedTeacher) return;
     const exists = addedSubjects.find(
       (s) => s.code === selectedSubject.code && s.teacher.id === selectedTeacher.id
@@ -145,7 +149,7 @@ const AddSchedulePage = () => {
           period,
           subject_code: selectedSubjectForPlacement.code,
           subject_name: selectedSubjectForPlacement.name,
-          teacher_id: selectedSubjectForPlacement.teacher.id,
+          teacher_id: selectedSubjectForPlacement.teacher.user_id,
           teacher_name: selectedSubjectForPlacement.teacher.name,
           hinh_thuc: hinhThuc,
           room_id: hinhThuc === "truc_tiep" ? selectedRoom?.id : null,
@@ -154,30 +158,60 @@ const AddSchedulePage = () => {
     }
   };
 
-  const handleSubmit = async () => {
-    const token = localStorage.getItem("token");
-    const headers = { Authorization: `Bearer ${token}` };
+const handleSubmit = async () => {
+  const token = localStorage.getItem("token");
+  const headers = { Authorization: `Bearer ${token}` };
 
-    const data = {
-      class_id: selectedClass.id,
-      hoc_ky: hocKy,
-      nam_hoc: namHoc,
-      schedule_items: scheduleItems.map(
-        ({ week, day, period, subject_code, teacher_id, hinh_thuc, room_id }) => ({
-          week,
-          day,
-          period,
-          subject_id: subject_code,
-          teacher_id,
-          hinh_thuc,
-          room_id,
-        })
-      ),
-    };
-
-    await axios.post("http://localhost:8000/admin/schedules", data, { headers });
-    alert("✅ Đã lưu thời khóa biểu");
+  const data = {
+    class_id: selectedClass.id,
+    hoc_ky: hocKy,
+    nam_hoc: namHoc,
+    schedule_items: scheduleItems.map(
+      ({ week, day, period, subject_code, teacher_id, hinh_thuc, room_id }) => ({
+        week,
+        day,
+        period,
+        subject_id: subject_code,
+        teacher_id,
+        hinh_thuc,
+        room_id,
+      })
+    ),
   };
+
+  try {
+    console.log("🔍 Data gửi lên:", JSON.stringify(data, null, 2));
+    const res = await axios.post("http://localhost:8000/admin/schedules", data, { headers });
+
+    const { message, skipped } = res.data;
+
+    msgs.current.clear();  // clear cũ
+    msgs.current.show([
+      {
+        severity: "success",
+        summary: "Thành công",
+        detail: message,
+        life: 10000,
+      },
+      ...(skipped || []).map((item) => ({
+        severity: "warn",
+        summary: "Trùng lịch",
+        detail: `Tuần ${item.week}, ${item.day}, ${item.period}`,
+        life: 10000,
+      })),
+    ]);
+  } catch (error) {
+    msgs.current.clear();
+    msgs.current.show([
+      {
+        severity: "error",
+        summary: "Lỗi",
+        detail: error.response?.data?.detail || error.message,
+        sticky: true,
+      },
+    ]);
+  }
+};
 
   const currentLabel = weekList[currentPage]
     ? `Tuần ${weekList[currentPage].hoc_ky_week} (${formatDate(weekList[currentPage].start_date)} – ${formatDate(weekList[currentPage].end_date)})`
@@ -192,7 +226,7 @@ const AddSchedulePage = () => {
       <AdminHeader />
       <div className="facilities-list-page">
         <h2 className="form-title">Thêm thời khoá biểu</h2>
-
+        <Messages ref={msgs} />
         <div className="form-row">
           <Dropdown value={selectedClass} options={classes} optionLabel="ma_lop" onChange={(e) => setSelectedClass(e.value)} placeholder="Chọn lớp" />
           <Dropdown value={namHoc} options={academicYears} onChange={(e) => setNamHoc(e.value)} placeholder="Chọn năm học" />

@@ -206,6 +206,22 @@ const AdminHeader = () => {
       ],
     },
     {
+      label: "Lịch học",
+      icon: "pi pi-school",
+      items: [
+        {
+          label: "Thêm lịch học",
+          icon: "pi pi-plus",
+          command: () => navigate("/admin/schedules/add"),
+        },
+        {
+          label: "Xem lịch học",
+          icon: "pi pi-list",
+          command: () => navigate("/admin/schedules/view"),
+        },
+      ],
+    },
+    {
       label: "Cài đặt",
       icon: "pi pi-cog",
       command: () => navigate("/admin/settings"),
@@ -218,12 +234,25 @@ const AdminHeader = () => {
   ];
 
   const start = (
+    <div
+      className="p-d-flex p-ai-center"
+      style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "1rem" }}
+      onClick={() => navigate("/admin")}
+    >
     <img
-      src="/logo.png"
+      src="/logo192.png"
       alt="Logo"
       style={{ height: "32px", cursor: "pointer" }}
-      onClick={() => navigate("/admin")}
     />
+          <div style={{ lineHeight: "1.2" }}>
+        <div style={{ fontSize: "0.85rem", color: "#000000", fontWeight: 500 }}>
+          TRUNG TÂM LIÊN KẾT ĐÀO TẠO
+        </div>
+        <div style={{ fontWeight: 700, fontSize: "1.2rem", color: "#0c4da2" }}>
+          TRƯỜNG ĐẠI HỌC CẦN THƠ
+        </div>
+      </div>
+    </div>
   );
 
   const end = (

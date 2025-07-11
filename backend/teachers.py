@@ -99,6 +99,7 @@ def list_teachers(db: Session = Depends(get_db)):
         faculty = db.query(models.Faculty).filter_by(id=t.faculty_id).first()
         result.append({
             "id": t.id,
+            "user_id": t.user_id,  # ✅ THÊM DÒNG NÀY
             "name": t.name,
             "code": t.code,
             "email": t.email,

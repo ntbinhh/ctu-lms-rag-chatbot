@@ -164,3 +164,43 @@ class ClassUpdate(BaseModel):
     facility_id: int
     major_id: int
     he_dao_tao: str
+
+class ScheduleItemCreate(BaseModel):
+    week: int
+    day: str
+    period: str
+    subject_id: str
+    teacher_id: int
+    hinh_thuc: str
+    room_id: Optional[int] = None
+
+class ScheduleCreate(BaseModel):
+    class_id: int
+    hoc_ky: str
+    nam_hoc: int
+    schedule_items: List[ScheduleItemCreate]
+
+class SubjectOut(BaseModel):
+    name: str
+    class Config:
+        orm_mode = True
+        
+class TeacherOut(BaseModel):
+    id: int
+    name: str
+    user_id: int
+
+    class Config:
+        orm_mode = True
+
+class ScheduleItemOut(BaseModel):
+    week: int
+    day: str
+    period: str
+    hinh_thuc: str
+    subject: Optional[SubjectOut] = None
+    teacher_profile: Optional[TeacherOut] = None
+    room_id: Optional[int] = None
+
+    class Config:
+        orm_mode = True

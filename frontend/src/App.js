@@ -34,6 +34,7 @@ import TeacherListPage from "./components/TeacherListPage";
 import AddClassForm from "./components/AddClassForm";
 import ClassListPage from "./components/ClassListPage";
 import AddSchedulePage from "./components/AddSchedulePage";
+import ScheduleViewPage from "./components/ScheduleViewPage";
 function App() {
   return (
     <Router>
@@ -250,10 +251,18 @@ function App() {
           }
         />
         <Route
-          path="/admin/mon"
+          path="/admin/schedules/add"
           element={
-            <ProtectedRoute allowedRoles={["admin"]}>
+            <ProtectedRoute allowedRoles={["admin", "manager"]}>
               <AddSchedulePage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/schedules/view"
+          element={
+            <ProtectedRoute allowedRoles={["admin", "teacher", "manager"]}>
+              <ScheduleViewPage />
             </ProtectedRoute>
           }
         />
