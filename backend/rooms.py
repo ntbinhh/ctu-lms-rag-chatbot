@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from auth import get_current_user
 from database import get_db
 import models, schemas
-
+from fastapi import Query
 router = APIRouter()
 
 @router.post("/rooms/add")
@@ -40,17 +40,20 @@ def add_room(
 @router.get("/rooms", response_model=list[schemas.RoomOut])
 def get_rooms(
     db: Session = Depends(get_db),
-    current_user = Depends(get_current_user)
+    current_user = Depends(get_current_user),
+    facility_id: int = Query(None)
 ):
-    if current_user.role != "manager":
+    if current_user.role not in ("manager", "admin"):
         raise HTTPException(status_code=403, detail="Bạn không có quyền xem phòng học")
 
-    # Lấy facility_id từ profile
-    profile = db.query(models.ManagerProfile).filter(models.ManagerProfile.user_id == current_user.id).first()
-    if not profile:
-        raise HTTPException(status_code=404, detail="Không tìm thấy hồ sơ quản lý")
+    if current_user.role == "manager":
+        profile = db.query(models.ManagerProfile).filter(models.ManagerProfile.user_id == current_user.id).first()
+        if not profile:
+            raise HTTPException(status_code=404, detail="Không tìm thấy hồ sơ quản lý")
+        facility_id = profile.facility_id
 
-    facility_id = profile.facility_id
+    if facility_id is None:
+        raise HTTPException(status_code=400, detail="Thiếu facility_id")
 
     rooms = db.query(models.Room).filter(models.Room.facility_id == facility_id).all()
     return rooms

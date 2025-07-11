@@ -3,24 +3,45 @@ import axios from "axios";
 import { Dropdown } from "primereact/dropdown";
 import { Button } from "primereact/button";
 import { Paginator } from "primereact/paginator";
+import { Tag } from "primereact/tag";
 import AdminHeader from "../components/AdminHeader";
 import AdminFooter from "../components/AdminFooter";
-import { Tag } from "primereact/tag";
-import { DataTable } from "primereact/datatable";
-
 import "./AddSchedulePage.css";
 
-const days = ["Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy", "CN"];
+const days = ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "CN"];
 const periods = ["Sáng", "Chiều", "Tối"];
 const hocKyOptions = ["HK1", "HK2", "HK3"];
+
+const formatDate = (dateString) => {
+  const d = new Date(dateString);
+  return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
+};
+
+const formatDateShort = (date) => {
+  const d = new Date(date);
+  return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`;
+};
+
+const getWeekDates = (startDate) => {
+  const base = new Date(startDate);
+  return Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(base);
+    d.setDate(base.getDate() + i);
+    return formatDateShort(d);
+  });
+};
 
 const AddSchedulePage = () => {
   const [classes, setClasses] = useState([]);
   const [selectedClass, setSelectedClass] = useState(null);
   const [subjects, setSubjects] = useState([]);
   const [teachers, setTeachers] = useState([]);
+  const [rooms, setRooms] = useState([]);
   const [hocKy, setHocKy] = useState("");
   const [namHoc, setNamHoc] = useState(null);
+  const [hinhThuc, setHinhThuc] = useState("");
+  const [selectedRoom, setSelectedRoom] = useState(null);
+
   const [weekList, setWeekList] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [scheduleItems, setScheduleItems] = useState([]);
@@ -42,20 +63,31 @@ const AddSchedulePage = () => {
     axios.get("http://localhost:8000/admin/users/teachers/list", { headers }).then((res) => setTeachers(res.data));
   }, []);
 
+    useEffect(() => {
+    if (hinhThuc === "truc_tiep" && selectedClass?.facility_id) {
+      const token = localStorage.getItem("token");
+      const headers = { Authorization: `Bearer ${token}` };
+
+      axios
+        .get("http://localhost:8000/manager/rooms", {
+          headers,
+          params: { facility_id: selectedClass.facility_id },
+        })
+        .then((res) => setRooms(res.data));
+    }
+  }, [hinhThuc, selectedClass]);
+
   useEffect(() => {
     if (!selectedClass) return;
     const token = localStorage.getItem("token");
     const headers = { Authorization: `Bearer ${token}` };
     axios
       .get("http://localhost:8000/programs/by_major", {
-        params: {
-          khoa: selectedClass.khoa,
-          major_id: selectedClass.major_id,
-        },
+        params: { khoa: selectedClass.khoa, major_id: selectedClass.major_id },
         headers,
       })
       .then((res) => {
-        if (res.data && Array.isArray(res.data.courses)) {
+        if (Array.isArray(res.data.courses)) {
           setSubjects(res.data.courses);
         }
       });
@@ -92,16 +124,12 @@ const AddSchedulePage = () => {
     setSelectedSubject(null);
     setSelectedTeacher(null);
   };
-
   const handleToggleCell = (day, period) => {
     const week = weekList[currentPage]?.week;
     if (!selectedSubjectForPlacement) return;
 
     const exists = scheduleItems.findIndex(
-      (item) =>
-        item.week === week &&
-        item.day === day &&
-        item.period === period
+      (item) => item.week === week && item.day === day && item.period === period
     );
 
     if (exists !== -1) {
@@ -119,7 +147,9 @@ const AddSchedulePage = () => {
           subject_name: selectedSubjectForPlacement.name,
           teacher_id: selectedSubjectForPlacement.teacher.id,
           teacher_name: selectedSubjectForPlacement.teacher.name,
-        }
+          hinh_thuc: hinhThuc,
+          room_id: hinhThuc === "truc_tiep" ? selectedRoom?.id : null,
+        },
       ]);
     }
   };
@@ -132,13 +162,17 @@ const AddSchedulePage = () => {
       class_id: selectedClass.id,
       hoc_ky: hocKy,
       nam_hoc: namHoc,
-      schedule_items: scheduleItems.map(({ week, day, period, subject_code, teacher_id }) => ({
-        week,
-        day,
-        period,
-        subject_id: subject_code,
-        teacher_id,
-      })),
+      schedule_items: scheduleItems.map(
+        ({ week, day, period, subject_code, teacher_id, hinh_thuc, room_id }) => ({
+          week,
+          day,
+          period,
+          subject_id: subject_code,
+          teacher_id,
+          hinh_thuc,
+          room_id,
+        })
+      ),
     };
 
     await axios.post("http://localhost:8000/admin/schedules", data, { headers });
@@ -146,61 +180,98 @@ const AddSchedulePage = () => {
   };
 
   const currentLabel = weekList[currentPage]
-    ? `Tuần ${weekList[currentPage].hoc_ky_week} (${weekList[currentPage].start_date} – ${weekList[currentPage].end_date})     `
+    ? `Tuần ${weekList[currentPage].hoc_ky_week} (${formatDate(weekList[currentPage].start_date)} – ${formatDate(weekList[currentPage].end_date)})`
     : "";
+
+  const weekDates = weekList[currentPage]?.start_date
+    ? getWeekDates(weekList[currentPage].start_date)
+    : [];
 
   return (
     <>
       <AdminHeader />
       <div className="facilities-list-page">
-        <h2 className="form-title">Thêm Thời Khoá Biểu</h2>
+        <h2 className="form-title">Thêm thời khoá biểu</h2>
 
-        {/* Chọn lớp, năm học, học kỳ */}
         <div className="form-row">
           <Dropdown value={selectedClass} options={classes} optionLabel="ma_lop" onChange={(e) => setSelectedClass(e.value)} placeholder="Chọn lớp" />
           <Dropdown value={namHoc} options={academicYears} onChange={(e) => setNamHoc(e.value)} placeholder="Chọn năm học" />
           <Dropdown value={hocKy} options={hocKyOptions} onChange={(e) => setHocKy(e.value)} placeholder="Chọn học kỳ" />
         </div>
-
-        {/* Form thêm môn */}
         <div className="form-row">
-          <Dropdown value={selectedSubject} options={subjects} optionLabel="name" onChange={(e) => setSelectedSubject(e.value)} placeholder="Chọn môn" />
-          <Dropdown value={selectedTeacher} options={teachers} optionLabel="name" onChange={(e) => setSelectedTeacher(e.value)} placeholder="Chọn giảng viên" />
+        <Dropdown
+            value={hinhThuc}
+            options={[
+              { label: "Trực tuyến", value: "truc_tuyen" },
+              { label: "Trực tiếp", value: "truc_tiep" },
+            ]}
+            onChange={(e) => setHinhThuc(e.value)}
+            placeholder="Hình thức học"
+          />
+          {hinhThuc === "truc_tiep" && (
+            <Dropdown
+              value={selectedRoom}
+              options={rooms}
+              onChange={(e) => setSelectedRoom(e.value)}
+              placeholder="Chọn phòng học"
+              optionLabel="room_number"
+              itemTemplate={(room) => {
+                if (!room) return "";
+                return selectedClass?.facility_id === 47
+                  ? `${room.room_number} / ${room.building}`
+                  : room.room_number;
+              }}
+            />
+          )}
+        </div>
+
+        <div className="form-row">
+          <Dropdown value={selectedSubject} options={subjects} optionLabel="name" onChange={(e) => setSelectedSubject(e.value)} placeholder="Chọn môn" filter  showClear/>
+          <Dropdown value={selectedTeacher} options={teachers} optionLabel="name" onChange={(e) => setSelectedTeacher(e.value)} placeholder="Chọn giảng viên" filter showClear />
+          
           <Button label="Thêm môn" onClick={handleAddSubject} />
         </div>
 
-        {/* Nút chọn môn */}
         <div className="subject-buttons-wrapper">
-        {addedSubjects.map((s, i) => (
-          <Button
-            key={s.code + s.teacher.id}
-            label={`${s.name} - ${s.teacher.name}`}
-            className={`p-button-sm ${
-              selectedSubjectForPlacement?.code === s.code &&
-              selectedSubjectForPlacement?.teacher.id === s.teacher.id
-                ? "p-button-info"
-                : "p-button-outlined"
-            } equal-width-button`}
-            onClick={() => setSelectedSubjectForPlacement(s)}
-          />
-        ))}
-      </div>
-        <div className="form-row">
-        <h3>{currentLabel}                 <Dropdown
-          value={currentPage}
-          options={weekList.map((w, i) => ({ label: `Tuần ${w.hoc_ky_week}`, value: i }))}
-          onChange={(e) => setCurrentPage(e.value)}
-          placeholder="Chọn tuần"
-        /></h3>
+          {addedSubjects.map((s) => (
+            <Button
+              key={s.code + s.teacher.id}
+              label={`${s.name} - ${s.teacher.name}`}
+              className={`p-button-sm ${
+                selectedSubjectForPlacement?.code === s.code &&
+                selectedSubjectForPlacement?.teacher.id === s.teacher.id
+                  ? "p-button-info"
+                  : "p-button-outlined"
+              } equal-width-button`}
+              onClick={() => setSelectedSubjectForPlacement(s)}
+            />
+          ))}
         </div>
 
-        {/* Bảng thời khoá biểu */}
+        <div className="form-row">
+          <h2 className="form-title">
+            {currentLabel}
+            <Dropdown
+              value={currentPage}
+              options={weekList.map((w, i) => ({ label: `Tuần ${w.hoc_ky_week}`, value: i }))}
+              onChange={(e) => setCurrentPage(e.value)}
+              placeholder="Chọn tuần"
+              className="ml-3"
+            />
+          </h2>
+        </div>
+
         <div className="timetable-grid">
           <table className="custom-timetable">
             <thead>
               <tr>
-                <th>Buổi / Thứ</th>
-                {days.map((day) => <th key={day}>{day}</th>)}
+                <th></th>
+                {days.map((day, i) => (
+                  <th key={day}>
+                    <div>{day}</div>
+                    <small style={{ fontSize: "12px", color: "#888" }}>{weekDates[i] || ""}</small>
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
@@ -235,9 +306,6 @@ const AddSchedulePage = () => {
           </table>
         </div>
 
-        {/* Tuần và phân trang */}
-
-
         <Paginator
           first={currentPage}
           rows={1}
@@ -247,7 +315,7 @@ const AddSchedulePage = () => {
           currentPageReportTemplate={currentLabel}
         />
 
-        <Button label="Lưu thời khóa biểu" onClick={handleSubmit} className="p-button-success" />
+        <Button label="Lưu thời khóa biểu" onClick={handleSubmit} className="p-button-success mt-3" />
       </div>
       <AdminFooter />
     </>
