@@ -66,11 +66,10 @@ const AddSchedulePage = () => {
     axios.get("http://localhost:8000/admin/users/teachers/list", { headers }).then((res) => setTeachers(res.data));
   }, []);
 
-    useEffect(() => {
+  useEffect(() => {
     if (hinhThuc === "truc_tiep" && selectedClass?.facility_id) {
       const token = localStorage.getItem("token");
       const headers = { Authorization: `Bearer ${token}` };
-
       axios
         .get("http://localhost:8000/manager/rooms", {
           headers,
@@ -110,8 +109,34 @@ const AddSchedulePage = () => {
       });
   }, [hocKy, namHoc]);
 
+  useEffect(() => {
+    if (!selectedClass || !hocKy || !namHoc) return;
+    const token = localStorage.getItem("token");
+    const headers = { Authorization: `Bearer ${token}` };
+    axios
+  .get("http://localhost:8000/admin/schedules", {
+    params: {
+      class_id: selectedClass.id,
+      hoc_ky: hocKy,
+      nam_hoc: namHoc,
+    },
+    headers,
+  })
+  .then((res) => {
+    if (Array.isArray(res.data)) {
+      const enriched = res.data.map((item) => ({
+        ...item,
+        subject_id: item.subject_id || item.subject?.code || "",
+        teacher_id: item.teacher_id || item.teacher_profile?.user_id || null,
+        teacher_name: item.teacher_profile?.name || "",
+        subject_name: item.subject?.name || "",
+      }));
+      setScheduleItems(enriched);
+    }
+  });
+  }, [selectedClass, hocKy, namHoc]);
+
   const handleAddSubject = () => {
-    console.log(" Giảng viên chọn:", selectedTeacher);
     if (!selectedSubject || !selectedTeacher) return;
     const exists = addedSubjects.find(
       (s) => s.code === selectedSubject.code && s.teacher.id === selectedTeacher.id
@@ -128,17 +153,40 @@ const AddSchedulePage = () => {
     setSelectedSubject(null);
     setSelectedTeacher(null);
   };
-  const handleToggleCell = (day, period) => {
+
+  const handleToggleCell = async (day, period) => {
     const week = weekList[currentPage]?.week;
     if (!selectedSubjectForPlacement) return;
-
-    const exists = scheduleItems.findIndex(
+    
+    const index = scheduleItems.findIndex(
       (item) => item.week === week && item.day === day && item.period === period
     );
 
-    if (exists !== -1) {
+    if (index !== -1) {
+      const itemToRemove = scheduleItems[index];
+      if (itemToRemove.id) {
+        try {
+          const token = localStorage.getItem("token");
+          const headers = { Authorization: `Bearer ${token}` };
+          await axios.delete(`http://localhost:8000/admin/schedules/${itemToRemove.id}`, { headers });
+          msgs.current.show({
+            severity: "success",
+            summary: "Đã xóa",
+            detail: `Xóa lịch: Tuần ${itemToRemove.week}, ${itemToRemove.day}, ${itemToRemove.period}`,
+            life: 5000,
+          });
+        } catch (err) {
+          msgs.current.show({
+            severity: "error",
+            summary: "Lỗi xóa lịch",
+            detail: err.response?.data?.detail || err.message,
+            life: 10000,
+          });
+          return;
+        }
+      }
       const updated = [...scheduleItems];
-      updated.splice(exists, 1);
+      updated.splice(index, 1);
       setScheduleItems(updated);
     } else {
       setScheduleItems([
@@ -147,7 +195,7 @@ const AddSchedulePage = () => {
           week,
           day,
           period,
-          subject_code: selectedSubjectForPlacement.code,
+          subject_id: selectedSubjectForPlacement.code,
           subject_name: selectedSubjectForPlacement.name,
           teacher_id: selectedSubjectForPlacement.teacher.user_id,
           teacher_name: selectedSubjectForPlacement.teacher.name,
@@ -158,34 +206,31 @@ const AddSchedulePage = () => {
     }
   };
 
-const handleSubmit = async () => {
-  const token = localStorage.getItem("token");
-  const headers = { Authorization: `Bearer ${token}` };
+  const handleSubmit = async () => {
+    const token = localStorage.getItem("token");
+    const headers = { Authorization: `Bearer ${token}` };
 
-  const data = {
-    class_id: selectedClass.id,
-    hoc_ky: hocKy,
-    nam_hoc: namHoc,
-    schedule_items: scheduleItems.map(
-      ({ week, day, period, subject_code, teacher_id, hinh_thuc, room_id }) => ({
-        week,
-        day,
-        period,
-        subject_id: subject_code,
-        teacher_id,
-        hinh_thuc,
-        room_id,
-      })
-    ),
-  };
+    const data = {
+      class_id: selectedClass.id,
+      hoc_ky: hocKy,
+      nam_hoc: namHoc,
+      schedule_items: scheduleItems.map(
+        ({ week, day, period, subject_id, teacher_id, hinh_thuc, room_id }) => ({
+          week,
+          day,
+          period,
+          subject_id,
+          teacher_id,
+          hinh_thuc,
+          room_id,
+        })
+      )
+    };
 
-  try {
-    console.log("🔍 Data gửi lên:", JSON.stringify(data, null, 2));
+ try {
     const res = await axios.post("http://localhost:8000/admin/schedules", data, { headers });
-
     const { message, skipped } = res.data;
-
-    msgs.current.clear();  // clear cũ
+    msgs.current.clear();
     msgs.current.show([
       {
         severity: "success",
@@ -202,11 +247,18 @@ const handleSubmit = async () => {
     ]);
   } catch (error) {
     msgs.current.clear();
+    const detail = error.response?.data?.detail;
+    const detailMessage = Array.isArray(detail)
+      ? detail.map((e) => `${e.loc?.join('.')} → ${e.msg}`).join('\n')
+      : typeof detail === 'object'
+      ? JSON.stringify(detail)
+      : detail || error.message;
+
     msgs.current.show([
       {
         severity: "error",
         summary: "Lỗi",
-        detail: error.response?.data?.detail || error.message,
+        detail: detailMessage,
         sticky: true,
       },
     ]);
@@ -220,6 +272,7 @@ const handleSubmit = async () => {
   const weekDates = weekList[currentPage]?.start_date
     ? getWeekDates(weekList[currentPage].start_date)
     : [];
+
 
   return (
     <>
@@ -327,8 +380,24 @@ const handleSubmit = async () => {
                       >
                         {entry && (
                           <>
-                            <Tag value={entry.subject_name} severity="info" className="mb-1" />
-                            <Tag value={entry.teacher_name} severity="success" />
+                            <Tag
+                              value={
+                                entry.subject_name ||
+                                entry.subject?.name ||
+                                entry.subject_id
+                              }
+                              severity="info"
+                              className="mb-1"
+                            />
+                            <Tag
+                              value={
+                                entry.teacher_profile?.name ||
+                                entry.teacher?.name ||
+                                entry.teacher_name ||
+                                "Không rõ giáo viên"
+                              }
+                              severity="success"
+                            />
                           </>
                         )}
                       </td>

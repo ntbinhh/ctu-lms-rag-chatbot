@@ -1,6 +1,8 @@
 from pydantic import BaseModel
 from typing import Optional
 from datetime import datetime
+from datetime import date
+
 
 # -------- USERS --------
 class UserCreate(BaseModel):
@@ -194,6 +196,7 @@ class TeacherOut(BaseModel):
         orm_mode = True
 
 class ScheduleItemOut(BaseModel):
+    id: int 
     week: int
     day: str
     period: str
@@ -204,3 +207,8 @@ class ScheduleItemOut(BaseModel):
 
     class Config:
         orm_mode = True
+
+class StudentCreate(BaseModel):
+    name: str
+    dob: date
+    gender: str

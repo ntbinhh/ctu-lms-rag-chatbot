@@ -92,12 +92,12 @@ const AdminHeader = () => {
             {
               label: "Thêm học viên",
               icon: "pi pi-user-plus",
-              command: () => navigate("/admin/users/students/add"),
+              command: () => navigate("/admin/students/add"),
             },
             {
               label: "Danh sách học viên",
               icon: "pi pi-users",
-              command: () => navigate("/admin/users/students"),
+              command: () => navigate("/admin/students"),
             },
           ],
         },
@@ -191,7 +191,7 @@ const AdminHeader = () => {
     },
     {
       label: "Lớp học",
-      icon: "pi pi-school",
+      icon: "pi pi-building-columns",
       items: [
         {
           label: "Thêm lớp học",
@@ -207,7 +207,7 @@ const AdminHeader = () => {
     },
     {
       label: "Lịch học",
-      icon: "pi pi-school",
+      icon: "pi pi-calendar",
       items: [
         {
           label: "Thêm lịch học",
@@ -221,6 +221,7 @@ const AdminHeader = () => {
         },
       ],
     },
+    
     {
       label: "Cài đặt",
       icon: "pi pi-cog",

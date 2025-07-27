@@ -35,6 +35,9 @@ import AddClassForm from "./components/AddClassForm";
 import ClassListPage from "./components/ClassListPage";
 import AddSchedulePage from "./components/AddSchedulePage";
 import ScheduleViewPage from "./components/ScheduleViewPage";
+import AddStudentForm from "./components/AddStudentForm";
+import StudentList from "./components/StudentList";
+
 function App() {
   return (
     <Router>
@@ -266,7 +269,25 @@ function App() {
             </ProtectedRoute>
           }
         />
+                
+        <Route
+          path="/admin/students/add"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <AddStudentForm />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/students"
+          element={
+            <ProtectedRoute allowedRoles={["admin"]}>
+              <StudentList />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
+          
       
         
       

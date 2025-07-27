@@ -153,4 +153,15 @@ class ScheduleItem(Base):
         lazy="joined",
         overlaps="teacher,teaching_schedule"
     )
-    
+
+class Student(Base):
+    __tablename__ = "students"
+
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    dob = Column(DateTime, nullable=False)
+    gender = Column(String, nullable=False)
+    student_code = Column(String, unique=True, nullable=False)
+    class_id = Column(Integer, ForeignKey("classes.id"))
+
+    class_obj = relationship("Class")

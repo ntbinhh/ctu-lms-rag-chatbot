@@ -86,3 +86,20 @@ def get_schedule(
             nam_hoc=nam_hoc
         ).all()
     return schedules
+
+@router.delete("/schedules/{schedule_id}")
+def delete_schedule(
+    schedule_id: int,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user)
+):
+    if current_user.role not in ("admin", "manager"):
+        raise HTTPException(status_code=403, detail="Bạn không có quyền xóa thời khóa biểu")
+
+    schedule = db.query(models.ScheduleItem).filter(models.ScheduleItem.id == schedule_id).first()
+    if not schedule:
+        raise HTTPException(status_code=404, detail="Không tìm thấy lịch học")
+
+    db.delete(schedule)
+    db.commit()
+    return {"message": "Đã xóa lịch học thành công"}
