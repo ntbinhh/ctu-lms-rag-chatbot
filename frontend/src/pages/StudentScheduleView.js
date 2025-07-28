@@ -5,7 +5,11 @@ import { Paginator } from "primereact/paginator";
 import { Tag } from "primereact/tag";
 import { Card } from "primereact/card";
 import { Message } from "primereact/message";
+import { Badge } from "primereact/badge";
+import { Chip } from "primereact/chip";
+import { Button } from "primereact/button";
 import StudentHeader from "../components/StudentHeader";
+import ChatbotWidget from "../components/ChatbotWidget";
 import "./StudentScheduleView.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
@@ -42,12 +46,145 @@ const StudentScheduleView = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [studentInfo, setStudentInfo] = useState(null);
+  const [todaySchedule, setTodaySchedule] = useState([]);
+  const [roomDetails, setRoomDetails] = useState({});
 
   const yearNow = new Date().getFullYear();
   const academicYears = Array.from({ length: 5 }, (_, i) => {
     const start = yearNow - i;
     return { label: `${start}-${start + 1}`, value: start };
   });
+
+  // Tự động thiết lập năm học và học kỳ hiện tại
+  useEffect(() => {
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth() + 1; // getMonth() trả về 0-11
+    const currentYear = currentDate.getFullYear();
+    
+    // Xác định học kỳ dựa trên tháng hiện tại
+    let currentSemester = "";
+    let academicYear = currentYear;
+    
+    if (currentMonth >= 9 || currentMonth <= 1) {
+      // Tháng 9-12 và tháng 1: HK1
+      currentSemester = "HK1";
+      if (currentMonth >= 9) {
+        academicYear = currentYear; // Năm học bắt đầu từ tháng 9
+      } else {
+        academicYear = currentYear - 1; // Tháng 1 thuộc năm học trước
+      }
+    } else if (currentMonth >= 2 && currentMonth <= 6) {
+      // Tháng 2-6: HK2
+      currentSemester = "HK2";
+      academicYear = currentYear - 1;
+    } else {
+      // Tháng 7-8: HK3 (học hè)
+      currentSemester = "HK3";
+      academicYear = currentYear - 1;
+    }
+    
+    setNamHoc(academicYear);
+    setHocKy(currentSemester);
+  }, []);
+
+  // Get today's day in Vietnamese
+  const getTodayVietnamese = () => {
+    const today = new Date();
+    const dayIndex = today.getDay();
+    const dayNames = ["CN", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
+    return dayNames[dayIndex];
+  };
+
+  // Check if it's current day
+  const isToday = (day) => {
+    return day === getTodayVietnamese();
+  };
+
+  // Get current week number
+  const getCurrentWeek = () => {
+    if (weekList.length === 0) return null;
+    const today = new Date();
+    const currentWeek = weekList.find(week => {
+      const startDate = new Date(week.start_date);
+      const endDate = new Date(week.end_date);
+      return today >= startDate && today <= endDate;
+    });
+    return currentWeek?.week || null;
+  };
+
+  // Fetch room details by room_id
+  const fetchRoomDetails = async (roomId) => {
+    if (!roomId || roomDetails[roomId]) return roomDetails[roomId];
+    
+    try {
+      console.log(`Fetching room details for room_id: ${roomId}`);
+      const response = await axios.get(`http://localhost:8000/rooms/${roomId}`);
+      const roomData = response.data;
+      console.log(`Room data for ${roomId}:`, roomData);
+      
+      // Cập nhật state ngay lập tức
+      setRoomDetails(prev => {
+        const newDetails = {
+          ...prev,
+          [roomId]: roomData
+        };
+        console.log("Updated roomDetails:", newDetails);
+        return newDetails;
+      });
+      return roomData;
+    } catch (error) {
+      console.error(`Không thể lấy thông tin phòng ${roomId}:`, error);
+      // Nếu API fail, lưu null để không fetch lại
+      setRoomDetails(prev => ({
+        ...prev,
+        [roomId]: null
+      }));
+      return null;
+    }
+  };
+
+  // Get room display name
+  const getRoomDisplayName = (item) => {
+    console.log("Getting room display for item:", item);
+    console.log("Current roomDetails:", roomDetails);
+    
+    // Nếu có room_id và đã fetch được thông tin chi tiết
+    if (item.room_id && roomDetails[item.room_id]) {
+      const room = roomDetails[item.room_id];
+      console.log("Found room details:", room);
+      
+      if (room && room.name) {
+        // Hiển thị building - name nếu có building
+        if (room.building) {
+          return `${room.building} - ${room.name}`;
+        }
+        // Chỉ hiển thị name nếu không có building
+        return room.name;
+      }
+    }
+    
+    // Ưu tiên thông tin room object từ API (fallback)
+    if (item.room?.room_number && item.room?.building) {
+      return `${item.room.building} - Phòng ${item.room.room_number}`;
+    }
+    if (item.room?.room_number || item.room?.name) {
+      return `Phòng ${item.room.room_number || item.room.name}`;
+    }
+    
+    // Nếu có room_id nhưng chưa fetch được thông tin (đang loading)
+    if (item.room_id && roomDetails[item.room_id] === undefined) {
+      console.log("Room details not loaded yet for:", item.room_id);
+      return `Loading...`;
+    }
+    
+    // Nếu API fail hoặc không có thông tin
+    if (item.room_id && roomDetails[item.room_id] === null) {
+      console.log("API failed for room_id:", item.room_id);
+      return `Phòng ${item.room_id}`;
+    }
+    
+    return null;
+  };
 
   // Lấy thông tin sinh viên
   useEffect(() => {
@@ -73,13 +210,26 @@ const StudentScheduleView = () => {
     if (!hocKy || !namHoc) return;
     setLoading(true);
     axios
-      .get("http://localhost:8000/weeks", {
+      .get("http://localhost:8000/weeks/", {
         params: { hoc_ky: hocKy, nam_hoc: namHoc },
       })
       .then((res) => {
         if (Array.isArray(res.data)) {
           setWeekList(res.data);
-          setCurrentPage(0);
+          
+          // Tự động chuyển đến tuần hiện tại
+          const today = new Date();
+          const currentWeekIndex = res.data.findIndex(week => {
+            const startDate = new Date(week.start_date);
+            const endDate = new Date(week.end_date);
+            return today >= startDate && today <= endDate;
+          });
+          
+          if (currentWeekIndex >= 0) {
+            setCurrentPage(currentWeekIndex);
+          } else {
+            setCurrentPage(0);
+          }
         }
       })
       .catch(() => setError("Không thể tải danh sách tuần học"))
@@ -101,9 +251,33 @@ const StudentScheduleView = () => {
         },
         headers,
       })
-      .then((res) => {
+      .then(async (res) => {
         if (Array.isArray(res.data)) {
           setScheduleItems(res.data);
+          
+          // Debug: Log dữ liệu để xem cấu trúc
+          console.log("Schedule data:", res.data);
+          
+          // Fetch room details for all room_ids
+          const roomIds = [...new Set(res.data.map(item => item.room_id).filter(Boolean))];
+          console.log("Room IDs to fetch:", roomIds);
+          
+          for (const roomId of roomIds) {
+            await fetchRoomDetails(roomId);
+          }
+          
+          // Lọc lịch học hôm nay
+          const today = getTodayVietnamese();
+          const currentWeek = getCurrentWeek();
+          const todayClasses = res.data.filter(item => 
+            item.day === today && item.week === currentWeek
+          );
+          
+          // Debug: Log today's classes
+          console.log("Today's classes:", todayClasses);
+          
+          setTodaySchedule(todayClasses);
+          
           setError("");
         }
       })
@@ -118,6 +292,44 @@ const StudentScheduleView = () => {
       })
       .finally(() => setLoading(false));
   }, [hocKy, namHoc]);
+
+  // Cập nhật lịch học hôm nay khi dữ liệu thay đổi
+  useEffect(() => {
+    if (scheduleItems.length > 0 && weekList.length > 0) {
+      const today = getTodayVietnamese();
+      const currentWeek = getCurrentWeek();
+      const todayClasses = scheduleItems.filter(item => 
+        item.day === today && item.week === currentWeek
+      );
+      setTodaySchedule(todayClasses);
+    }
+  }, [scheduleItems, weekList, roomDetails]); // Thêm roomDetails để update khi có thông tin phòng mới
+
+  // Hàm chuyển về tuần hiện tại
+  const goToCurrentWeek = () => {
+    if (weekList.length === 0) return;
+    
+    const today = new Date();
+    const currentWeekIndex = weekList.findIndex(week => {
+      const startDate = new Date(week.start_date);
+      const endDate = new Date(week.end_date);
+      return today >= startDate && today <= endDate;
+    });
+    
+    if (currentWeekIndex >= 0) {
+      setCurrentPage(currentWeekIndex);
+    }
+  };
+
+  // Kiểm tra xem có đang hiển thị tuần hiện tại không
+  const isCurrentWeek = () => {
+    if (weekList.length === 0 || !weekList[currentPage]) return false;
+    const today = new Date();
+    const displayedWeek = weekList[currentPage];
+    const startDate = new Date(displayedWeek.start_date);
+    const endDate = new Date(displayedWeek.end_date);
+    return today >= startDate && today <= endDate;
+  };
 
   const currentLabel = weekList[currentPage]
     ? `Tuần ${weekList[currentPage].hoc_ky_week} (${formatDate(weekList[currentPage].start_date)} – ${formatDate(weekList[currentPage].end_date)})`
@@ -147,6 +359,65 @@ const StudentScheduleView = () => {
                   <p>Mã sinh viên: <strong>{studentInfo.student_code}</strong></p>
                   <p>Lớp: <strong>{studentInfo.class_name}</strong></p>
                 </div>
+              </div>
+            </Card>
+          )}
+
+          {/* Today's Schedule */}
+          {hocKy && namHoc && todaySchedule.length > 0 && (
+            <Card className="student-today-schedule-card">
+              <div className="student-today-header">
+                <h3>
+                  <i className="pi pi-calendar-plus" style={{ marginRight: '0.5rem', color: '#0c4da2' }}></i>
+                  Lịch học hôm nay ({getTodayVietnamese()})
+                </h3>
+                <Badge value={`${todaySchedule.length} môn`} severity="info" />
+              </div>
+              
+              <div className="student-today-classes">
+                {todaySchedule
+                  .sort((a, b) => {
+                    const periodOrder = { "Sáng": 1, "Chiều": 2, "Tối": 3 };
+                    return periodOrder[a.period] - periodOrder[b.period];
+                  })
+                  .map((item, index) => (
+                    <div key={index} className="student-today-class-item">
+                      <div className="student-class-time">
+                        <Tag value={item.period} severity="info" />
+                      </div>
+                      <div className="student-class-details">
+                        <div className="student-subject-name">
+                          {item.subject_name || item.subject?.name || item.subject_id}
+                        </div>
+                        <div className="student-class-meta">
+                          <span className="student-teacher-name">
+                            <i className="pi pi-user" style={{ marginRight: '0.3rem' }}></i>
+                            {item.teacher_profile?.name || item.teacher_name}
+                          </span>
+                          {getRoomDisplayName(item) && (
+                            <Chip 
+                              label={getRoomDisplayName(item)} 
+                              className="student-room-chip"
+                            />
+                          )}
+                          <span className="student-format-info">
+                            {item.hinh_thuc === "truc_tiep" ? "🏫 Trực tiếp" : "💻 Trực tuyến"}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </Card>
+          )}
+
+          {/* Show message when no classes today */}
+          {hocKy && namHoc && todaySchedule.length === 0 && scheduleItems.length > 0 && (
+            <Card className="student-no-today-schedule">
+              <div className="student-no-today-content">
+                <i className="pi pi-calendar-times" style={{ fontSize: '2rem', color: '#6b7280', marginBottom: '0.5rem' }}></i>
+                <h4>Không có lịch học hôm nay</h4>
+                <p>Hôm nay ({getTodayVietnamese()}) bạn không có lịch học nào.</p>
               </div>
             </Card>
           )}
@@ -189,16 +460,27 @@ const StudentScheduleView = () => {
               <Card className="student-week-selector">
                 <div className="student-week-header">
                   <h3>{currentLabel}</h3>
-                  <Dropdown
-                    value={currentPage}
-                    options={weekList.map((w, i) => ({ 
-                      label: `Tuần ${w.hoc_ky_week} (${formatDateShort(w.start_date)} - ${formatDateShort(w.end_date)})`, 
-                      value: i 
-                    }))}
-                    onChange={(e) => setCurrentPage(e.value)}
-                    placeholder="Chọn tuần"
-                    className="student-week-dropdown"
-                  />
+                  <div className="student-week-controls">
+                    <Dropdown
+                      value={currentPage}
+                      options={weekList.map((w, i) => ({ 
+                        label: `Tuần ${w.hoc_ky_week} (${formatDateShort(w.start_date)} - ${formatDateShort(w.end_date)})`, 
+                        value: i 
+                      }))}
+                      onChange={(e) => setCurrentPage(e.value)}
+                      placeholder="Chọn tuần"
+                      className="student-week-dropdown"
+                    />
+                    {!isCurrentWeek() && (
+                      <Button 
+                        label="Tuần hiện tại" 
+                        icon="pi pi-calendar" 
+                        onClick={goToCurrentWeek}
+                        className="p-button-sm p-button-success current-week-btn"
+                        style={{ marginLeft: '0.5rem' }}
+                      />
+                    )}
+                  </div>
                 </div>
               </Card>
 
@@ -215,7 +497,7 @@ const StudentScheduleView = () => {
                         <tr>
                           <th className="period-header">Ca học</th>
                           {days.map((day, i) => (
-                            <th key={day} className="day-header">
+                            <th key={day} className={`day-header ${isToday(day) ? 'today-column' : ''}`}>
                               <div className="day-name">{day}</div>
                               <small className="day-date">{weekDates[i] || ""}</small>
                             </th>
@@ -236,7 +518,7 @@ const StudentScheduleView = () => {
                                   item.period === period
                               );
                               return (
-                                <td key={day + period} className={`schedule-cell ${entry ? "has-class" : "empty-cell"}`}>
+                                <td key={day + period} className={`schedule-cell ${entry ? "has-class" : "empty-cell"} ${isToday(day) ? 'today-column' : ''}`}>
                                   {entry && (
                                     <div className="class-info">
                                       <div className="subject-info">
@@ -257,10 +539,10 @@ const StudentScheduleView = () => {
                                         </div>
                                       </div>
                                       
-                                      {entry.room && (
+                                      {getRoomDisplayName(entry) && (
                                         <div className="room-info">
                                           <i className="pi pi-home" style={{ fontSize: '0.6rem', marginRight: '0.2rem' }}></i>
-                                          Phòng {entry.room.room_number || entry.room.id}
+                                          {getRoomDisplayName(entry)}
                                         </div>
                                       )}
                                     </div>
@@ -284,7 +566,7 @@ const StudentScheduleView = () => {
                     totalRecords={weekList.length}
                     onPageChange={(e) => setCurrentPage(e.first)}
                     template="PrevPageLink CurrentPageReport NextPageLink"
-                    currentPageReportTemplate={`Tuần {currentPage + 1} / {totalRecords}`}
+                    currentPageReportTemplate={`Tuần ${weekList[currentPage]?.hoc_ky_week || (currentPage + 1)} / ${weekList.length} tuần`}
                     className="student-paginator"
                   />
                 </Card>
@@ -313,6 +595,9 @@ const StudentScheduleView = () => {
           ) : null}
         </div>
       </main>
+      
+      {/* Chatbot Widget */}
+      <ChatbotWidget />
     </div>
   );
 };

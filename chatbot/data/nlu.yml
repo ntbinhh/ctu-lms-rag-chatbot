@@ -16,6 +16,25 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - xin chào
+    - chào bạn
+    - chào
+    - chào em
+    - chào anh
+    - chào chị
+    - xin chào bạn
+    - chào buổi sáng
+    - chào buổi chiều
+    - chào buổi tối
+    - chúc buổi sáng tốt lành
+    - chúc buổi chiều vui vẻ
+    - chúc buổi tối an lành
+    - bạn khỏe không
+    - hôm nay thế nào
+    - hello bạn
+    - hi bạn
+    - yo
+    - hế lô
 
 - intent: goodbye
   examples: |
@@ -29,6 +48,24 @@ nlu:
     - see you around
     - bye bye
     - see you later
+    - tạm biệt
+    - chào tạm biệt
+    - bye bạn
+    - hẹn gặp lại
+    - gặp lại sau nhé
+    - chúc bạn ngủ ngon
+    - chúc ngủ ngon
+    - chúc buổi tối tốt lành
+    - thôi tôi đi đây
+    - cảm ơn và tạm biệt
+    - cảm ơn bạn
+    - ok bye
+    - thoát
+    - kết thúc
+    - đóng chat
+    - không cần nữa
+    - thôi đủ rồi
+    - see you later
 
 - intent: affirm
   examples: |
@@ -38,6 +75,32 @@ nlu:
     - of course
     - that sounds good
     - correct
+    - có
+    - đúng
+    - đúng rồi
+    - tất nhiên
+    - chắc chắn
+    - ok
+    - oke
+    - okie
+    - ok bạn
+    - ok anh
+    - ok chị
+    - ok em
+    - ok rồi
+    - ok nhé
+    - uk
+    - uh
+    - sure
+    - ukie
+    - được
+    - đồng ý
+    - yes bạn
+    - ừ
+    - uh huh
+    - phải
+    - right
+    - exactly
 
 - intent: deny
   examples: |
@@ -48,6 +111,20 @@ nlu:
     - don't like that
     - no way
     - not really
+    - không
+    - không phải
+    - ko
+    - k
+    - sai
+    - sai rồi
+    - không đúng
+    - không chính xác
+    - thôi
+    - bỏ qua
+    - cancel
+    - hủy
+    - không cần
+    - không muốn
 
 - intent: mood_great
   examples: |
@@ -65,6 +142,19 @@ nlu:
     - so so perfect
     - so good
     - so perfect
+    - tuyệt vời
+    - rất tốt
+    - hoàn hảo
+    - tuyệt
+    - xuất sắc
+    - tôi cảm thấy rất tốt
+    - tôi rất khỏe
+    - hôm nay tuyệt vời
+    - mọi thứ đều tốt
+    - tôi rất vui
+    - cảm thấy tuyệt vời
+    - tốt lắm
+    - quá tuyệt
 
 - intent: mood_unhappy
   examples: |
@@ -82,6 +172,20 @@ nlu:
     - extremly sad
     - so saad
     - so sad
+    - tôi buồn
+    - cảm thấy buồn
+    - hôm nay tệ quá
+    - tôi không khỏe
+    - tôi thất vọng
+    - rất buồn
+    - cảm thấy không tốt
+    - tâm trạng không tốt
+    - stress
+    - mệt mỏi
+    - chán nản
+    - khó chịu
+    - tệ
+    - không vui
 
 - intent: bot_challenge
   examples: |
@@ -89,38 +193,82 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+    - bạn có phải là bot không?
+    - bạn có phải robot không?
+    - bạn là ai?
+    - tôi đang nói chuyện với ai?
+    - bạn là con người à?
+    - bạn là máy tính à?
+    - bạn là ai vậy?
 
-- intent: request_program
-  examples: |
-    - tôi muốn xem chương trình đào tạo
-    - chương trình học năm 2021
-    - xem ngành học của khoa CNTT
-    - chương trình học ngành toán
-    - tôi muốn tìm chương trình đào tạo của ngành
-    - chương trình học của khoa kinh tế
-    - chương trình học năm 2022
-    - chương trình học năm 2023
-    - chương trình học năm 2024
-    - chương trình học năm 2025
-    - chương trình học năm 2026
 
-- intent: inform_year
+- intent: ask_today_schedule
   examples: |
-    - năm 2020
-    - 2021
-    - khóa 2022
-    - tôi muốn xem năm 2023
+    - lịch học hôm nay
+    - hôm nay tôi có môn gì
+    - có lớp nào hôm nay không
+    - lịch học của tôi hôm nay
+    - môn học hôm nay
+    - thời khóa biểu hôm nay
+    - hôm nay học gì
+    - lịch hôm nay
+    - tôi có lịch học gì hôm nay
+    - cho tôi xem lịch học hôm nay
+    - lịch học ngày hôm nay
+    - hôm nay tôi có tiết nào
+    - có tiết học nào hôm nay
+    - môn gì hôm nay vậy
+    - lịch học của mình hôm nay thế nào
 
-- intent: inform_faculty
+- intent: ask_schedule_week
   examples: |
-    - khoa công nghệ thông tin
-    - khoa kinh tế
-    - CNTT
-    - mình học bên nông nghiệp
+    - lịch học tuần này
+    - thời khóa biểu tuần này
+    - lịch học cả tuần
+    - tuần này tôi học gì
+    - lịch tuần này như thế nào
+    - cho tôi xem lịch học tuần này
 
-- intent: inform_major
+- intent: ask_schedule_tomorrow
   examples: |
-    - khoa học máy tính
-    - công nghệ phần mềm
-    - tài chính ngân hàng
-    - nông học
+    - lịch học ngày mai
+    - ngày mai tôi có môn gì
+    - lịch mai
+    - thời khóa biểu ngày mai
+    - ngày mai học gì
+    - mai có lớp không
+
+- intent: ask_next_class
+  examples: |
+    - tiết học tiếp theo
+    - môn tiếp theo là gì
+    - tiết sau học gì
+    - lớp tiếp theo
+    - sau này học môn gì
+
+- intent: ask_student_program
+  examples: |
+    - ctdt
+    - ctdt của tôi
+    - chương trình học của tôi
+    - chương trình học của sinh viên
+    - chương trình đào tạo của tôi
+    - xem chương trình học của mình
+    - chương trình đào tạo
+    - môn học trong chương trình
+    - tôi học những môn gì
+    - xem curriculum
+    - danh sách môn học
+    - chương trình học
+    - các môn tôi phải học
+    - môn học bắt buộc
+    - xem syllabus
+    - kế hoạch học tập
+    - chương trình của lớp tôi
+    - môn học theo khóa
+    - khht 
+    - kế hoạch học tập của tôi
+    - khht của tôi
+    - xem kế hoạch học tập của tôi
+    - xem chương trình học của tôi 
+

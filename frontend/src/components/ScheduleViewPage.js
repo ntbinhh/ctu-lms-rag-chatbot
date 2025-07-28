@@ -55,7 +55,7 @@ const ScheduleViewPage = () => {
   useEffect(() => {
     if (!hocKy || !namHoc) return;
     axios
-      .get("http://localhost:8000/weeks", {
+      .get("http://localhost:8000/weeks/", {
         params: { hoc_ky: hocKy, nam_hoc: namHoc },
       })
       .then((res) => {

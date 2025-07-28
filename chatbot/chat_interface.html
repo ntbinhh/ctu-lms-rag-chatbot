@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Lịch Học</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 500px;
+            height: 600px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #0c4da2 0%, #1e5bb8 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .chat-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .chat-header p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8f9fa;
+        }
+
+        .message {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .message.user {
+            justify-content: flex-end;
+        }
+
+        .message.bot {
+            justify-content: flex-start;
+        }
+
+        .message-content {
+            max-width: 80%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .message.user .message-content {
+            background: #0c4da2;
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .message.bot .message-content {
+            background: white;
+            color: #333;
+            border: 1px solid #e1e8ed;
+            border-bottom-left-radius: 4px;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            margin: 0 8px;
+        }
+
+        .message.user .message-avatar {
+            background: #0c4da2;
+            color: white;
+            order: 2;
+        }
+
+        .message.bot .message-avatar {
+            background: #e1e8ed;
+            color: #666;
+            order: 1;
+        }
+
+        .chat-input {
+            padding: 20px;
+            border-top: 1px solid #e1e8ed;
+            background: white;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .message-input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #e1e8ed;
+            border-radius: 25px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .message-input:focus {
+            border-color: #0c4da2;
+        }
+
+        .send-button {
+            padding: 12px 20px;
+            background: #0c4da2;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .send-button:hover {
+            background: #084086;
+        }
+
+        .send-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .typing-indicator {
+            display: none;
+            padding: 10px 16px;
+            background: white;
+            border: 1px solid #e1e8ed;
+            border-radius: 18px;
+            color: #666;
+            font-style: italic;
+            max-width: 80%;
+        }
+
+        .typing-indicator.show {
+            display: block;
+        }
+
+        .suggestions {
+            padding: 15px 20px;
+            background: white;
+            border-top: 1px solid #e1e8ed;
+        }
+
+        .suggestions-title {
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .suggestion-chips {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .suggestion-chip {
+            padding: 6px 12px;
+            background: #f0f3f7;
+            border: 1px solid #e1e8ed;
+            border-radius: 16px;
+            font-size: 12px;
+            color: #0c4da2;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .suggestion-chip:hover {
+            background: #0c4da2;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            .chat-container {
+                height: 100vh;
+                border-radius: 0;
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🤖 Chatbot Lịch Học</h1>
+            <p>Hỏi tôi về lịch học của bạn</p>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    Xin chào! Tôi là chatbot hỗ trợ xem lịch học. Bạn có thể hỏi tôi:
+                    
+• Lịch học hôm nay
+• Lịch học tuần này  
+• Lịch học ngày mai
+• Tiết học tiếp theo
+
+Hãy thử hỏi tôi nhé! 😊
+                </div>
+            </div>
+            <div class="typing-indicator" id="typingIndicator">
+                Bot đang trả lời...
+            </div>
+        </div>
+
+        <div class="suggestions">
+            <div class="suggestions-title">Gợi ý câu hỏi:</div>
+            <div class="suggestion-chips">
+                <div class="suggestion-chip" onclick="sendSuggestion('lịch học hôm nay')">📅 Lịch hôm nay</div>
+                <div class="suggestion-chip" onclick="sendSuggestion('hôm nay tôi có môn gì')">📚 Môn học hôm nay</div>
+                <div class="suggestion-chip" onclick="sendSuggestion('lịch học tuần này')">🗓️ Lịch tuần này</div>
+                <div class="suggestion-chip" onclick="sendSuggestion('lịch học ngày mai')">🌅 Lịch ngày mai</div>
+            </div>
+        </div>
+        
+        <div class="chat-input">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    class="message-input" 
+                    id="messageInput" 
+                    placeholder="Nhập câu hỏi của bạn..."
+                    onkeypress="handleKeyPress(event)"
+                >
+                <button class="send-button" id="sendButton" onclick="sendMessage()">
+                    Gửi
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const RASA_URL = 'http://localhost:5005/webhooks/rest/webhook';
+        let isTyping = false;
+
+        function addMessage(content, isUser = false) {
+            const messagesContainer = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${isUser ? 'user' : 'bot'}`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'message-avatar';
+            avatar.textContent = isUser ? '👤' : '🤖';
+            
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'message-content';
+            contentDiv.textContent = content;
+            
+            messageDiv.appendChild(avatar);
+            messageDiv.appendChild(contentDiv);
+            messagesContainer.appendChild(messageDiv);
+            
+            // Scroll to bottom
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function showTyping() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            typingIndicator.classList.add('show');
+            isTyping = true;
+            
+            const messagesContainer = document.getElementById('chatMessages');
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function hideTyping() {
+            const typingIndicator = document.getElementById('typingIndicator');
+            typingIndicator.classList.remove('show');
+            isTyping = false;
+        }
+
+        async function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const sendButton = document.getElementById('sendButton');
+            const message = input.value.trim();
+            
+            if (!message || isTyping) return;
+            
+            // Add user message
+            addMessage(message, true);
+            input.value = '';
+            
+            // Disable input while processing
+            sendButton.disabled = true;
+            showTyping();
+            
+            try {
+                const response = await fetch(RASA_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        sender: 'user',
+                        message: message
+                    })
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    
+                    if (data && data.length > 0) {
+                        // Add bot responses
+                        data.forEach(botResponse => {
+                            if (botResponse.text) {
+                                addMessage(botResponse.text, false);
+                            }
+                        });
+                    } else {
+                        addMessage('Xin lỗi, tôi không hiểu câu hỏi của bạn. Vui lòng thử lại.', false);
+                    }
+                } else {
+                    addMessage('Không thể kết nối với chatbot. Vui lòng kiểm tra server Rasa.', false);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                addMessage('Có lỗi xảy ra khi kết nối với chatbot. Vui lòng thử lại sau.', false);
+            } finally {
+                hideTyping();
+                sendButton.disabled = false;
+                input.focus();
+            }
+        }
+
+        function sendSuggestion(text) {
+            const input = document.getElementById('messageInput');
+            input.value = text;
+            sendMessage();
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter' && !event.shiftKey) {
+                event.preventDefault();
+                sendMessage();
+            }
+        }
+
+        // Focus input on load
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('messageInput').focus();
+        });
+    </script>
+</body>
+</html>

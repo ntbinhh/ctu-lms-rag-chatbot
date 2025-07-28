@@ -29,16 +29,43 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: Người dùng yêu cầu xem chương trình đào tạo
-  steps:
-    - intent: request_program
-    - action: program_form
-    - active_loop: program_form
 
-# - story: Người dùng điền xong form chương trình
-#   condition:
-#     - active_loop: program_form
-#   steps:
-#     - action: program_form
-#     - active_loop: null
-#     - action: action_submit_program
+
+- story: Hỏi lịch học hôm nay
+  steps:
+    - intent: ask_today_schedule
+    - action: action_get_today_schedule
+
+- story: Hỏi lịch học hôm nay sau khi chào hỏi
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_today_schedule
+    - action: action_get_today_schedule
+
+- story: Hỏi lịch học tuần này
+  steps:
+    - intent: ask_schedule_week
+    - action: action_get_schedule_week
+
+- story: Hỏi lịch học ngày mai
+  steps:
+    - intent: ask_schedule_tomorrow
+    - action: action_get_schedule_tomorrow
+
+- story: Hỏi tiết học tiếp theo
+  steps:
+    - intent: ask_next_class
+    - action: action_get_next_class
+
+- story: Hỏi chương trình đào tạo của sinh viên
+  steps:
+    - intent: ask_student_program
+    - action: action_get_student_program
+
+- story: Hỏi chương trình đào tạo sau chào hỏi
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_student_program
+    - action: action_get_student_program

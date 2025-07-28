@@ -1,5 +1,6 @@
 import React from "react";
 import { Menubar } from "primereact/menubar";
+import { Button } from "primereact/button";
 import { useNavigate } from "react-router-dom";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
@@ -39,15 +40,31 @@ const StudentHeader = () => {
   );
 
   const end = (
-    <button
-      className="p-button p-button-danger p-button-sm"
-      onClick={() => {
-        localStorage.clear();
-        navigate("/login");
-      }}
-    >
-      Đăng xuất
-    </button>
+    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+      <Button
+        icon="pi pi-comment"
+        rounded
+        size="small"
+        className="p-button-info"
+        onClick={() => {
+          // Trigger chatbot open event
+          window.dispatchEvent(new CustomEvent('openChatbot'));
+        }}
+        tooltip="Chatbot Hỗ Trợ"
+        tooltipOptions={{ position: 'bottom' }}
+        aria-label="Mở chatbot hỗ trợ"
+      />
+      <Button
+        label="Đăng xuất"
+        icon="pi pi-sign-out"
+        size="small"
+        className="p-button-danger"
+        onClick={() => {
+          localStorage.clear();
+          navigate("/login");
+        }}
+      />
+    </div>
   );
 
   return (

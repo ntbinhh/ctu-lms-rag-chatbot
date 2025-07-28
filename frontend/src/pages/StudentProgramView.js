@@ -5,6 +5,7 @@ import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import StudentHeader from "../components/StudentHeader";
+import ChatbotWidget from "../components/ChatbotWidget";
 import "./StudentProgramView.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
@@ -247,6 +248,9 @@ const StudentProgramView = () => {
           )}
         </div>
       </main>
+      
+      {/* Chatbot Widget */}
+      <ChatbotWidget />
     </div>
   );
 };

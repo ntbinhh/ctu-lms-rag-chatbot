@@ -9,6 +9,11 @@ intents:
   - mood_unhappy
   - bot_challenge
   - request_program
+  - ask_today_schedule
+  - ask_schedule_week
+  - ask_schedule_tomorrow
+  - ask_next_class
+  - ask_student_program
 
 entities:
   - year
@@ -39,25 +44,42 @@ slots:
     mappings:
       - type: custom
 
+  auth_token:
+    type: text
+    mappings:
+      - type: custom
+
 responses:
   utter_greet:
-    - text: "Hey! How are you?"
+    - text: "Xin chào! Tôi là chatbot hỗ trợ học tập. Bạn cần hỗ trợ gì hôm nay? 😊"
+    - text: "Chào bạn! Rất vui được gặp bạn. Tôi có thể giúp bạn về lịch học và chương trình đào tạo nhé! 🎓"
+    - text: "Hello! Tôi là trợ lý ảo của bạn. Hãy hỏi tôi về lịch học hoặc thông tin học tập nhé! 📚"
+    - text: "Chào buổi sáng/chiều/tối! Tôi sẵn sàng hỗ trợ bạn về các vấn đề học tập. Bạn muốn biết gì? ✨"
 
   utter_cheer_up:
-    - text: "Here is something to cheer you up:"
+    - text: "Đây là điều gì đó để bạn vui lên:"
       image: "https://media.giphy.com/media/l0M682Yh7zVbL6w8o/giphy.gif"
+    - text: "Đừng lo lắng! Mọi thứ sẽ ổn thôi. Tôi sẽ giúp bạn! 💪"
 
   utter_did_that_help:
-    - text: "Did that help you?"
+    - text: "Điều đó có giúp ích cho bạn không?"
+    - text: "Thông tin này có hữu ích không?"
+    - text: "Bạn còn cần hỗ trợ gì khác không?"
 
   utter_happy:
-    - text: "Great, carry on!"
+    - text: "Tuyệt vời! Cứ tiếp tục nhé! 👍"
+    - text: "Rất tốt! Tôi luôn sẵn sàng hỗ trợ bạn! 😊"
+    - text: "Tốt lắm! Hãy hỏi tôi bất cứ khi nào bạn cần! ✨"
 
   utter_goodbye:
-    - text: "Bye"
+    - text: "Tạm biệt! Chúc bạn học tập tốt! 📚"
+    - text: "Hẹn gặp lại bạn! Chúc một ngày tốt lành! 🌟"
+    - text: "Bye bye! Nhớ quay lại hỏi tôi nhé! 👋"
+    - text: "Chào tạm biệt! Chúc bạn thành công trong học tập! 🎓"
 
   utter_iamabot:
-    - text: "I am a bot, powered by Rasa."
+    - text: "Tôi là chatbot được phát triển bằng Rasa, chuyên hỗ trợ về học tập! 🤖"
+    - text: "Tôi là trợ lý ảo thông minh, có thể giúp bạn về lịch học và chương trình đào tạo! 💻"
 
   utter_ask_year:
     - text: "Bạn muốn xem chương trình của năm nào?"
@@ -71,6 +93,15 @@ responses:
   utter_submit_program:
     - text: "Đây là chương trình học của bạn:\n{program_info}"
 
+  utter_ask_login:
+    - text: "Để xem lịch học, bạn cần đăng nhập vào hệ thống. Vui lòng cung cấp mã sinh viên và mật khẩu."
+
+  utter_no_schedule_today:
+    - text: "Hôm nay bạn không có lịch học nào. Có thể nghỉ ngơi hoặc ôn bài nhé! 😊"
+
+  utter_schedule_error:
+    - text: "Xin lỗi, tôi không thể lấy thông tin lịch học lúc này. Vui lòng thử lại sau hoặc kiểm tra trên hệ thống."
+
 forms:
   program_form:
     required_slots:
@@ -80,6 +111,11 @@ forms:
 
 actions:
   - action_submit_program
+  - action_get_today_schedule
+  - action_get_schedule_week
+  - action_get_schedule_tomorrow
+  - action_get_next_class
+  - action_get_student_program
 
 session_config:
   session_expiration_time: 60

@@ -13,16 +13,27 @@ rules:
   - action: utter_iamabot
 
 
-- rule: Bắt đầu form chương trình học
+- rule: Trả lời lịch học hôm nay
   steps:
-    - intent: request_program
-    - action: program_form
-    - active_loop: program_form
+    - intent: ask_today_schedule
+    - action: action_get_today_schedule
 
-- rule: Gửi chương trình học khi hoàn tất form
-  condition:
-    - active_loop: program_form
+- rule: Trả lời lịch học tuần này
   steps:
-    - action: program_form
-    - active_loop: null
-    - action: action_submit_program
+    - intent: ask_schedule_week
+    - action: action_get_schedule_week
+
+- rule: Trả lời lịch học ngày mai
+  steps:
+    - intent: ask_schedule_tomorrow
+    - action: action_get_schedule_tomorrow
+
+- rule: Trả lời tiết học tiếp theo
+  steps:
+    - intent: ask_next_class
+    - action: action_get_next_class
+
+- rule: Trả lời chương trình đào tạo sinh viên
+  steps:
+    - intent: ask_student_program
+    - action: action_get_student_program
