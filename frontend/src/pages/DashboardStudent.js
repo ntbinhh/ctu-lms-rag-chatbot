@@ -1,3 +1,10 @@
+import StudentHeader from "../components/StudentHeader";
+
 export default function DashboardStudent() {
-  return <h2>📚 Dashboard Sinh viên</h2>;
+  return (
+    <>
+      <StudentHeader />
+      <h2>📚 Dashboard Sinh viên</h2>
+    </>
+  );
 }

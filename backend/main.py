@@ -44,4 +44,5 @@ app.include_router(teacher_router)
 app.include_router(class_router, prefix="/admin")
 app.include_router(week_router, prefix="/weeks")
 app.include_router(schedule_router, prefix="/admin")
+app.include_router(schedule_router)  # Thêm route không có prefix cho sinh viên
 app.include_router(students_router, prefix="/admin")

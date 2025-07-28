@@ -5,6 +5,7 @@ import models, schemas
 from passlib.hash import bcrypt
 from typing import List
 from pydantic import BaseModel
+from auth import get_current_user
 
 router = APIRouter()
 class AddStudentsRequest(BaseModel):
@@ -99,3 +100,30 @@ def delete_student(student_id: int, db: Session = Depends(get_db)):
     db.commit()
 
     return {"message": f"Đã xóa học viên với ID {student_id}"}
+
+@router.get("/student/profile")
+def get_student_profile(
+    current_user=Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Lấy thông tin hồ sơ sinh viên hiện tại"""
+    if current_user.role != "student":
+        raise HTTPException(status_code=403, detail="Chỉ sinh viên mới có thể xem hồ sơ của mình")
+
+    # Tìm thông tin sinh viên dựa trên user hiện tại
+    student = db.query(models.Student).join(models.Class).filter(
+        models.Student.student_code == current_user.username
+    ).first()
+    
+    if not student:
+        raise HTTPException(status_code=404, detail="Không tìm thấy thông tin sinh viên")
+
+    return {
+        "id": student.id,
+        "name": student.name,
+        "student_code": student.student_code,
+        "dob": student.dob,
+        "gender": student.gender,
+        "class_id": student.class_id,
+        "class_name": student.class_obj.ma_lop if student.class_obj else None
+    }

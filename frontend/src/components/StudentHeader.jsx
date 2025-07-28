@@ -1,0 +1,60 @@
+import React from "react";
+import { Menubar } from "primereact/menubar";
+import { useNavigate } from "react-router-dom";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
+
+const StudentHeader = () => {
+  const navigate = useNavigate();
+
+  const menuItems = [
+    {
+      label: "Chương trình đào tạo",
+      icon: "pi pi-book",
+      command: () => navigate("/student/programs"),
+    },
+    {
+      label: "Lịch học",
+      icon: "pi pi-calendar",
+      command: () => navigate("/student/schedule"),
+    },
+  ];
+
+  const start = (
+    <div
+      className="p-d-flex p-ai-center"
+      style={{ cursor: "pointer", display: "flex", alignItems: "center", gap: "1rem" }}
+      onClick={() => navigate("/student")}
+    >
+      <img src="/logo192.png" alt="Logo" style={{ height: "32px", cursor: "pointer" }} />
+      <div style={{ lineHeight: "1.2" }}>
+        <div style={{ fontSize: "0.85rem", color: "#000000", fontWeight: 500 }}>
+          TRUNG TÂM LIÊN KẾT ĐÀO TẠO
+        </div>
+        <div style={{ fontWeight: 700, fontSize: "1.2rem", color: "#0c4da2" }}>
+          TRƯỜNG ĐẠI HỌC CẦN THƠ
+        </div>
+      </div>
+    </div>
+  );
+
+  const end = (
+    <button
+      className="p-button p-button-danger p-button-sm"
+      onClick={() => {
+        localStorage.clear();
+        navigate("/login");
+      }}
+    >
+      Đăng xuất
+    </button>
+  );
+
+  return (
+    <div className="student-header" style={{ position: "relative", zIndex: 1000 }}>
+      <Menubar model={menuItems} start={start} end={end} />
+    </div>
+  );
+};
+
+export default StudentHeader;

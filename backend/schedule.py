@@ -87,6 +87,34 @@ def get_schedule(
         ).all()
     return schedules
 
+@router.get("/student/schedules", response_model=List[schemas.ScheduleItemOut])
+def get_student_schedule(
+    hoc_ky: str,
+    nam_hoc: int,
+    db: Session = Depends(get_db),
+    current_user=Depends(get_current_user),
+):
+    if current_user.role != "student":
+        raise HTTPException(status_code=403, detail="Chỉ sinh viên mới có thể xem lịch học của mình")
+
+    # Tìm thông tin sinh viên dựa trên user hiện tại
+    student = db.query(models.Student).filter(models.Student.student_code == current_user.username).first()
+    if not student:
+        raise HTTPException(status_code=404, detail="Không tìm thấy thông tin sinh viên")
+
+    if not student.class_id:
+        raise HTTPException(status_code=404, detail="Sinh viên chưa được phân lớp")
+
+    schedules = db.query(models.ScheduleItem)        .options(
+            joinedload(models.ScheduleItem.subject),
+            joinedload(models.ScheduleItem.teacher_profile),
+        )        .filter_by(
+            class_id=student.class_id,
+            hoc_ky=hoc_ky,
+            nam_hoc=nam_hoc
+        ).all()
+    return schedules
+
 @router.delete("/schedules/{schedule_id}")
 def delete_schedule(
     schedule_id: int,

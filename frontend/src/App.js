@@ -37,6 +37,8 @@ import AddSchedulePage from "./components/AddSchedulePage";
 import ScheduleViewPage from "./components/ScheduleViewPage";
 import AddStudentForm from "./components/AddStudentForm";
 import StudentList from "./components/StudentList";
+import StudentProgramView from "./pages/StudentProgramView";
+import StudentScheduleView from "./pages/StudentScheduleView";
 
 function App() {
   return (
@@ -193,6 +195,22 @@ function App() {
           element={
             <ProtectedRoute allowedRoles={["student"]}>
               <DashboardStudent />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/student/programs"
+          element={
+            <ProtectedRoute allowedRoles={["student"]}>
+              <StudentProgramView />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/student/schedule"
+          element={
+            <ProtectedRoute allowedRoles={["student"]}>
+              <StudentScheduleView />
             </ProtectedRoute>
           }
         />

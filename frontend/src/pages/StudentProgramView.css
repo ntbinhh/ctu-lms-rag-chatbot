@@ -1,0 +1,248 @@
+/* StudentProgramView.css */
+
+.student-program-container {
+  font-family: 'Segoe UI', Roboto, Inter, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.student-program-main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 120px);
+}
+
+.student-program-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #0c4da2;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-error {
+  background: #fee;
+  border: 1px solid #fcc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #c33;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-form-container {
+  display: grid;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.student-form-step {
+  margin-bottom: 1rem;
+}
+
+.student-form-step h3 {
+  margin-bottom: 0.8rem;
+  color: #0c4da2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.student-faculty-buttons,
+.student-major-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.student-faculty-btn,
+.student-major-btn {
+  border-radius: 20px !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+}
+
+.student-faculty-btn:hover,
+.student-major-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2) !important;
+}
+
+.student-program-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.student-program-header-left h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.student-program-header-left p {
+  margin: 0;
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+.student-program-header-right {
+  text-align: right;
+}
+
+.student-program-count {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.student-program-count-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-top: 0.2rem;
+}
+
+.student-datatable-container {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.student-datatable-header {
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+  font-weight: 600;
+  color: #0c4da2;
+  font-size: 1.1rem;
+  border-bottom: 2px solid #0c4da2;
+}
+
+.student-datatable-footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0c4da2;
+  border-top: 2px solid #0c4da2;
+}
+
+.student-welcome-container {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+  background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%);
+  border-radius: 20px;
+  margin-top: 2rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.student-welcome-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #0c4da2;
+  animation: bounce 2s infinite;
+}
+
+.student-welcome-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #0c4da2;
+  font-weight: 700;
+}
+
+.student-welcome-text {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Custom styles for PrimeReact components */
+.p-datatable .p-datatable-tbody > tr > td {
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.p-datatable .p-datatable-thead > tr > th {
+  padding: 1rem 0.75rem;
+  background: #f8f9fa;
+  color: #0c4da2;
+  font-weight: 600;
+  border-bottom: 2px solid #0c4da2;
+}
+
+.p-dropdown {
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.p-dropdown:focus {
+  border-color: #0c4da2;
+  box-shadow: 0 0 0 3px rgba(12, 77, 162, 0.1);
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .student-program-main {
+    padding: 1rem;
+  }
+  
+  .student-program-title {
+    font-size: 1.5rem;
+  }
+  
+  .student-form-container {
+    padding: 1rem;
+  }
+  
+  .student-program-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .student-program-header-right {
+    text-align: center;
+  }
+  
+  .student-faculty-buttons,
+  .student-major-buttons {
+    justify-content: center;
+  }
+}

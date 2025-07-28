@@ -1,0 +1,531 @@
+/* StudentScheduleView.css */
+
+.student-schedule-container {
+  font-family: 'Segoe UI', Roboto, Inter, sans-serif;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.student-schedule-main {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.student-schedule-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.student-schedule-title {
+  text-align: center;
+  color: #0c4da2;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.student-schedule-form {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.student-info-card {
+  background: linear-gradient(135deg, #0c4da2 0%, #1565c0 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.student-info-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.student-info-avatar {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.student-info-details h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.student-info-details p {
+  margin: 0.2rem 0;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+.student-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.student-form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.student-form-field label {
+  font-weight: 600;
+  color: #0c4da2;
+  font-size: 1rem;
+}
+
+.student-dropdown {
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.student-dropdown:focus {
+  border-color: #0c4da2;
+  box-shadow: 0 0 0 3px rgba(12, 77, 162, 0.1);
+}
+
+.student-week-selector {
+  background: linear-gradient(135deg, #0c4da2 0%, #1565c0 100%);
+  color: white;
+  border: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.student-week-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.student-week-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  flex: 1;
+}
+
+.student-week-dropdown {
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 8px;
+}
+
+.student-timetable-card {
+  background: rgba(255, 255, 255, 0.98);
+  border: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.student-timetable-container {
+  padding: 0;
+  overflow-x: auto;
+}
+
+.student-timetable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  background: white;
+}
+
+.student-timetable th,
+.student-timetable td {
+  border: 1px solid #dee2e6;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+.period-header {
+  background: linear-gradient(135deg, #0c4da2 0%, #1e5bb8 100%);
+  color: white;
+  font-weight: 700;
+  width: 100px;
+  padding: 1rem 0.5rem;
+}
+
+.day-header {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #0c4da2;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+  min-width: 150px;
+}
+
+.day-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.day-date {
+  display: block;
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.2rem;
+}
+
+.period-cell {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #0c4da2;
+  font-weight: 600;
+  padding: 1rem 0.5rem;
+}
+
+.schedule-cell {
+  padding: 0.5rem;
+  height: 100px;
+  vertical-align: top;
+  position: relative;
+}
+
+.empty-cell {
+  background: #fafafa;
+}
+
+.has-class {
+  background: linear-gradient(135deg, #e8f4f8 0%, #f0f7ff 100%);
+  border-left: 4px solid #0c4da2;
+  box-shadow: inset 0 0 0 1px rgba(12, 77, 162, 0.1);
+}
+
+.class-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  height: 100%;
+  justify-content: center;
+  padding: 0.3rem;
+}
+
+.subject-info {
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+
+.subject-name {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0c4da2;
+  line-height: 1.2;
+  margin-bottom: 0.1rem;
+}
+
+.subject-code {
+  font-size: 0.65rem;
+  color: #666;
+  font-style: italic;
+}
+
+.teacher-info,
+.room-info,
+.class-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  color: #555;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0.15rem 0.3rem;
+  border-radius: 8px;
+  border-left: 3px solid;
+}
+
+.teacher-info {
+  border-left-color: #4caf50;
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.08) 0%, rgba(139, 195, 74, 0.08) 100%);
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(76, 175, 80, 0.1);
+}
+
+.teacher-content {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.1rem 0;
+}
+
+.teacher-content i {
+  color: #4caf50;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.teacher-text {
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 0.65rem;
+  line-height: 1.2;
+  text-shadow: 0 0.5px 1px rgba(255, 255, 255, 0.8);
+}
+
+.room-info {
+  border-left-color: #ff9800;
+  background: rgba(255, 152, 0, 0.1);
+}
+
+.class-type {
+  border-left-color: #9c27b0;
+  background: rgba(156, 39, 176, 0.1);
+}
+
+.subject-tag {
+  font-size: 0.75rem !important;
+  padding: 0.25rem 0.5rem !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  background: #2196f3 !important;
+}
+
+.teacher-tag {
+  font-size: 0.7rem !important;
+  padding: 0.2rem 0.4rem !important;
+  border-radius: 10px !important;
+  background: #4caf50 !important;
+}
+
+.room-tag {
+  font-size: 0.65rem !important;
+  padding: 0.15rem 0.3rem !important;
+  border-radius: 8px !important;
+  background: #ff9800 !important;
+}
+
+.student-pagination-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.student-paginator {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.student-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  color: #0c4da2;
+}
+
+.student-loading p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.student-no-data,
+.student-welcome-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.student-no-data-content,
+.student-welcome-content {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: #666;
+}
+
+.student-no-data-content h3,
+.student-welcome-content h3 {
+  color: #0c4da2;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 700;
+}
+
+.student-no-data-content p,
+.student-welcome-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Hover effects */
+.has-class:hover {
+  background: linear-gradient(135deg, #d4edda 0%, #e1f3ff 100%);
+  transform: scale(1.02);
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 20px rgba(12, 77, 162, 0.25);
+  border-left: 4px solid #0c4da2;
+  border: 2px solid rgba(12, 77, 162, 0.3);
+}
+
+.has-class:hover .subject-name {
+  color: #0c4da2;
+  font-weight: 800;
+}
+
+.has-class:hover .teacher-info,
+.has-class:hover .room-info,
+.has-class:hover .class-type {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(12, 77, 162, 0.15);
+  transition: all 0.2s ease;
+}
+
+.has-class:hover .teacher-info {
+  background: linear-gradient(135deg, rgba(76, 175, 80, 0.15) 0%, rgba(139, 195, 74, 0.15) 100%);
+  border-left-color: #388e3c;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+.has-class:hover .teacher-content i {
+  color: #2e7d32;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.has-class:hover .teacher-text {
+  color: #1b5e20;
+  font-weight: 600;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .student-schedule-main {
+    padding: 1rem;
+  }
+  
+  .student-schedule-title {
+    font-size: 1.6rem;
+  }
+  
+  .student-form-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .student-week-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .student-week-dropdown {
+    min-width: 100%;
+  }
+  
+  .student-timetable {
+    font-size: 0.75rem;
+  }
+  
+  .day-header,
+  .schedule-cell {
+    min-width: 100px;
+  }
+  
+  .subject-name {
+    font-size: 0.65rem !important;
+  }
+  
+  .subject-code {
+    font-size: 0.55rem !important;
+  }
+  
+  .teacher-info,
+  .room-info,
+  .class-type {
+    font-size: 0.55rem !important;
+    padding: 0.1rem 0.2rem !important;
+  }
+  
+  .teacher-content {
+    gap: 0.2rem !important;
+  }
+  
+  .teacher-content i {
+    font-size: 0.6rem !important;
+  }
+  
+  .teacher-text {
+    font-size: 0.55rem !important;
+  }
+  
+  .subject-tag,
+  .teacher-tag,
+  .room-tag {
+    font-size: 0.6rem !important;
+    padding: 0.15rem 0.25rem !important;
+  }
+  
+  .class-info {
+    gap: 0.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-timetable-container {
+    padding: 0;
+  }
+  
+  .student-timetable {
+    font-size: 0.65rem;
+  }
+  
+  .schedule-cell {
+    height: 80px;
+    padding: 0.3rem;
+  }
+  
+  .period-cell,
+  .day-header {
+    padding: 0.5rem 0.2rem;
+  }
+}
+
+/* Animation for loading */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.class-info {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.pi-spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Card hover effects */
+.student-schedule-form:hover,
+.student-timetable-card:hover,
+.student-pagination-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
