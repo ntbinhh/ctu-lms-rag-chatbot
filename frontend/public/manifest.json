@@ -1,25 +1,169 @@
 {
-  "short_name": "Trung tâm liên kết Đào tạo",
-  "name": "Trung tâm liên kết Đào tạo - Trường Đại học Cần Thơ",
-  "icons": [
+  "name": "CTU Learning Management System",
+  "short_name": "CTU LMS",
+  "description": "Hệ thống quản lý đào tạo Đại học Cần Thơ - Cơ sở An Giang",
+  "version": "2.0.0",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0c4da2",
+  "background_color": "#ffffff",
+  "lang": "vi",
+  "dir": "ltr",
+  "categories": ["education", "productivity", "learning"],
+  "screenshots": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/screenshots/desktop-home.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Trang chủ CTU LMS trên desktop"
     },
     {
-      "src": "logo192.png",
+      "src": "/screenshots/mobile-schedule.png",
+      "sizes": "390x844",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "platform": "narrow",
+      "label": "Lịch học trên mobile"
     }
   ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16 32x32",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/347.png",
+      "type": "image/png",
+      "sizes": "347x347",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Lịch học",
+      "short_name": "Lịch học",
+      "description": "Xem lịch học hàng ngày",
+      "url": "/schedule",
+      "icons": [
+        {
+          "src": "/icons/calendar-shortcut.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Điểm số",
+      "short_name": "Điểm số",
+      "description": "Xem điểm số và kết quả học tập",
+      "url": "/grades",
+      "icons": [
+        {
+          "src": "/icons/grades-shortcut.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Thông báo",
+      "short_name": "Thông báo",
+      "description": "Xem thông báo mới nhất",
+      "url": "/notifications",
+      "icons": [
+        {
+          "src": "/icons/notifications-shortcut.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Tin tức",
+      "short_name": "Tin tức",
+      "description": "Đọc tin tức và thông tin mới nhất",
+      "url": "/news",
+      "icons": [
+        {
+          "src": "/icons/news-shortcut.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "webapp",
+      "url": "https://ctu-lms.edu.vn"
+    }
+  ],
+  "prefer_related_applications": false,
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "launch_handler": {
+    "client_mode": "navigate-existing"
+  },
+  "handle_links": "preferred",
+  "protocol_handlers": [
+    {
+      "protocol": "web+ctulms",
+      "url": "/?action=%s"
+    }
+  ],
+  "file_handlers": [
+    {
+      "action": "/open-file",
+      "accept": {
+        "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet": [".xlsx"],
+        "application/pdf": [".pdf"],
+        "text/csv": [".csv"]
+      }
+    }
+  ],
+  "share_target": {
+    "action": "/share",
+    "method": "POST",
+    "enctype": "multipart/form-data",
+    "params": {
+      "title": "title",
+      "text": "text",
+      "url": "url",
+      "files": [
+        {
+          "name": "file",
+          "accept": [
+            "image/*",
+            "application/pdf",
+            "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          ]
+        }
+      ]
+    }
+  },
+  "permissions": [
+    "notifications",
+    "background-sync",
+    "persistent-storage"
+  ],
+  "features": [
+    "cross-origin-isolated"
+  ]
 }

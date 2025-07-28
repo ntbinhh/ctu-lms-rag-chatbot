@@ -1,0 +1,179 @@
+/* Mobile Bottom Navigation Styles */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5rem 0 calc(0.5rem + env(safe-area-inset-bottom));
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  min-height: 60px;
+  flex: 1;
+  max-width: 80px;
+}
+
+.nav-item i {
+  font-size: 1.25rem;
+  color: #6b7280;
+  transition: all 0.3s ease;
+  margin-bottom: 0.25rem;
+}
+
+.nav-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-align: center;
+  line-height: 1.2;
+}
+
+/* Active state */
+.nav-item.active {
+  transform: translateY(-2px);
+}
+
+.nav-item.active i {
+  color: var(--item-color);
+  transform: scale(1.1);
+}
+
+.nav-item.active .nav-label {
+  color: var(--item-color);
+  font-weight: 600;
+}
+
+.active-indicator {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 3px;
+  background: var(--item-color);
+  border-radius: 2px;
+  animation: slideDown 0.3s ease;
+}
+
+/* Hover effects for desktop */
+@media (hover: hover) {
+  .nav-item:hover {
+    background: rgba(0, 0, 0, 0.05);
+    transform: translateY(-1px);
+  }
+  
+  .nav-item:hover i {
+    transform: scale(1.05);
+  }
+}
+
+/* Touch feedback */
+.nav-item:active {
+  transform: scale(0.95);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Different screen sizes */
+@media (max-width: 360px) {
+  .nav-item {
+    padding: 0.4rem 0.5rem;
+    min-height: 55px;
+  }
+  
+  .nav-item i {
+    font-size: 1.1rem;
+  }
+  
+  .nav-label {
+    font-size: 0.7rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .mobile-bottom-nav {
+    background: rgba(0, 0, 0, 0.9);
+    border-top-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .nav-item i,
+  .nav-label {
+    color: #9ca3af;
+  }
+  
+  .nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .nav-item:active {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Safe area adjustments for devices with notch/home indicator */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .mobile-bottom-nav {
+    padding-bottom: calc(0.5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* Add space at bottom of main content when bottom nav is present */
+.has-bottom-nav {
+  padding-bottom: 90px;
+}
+
+@media (max-width: 360px) {
+  .has-bottom-nav {
+    padding-bottom: 85px;
+  }
+}
+
+/* Hide/show animation when scrolling */
+.mobile-bottom-nav.hidden {
+  transform: translateY(100%);
+}
+
+.mobile-bottom-nav.visible {
+  transform: translateY(0);
+}

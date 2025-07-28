@@ -1,0 +1,572 @@
+/* Enhanced AddStudentForm Component Styles */
+.add-student-container {
+  background: white;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.add-student-card {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: none;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.add-student-card .p-card-content {
+  padding: 0;
+}
+
+/* Page Header */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 30px;
+  background: linear-gradient(135deg, #0c4da2, #1976d2);
+  color: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.page-title i {
+  font-size: 1.8rem;
+}
+
+.page-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 400;
+}
+
+/* Class Selector Section */
+.class-selector-section {
+  padding: 25px 30px;
+  background: white;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.selector-wrapper {
+  margin-bottom: 20px;
+}
+
+.selector-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #0c4da2;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.class-dropdown {
+  width: 100%;
+  max-width: 500px;
+}
+
+.class-dropdown .p-dropdown {
+  border-radius: 12px;
+  border: 2px solid #e1e5e9;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  padding: 2px;
+}
+
+.class-dropdown .p-dropdown:not(.p-disabled):hover {
+  border-color: #0c4da2;
+  box-shadow: 0 0 0 0.2rem rgba(12, 77, 162, 0.1);
+}
+
+.class-dropdown .p-dropdown:not(.p-disabled).p-focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.2rem rgba(12, 77, 162, 0.2);
+  border-color: #0c4da2;
+}
+
+.class-info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e1e5e9;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.info-value {
+  color: #6c757d;
+  font-size: 0.9rem;
+}
+
+.info-badge {
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+}
+
+/* Input Method Section */
+.input-method-section {
+  padding: 25px 30px 15px 30px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #0c4da2;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+}
+
+.method-selector {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.method-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.method-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  color: #495057;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.method-label:hover {
+  color: #0c4da2;
+}
+
+.method-label i {
+  font-size: 1.1rem;
+}
+
+/* Input Panels */
+.input-panel {
+  margin: 20px 30px;
+  border-radius: 12px;
+  border: 1px solid #e1e5e9;
+}
+
+.input-panel .p-panel-header {
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 12px 12px 0 0;
+  border-bottom: 1px solid #e1e5e9;
+  padding: 15px 20px;
+}
+
+.input-panel .p-panel-content {
+  padding: 20px;
+}
+
+/* Paste Area */
+.paste-instructions {
+  margin-bottom: 15px;
+  padding: 10px;
+  background: #e7f3ff;
+  border-radius: 8px;
+  border-left: 4px solid #0c4da2;
+}
+
+.paste-instructions p {
+  margin: 0;
+  color: #0c4da2;
+  font-size: 0.9rem;
+}
+
+.paste-instructions i {
+  margin-right: 8px;
+}
+
+.paste-area {
+  border: 2px dashed #0c4da2;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: text;
+  background: #f8f9ff;
+  transition: all 0.3s ease;
+}
+
+.paste-area:hover {
+  background: #f0f4ff;
+  border-color: #1976d2;
+}
+
+.paste-area:focus {
+  outline: none;
+  background: #e7f3ff;
+  border-color: #1976d2;
+}
+
+.paste-area p {
+  margin: 10px 0 5px 0;
+  font-weight: 600;
+  color: #0c4da2;
+  font-size: 1.1rem;
+}
+
+.paste-area small {
+  color: #6c757d;
+}
+
+/* Manual Form */
+.manual-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-weight: 600;
+  color: #495057;
+  font-size: 0.9rem;
+}
+
+.form-field .p-inputtext,
+.form-field .p-dropdown,
+.form-field .p-calendar {
+  border-radius: 8px;
+  border: 2px solid #e1e5e9;
+  transition: all 0.3s ease;
+}
+
+.form-field .p-inputtext:focus,
+.form-field .p-dropdown:not(.p-disabled).p-focus,
+.form-field .p-calendar:not(.p-disabled).p-focus {
+  border-color: #0c4da2;
+  box-shadow: 0 0 0 0.2rem rgba(12, 77, 162, 0.2);
+}
+
+/* Student DataTable */
+.student-toolbar {
+  background: white !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 15px 30px !important;
+  border-bottom: 1px solid #e9ecef !important;
+  margin: 0 !important;
+}
+
+.toolbar-start h4 {
+  margin: 0;
+  color: #0c4da2;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toolbar-end {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.student-datatable {
+  margin: 0 30px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e1e5e9;
+}
+
+.student-datatable .p-datatable-thead > tr > th {
+  background: linear-gradient(135deg, #0c4da2, #1976d2) !important;
+  color: white !important;
+  border: none !important;
+  padding: 15px 12px !important;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+  text-align: left !important;
+}
+
+.student-datatable .p-datatable-tbody > tr {
+  transition: all 0.2s ease;
+}
+
+.student-datatable .p-datatable-tbody > tr:hover {
+  background: rgba(12, 77, 162, 0.05) !important;
+}
+
+.student-datatable .p-datatable-tbody > tr > td {
+  padding: 15px 12px !important;
+  border-bottom: 1px solid #f1f3f4 !important;
+  font-size: 0.9rem !important;
+}
+
+/* Student Name Cell */
+.student-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.student-avatar {
+  flex-shrink: 0;
+  font-weight: 600 !important;
+  font-size: 0.9rem !important;
+}
+
+.student-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.student-name {
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.student-email {
+  font-size: 0.8rem;
+  color: #6c757d;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* DOB Cell */
+.dob-cell {
+  text-align: left;
+}
+
+.dob-cell small {
+  display: block;
+  margin-top: 2px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.action-buttons .p-button {
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 8px !important;
+}
+
+/* Submit Section */
+.submit-section {
+  padding: 30px;
+  text-align: center;
+  border-top: 1px solid #e9ecef;
+  background: #f8f9fa;
+}
+
+.submit-btn {
+  min-width: 200px !important;
+  padding: 12px 30px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 25px !important;
+  transition: all 0.3s ease !important;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.3) !important;
+}
+
+/* No Class Selected */
+.no-class-selected {
+  text-align: center;
+  padding: 80px 20px;
+  color: #6c757d;
+}
+
+.no-class-selected h3 {
+  margin: 20px 0 10px 0;
+  color: #495057;
+}
+
+.no-class-selected p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .class-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .info-item {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-student-container {
+    padding: 10px;
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .class-selector-section,
+  .input-method-section {
+    padding: 20px;
+  }
+
+  .input-panel {
+    margin: 20px 20px;
+  }
+
+  .method-selector {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .student-toolbar {
+    padding: 15px 20px !important;
+  }
+
+  .student-datatable {
+    margin: 0 20px;
+  }
+
+  .submit-section {
+    padding: 20px;
+  }
+
+  .submit-btn {
+    width: 100% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.3rem;
+  }
+
+  .student-datatable .p-datatable-thead > tr > th,
+  .student-datatable .p-datatable-tbody > tr > td {
+    padding: 10px 8px !important;
+    font-size: 0.8rem !important;
+  }
+
+  .class-info {
+    padding: 12px;
+  }
+
+  .info-item {
+    font-size: 0.85rem;
+  }
+
+  .paste-area {
+    padding: 30px 15px;
+  }
+}
+
+/* Animation for new features */
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.add-student-card {
+  animation: slideInFromRight 0.6s ease-out;
+}
+
+/* Focus states for accessibility */
+.student-datatable .p-datatable-tbody > tr:focus {
+  outline: 2px solid #0c4da2;
+  outline-offset: -2px;
+}
+
+.action-buttons .p-button:focus-visible {
+  outline: 2px solid #0c4da2;
+  outline-offset: 2px;
+}
+
+/* Toast adjustments */
+.p-toast {
+  z-index: 9999;
+}
+
+/* Panel header styling */
+.input-panel .p-panel-header .p-panel-title {
+  font-weight: 600;
+  color: #0c4da2;
+}
+
+/* Divider styling */
+.p-divider.p-divider-horizontal {
+  margin: 0;
+  border-color: #e9ecef;
+}
