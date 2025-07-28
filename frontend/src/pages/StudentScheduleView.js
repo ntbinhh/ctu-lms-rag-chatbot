@@ -47,7 +47,7 @@ const StudentScheduleView = () => {
   const [error, setError] = useState("");
   const [studentInfo, setStudentInfo] = useState(null);
   const [todaySchedule, setTodaySchedule] = useState([]);
-  const [roomDetails, setRoomDetails] = useState({});
+  const [roomCache, setRoomCache] = useState({}); // Cache để lưu thông tin phòng
 
   const yearNow = new Date().getFullYear();
   const academicYears = Array.from({ length: 5 }, (_, i) => {
@@ -112,78 +112,69 @@ const StudentScheduleView = () => {
     return currentWeek?.week || null;
   };
 
-  // Fetch room details by room_id
-  const fetchRoomDetails = async (roomId) => {
-    if (!roomId || roomDetails[roomId]) return roomDetails[roomId];
-    
-    try {
-      console.log(`Fetching room details for room_id: ${roomId}`);
-      const response = await axios.get(`http://localhost:8000/rooms/${roomId}`);
-      const roomData = response.data;
-      console.log(`Room data for ${roomId}:`, roomData);
-      
-      // Cập nhật state ngay lập tức
-      setRoomDetails(prev => {
-        const newDetails = {
-          ...prev,
-          [roomId]: roomData
-        };
-        console.log("Updated roomDetails:", newDetails);
-        return newDetails;
-      });
-      return roomData;
-    } catch (error) {
-      console.error(`Không thể lấy thông tin phòng ${roomId}:`, error);
-      // Nếu API fail, lưu null để không fetch lại
-      setRoomDetails(prev => ({
-        ...prev,
-        [roomId]: null
-      }));
-      return null;
-    }
-  };
-
   // Get room display name
   const getRoomDisplayName = (item) => {
-    console.log("Getting room display for item:", item);
-    console.log("Current roomDetails:", roomDetails);
-    
-    // Nếu có room_id và đã fetch được thông tin chi tiết
-    if (item.room_id && roomDetails[item.room_id]) {
-      const room = roomDetails[item.room_id];
-      console.log("Found room details:", room);
-      
-      if (room && room.name) {
-        // Hiển thị building - name nếu có building
-        if (room.building) {
-          return `${room.building} - ${room.name}`;
-        }
-        // Chỉ hiển thị name nếu không có building
-        return room.name;
+    // Nếu có thông tin phòng trong cache
+    if (item.room_id && roomCache[item.room_id]) {
+      const room = roomCache[item.room_id];
+      if (room.building && room.room_number) {
+        return `${room.building}/${room.room_number}`;
+      }
+      if (room.room_number) {
+        return `P.${room.room_number}`;
       }
     }
     
-    // Ưu tiên thông tin room object từ API (fallback)
-    if (item.room?.room_number && item.room?.building) {
-      return `${item.room.building} - Phòng ${item.room.room_number}`;
-    }
-    if (item.room?.room_number || item.room?.name) {
-      return `Phòng ${item.room.room_number || item.room.name}`;
-    }
-    
-    // Nếu có room_id nhưng chưa fetch được thông tin (đang loading)
-    if (item.room_id && roomDetails[item.room_id] === undefined) {
-      console.log("Room details not loaded yet for:", item.room_id);
-      return `Loading...`;
-    }
-    
-    // Nếu API fail hoặc không có thông tin
-    if (item.room_id && roomDetails[item.room_id] === null) {
-      console.log("API failed for room_id:", item.room_id);
-      return `Phòng ${item.room_id}`;
+    // Fallback: hiển thị room_id nếu chưa có thông tin chi tiết
+    if (item.room_id) {
+      return `P.${item.room_id}`;
     }
     
     return null;
+  };
+
+  // Fetch room details by room_id
+  const fetchRoomDetails = async (roomId) => {
+    if (!roomId || roomCache[roomId]) return;
+    
+    try {
+      // Thử endpoint public trước (không cần authentication)
+      const response = await axios.get(`http://localhost:8000/manager/rooms/public/${roomId}`);
+      const roomData = response.data;
+      
+      console.log(`Fetched room ${roomId}:`, roomData);
+      
+      // Cập nhật cache
+      setRoomCache(prev => ({
+        ...prev,
+        [roomId]: roomData
+      }));
+    } catch (error) {
+      console.error(`Không thể tải thông tin phòng ${roomId}:`, error);
+      
+      // Fallback: thử endpoint có authentication
+      try {
+        const token = localStorage.getItem("token");
+        const headers = { Authorization: `Bearer ${token}` };
+        
+        const response = await axios.get(`http://localhost:8000/manager/rooms/${roomId}`, { headers });
+        const roomData = response.data;
+        
+        console.log(`Fetched room ${roomId} (authenticated):`, roomData);
+        
+        setRoomCache(prev => ({
+          ...prev,
+          [roomId]: roomData
+        }));
+      } catch (authError) {
+        console.error(`Không thể tải thông tin phòng ${roomId} (cả 2 endpoint):`, authError);
+        // Cache với thông tin cơ bản
+        setRoomCache(prev => ({
+          ...prev,
+          [roomId]: { room_number: roomId.toString(), building: null }
+        }));
+      }
+    }
   };
 
   // Lấy thông tin sinh viên
@@ -258,13 +249,12 @@ const StudentScheduleView = () => {
           // Debug: Log dữ liệu để xem cấu trúc
           console.log("Schedule data:", res.data);
           
-          // Fetch room details for all room_ids
+          // Fetch thông tin phòng cho tất cả các lịch học
           const roomIds = [...new Set(res.data.map(item => item.room_id).filter(Boolean))];
           console.log("Room IDs to fetch:", roomIds);
           
-          for (const roomId of roomIds) {
-            await fetchRoomDetails(roomId);
-          }
+          // Fetch thông tin chi tiết cho từng phòng
+          await Promise.all(roomIds.map(roomId => fetchRoomDetails(roomId)));
           
           // Lọc lịch học hôm nay
           const today = getTodayVietnamese();
@@ -303,7 +293,7 @@ const StudentScheduleView = () => {
       );
       setTodaySchedule(todayClasses);
     }
-  }, [scheduleItems, weekList, roomDetails]); // Thêm roomDetails để update khi có thông tin phòng mới
+  }, [scheduleItems, weekList, roomCache]); // Thêm roomCache vào dependencies để cập nhật khi có thông tin phòng mới
 
   // Hàm chuyển về tuần hiện tại
   const goToCurrentWeek = () => {

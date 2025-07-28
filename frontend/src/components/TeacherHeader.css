@@ -1,0 +1,19 @@
+.teacher-header {
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-bottom: 2px solid #0c4da2;
+}
+
+.teacher-header .p-menubar {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+}
+
+.teacher-header .p-menubar-root-list > .p-menuitem > .p-menuitem-link:hover {
+  background-color: rgba(12, 77, 162, 0.1);
+}
+
+.teacher-header .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus {
+  box-shadow: 0 0 0 2px rgba(12, 77, 162, 0.2);
+}

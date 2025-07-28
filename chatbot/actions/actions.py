@@ -6,6 +6,45 @@ import requests
 from datetime import datetime, timedelta
 import json
 
+# Cache để lưu thông tin phòng
+room_cache = {}
+
+def fetch_room_info(room_id):
+    """Fetch thông tin phòng từ API và cache lại"""
+    if not room_id:
+        return None
+    
+    # Kiểm tra cache trước
+    if room_id in room_cache:
+        return room_cache[room_id]
+    
+    try:
+        # Thử endpoint public trước
+        response = requests.get(f"http://localhost:8000/manager/rooms/public/{room_id}", timeout=5)
+        if response.status_code == 200:
+            room_data = response.json()
+            room_cache[room_id] = room_data
+            return room_data
+    except Exception as e:
+        print(f"Lỗi khi fetch thông tin phòng {room_id}: {e}")
+    
+    # Cache thông tin cơ bản nếu không fetch được
+    fallback_info = {"room_number": str(room_id), "building": None}
+    room_cache[room_id] = fallback_info
+    return fallback_info
+
+def format_room_display(room_info):
+    """Format hiển thị thông tin phòng"""
+    if not room_info:
+        return None
+    
+    if room_info.get("building") and room_info.get("room_number"):
+        return f"{room_info['building']}/{room_info['room_number']}"
+    elif room_info.get("room_number"):
+        return f"P.{room_info['room_number']}"
+    
+    return None
+
 class ActionSubmitProgram(Action):
 
     def name(self) -> Text:
@@ -275,17 +314,30 @@ class ActionGetTodaySchedule(Action):
     
     def get_room_info(self, item):
         """Lấy thông tin phòng học"""
-        # Thử lấy từ room object trước
+        # Thử lấy từ classroom object trước (từ API đã join)
+        if item.get("classroom"):
+            room = item["classroom"]
+            if room.get("building") and room.get("room_number"):
+                return f"{room['building']}/{room['room_number']}"
+            elif room.get("room_number"):
+                return f"P.{room['room_number']}"
+        
+        # Fallback: Thử lấy từ room object (backward compatibility)
         if item.get("room"):
             room = item["room"]
             if room.get("building") and room.get("room_number"):
-                return f"{room['building']} - Phòng {room['room_number']}"
-            elif room.get("name"):
-                return f"Phòng {room['name']}"
+                return f"{room['building']}/{room['room_number']}"
+            elif room.get("room_number"):
+                return f"P.{room['room_number']}"
         
-        # Nếu không có, thử lấy room_id
+        # Nếu có room_id, fetch thông tin từ API
         if item.get("room_id"):
-            return f"Phòng {item['room_id']}"
+            room_info = fetch_room_info(item["room_id"])
+            formatted = format_room_display(room_info)
+            if formatted:
+                return formatted
+            # Fallback cuối cùng
+            return f"P.{item['room_id']}"
         
         return None
     
@@ -459,16 +511,31 @@ class ActionGetScheduleWeek(Action):
     
     def get_room_info(self, item):
         """Lấy thông tin phòng học"""
-        # Thử lấy từ room object trước
+        # Thử lấy từ classroom object trước (từ API đã join)
+        if item.get("classroom"):
+            room = item["classroom"]
+            if room.get("building") and room.get("room_number"):
+                return f"{room['building']}/{room['room_number']}"
+            elif room.get("room_number"):
+                return f"P.{room['room_number']}"
+        
+        # Fallback: Thử lấy từ room object (backward compatibility)
         if item.get("room"):
             room = item["room"]
             if room.get("building") and room.get("room_number"):
-                return f"{room['building']}-{room['room_number']}"
+                return f"{room['building']}/{room['room_number']}"
             elif room.get("name"):
                 return f"P.{room['name']}"
+            elif room.get("room_number"):
+                return f"P.{room['room_number']}"
         
-        # Nếu không có, thử lấy room_id
+        # Nếu có room_id, fetch thông tin từ API
         if item.get("room_id"):
+            room_info = fetch_room_info(item["room_id"])
+            formatted = format_room_display(room_info)
+            if formatted:
+                return formatted
+            # Fallback cuối cùng
             return f"P.{item['room_id']}"
         
         return None
@@ -622,17 +689,30 @@ class ActionGetScheduleTomorrow(Action):
     
     def get_room_info(self, item):
         """Lấy thông tin phòng học"""
-        # Thử lấy từ room object trước
+        # Thử lấy từ classroom object trước (từ API đã join)
+        if item.get("classroom"):
+            room = item["classroom"]
+            if room.get("building") and room.get("room_number"):
+                return f"{room['building']}/{room['room_number']}"
+            elif room.get("room_number"):
+                return f"P.{room['room_number']}"
+        
+        # Fallback: Thử lấy từ room object (backward compatibility)
         if item.get("room"):
             room = item["room"]
             if room.get("building") and room.get("room_number"):
-                return f"{room['building']} - Phòng {room['room_number']}"
-            elif room.get("name"):
-                return f"Phòng {room['name']}"
+                return f"{room['building']}/{room['room_number']}"
+            elif room.get("room_number"):
+                return f"P.{room['room_number']}"
         
-        # Nếu không có, thử lấy room_id
+        # Nếu có room_id, fetch thông tin từ API
         if item.get("room_id"):
-            return f"Phòng {item['room_id']}"
+            room_info = fetch_room_info(item["room_id"])
+            formatted = format_room_display(room_info)
+            if formatted:
+                return formatted
+            # Fallback cuối cùng
+            return f"P.{item['room_id']}"
         
         return None
     

@@ -105,10 +105,13 @@ def get_student_schedule(
     if not student.class_id:
         raise HTTPException(status_code=404, detail="Sinh viên chưa được phân lớp")
 
-    schedules = db.query(models.ScheduleItem)        .options(
+    schedules = db.query(models.ScheduleItem) \
+        .options(
             joinedload(models.ScheduleItem.subject),
             joinedload(models.ScheduleItem.teacher_profile),
-        )        .filter_by(
+            joinedload(models.ScheduleItem.classroom)
+        ) \
+        .filter_by(
             class_id=student.class_id,
             hoc_ky=hoc_ky,
             nam_hoc=nam_hoc

@@ -59,6 +59,34 @@ def get_rooms(
     return rooms
 
 
+@router.get("/rooms/{room_id}", response_model=schemas.RoomOut)
+def get_room_by_id(
+    room_id: int,
+    db: Session = Depends(get_db),
+    current_user = Depends(get_current_user)
+):
+    # Cho phép tất cả user đã đăng nhập xem thông tin phòng
+    room = db.query(models.Room).filter(models.Room.id == room_id).first()
+    if not room:
+        raise HTTPException(status_code=404, detail="Không tìm thấy phòng học")
+    return room
+
+@router.get("/rooms/public/{room_id}")
+def get_room_public_info(
+    room_id: int,
+    db: Session = Depends(get_db)
+):
+    """Public endpoint để lấy thông tin cơ bản của phòng (room_number, building)"""
+    room = db.query(models.Room).filter(models.Room.id == room_id).first()
+    if not room:
+        raise HTTPException(status_code=404, detail="Không tìm thấy phòng học")
+    
+    return {
+        "id": room.id,
+        "room_number": room.room_number,
+        "building": room.building
+    }
+
 @router.delete("/rooms/{room_id}")
 def delete_room(
     room_id: int,
