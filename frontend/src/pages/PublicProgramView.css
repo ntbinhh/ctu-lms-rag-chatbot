@@ -1,0 +1,688 @@
+/* PublicProgramView CTU Style */
+
+:root {
+  --ctu-primary: #0c5aa6;
+  --ctu-secondary: #1976d2;
+  --ctu-accent: #00acc1;
+  --ctu-success: #2e7d32;
+  --ctu-warning: #f57c00;
+  --ctu-light: #e3f2fd;
+  --ctu-dark: #263238;
+  --ctu-gradient: linear-gradient(135deg, #0c5aa6 0%, #1976d2 100%);
+}
+
+.public-program-view {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 2rem 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section - CTU Style */
+.hero-section {
+  background: var(--ctu-gradient);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(12, 90, 166, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  pointer-events: none;
+}
+
+.hero-content .page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  color: white !important;
+}
+
+.hero-content .page-title small {
+  color: white !important;
+}
+
+.hero-content .page-title i {
+  font-size: 2.2rem;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content .page-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  color: white !important;
+}
+
+.program-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Filter Card - CTU Style */
+.filter-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(12, 90, 166, 0.15);
+  border: none;
+  overflow: hidden;
+  background: white;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: var(--ctu-gradient);
+  color: white;
+  margin: -1.5rem -2rem 1.5rem -2rem;
+}
+
+.filter-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-header h3 i {
+  color: #ffd700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.filter-content {
+  padding: 0 2rem 2rem 2rem;
+}
+
+.filter-step {
+  margin-bottom: 2rem;
+}
+
+.step-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: var(--ctu-dark);
+  font-size: 1rem;
+}
+
+.step-number {
+  background: var(--ctu-gradient);
+  color: white;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(12, 90, 166, 0.3);
+}
+
+/* Faculty and Major Buttons - CTU Style */
+.faculty-buttons,
+.major-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.faculty-btn,
+.major-btn {
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid var(--ctu-light);
+  background: white;
+  color: var(--ctu-primary);
+  box-shadow: 0 2px 8px rgba(12, 90, 166, 0.1);
+}
+
+.faculty-btn:hover,
+.major-btn:hover {
+  background: var(--ctu-light);
+  border-color: var(--ctu-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(12, 90, 166, 0.2);
+}
+
+.faculty-btn.selected,
+.major-btn.selected {
+  background: var(--ctu-gradient);
+  color: white;
+  border-color: var(--ctu-primary);
+  box-shadow: 0 4px 15px rgba(12, 90, 166, 0.3);
+}
+
+.faculty-btn.selected:hover,
+.major-btn.selected:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(12, 90, 166, 0.4);
+}
+
+/* Skeleton Loading Styles */
+.faculty-skeleton,
+.major-skeleton {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Loading Card - CTU Style */
+.loading-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  background: white;
+  box-shadow: 0 4px 20px rgba(12, 90, 166, 0.1);
+}
+
+.loading-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ctu-dark);
+}
+
+/* Program Card - CTU Style */
+.program-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(12, 90, 166, 0.15);
+  border: none;
+  overflow: hidden;
+  background: white;
+}
+
+.program-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--ctu-light), #e3f2fd);
+  margin: -1.5rem -2rem 0 -2rem;
+  gap: 2rem;
+  border-bottom: 3px solid var(--ctu-primary);
+}
+
+.program-info {
+  flex: 1;
+}
+
+.program-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--ctu-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.program-title i {
+  color: var(--ctu-secondary);
+}
+
+.program-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.program-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  min-width: 250px;
+}
+
+/* Enhanced DataTable - CTU Style */
+.program-table {
+  margin-top: 1rem;
+}
+
+.program-table .p-datatable-header {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.program-table .p-datatable-thead > tr > th {
+  background: var(--ctu-gradient);
+  color: white;
+  font-weight: 600;
+  padding: 1rem;
+  border: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.program-table .p-datatable-tbody > tr {
+  transition: all 0.2s ease;
+}
+
+.program-table .p-datatable-tbody > tr:hover {
+  background: rgba(12, 90, 166, 0.05);
+}
+
+.program-table .p-datatable-tbody > tr.p-highlight {
+  background: rgba(12, 90, 166, 0.1);
+  color: var(--ctu-primary);
+}
+
+/* Course Cell Templates - CTU Style */
+.course-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.course-link {
+  color: var(--ctu-primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.course-link:hover {
+  color: var(--ctu-secondary);
+  text-decoration: underline;
+}
+
+.course-name {
+  font-weight: 500;
+  color: var(--ctu-dark);
+}
+
+.credit-cell,
+.code-cell {
+  text-align: center;
+}
+
+.code-cell strong {
+  color: var(--ctu-primary);
+  font-family: 'Courier New', monospace;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* Course Detail Panel - CTU Style */
+.course-detail {
+  padding: 1rem 0;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--ctu-light);
+  border-radius: 8px;
+  border-left: 4px solid var(--ctu-primary);
+}
+
+.detail-item label {
+  font-weight: 600;
+  color: var(--ctu-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-item span,
+.detail-item .p-tag {
+  align-self: flex-start;
+}
+
+.course-description {
+  background: var(--ctu-light);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--ctu-accent);
+}
+
+.course-description label {
+  font-weight: 600;
+  color: var(--ctu-primary);
+  margin-bottom: 0.5rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.course-description p {
+  line-height: 1.6;
+  color: var(--ctu-dark);
+  margin: 0;
+}
+
+.text-muted {
+  color: #999;
+  font-style: italic;
+}
+
+/* Empty State - CTU Style */
+.empty-state {
+  border-radius: 16px;
+  text-align: center;
+  border: 2px dashed var(--ctu-light);
+  background: rgba(227, 242, 253, 0.3);
+}
+
+.empty-content {
+  padding: 3rem;
+  color: var(--ctu-dark);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  color: var(--ctu-light);
+  margin-bottom: 1rem;
+}
+
+.empty-content h3 {
+  color: var(--ctu-primary);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.empty-content p {
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ctu-dark);
+}
+
+/* CTU Badge Styling */
+.p-badge.p-badge-warning {
+  background: var(--ctu-warning);
+  color: white;
+  font-weight: 600;
+}
+
+.p-tag.p-tag-info {
+  background: var(--ctu-primary);
+  color: white;
+}
+
+.p-tag.p-tag-success {
+  background: var(--ctu-success);
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .program-stats {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .public-program-view {
+    padding: 1rem 0;
+  }
+  
+  .hero-section {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hero-content .page-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .program-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .stat-item {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .filter-header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+  
+  .filter-content {
+    padding: 0 1rem 1.5rem 1rem;
+  }
+  
+  .faculty-buttons,
+  .major-buttons {
+    flex-direction: column;
+  }
+  
+  .faculty-btn,
+  .major-btn {
+    justify-content: center;
+  }
+  
+  .program-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  
+  .program-actions {
+    flex-direction: column;
+  }
+  
+  .search-input {
+    min-width: auto;
+  }
+  
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-content .page-subtitle {
+    font-size: 1rem;
+  }
+  
+  .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .filter-header {
+    padding: 1rem;
+    margin: -1rem -1rem 1rem -1rem;
+  }
+  
+  .program-header {
+    padding: 1.5rem;
+    margin: -1rem -1rem 0 -1rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .public-program-view {
+    background: white;
+    padding: 0;
+  }
+  
+  .hero-section,
+  .filter-card,
+  .program-actions,
+  .action-buttons {
+    display: none;
+  }
+  
+  .program-card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+  
+  .program-table .p-datatable-thead > tr > th {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-card,
+.program-card,
+.hero-section {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Accessibility */
+.faculty-btn:focus,
+.major-btn:focus,
+.p-button:focus {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .hero-section {
+    background: #000;
+    color: #fff;
+  }
+  
+  .faculty-btn,
+  .major-btn {
+    border-width: 3px;
+  }
+  
+  .program-table .p-datatable-thead > tr > th {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .filter-card,
+  .program-card,
+  .hero-section {
+    animation: none;
+  }
+  
+  .faculty-btn:hover,
+  .major-btn:hover {
+    transform: none;
+  }
+}

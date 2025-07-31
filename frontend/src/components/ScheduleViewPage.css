@@ -1,0 +1,635 @@
+/* Modern Schedule View Page Styles */
+.schedule-view-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem;
+}
+
+/* Page Header */
+.page-header {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.page-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0c4da2;
+  margin: 0 0 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.page-title i {
+  font-size: 1.8rem;
+  color: #2196F3;
+}
+
+.page-subtitle {
+  color: #5a6c7d;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-actions .p-button {
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.header-actions .p-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Filter Card */
+.filter-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.filter-card .p-card-body {
+  padding: 2rem;
+}
+
+.filter-section {
+  background: linear-gradient(135deg, #f8fbff 0%, #ffffff 100%);
+  border-radius: 12px;
+  padding: 1.5rem;
+}
+
+.filter-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0c4da2;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-title i {
+  color: #2196F3;
+}
+
+.filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-group label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.filter-group .p-dropdown,
+.filter-group .p-calendar {
+  border-radius: 8px;
+  border: 2px solid #e0e6ed;
+  transition: all 0.3s ease;
+}
+
+.filter-group .p-dropdown:hover,
+.filter-group .p-calendar:hover {
+  border-color: #0c4da2;
+}
+
+.filter-group .p-dropdown.p-focus,
+.filter-group .p-calendar.p-focus {
+  border-color: #2196F3;
+  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+}
+
+/* Loading Card */
+.loading-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.loading-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.loading-content p {
+  color: #5a6c7d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Error Card */
+.error-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  border-left: 4px solid #e74c3c;
+}
+
+.error-content {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #e74c3c;
+}
+
+.error-content i {
+  font-size: 1.5rem;
+}
+
+/* Schedule Card */
+.schedule-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.schedule-card .p-card-body {
+  padding: 0;
+}
+
+.schedule-header {
+  padding: 2rem;
+  border-bottom: 1px solid #e0e6ed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.schedule-info {
+  flex: 1;
+}
+
+.schedule-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0c4da2;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.schedule-title i {
+  color: #2196F3;
+}
+
+.schedule-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.schedule-meta .p-tag {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+
+.week-navigation {
+  min-width: 300px;
+}
+
+.week-dropdown {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Timetable */
+.timetable-container {
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.timetable-wrapper {
+  min-width: 800px;
+}
+
+.modern-timetable {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.modern-timetable th,
+.modern-timetable td {
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #e0e6ed;
+  vertical-align: top;
+}
+
+.modern-timetable th {
+  background: linear-gradient(135deg, #0c4da2, #2196F3);
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.period-header {
+  background: linear-gradient(135deg, #0c4da2, #1976D2) !important;
+  min-width: 120px;
+}
+
+.day-header {
+  min-width: 150px;
+}
+
+.day-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.day-name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.day-date {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.period-row:nth-child(even) {
+  background: rgba(248, 251, 255, 0.5);
+}
+
+.period-cell {
+  background: #f8fbff !important;
+  border-right: 2px solid #0c4da2;
+  min-width: 120px;
+}
+
+.period-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.period-info strong {
+  color: #0c4da2;
+  font-size: 1rem;
+}
+
+.period-info small {
+  color: #5a6c7d;
+  font-size: 0.75rem;
+}
+
+.schedule-cell {
+  min-height: 100px;
+  position: relative;
+  vertical-align: top;
+  padding: 0.75rem;
+}
+
+.empty-cell {
+  background: #fafbfc;
+  position: relative;
+}
+
+.empty-cell::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border: 2px dashed #ddd;
+  border-radius: 50%;
+}
+
+.has-subject {
+  background: linear-gradient(135deg, #f0f8ff, #e3f2fd);
+  border-left: 4px solid #2196F3;
+}
+
+.subject-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+}
+
+.subject-header {
+  margin-bottom: 0.5rem;
+}
+
+.subject-tag {
+  font-weight: 600;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  width: 100%;
+  text-align: center;
+}
+
+.subject-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.teacher-info,
+.room-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: #5a6c7d;
+}
+
+.teacher-info i,
+.room-info i {
+  color: #0c4da2;
+  font-size: 0.7rem;
+}
+
+.teacher-info span,
+.room-info span {
+  font-weight: 500;
+}
+
+/* Pagination */
+.schedule-pagination {
+  padding: 1.5rem 2rem;
+  border-top: 1px solid #e0e6ed;
+  background: #f8fbff;
+}
+
+.custom-paginator {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-paginator .p-paginator-page,
+.custom-paginator .p-paginator-next,
+.custom-paginator .p-paginator-prev,
+.custom-paginator .p-paginator-first,
+.custom-paginator .p-paginator-last {
+  border-radius: 6px;
+  margin: 0 0.2rem;
+  transition: all 0.3s ease;
+}
+
+.custom-paginator .p-paginator-page:hover,
+.custom-paginator .p-paginator-next:hover,
+.custom-paginator .p-paginator-prev:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Empty Schedule Card */
+.empty-schedule-card {
+  margin-bottom: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  border: 2px dashed #e0e6ed;
+}
+
+.empty-content {
+  padding: 3rem;
+  color: #5a6c7d;
+}
+
+.empty-content i {
+  font-size: 3rem;
+  color: #ddd;
+  margin-bottom: 1rem;
+}
+
+.empty-content h3 {
+  color: #333;
+  margin: 0 0 0.5rem 0;
+  font-size: 1.3rem;
+}
+
+.empty-content p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .schedule-view-page {
+    padding: 1.5rem;
+  }
+
+  .header-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions {
+    justify-content: center;
+  }
+
+  .filter-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+  }
+
+  .schedule-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .week-navigation {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .schedule-view-page {
+    padding: 1rem;
+  }
+
+  .page-header {
+    padding: 1.5rem;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .filter-card .p-card-body {
+    padding: 1.5rem;
+  }
+
+  .filter-section {
+    padding: 1rem;
+  }
+
+  .filter-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schedule-header {
+    padding: 1.5rem;
+  }
+
+  .timetable-container {
+    padding: 1rem;
+  }
+
+  .modern-timetable th,
+  .modern-timetable td {
+    padding: 0.5rem;
+  }
+
+  .day-info {
+    gap: 0.1rem;
+  }
+
+  .day-name {
+    font-size: 0.85rem;
+  }
+
+  .day-date {
+    font-size: 0.7rem;
+  }
+
+  .subject-tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .teacher-info,
+  .room-info {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-title {
+    font-size: 1.3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .header-actions {
+    flex-direction: column;
+  }
+
+  .header-actions .p-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .modern-timetable th,
+  .modern-timetable td {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .schedule-cell {
+    min-height: 80px;
+  }
+
+  .subject-info {
+    gap: 0.5rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.schedule-card,
+.filter-card,
+.page-header {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.has-subject {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Print Styles */
+@media print {
+  .schedule-view-page {
+    background: white;
+    padding: 0;
+  }
+
+  .page-header,
+  .filter-card,
+  .header-actions,
+  .schedule-pagination {
+    display: none;
+  }
+
+  .schedule-card {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .modern-timetable {
+    box-shadow: none;
+  }
+
+  .modern-timetable th {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+  }
+
+  .has-subject {
+    background: #f9f9f9 !important;
+  }
+}

@@ -1,47 +1,117 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./SliderSection.css"; // import CSS riêng
+import "./SliderSection.css";
 
 const SliderSection = () => {
   const [images, setImages] = useState([]);
-  const [current, setCurrent] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
 
+  // Fetch images from API
   useEffect(() => {
-    axios.get("http://localhost:8000/home/slider-images")
-      .then(res => setImages(res.data))
-      .catch(() => setImages([]));
+    const fetchImages = async () => {
+      try {
+        const response = await axios.get("http://localhost:8000/home/slider-images");
+        setImages(response.data || []);
+      } catch (error) {
+        console.error("Error fetching slider images:", error);
+        setImages([]);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchImages();
   }, []);
 
+  // Auto-play functionality
   useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [images, current]);
+    if (images.length === 0) return;
 
-  const handlePrev = () => {
-    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+    const autoPlay = setInterval(() => {
+      setCurrentIndex((prevIndex) => 
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(autoPlay);
+  }, [images.length]);
+
+  // Navigation functions
+  const goToPrevious = () => {
+    setCurrentIndex(currentIndex === 0 ? images.length - 1 : currentIndex - 1);
   };
 
-  const handleNext = () => {
-    setCurrent((prev) => (prev + 1) % images.length);
+  const goToNext = () => {
+    setCurrentIndex(currentIndex === images.length - 1 ? 0 : currentIndex + 1);
   };
 
-  if (images.length === 0) return null;
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  // Loading state
+  if (isLoading) {
+    return (
+      <div className="slider-loading">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+
+  // No images state
+  if (images.length === 0) {
+    return null;
+  }
 
   return (
-    <div className="slider-wrapper">
-      <div className="slider-container">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={`http://localhost:8000${img.url}`}
-            alt={`slide-${index}`}
-            className={`slider-image ${index === current ? "active" : ""}`}
-          />
-        ))}
-        <button className="nav-button prev" onClick={handlePrev}>‹</button>
-        <button className="nav-button next" onClick={handleNext}>›</button>
+    <div className="slider-container">
+      <div className="slider-wrapper">
+        {/* Images */}
+        <div 
+          className="slider-images"
+          style={{
+            transform: `translateX(-${currentIndex * 100}%)`
+          }}
+        >
+          {images.map((image, index) => (
+            <img
+              key={index}
+              src={`http://localhost:8000${image.url}`}
+              alt={image.title || `Slide ${index + 1}`}
+              className="slider-image"
+            />
+          ))}
+        </div>
+
+        {/* Navigation Arrows */}
+        <button 
+          className="slider-nav prev"
+          onClick={goToPrevious}
+          aria-label="Previous slide"
+        >
+          &#8249;
+        </button>
+        
+        <button 
+          className="slider-nav next"
+          onClick={goToNext}
+          aria-label="Next slide"
+        >
+          &#8250;
+        </button>
+
+        {/* Dots Indicator */}
+        <div className="slider-dots">
+          {images.map((_, index) => (
+            <button
+              key={index}
+              className={`slider-dot ${index === currentIndex ? 'active' : ''}`}
+              onClick={() => goToSlide(index)}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
