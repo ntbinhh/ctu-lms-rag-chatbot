@@ -1,0 +1,167 @@
+# PHƯƠNG THỨC 2: XÉT TUYỂN ĐIỂM KỲ THI TỐT NGHIỆP THPT NĂM 2025
+
+## 1. TỔNG QUAN PHƯƠNG THỨC 2
+
+Câu hỏi: Phương thức 2 xét tuyển như thế nào?
+Trả lời: 📝 **Phương thức 2** xét tuyển dựa vào điểm của Kỳ thi tốt nghiệp THPT năm 2025 theo tổ hợp xét tuyển ứng với ngành dự tuyển. Đây là phương thức phổ biến nhất với 121 mã ngành xét tuyển.
+
+## 2. CÁCH TÍNH ĐIỂM XÉT TUYỂN
+
+### 2.1. CÔNG THỨC TÍNH ĐIỂM
+
+Câu hỏi: Điểm xét tuyển được tính như thế nào?
+Trả lời: Công thức tính điểm xét tuyển (ĐXT):
+
+**ĐXT = (Môn_1 + Môn_2 + Môn_3) + Điểm ưu tiên**
+
+- 📊 **Thang điểm**: 30 điểm
+- 🔢 **Làm tròn**: Đến hai chữ số thập phân
+- 🚫 **Không nhân hệ số**: Các môn trong tổ hợp không nhân hệ số
+- 🎯 **Tự động chọn tổ hợp cao nhất**: Trường sẽ chọn tổ hợp có ĐXT cao nhất
+
+### 2.2. XỬ LÝ MÔN NĂNG KHIẾU
+
+Câu hỏi: Môn năng khiếu được xử lý như thế nào?
+Trả lời: Môn năng khiếu trong tổ hợp:
+- 🏫 **Do ĐHCT tổ chức**: Sử dụng kết quả do Trường ĐHCT thi
+- 🎓 **Do trường khác tổ chức**: Có thể sử dụng kết quả từ trường đại học khác
+- 🚫 **Không dùng miễn môn**: Không sử dụng điểm miễn môn ngoại ngữ
+
+## 3. NGÀNH VÀ ĐỐI TƯỢNG XÉT TUYỂN
+
+### 3.1. NGÀNH XÉT TUYỂN
+
+Câu hỏi: Có bao nhiêu ngành xét tuyển theo phương thức 2?
+Trả lời: 🎯 **Tất cả 121 mã ngành** đều xét tuyển theo phương thức 2, bao gồm mọi lĩnh vực từ kỹ thuật, kinh tế, xã hội đến sư phạm.
+
+### 3.2. ĐỐI TƯỢNG DỰ TUYỂN
+
+Câu hỏi: Ai có thể dự tuyển theo phương thức 2?
+Trả lời: Đối tượng được dự tuyển:
+- 🎓 **Thí sinh tốt nghiệp THPT** từ năm 2025 trở về trước
+- 🏫 **Thí sinh đã tốt nghiệp cao đẳng, đại học** có nhu cầu học liên thông đại học
+
+## 4. ĐIỀU KIỆN ĐĂNG KÝ XÉT TUYỂN
+
+### 4.1. NGƯỠNG ĐIỂM ĐẦU VÀO
+
+Câu hỏi: Điều kiện về điểm để đăng ký xét tuyển?
+Trả lời: Điều kiện điểm số:
+- 📊 **Đạt ngưỡng đầu vào**: Do ĐHCT xác định và công bố trước 17g00 ngày 23/7/2025
+- 🎯 **Tương ứng với mã ngành**: Mỗi ngành có ngưỡng riêng
+- 📈 **Công bố kịp thời**: Thí sinh biết trước khi đăng ký
+
+### 4.2. ĐIỀU KIỆN VỀ ĐIỂM TỪNG MÔN
+
+Câu hỏi: Yêu cầu điểm tối thiểu cho từng môn?
+Trả lời: Yêu cầu điểm từng môn:
+- 🚫 **Không có môn ≤ 1,0 điểm**: Trong tổ hợp xét tuyển (đã quy đổi)
+- 🎭 **Môn năng khiếu ≥ 5,0 điểm**: Cho các ngành:
+  - ⚽ **Giáo dục Thể chất**
+  - 👶 **Giáo dục Mầm non**
+  - 🏗️ **Kiến trúc**
+
+## 5. ĐĂNG KÝ XÉT TUYỂN
+
+### 5.1. HÌNH THỨC ĐĂNG KÝ
+
+Câu hỏi: Đăng ký xét tuyển ở đâu và như thế nào?
+Trả lời: Thông tin đăng ký:
+- 💻 **Đăng ký trực tuyến**: Trên Cổng tuyển sinh của Bộ GDĐT
+- 🌐 **Website**: https://thisinh.thitotnghiepthpt.edu.vn
+- 🔄 **Không giới hạn**: Số lần đăng ký, điều chỉnh, bổ sung nguyện vọng
+- 📱 **Tiện lợi**: Có thể thay đổi linh hoạt
+
+### 5.2. THỜI GIAN ĐĂNG KÝ
+
+Câu hỏi: Khi nào đăng ký xét tuyển?
+Trả lời: Lịch trình đăng ký:
+- 📅 **Thời gian đăng ký**: Từ 16/7 đến 17g00 ngày 28/7/2025
+- 💰 **Nộp lệ phí**: Từ 29/7 đến 17g00 ngày 5/8/2025
+- 💻 **Nộp phí trực tuyến**: Theo hướng dẫn trên Cổng tuyển sinh
+- ⏰ **Lưu ý**: Nộp phí sau khi đăng ký nguyện vọng
+
+## 6. ƯU ĐIỂM CỦA PHƯƠNG THỨC 2
+
+### 6.1. ƯU ĐIỂM CHUNG
+
+Câu hỏi: Phương thức 2 có ưu điểm gì?
+Trả lời: Ưu điểm của phương thức 2:
+- 🎯 **Phổ biến nhất**: 121 ngành đều có
+- 📊 **Công bằng**: Dựa trên kết quả thi chuẩn quốc gia
+- 🔄 **Linh hoạt**: Thay đổi nguyện vọng nhiều lần
+- 📈 **Minh bạch**: Điểm số rõ ràng, có thể tính toán trước
+
+### 6.2. PHẠM VI ỨNG DỤNG RỘNG
+
+Câu hỏi: Ai nên chọn phương thức 2?
+Trả lời: Phương thức 2 phù hợp với:
+- 👥 **Đại đa số thí sinh**: Phương thức chính của hệ thống giáo dục
+- 📚 **Thí sinh tự tin vào kỳ thi**: Có kết quả thi tốt nghiệp khả quan
+- 🎯 **Thí sinh muốn chọn đa dạng**: Có nhiều tổ hợp xét tuyển
+- 🔄 **Thí sinh liên thông**: Từ cao đẳng lên đại học
+
+## 7. CHIẾN LƯỢC CHO THÍ SINH
+
+### 7.1. CHUẨN BỊ TRƯỚC THI
+
+Câu hỏi: Cần chuẩn bị gì trước kỳ thi tốt nghiệp?
+Trả lời: Chiến lược chuẩn bị:
+- 📚 **Ôn tập tập trung**: Các môn trong tổ hợp xét tuyển
+- 🎯 **Chọn tổ hợp phù hợp**: Dựa trên điểm mạnh cá nhân
+- 📊 **Tính toán điểm**: Ước tính điểm có thể đạt được
+- 🏆 **Đặt mục tiêu rõ ràng**: Ngành và trường mong muốn
+
+### 7.2. CHIẾN LƯỢC ĐĂNG KÝ NGUYỆN VỌNG
+
+Câu hỏi: Đăng ký nguyện vọng như thế nào cho hiệu quả?
+Trả lời: Chiến lược đăng ký nguyện vọng:
+- 🎯 **Nguyện vọng 1**: Ngành yêu thích nhất (điểm cao)
+- ⚖️ **Nguyện vọng 2**: Ngành phù hợp (điểm trung bình)
+- 🛡️ **Nguyện vọng 3**: Ngành an toàn (điểm thấp hơn)
+- 🔄 **Điều chỉnh linh hoạt**: Theo kết quả thi thực tế
+
+## 8. XỬ LÝ CÁC TRƯỜNG HỢP ĐẶC BIỆT
+
+### 8.1. THÍ SINH THAM DỰ NHIỀU KỲ THI
+
+Câu hỏi: Thí sinh thi nhiều năm xử lý như thế nào?
+Trả lời: 📅 **Thí sinh tốt nghiệp THPT từ năm 2025 trở về trước** đều có thể dự tuyển, điểm sẽ được quy đổi theo quy định của Bộ GDĐT.
+
+### 8.2. THÍ SINH LIÊN THÔNG
+
+Câu hỏi: Thí sinh đã tốt nghiệp cao đẳng/đại học có lợi thế gì?
+Trả lời: Lợi thế của thí sinh liên thông:
+- 🎓 **Kinh nghiệm học đại học**: Đã quen với môi trường đại học
+- 📚 **Nền tảng kiến thức**: Có cơ sở chuyên môn tốt hơn
+- 🎯 **Mục tiêu rõ ràng**: Biết chính xác mình muốn gì
+- ⏱️ **Quản lý thời gian tốt**: Có kỹ năng học tập tự giác
+
+## 9. LƯU Ý QUAN TRỌNG
+
+### 9.1. VỀ ĐIỂM SỐ
+
+Câu hỏi: Cần lưu ý gì về điểm số?
+Trả lời: Lưu ý quan trọng về điểm:
+- 🚫 **Không có môn ≤ 1,0**: Điều kiện bắt buộc
+- 🎭 **Môn năng khiếu ≥ 5,0**: Với một số ngành đặc biệt
+- 📊 **Ngưỡng đầu vào**: Chờ công bố trước 23/7/2025
+- 🔢 **Làm tròn đến 2 chữ số**: Thập phân trong tính toán
+
+### 9.2. VỀ THỜI GIAN
+
+Câu hỏi: Cần chú ý gì về thời gian?
+Trả lời: Lưu ý về thời gian:
+- ⏰ **Đăng ký**: 16/7 - 17h00 ngày 28/7/2025
+- 💰 **Nộp phí**: 29/7 - 17h00 ngày 5/8/2025
+- 🕐 **17h00 nghiêm ngặt**: Hệ thống đóng đúng giờ
+- 📅 **Theo dõi thông báo**: Để cập nhật thay đổi
+
+## 10. KẾT LUẬN
+
+Câu hỏi: Tổng kết về phương thức 2?
+Trả lời: Phương thức 2 là:
+- 🎯 **Phương thức chủ đạo**: Của hệ thống tuyển sinh Việt Nam
+- 📊 **Công bằng và minh bạch**: Dựa trên kết quả thi chuẩn
+- 🔄 **Linh hoạt**: Cho phép điều chỉnh nguyện vọng
+- 👥 **Phù hợp đa số**: Thí sinh tốt nghiệp THPT

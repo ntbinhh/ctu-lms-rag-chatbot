@@ -1,0 +1,128 @@
+# GIỜ LÊN LỚP - TRƯỜNG ĐẠI HỌC CẦN THƠ
+
+## 1. QUY ĐỊNH VỀ CHUYÊN CẦN
+
+### 1.1. HỌC PHẦN THỰC HÀNH VÀ ĐẶC BIỆT
+
+Câu hỏi: Sinh viên phải tham dự bao nhiêu % đối với học phần thực hành?
+Trả lời: Sinh viên phải dự 100% số tiết đối với các học phần sau:
+- Học phần thực hành
+- Học phần thí nghiệm  
+- Thực tập tại cơ sở
+- Giáo dục Quốc phòng & An ninh (GDQP&AN)
+- Giáo dục Thể chất (GDTC)
+
+Câu hỏi: Có được vắng buổi nào của học phần thực hành không?
+Trả lời: KHÔNG, sinh viên bắt buộc phải tham dự 100% số tiết của các học phần thực hành, thí nghiệm, thực tập, GDQP&AN, và GDTC.
+
+### 1.2. HỌC PHẦN LÝ THUYẾT
+
+Câu hỏi: Sinh viên phải tham dự bao nhiêu % đối với học phần lý thuyết?
+Trả lời: Sinh viên phải tham dự tối thiểu 80% số tiết đối với các học phần lý thuyết.
+
+Câu hỏi: Có thể vắng 20% tiết lý thuyết không?
+Trả lời: Có, sinh viên được phép vắng tối đa 20% số tiết của học phần lý thuyết mà không bị cấm thi.
+
+## 2. HẬU QUẢ CỦA VIỆC VẮNG HỌC
+
+Câu hỏi: Chuyện gì xảy ra nếu vắng học quá quy định?
+Trả lời: Sinh viên vắng mặt vượt quá thời gian quy định sẽ bị cấm thi kết thúc học phần.
+
+Câu hỏi: Ai quyết định cấm thi sinh viên?
+Trả lời: Giảng viên giảng dạy học phần đề nghị trưởng đơn vị đào tạo duyệt danh sách sinh viên bị cấm thi và cho điểm F vào bảng điểm.
+
+Câu hỏi: Sinh viên bị cấm thi sẽ nhận điểm gì?
+Trả lời: Sinh viên bị cấm thi sẽ nhận điểm F cho học phần đó.
+
+## 3. THÔNG TIN BUỔI HỌC ĐẦU TIÊN
+
+Câu hỏi: Giảng viên phải thông báo gì trong buổi học đầu tiên?
+Trả lời: Vào buổi học đầu tiên, giảng viên thông báo cho sinh viên biết đề cương chi tiết học phần bao gồm:
+- Nội dung học phần
+- Chuẩn đầu ra
+- Phương pháp giảng dạy
+- Hình thức kiểm tra, đánh giá
+- Cách tính điểm
+
+## 4. LỊCH GIẢNG DẠY TRONG TUẦN
+
+Câu hỏi: Trường tổ chức giảng dạy mấy ngày trong tuần?
+Trả lời: Công tác giảng dạy, học tập được thực hiện 6 ngày/tuần (từ thứ Hai đến thứ Bảy, trừ Chủ nhật).
+
+Câu hỏi: Có học vào Chủ nhật không?
+Trả lời: KHÔNG, các hoạt động giảng dạy thường quy không tổ chức vào Chủ nhật.
+
+## 5. THỜI GIAN BIỂU TRONG NGÀY
+
+### 5.1. BUỔI SÁNG
+
+Câu hỏi: Buổi sáng có mấy tiết học?
+Trả lời: Buổi sáng có 5 tiết học (tiết 1, 2, 3, 4, 5).
+
+**CHI TIẾT GIỜ HỌC BUỔI SÁNG:**
+- **Tiết 1**: 07:00 - 07:50 (không có giờ nghỉ)
+- **Tiết 2**: 07:50 - 08:40 (nghỉ 10 phút sau tiết 2)
+- **Tiết 3**: 08:50 - 09:40 (nghỉ 10 phút sau tiết 3)  
+- **Tiết 4**: 09:50 - 10:40 (không có giờ nghỉ)
+- **Tiết 5**: 10:40 - 11:30
+
+Câu hỏi: Tiết học sáng bắt đầu từ mấy giờ?
+Trả lời: Tiết học sáng bắt đầu từ 07:00 (tiết 1).
+
+Câu hỏi: Tiết học sáng kết thúc lúc mấy giờ?
+Trả lời: Tiết học sáng kết thúc lúc 11:30 (sau tiết 5).
+
+### 5.2. BUỔI CHIỀU
+
+Câu hỏi: Buổi chiều có mấy tiết học?
+Trả lời: Buổi chiều có 4 tiết học (tiết 6, 7, 8, 9).
+
+**CHI TIẾT GIỜ HỌC BUỔI CHIỀU:**
+- **Tiết 6**: 13:30 - 14:20 (không có giờ nghỉ)
+- **Tiết 7**: 14:20 - 15:10 (nghỉ 10 phút sau tiết 7)
+- **Tiết 8**: 15:20 - 16:10 (không có giờ nghỉ)
+- **Tiết 9**: 16:10 - 17:00
+
+Câu hỏi: Tiết học chiều bắt đầu từ mấy giờ?
+Trả lời: Tiết học chiều bắt đầu từ 13:30 (tiết 6).
+
+Câu hỏi: Tiết học chiều kết thúc lúc mấy giờ?
+Trả lời: Tiết học chiều kết thúc lúc 17:00 (sau tiết 9).
+
+### 5.3. BUỔI TỐI
+
+Câu hỏi: Buổi tối có mấy tiết học?
+Trả lời: Buổi tối có 2 tiết học (tiết 11, 12).
+
+**CHI TIẾT GIỜ HỌC BUỔI TỐI:**
+- **Tiết 11**: 18:20 - 19:10 (không có giờ nghỉ)
+- **Tiết 12**: 19:10 - 20:00
+
+Câu hỏi: Tiết học tối bắt đầu từ mấy giờ?
+Trả lời: Tiết học tối bắt đầu từ 18:20 (tiết 11).
+
+Câu hỏi: Tiết học tối kết thúc lúc mấy giờ?
+Trả lời: Tiết học tối kết thúc lúc 20:00 (sau tiết 12).
+
+## 6. LƯU Ý ĐẶC BIỆT
+
+Câu hỏi: Tiết 10 là tiết gì?
+Trả lời: Tiết 10 là tiết nghỉ chung, không có lịch học ở tiết này.
+
+Câu hỏi: Tại sao không có tiết 10?
+Trả lời: Tiết 10 được dành để nghỉ chung giữa buổi chiều và buổi tối, tạo khoảng thời gian chuyển đổi.
+
+## 7. TÓM TẮT THỜI GIAN BIỂU
+
+Câu hỏi: Tổng cộng có bao nhiêu tiết học trong ngày?
+Trả lời: Tổng cộng có 11 tiết học trong ngày:
+- 🌅 **Buổi sáng**: 5 tiết (1→5) - 07:00→11:30
+- 🌞 **Buổi chiều**: 4 tiết (6→9) - 13:30→17:00  
+- 🌙 **Buổi tối**: 2 tiết (11→12) - 18:20→20:00
+- ⏸️ **Tiết nghỉ**: Tiết 10
+
+Câu hỏi: Giờ nghỉ giữa các tiết như thế nào?
+Trả lời: 
+- Nghỉ 10 phút sau tiết 2 và tiết 3 (buổi sáng)
+- Nghỉ 10 phút sau tiết 7 (buổi chiều)
+- Các tiết khác không có giờ nghỉ riêng

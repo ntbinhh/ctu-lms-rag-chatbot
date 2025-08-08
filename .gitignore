@@ -1,29 +1,130 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dependencies
+# Node.js dependencies
 /node_modules
 /.pnp
 .pnp.js
-
-# testing
-/coverage
-
-# production
-/build
-
-# misc
-.DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Testing
+/coverage
+
+# Production builds
+/build
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Python
 __pycache__/
-# Global .gitignore
 **/__pycache__/
-**/.venv/
 **/*.pyc
-chatbot/models/
+**/*.pyo
+**/*.pyd
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+**/.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+*.code-workspace
+
+# Rasa specific
+.rasa/
+chatbot/.rasa/
+chatbot/models/*.tar.gz
+chatbot/models/*.pkl
+chatbot/models/*.json
+!chatbot/models/vinallama-7b-chat_q5_0.gguf
+
+# RAG system specific
+1rag/models/*.gguf
+!1rag/models/all-MiniLM-L6-v2-f16.gguf
+1rag/vector_store/
+1rag/data/vector_store/
+vector_store/
+embeddings/
+faiss_index/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+users.db
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# API Keys and sensitive data (but keep examples)
+credentials.yml
+!credentials.yml.example
+
+# Cache directories
+.cache/
+cache/
+.pytest_cache/
+
+# Large model files (except specific ones we want to keep)
+*.bin
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.h5
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Test artifacts
+test_results/
+.coverage
+htmlcov/

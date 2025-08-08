@@ -1,0 +1,76 @@
+# ĐIỂM RÈN LUYỆN SINH VIÊN - TRƯỜNG ĐẠI HỌC CẦN THƠ
+
+## 1. KHÁI NIỆM VÀ CÁCH TÍNH ĐIỂM RÈN LUYỆN
+
+Câu hỏi: Điểm rèn luyện được đánh giá như thế nào?
+Trả lời: Mức độ rèn luyện của sinh viên được đánh giá từng học kỳ và đo lường bằng điểm rèn luyện (ĐRL) chấm theo thang điểm 100 dựa vào các quy định hiện hành.
+
+Câu hỏi: Điểm rèn luyện cả năm được tính như thế nào?
+Trả lời: ĐRL cả năm học là trung bình cộng của ĐRL 3 học kỳ (học kỳ 1, học kỳ 2, và học kỳ hè).
+
+Câu hỏi: Thang điểm rèn luyện là bao nhiêu?
+Trả lời: Điểm rèn luyện được chấm theo thang điểm 100 (từ 0 đến 100 điểm).
+
+## 2. QUY ĐỊNH VỀ KỶ LUẬT VÀ ĐIỂM RÈN LUYỆN
+
+### 2.1. SINH VIÊN BỊ KHIỂN TRÁCH
+
+Câu hỏi: Sinh viên bị khiển trách có ảnh hưởng đến điểm rèn luyện không?
+Trả lời: Có, sinh viên bị kỷ luật mức khiển trách cấp Trường, khi đánh giá kết quả rèn luyện không được vượt quá loại KHÁ.
+
+### 2.2. SINH VIÊN BỊ CẢNH CÁO
+
+Câu hỏi: Sinh viên bị cảnh cáo có ảnh hưởng đến điểm rèn luyện không?
+Trả lời: Có, sinh viên bị kỷ luật mức cảnh cáo cấp Trường, khi đánh giá kết quả rèn luyện không được vượt quá loại TRUNG BÌNH.
+
+## 3. QUY ĐỊNH VỀ NỘP BẢG ĐÁNH GIÁ
+
+Câu hỏi: Chuyện gì xảy ra nếu không nộp bảng đánh giá rèn luyện đúng hạn?
+Trả lời: Sinh viên không thực hiện hoặc không nộp bảng đánh giá kết quả rèn luyện đúng thời gian quy định sẽ bị xếp loại KÉM ở học kỳ đó.
+
+## 4. HẬU QUẢ CỦA ĐIỂM RÈN LUYỆN THẤP
+
+### 4.1. ĐÌNH CHỈ HỌC TẬP
+
+Câu hỏi: Khi nào sinh viên bị đình chỉ học tập do điểm rèn luyện?
+Trả lời: Sinh viên bị xếp loại rèn luyện YẾU hoặc KÉM trong 2 học kỳ liên tiếp sẽ bị đình chỉ học tập 1 học kỳ.
+
+### 4.2. BUỘC THÔI HỌC
+
+Câu hỏi: Khi nào sinh viên bị buộc thôi học do điểm rèn luyện?
+Trả lời: Sinh viên bị xếp loại rèn luyện YẾU hoặc KÉM trong 2 học kỳ liên tiếp lần thứ HAI sẽ bị buộc thôi học.
+
+Câu hỏi: Có bao nhiều lần sinh viên có thể bị xếp loại yếu, kém liên tiếp?
+Trả lời: Sinh viên chỉ có thể bị xếp loại rèn luyện yếu, kém trong 2 học kỳ liên tiếp tối đa 2 lần. Lần thứ hai sẽ bị buộc thôi học.
+
+## 5. ỨNG DỤNG CỦA ĐIỂM RÈN LUYỆN
+
+### 5.1. LƯU TRỮ VÀ CHỨNG NHẬN
+
+Câu hỏi: Điểm rèn luyện toàn khóa được lưu ở đâu?
+Trả lời: Điểm rèn luyện toàn khóa học được lưu trong hồ sơ quản lý sinh viên và được ghi vào phụ lục văn bằng tốt nghiệp.
+
+Câu hỏi: Điểm rèn luyện có xuất hiện trên bằng tốt nghiệp không?
+Trả lời: Điểm rèn luyện toàn khóa được ghi vào phụ lục văn bằng tốt nghiệp, không ghi trực tiếp trên bằng chính.
+
+### 5.2. XÉT HỌC BỔNG VÀ KHEN THƯỞNG
+
+Câu hỏi: Điểm rèn luyện có ảnh hưởng đến học bổng không?
+Trả lời: Có, điểm rèn luyện từng học kỳ là tiêu chí để xét học bổng khuyến khích học tập.
+
+Câu hỏi: Điểm rèn luyện có ảnh hưởng đến xếp loại cuối năm không?
+Trả lời: Có, điểm rèn luyện từng học kỳ là tiêu chí để xếp loại và khen thưởng cuối mỗi năm học.
+
+## 6. CÁC MỨC XẾP LOẠI RÈN LUYỆN
+
+Câu hỏi: Có những loại xếp hạng rèn luyện nào?
+Trả lời: Dựa trên nội dung đã nêu, các mức xếp loại rèn luyện gồm có:
+- XUẤT SẮC (cao nhất)
+- TỐT
+- KHÁ  
+- TRUNG BÌNH
+- YẾU
+- KÉM (thấp nhất)
+
+Câu hỏi: Điểm rèn luyện bao nhiêu được xếp loại tốt?
+Trả lời: Thông tin chi tiết về thang điểm cụ thể cho từng loại cần tham khao thêm quy định chi tiết của nhà trường.

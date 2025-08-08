@@ -1,0 +1,203 @@
+# PHƯƠNG THỨC 3: XÉT ĐIỂM HỌC BẠ THPT NĂM 2025
+
+## 1. TỔNG QUAN PHƯƠNG THỨC 3
+
+Câu hỏi: Phương thức 3 xét tuyển dựa trên gì?
+Trả lời: 📚 **Phương thức 3** xét tuyển dựa vào Điểm trung bình môn cả năm (ĐTBMCN) lớp 10, 11, 12 của 3 môn trong tổ hợp xét tuyển ứng với ngành dự tuyển.
+
+## 2. CÁCH TÍNH ĐIỂM HỌC BẠ
+
+### 2.1. CÔNG THỨC TÍNH ĐIỂM MỖI MÔN
+
+Câu hỏi: Điểm mỗi môn trong học bạ được tính như thế nào?
+Trả lời: Công thức tính điểm học bạ mỗi môn (HM):
+
+**HM = (ĐTBMCN_L10 + ĐTBMCN_L11 + ĐTBMCN_L12) / 3**
+
+- 📊 **Thang điểm**: 10 điểm
+- 🔢 **Làm tròn**: Đến hai chữ số thập phân
+- 🚫 **Không sử dụng**: Điểm kiểm tra lại
+- 📈 **Trung bình cộng**: Ba năm lớp 10, 11, 12
+
+### 2.2. QUY ĐỔI ĐIỂM HỌC BẠ
+
+Câu hỏi: Điểm học bạ có được quy đổi không?
+Trả lời: Quy trình quy đổi điểm:
+- 🔄 **Quy đổi tương đương**: Với điểm thi tốt nghiệp THPT (HMQĐ)
+- 📏 **Theo quy tắc chuẩn**: Của Bộ GDĐT
+- 🎭 **Môn năng khiếu**: Không quy đổi tương đương
+- 📊 **Đảm bảo công bằng**: Giữa các phương thức xét tuyển
+
+### 2.3. CÔNG THỨC TÍNH ĐIỂM XÉT TUYỂN
+
+Câu hỏi: Điểm xét tuyển cuối cùng được tính ra sao?
+Trả lời: Công thức điểm xét tuyển (ĐXT):
+
+**ĐXT = (HM_1QĐ + HM_2QĐ + HM_3QĐ) + Điểm ưu tiên**
+
+- 📊 **Thang điểm**: 30 điểm
+- 🚫 **Không nhân hệ số**: Các môn trong tổ hợp
+- 🔢 **Làm tròn**: Đến hai chữ số thập phân
+- 🎯 **Tự động chọn tổ hợp cao nhất**: Trường sẽ chọn tổ hợp có ĐXT cao nhất
+
+## 3. NGÀNH VÀ ĐỐI TƯỢNG XÉT TUYỂN
+
+### 3.1. NGÀNH XÉT TUYỂN
+
+Câu hỏi: Có bao nhiêu ngành xét tuyển theo học bạ THPT?
+Trả lời: 🎯 **Tất cả 121 mã ngành** đều xét tuyển theo phương thức 3, tương tự như phương thức 2.
+
+### 3.2. ĐỐI TƯỢNG DỰ TUYỂN
+
+Câu hỏi: Ai có thể dự tuyển theo phương thức 3?
+Trả lời: Đối tượng được dự tuyển:
+- 🎓 **Thí sinh tốt nghiệp THPT** từ năm 2025 trở về trước
+- 🏫 **Thí sinh đã tốt nghiệp cao đẳng, đại học** có nhu cầu học liên thông
+
+## 4. ĐIỀU KIỆN ĐẶC BIỆT CHO NGÀNH ĐÀO TẠO GIÁO VIÊN
+
+### 4.1. GIÁO DỤC THỂ CHẤT
+
+Câu hỏi: Điều kiện đăng ký ngành Giáo dục Thể chất như thế nào?
+Trả lời: Yêu cầu cho ngành Giáo dục Thể chất:
+- 📚 **Kết quả học tập lớp 12**: Xếp loại khá trở lên
+- 🎯 **Không áp dụng ngưỡng đầu vào** nếu đạt 1 trong 2 điều kiện:
+  - 🏆 **Điểm thi môn Năng khiếu TDTT**: Từ 9,0 trở lên (thang 10)
+  - 🥇 **Vận động viên cấp 1, kiện tướng** hoặc đoạt huy chương tại giải thể thao quốc gia/quốc tế
+
+### 4.2. CÁC NGÀNH GIÁO VIÊN KHÁC
+
+Câu hỏi: Điều kiện cho các ngành đào tạo giáo viên khác?
+Trả lời: 🏆 **Kết quả học tập cả năm lớp 12**: Xếp loại giỏi trở lên cho tất cả các ngành đào tạo giáo viên khác.
+
+## 5. ĐIỀU KIỆN CHO NGÀNH KHÔNG PHẢI ĐÀO TẠO GIÁO VIÊN
+
+### 5.1. NGƯỠNG ĐIỂM ĐẦU VÀO
+
+Câu hỏi: Điều kiện điểm cho ngành không phải sư phạm?
+Trả lời: Điều kiện điểm số:
+- 📊 **Đạt ngưỡng đầu vào**: Do ĐHCT xác định và công bố trước 17g00 ngày 23/7/2025
+- 🎯 **Điểm đã quy đổi**: Phù hợp với mã ngành dự tuyển
+- 📈 **Tương ứng từng ngành**: Mỗi ngành có ngưỡng riêng
+
+### 5.2. YÊU CẦU ĐIỂM TỪNG MÔN
+
+Câu hỏi: Yêu cầu điểm tối thiểu cho từng môn?
+Trả lời: Yêu cầu điểm từng môn:
+- 🚫 **Không có môn ≤ 1,0 điểm**: Trong tổ hợp xét tuyển (đã quy đổi)
+- 🎭 **Môn năng khiếu ≥ 5,0 điểm**: Cho các ngành:
+  - ⚽ **Giáo dục Thể chất**
+  - 👶 **Giáo dục Mầm non**  
+  - 🏗️ **Kiến trúc**
+
+## 6. ĐĂNG KÝ XÉT TUYỂN
+
+### 6.1. HÌNH THỨC ĐĂNG KÝ
+
+Câu hỏi: Đăng ký xét tuyển học bạ ở đâu?
+Trả lời: Thông tin đăng ký:
+- 💻 **Đăng ký trực tuyến**: Trên Cổng tuyển sinh của Bộ GDĐT
+- 🌐 **Website**: https://thisinh.thitotnghiepthpt.edu.vn
+- 🔄 **Không giới hạn**: Số lần đăng ký, điều chỉnh nguyện vọng
+- 📱 **Linh hoạt**: Thay đổi được nhiều lần
+
+### 6.2. THỜI GIAN ĐĂNG KÝ
+
+Câu hỏi: Lịch trình đăng ký như thế nào?
+Trả lời: Lịch trình đăng ký:
+- 📅 **Thời gian đăng ký**: Từ 16/7 đến 17g00 ngày 28/7/2025
+- 💰 **Nộp lệ phí**: Từ 29/7 đến 17g00 ngày 5/8/2025
+- 💻 **Nộp phí trực tuyến**: Theo hướng dẫn trên Cổng tuyển sinh
+- ⏰ **Chú ý**: Đúng giờ quy định
+
+## 7. ƯU ĐIỂM CỦA PHƯƠNG THỨC 3
+
+### 7.1. ƯU ĐIỂM CHO HỌC SINH
+
+Câu hỏi: Phương thức xét học bạ có ưu điểm gì?
+Trả lời: Ưu điểm của phương thức 3:
+- 📈 **Phản ánh quá trình**: Kết quả học tập 3 năm THPT
+- 🎯 **Phù hợp học sinh giỏi đều**: Không bị "đánh" một lần thi
+- 📚 **Ổn định**: Không phụ thuộc vào tâm lý thi cử
+- ⚖️ **Công bằng**: Đánh giá toàn diện năng lực
+
+### 7.2. PHẠM VI ỨNG DỤNG
+
+Câu hỏi: Ai nên chọn phương thức xét học bạ?
+Trả lời: Phương thức 3 phù hợp với:
+- 📊 **Học sinh có học bạ tốt**: Điểm đều qua các năm học
+- 🎯 **Học sinh lo thi kém**: Không tự tin với kỳ thi một lần
+- 🏆 **Học sinh dự tuyển sư phạm**: Có yêu cầu đặc biệt về xếp loại
+- 🔄 **Học sinh đa chiến lược**: Kết hợp với các phương thức khác
+
+## 8. CHIẾN LƯỢC CHO THÍ SINH
+
+### 8.1. CHO HỌC SINH CÓ HỌC BẠ TỐT
+
+Câu hỏi: Học sinh có học bạ tốt nên làm gì?
+Trả lời: Chiến lược cho học sinh có học bạ tốt:
+- 🎯 **Ưu tiên phương thức 3**: Tận dụng thế mạnh học bạ
+- 📊 **Tính toán điểm quy đổi**: Ước tính chính xác khả năng trúng tuyển
+- 🏆 **Chọn ngành phù hợp**: Với mức điểm của mình
+- 🔄 **Backup với phương thức 2**: An toàn hơn
+
+### 8.2. CHO HỌC SINH DỰ TUYỂN SƯ PHẠM
+
+Câu hỏi: Thí sinh dự tuyển sư phạm cần chú ý gì?
+Trả lời: Lưu ý đặc biệt cho sư phạm:
+- 🏆 **Xếp loại học tập**: Khá (GDTC) hoặc Giỏi (ngành khác)
+- 📚 **Kết quả lớp 12**: Đặc biệt quan trọng
+- 🎭 **Môn năng khiếu**: Chú ý điểm tối thiểu
+- 🎯 **Thế mạnh thể thao**: Tận dụng nếu có
+
+## 9. SO SÁNH VỚI PHƯƠNG THỨC KHÁC
+
+### 9.1. SO VỚI PHƯƠNG THỨC 2
+
+Câu hỏi: Khác biệt giữa học bạ và thi tốt nghiệp?
+Trả lời: So sánh phương thức 2 và 3:
+
+| Tiêu chí | Phương thức 2 (Thi TN) | Phương thức 3 (Học bạ) |
+|----------|------------------------|------------------------|
+| **Cơ sở điểm** | 📝 Kỳ thi một lần | 📚 Quá trình 3 năm |
+| **Tính ổn định** | 🎲 Phụ thuộc tâm lý thi | 📈 Ổn định theo thời gian |
+| **Phù hợp với** | 🎯 Học sinh thi giỏi | 📊 Học sinh học đều |
+| **Rủi ro** | ⚡ Cao (một lần thi) | 🛡️ Thấp (tích lũy dài hạn) |
+
+### 9.2. KHAI THÁC ĐIỂM MẠNH
+
+Câu hỏi: Làm sao để tận dụng tối đa phương thức 3?
+Trả lời: Cách tận dụng hiệu quả:
+- 📈 **Duy trì điểm cao**: Đều đặn qua 3 năm học
+- 🎯 **Tập trung tổ hợp**: Các môn trong tổ hợp xét tuyển
+- 🔄 **Linh hoạt kết hợp**: Với các phương thức khác
+- 📊 **Tính toán kỹ**: Điểm quy đổi và ngưỡng đầu vào
+
+## 10. LƯU Ý QUAN TRỌNG
+
+### 10.1. VỀ ĐIỂM SỐ VÀ QUY ĐỔI
+
+Câu hỏi: Cần chú ý gì về điểm và quy đổi?
+Trả lời: Lưu ý về điểm số:
+- 🔄 **Quy đổi chính xác**: Theo quy tắc của Bộ GDĐT
+- 🚫 **Không dưới 1,0**: Điểm từng môn sau quy đổi
+- 🎭 **Môn năng khiếu ≥ 5,0**: Với ngành có yêu cầu đặc biệt
+- 📊 **Ngưỡng đầu vào**: Chờ công bố trước 23/7/2025
+
+### 10.2. VỀ XẾP LOẠI HỌC LỰC
+
+Câu hỏi: Xếp loại học lực có quan trọng không?
+Trả lời: Tầm quan trọng của xếp loại:
+- 🏆 **Rất quan trọng**: Với ngành đào tạo giáo viên
+- ⚽ **GDTC**: Tối thiểu Khá
+- 📚 **Sư phạm khác**: Tối thiểu Giỏi
+- 🎯 **Ngành thường**: Không bắt buộc xếp loại
+
+## 11. KẾT LUẬN
+
+Câu hỏi: Tổng kết về phương thức xét học bạ THPT?
+Trả lời: Phương thức 3 là lựa chọn tuyệt vời cho:
+- 📊 **Học sinh có kết quả học tập ổn định**: Qua 3 năm THPT
+- 🎯 **Thí sinh không tự tin với thi cử**: Một lần quyết định
+- 🏆 **Ứng viên ngành sư phạm**: Có yêu cầu đặc biệt về xếp loại
+- 🔄 **Chiến lược đa phương thức**: Kết hợp với các phương thức khác để tăng cơ hội

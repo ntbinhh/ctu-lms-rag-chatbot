@@ -5,6 +5,48 @@ from rasa_sdk.events import SlotSet
 import requests
 from datetime import datetime, timedelta
 import json
+import os
+import sys
+
+# Load environment variables manually
+def load_env_file():
+    """Load .env file manually since Rasa might not do it automatically"""
+    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '.env')
+    print(f"🔧 DEBUG: Looking for .env at: {env_path}")
+    
+    if os.path.exists(env_path):
+        print("📁 Loading .env file...")
+        with open(env_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line and not line.startswith('#') and '=' in line:
+                    key, value = line.split('=', 1)
+                    os.environ[key.strip()] = value.strip()
+                    print(f"🔧 Set env: {key.strip()} = {value.strip()}")
+    else:
+        print(f"❌ .env file not found at {env_path}")
+
+# Load environment variables
+load_env_file()
+
+# Import RAG bridge system
+try:
+    # Debug environment variables
+    print(f"🔧 DEBUG: RAG_SERVER_URL = {os.getenv('RAG_SERVER_URL', 'NOT_SET')}")
+    print(f"🔧 DEBUG: Current working directory = {os.getcwd()}")
+    
+    from rag_bridge import RAGBridge
+    RAG_AVAILABLE = True
+    rag_bridge = RAGBridge()
+    print("✅ RAG Bridge initialized successfully")
+except ImportError as e:
+    print(f"⚠️ RAG Bridge not available: {e}")
+    RAG_AVAILABLE = False
+    rag_bridge = None
+except Exception as e:
+    print(f"❌ RAG Bridge initialization error: {e}")
+    RAG_AVAILABLE = False
+    rag_bridge = None
 
 # Cache để lưu thông tin phòng
 room_cache = {}
@@ -790,4 +832,158 @@ class ActionGetNextClass(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         dispatcher.utter_message(text="⏰ Chức năng xem tiết học tiếp theo đang được phát triển. Hiện tại bạn có thể hỏi lịch học hôm nay.")
+        return []
+
+
+class ActionRAGQuery(Action):
+    """Action để xử lý câu hỏi tổng quát bằng RAG system"""
+    
+    def name(self) -> Text:
+        return "action_rag_query"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        try:
+            # Lấy tin nhắn của user
+            user_message = tracker.latest_message.get('text', '')
+            
+            if not user_message:
+                dispatcher.utter_message(text="❓ Bạn có thể đặt câu hỏi cụ thể không?")
+                return []
+            
+            # Kiểm tra RAG bridge có sẵn không
+            if not RAG_AVAILABLE or not rag_bridge:
+                # Fallback response khi RAG không sẵn sàng
+                fallback_response = self._get_fallback_response(user_message)
+                dispatcher.utter_message(text=fallback_response)
+                return []
+            
+            print(f"🔍 Processing RAG query: {user_message}")
+            print(f"🔧 DEBUG: RAG_AVAILABLE = {RAG_AVAILABLE}")
+            print(f"🔧 DEBUG: rag_bridge = {rag_bridge}")
+            print(f"🔧 DEBUG: RAG_SERVER_URL = {os.getenv('RAG_SERVER_URL', 'NOT_SET')}")
+            
+            # Thực hiện truy vấn RAG qua bridge
+            print("🚀 Calling rag_bridge.query()...")
+            response = rag_bridge.query(user_message)
+            print(f"📤 RAG response received: {response[:100]}...")
+            
+            # Gửi phản hồi
+            dispatcher.utter_message(text=response)
+            
+            return []
+            
+        except Exception as e:
+            print(f"❌ Error in ActionRAGQuery: {e}")
+            dispatcher.utter_message(text="⚠️ Có lỗi xảy ra khi xử lý câu hỏi. Vui lòng thử lại sau.")
+            return []
+    
+    def _get_fallback_response(self, user_message: str) -> str:
+        """Phản hồi dự phòng khi RAG không khả dụng"""
+        message_lower = user_message.lower()
+        
+        if any(keyword in message_lower for keyword in ['học phí', 'chi phí', 'phí', 'tiền']):
+            return ("💰 Về học phí, bạn có thể:\n"
+                   "• Liên hệ phòng Đào tạo để được tư vấn chi tiết\n"
+                   "• Xem thông tin trên website chính thức của trường\n"
+                   "• Gọi hotline hỗ trợ sinh viên")
+        
+        elif any(keyword in message_lower for keyword in ['chương trình', 'ngành', 'đào tạo', 'môn học']):
+            return ("📚 Về chương trình đào tạo:\n"
+                   "• Bạn có thể xem chi tiết trên website của trường\n"
+                   "• Liên hệ phòng Đào tạo để được tư vấn\n"
+                   "• Tôi cũng có thể giúp xem chương trình đào tạo nếu bạn đã đăng nhập")
+        
+        elif any(keyword in message_lower for keyword in ['quy định', 'quy chế', 'luật', 'điều lệ']):
+            return ("📋 Về các quy định:\n"
+                   "• Xem tài liệu quy chế đào tạo trên website\n"
+                   "• Liên hệ phòng Đào tạo để được giải đáp\n"
+                   "• Tham khảo sổ tay sinh viên")
+        
+        elif any(keyword in message_lower for keyword in ['học bổng', 'hỗ trợ', 'miễn giảm']):
+            return ("🎓 Về học bổng và hỗ trợ:\n"
+                   "• Xem thông tin học bổng trên website\n"
+                   "• Liên hệ phòng Công tác sinh viên\n"
+                   "• Theo dõi thông báo từ trường")
+        
+        elif any(keyword in message_lower for keyword in ['liên hệ', 'địa chỉ', 'email', 'điện thoại']):
+            return ("📞 Thông tin liên hệ:\n"
+                   "• Website chính thức của trường\n"
+                   "• Phòng Đào tạo và Công tác sinh viên\n"
+                   "• Hotline hỗ trợ sinh viên\n"
+                   "• Fanpage và mạng xã hội của trường")
+        
+        else:
+            return ("🤖 Cảm ơn bạn đã hỏi! Hiện tại tôi có thể giúp bạn:\n"
+                   "• 📅 Xem lịch học (hôm nay, ngày mai, tuần)\n"
+                   "• 📚 Xem chương trình đào tạo\n"
+                   "• 📞 Thông tin liên hệ các phòng ban\n\n"
+                   "Bạn cũng có thể liên hệ trực tiếp phòng Đào tạo để được hỗ trợ chi tiết hơn.")
+
+
+class ActionInitializeRAG(Action):
+    """Action để kiểm tra trạng thái RAG bridge"""
+    
+    def name(self) -> Text:
+        return "action_initialize_rag"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        try:
+            if not RAG_AVAILABLE or not rag_bridge:
+                dispatcher.utter_message(text="❌ RAG bridge không khả dụng. Vui lòng kiểm tra kết nối.")
+                return []
+            
+            # Kiểm tra trạng thái
+            if rag_bridge.is_ready():
+                dispatcher.utter_message(text="✅ RAG system đã sẵn sàng!")
+            else:
+                dispatcher.utter_message(text="⚠️ RAG system chưa sẵn sàng. Vui lòng kiểm tra external API.")
+            
+            return []
+            
+        except Exception as e:
+            print(f"❌ Error in ActionInitializeRAG: {e}")
+            dispatcher.utter_message(text="⚠️ Có lỗi xảy ra khi kiểm tra hệ thống.")
+            return []
+
+
+class ActionRAGHelp(Action):
+    """Action cung cấp hướng dẫn về RAG system"""
+    
+    def name(self) -> Text:
+        return "action_rag_help"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        help_message = """🤖 **Hướng dẫn sử dụng chatbot**
+
+Tôi có thể giúp bạn:
+
+📅 **Lịch học:**
+- "lịch học hôm nay"
+- "lịch học ngày mai"  
+- "lịch học tuần này"
+
+📚 **Chương trình đào tạo:**
+- "chương trình đào tạo của tôi"
+- "xem môn học"
+
+❓ **Câu hỏi tổng quát:**
+- Học phí và chi phí
+- Quy định và quy chế
+- Thông tin liên hệ
+- Học bổng và hỗ trợ
+
+**Lưu ý:** Để xem lịch học và chương trình đào tạo, bạn cần đăng nhập vào hệ thống trước.
+
+Hãy thử hỏi tôi bất kỳ điều gì! 😊"""
+        
+        dispatcher.utter_message(text=help_message)
         return []

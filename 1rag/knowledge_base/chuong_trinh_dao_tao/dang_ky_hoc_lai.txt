@@ -1,0 +1,4 @@
+Đăng ký học lại
+Các học phần có điểm F sẽ không được tích lũy. Nếu là học phần bắt buộc, sinh viên phải đăng ký học lại những học phần này; nếu là học phần tự chọn, sinh viên có thể đăng ký học lại hoặc chọn học phần tự chọn khác.
+Sinh viên có thể đăng ký học để cải thiện kết quả. Điểm của học phần sẽ là điểm cao nhất trong các lần học. Số tín chỉ của học phần học cải thiện bị điểm F sẽ không tính giảm một mức hạng tốt nghiệp theo Điểm a, Khoản 2, Điều 34.
+Đối với học phần tự chọn, nếu sinh viên tích lũy số tín chỉ nhiều hơn yêu cầu của nhóm học phần tự chọn, khi xét tốt nghiệp sinh viên có thể lựa chọn học phần có điểm cao để tính vào ĐTBCTL.

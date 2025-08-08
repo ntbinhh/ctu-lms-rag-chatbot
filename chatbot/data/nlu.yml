@@ -50,6 +50,73 @@ nlu:
     - see you later
     - tạm biệt
     - chào tạm biệt
+    - hẹn gặp lại
+    - bye bạn
+    - see you
+    - chúc ngủ ngon
+    - chúc buổi tối vui vẻ
+
+- intent: general_question
+  examples: |
+    - thông tin học bổng
+    - có mấy phương thức tuyển sinh
+    - có mấy phương thức xts tuyển
+    - quy định về điểm số như thế nào?
+    - thủ tục xin học bổng
+    - lịch thi cuối kỳ
+    - quy định về vắng mặt
+    - cách tính điểm trung bình
+    - thủ tục chuyển ngành
+    - quy định về đăng ký học phần
+    - học phí một học kỳ là bao nhiêu?
+    - làm thế nào để xin nghỉ học?
+    - điều kiện tốt nghiệp
+    - thông tin liên hệ phòng đào tạo
+    - địa chỉ trường
+    - số điện thoại phòng ban
+    - email liên hệ
+    - giờ làm việc của các phòng ban
+    - quy chế đào tạo
+    - quy định về thi cử
+    - thủ tục xin miễn giảm học phí
+    - chính sách học bổng
+    - điều kiện xét học bổng
+    - cách nộp hồ sơ xin học bổng
+    - quy định về thực tập
+    - yêu cầu làm đồ án tốt nghiệp
+    - thủ tục chuyển lớp
+    - quy định về đăng ký tín chỉ
+    - học phí
+    - chi phí học tập
+    - mức phí
+    - tiền học
+    - cost
+    - fee
+    - tuition
+    - học bổng
+    - scholarship
+    - hỗ trợ tài chính
+    - miễn giảm
+    - quy định
+    - quy chế
+    - regulation
+    - rule
+    - luật
+    - chương trình đào tạo
+    - curriculum
+    - môn học
+    - subject
+    - course
+    - ngành học
+    - major
+    - liên hệ
+    - contact
+    - địa chỉ
+    - address
+    - phone
+    - email
+    - điện thoại
+    - chào tạm biệt
     - bye bạn
     - hẹn gặp lại
     - gặp lại sau nhé

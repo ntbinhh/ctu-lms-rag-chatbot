@@ -1,0 +1,85 @@
+# ĐIỂM TRUNG BÌNH CHUNG - TRƯỜNG ĐẠI HỌC CẦN THƠ
+
+## 1. SỐ TÍN CHỈ TÍCH LŨY
+
+Câu hỏi: Số tín chỉ tích lũy là gì?
+Trả lời: Số tín chỉ tích lũy là tổng số tín chỉ của các học phần mà sinh viên đã hoàn thành và được tính vào kết quả học tập.
+
+## 2. ĐIỂM TRUNG BÌNH CHUNG HỌC KỲ (ĐTBCHK)
+
+Câu hỏi: ĐTBCHK là gì?
+Trả lời: Điểm trung bình chung học kỳ (ĐTBCHK) là trung bình có trọng số của điểm các học phần đã học trong học kỳ, với trọng số là số tín chỉ của học phần đó.
+
+Câu hỏi: ĐTBCHK có tính các học phần điểm F không?
+Trả lời: Có, ĐTBCHK tính tất cả học phần đã học trong học kỳ, kể cả học phần bị điểm F và học phần điều kiện, nhưng không tính môn Giáo dục Thể chất (GDTC).
+
+Câu hỏi: Công thức tính ĐTBCHK như thế nào?
+Trả lời: Công thức tính ĐTBCHK là:
+**ĐTBCHK = (Σ Xi × ai) ÷ (Σ ai)**
+Trong đó:
+- Xi: điểm học phần thứ i
+- ai: số tín chỉ của học phần thứ i  
+- n: số học phần đăng ký trong học kỳ
+
+Câu hỏi: ĐTBCHK được dùng để làm gì?
+Trả lời: ĐTBCHK là cơ sở để đánh giá kết quả học tập, xét học bổng, khen thưởng, và cảnh báo học tập sau mỗi học kỳ.
+
+## 3. ĐIỂM TRUNG BÌNH CHUNG NĂM HỌC (ĐTBCNH)
+
+Câu hỏi: ĐTBCNH là gì?
+Trả lời: Điểm trung bình chung năm học (ĐTBCNH) là trung bình có trọng số của điểm các học phần đã học trong cả năm học.
+
+Câu hỏi: ĐTBCNH có tính học phần điểm F không?
+Trả lời: Có, ĐTBCNH tính tất cả học phần đã học trong năm học, kể cả học phần bị điểm F và học phần điều kiện, nhưng không tính môn Giáo dục Thể chất (GDTC).
+
+## 4. ĐIỂM TRUNG BÌNH CHUNG TÍCH LŨY (ĐTBCTL)
+
+Câu hỏi: ĐTBCTL là gì?
+Trả lời: Điểm trung bình chung tích lũy (ĐTBCTL) là trung bình có trọng số của điểm các học phần đã tích lũy tính đến thời điểm xét.
+
+Câu hỏi: ĐTBCTL có tính học phần điểm F không?
+Trả lời: KHÔNG, ĐTBCTL không bao gồm học phần bị điểm F và học phần điều kiện, chỉ tính các học phần đã PASS.
+
+Câu hỏi: ĐTBCTL được dùng để làm gì?
+Trả lời: ĐTBCTL là cơ sở để đánh giá kết quả học tập toàn khóa, xếp loại học tập, và xếp hạng tốt nghiệp.
+
+## 5. BẢNG XẾP LOẠI HỌC TẬP
+
+Câu hỏi: Bảng xếp loại học tập dựa trên điểm nào?
+Trả lời: Xếp loại học tập học kỳ căn cứ vào ĐTBCHK, xếp loại học tập năm học căn cứ vào ĐTBCNH.
+
+**BẢNG XẾP LOẠI HỌC TẬP:**
+
+### XẾP LOẠI XUẤT SẮC
+Câu hỏi: Điểm bao nhiêu được xếp loại Xuất sắc?
+Trả lời: ĐTBCHK/ĐTBCNH từ 3,60 đến 4,00 được xếp loại Xuất sắc.
+
+### XẾP LOẠI GIỎI  
+Câu hỏi: Điểm bao nhiêu được xếp loại Giỏi?
+Trả lời: ĐTBCHK/ĐTBCNH từ 3,20 đến 3,59 được xếp loại Giỏi.
+
+### XẾP LOẠI KHÁ
+Câu hỏi: Điểm bao nhiêu được xếp loại Khá?
+Trả lời: ĐTBCHK/ĐTBCNH từ 2,50 đến 3,19 được xếp loại Khá.
+
+### XẾP LOẠI TRUNG BÌNH
+Câu hỏi: Điểm bao nhiêu được xếp loại Trung bình?
+Trả lời: ĐTBCHK/ĐTBCNH từ 2,00 đến 2,49 được xếp loại Trung bình.
+
+### XẾP LOẠI YẾU
+Câu hỏi: Điểm bao nhiêu được xếp loại Yếu?
+Trả lời: ĐTBCHK/ĐTBCNH từ 1,00 đến 1,99 được xếp loại Yếu.
+
+### XẾP LOẠI KÉM
+Câu hỏi: Điểm bao nhiêu được xếp loại Kém?
+Trả lời: ĐTBCHK/ĐTBCNH dưới 1,00 được xếp loại Kém.
+
+## 6. KHÁC BIỆT GIỮA CÁC LOẠI ĐIỂM TRUNG BÌNH
+
+Câu hỏi: Khác biệt chính giữa ĐTBCHK và ĐTBCTL là gì?
+Trả lời: 
+- ĐTBCHK: Tính TẤT CẢ học phần trong kỳ (kể cả điểm F), dùng để xét học bổng và cảnh báo
+- ĐTBCTL: CHỈ tính học phần đã PASS (không tính điểm F), dùng để xếp loại tốt nghiệp
+
+Câu hỏi: Môn nào không được tính vào điểm trung bình?
+Trả lời: Môn Giáo dục Thể chất (GDTC) không được tính vào tất cả các loại điểm trung bình.

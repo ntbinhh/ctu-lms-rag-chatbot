@@ -14,6 +14,8 @@ intents:
   - ask_schedule_tomorrow
   - ask_next_class
   - ask_student_program
+  - general_question
+  - ask_help
 
 entities:
   - year
@@ -116,6 +118,9 @@ actions:
   - action_get_schedule_tomorrow
   - action_get_next_class
   - action_get_student_program
+  - action_rag_query
+  - action_initialize_rag
+  - action_rag_help
 
 session_config:
   session_expiration_time: 60

@@ -29,6 +29,22 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+- story: general question with rag
+  steps:
+  - intent: general_question
+  - action: action_rag_query
+
+- story: greet and initialize rag
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: action_initialize_rag
+
+- story: help with rag
+  steps:
+  - intent: ask_help
+  - action: action_rag_help
+
 
 
 - story: Hỏi lịch học hôm nay

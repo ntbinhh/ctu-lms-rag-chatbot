@@ -1,0 +1,117 @@
+# HỌC PHÍ CHƯƠNG TRÌNH TIÊN TIẾN (CTTT) VÀ CHẤT LƯỢNG CAO (CTCLC) NĂM 2025-2026
+
+## 1. TỔNG QUAN VỀ HỌC PHÍ CTTT VÀ CTCLC
+
+Câu hỏi: Học phí chương trình tiên tiến và chất lượng cao năm 2025-2026 như thế nào?
+Trả lời: Học phí dự kiến cho sinh viên trúng tuyển năm học 2025-2026 sẽ cố định trong suốt khóa học, không thay đổi qua các năm.
+
+## 2. MỨC HỌC PHÍ CHÍNH
+
+### 2.1. HỌC PHÍ 40 TRIỆU ĐỒNG/NĂM
+
+Câu hỏi: Hầu hết các ngành CTTT/CTCLC có học phí bao nhiêu?
+Trả lời: Hầu hết các ngành chương trình tiên tiến và chất lượng cao có học phí 40 triệu đồng/năm.
+
+### 2.2. HỌC PHÍ ĐẶC BIỆT - 37 TRIỆU ĐỒNG/NĂM
+
+Câu hỏi: Ngành nào có học phí thấp hơn 40 triệu?
+Trả lời: Ngành Kỹ thuật điều khiển và tự động hóa (CTCLC) có học phí 37 triệu đồng/năm.
+
+## 3. PHÂN LOẠI THEO LĨNH VỰC
+
+### 3.1. NGÀNH KINH TẾ - QUẢN TRỊ
+
+Câu hỏi: Các ngành kinh tế trong CTCLC có những ngành nào?
+Trả lời: Các ngành kinh tế - quản trị CTCLC gồm:
+- 💼 **Ngôn ngữ Anh** (7220201C) - 40 triệu đồng/năm
+- 💼 **Quản trị kinh doanh** (7340101C) - 40 triệu đồng/năm  
+- 💼 **Kinh doanh quốc tế** (7340120C) - 40 triệu đồng/năm
+- 💼 **Tài chính – Ngân hàng** (7340201C) - 40 triệu đồng/năm
+- 🏨 **Quản trị dịch vụ du lịch và lữ hành** (7810103C) - 40 triệu đồng/năm
+
+### 3.2. NGÀNH CÔNG NGHỆ THÔNG TIN
+
+Câu hỏi: Các ngành CNTT trong CTCLC có những ngành nào?
+Trả lời: Các ngành CNTT CTCLC gồm:
+- 💻 **Mạng máy tính và truyền thông dữ liệu** (7480102C) - 40 triệu đồng/năm
+- 💻 **Kỹ thuật phần mềm** (7480103C) - 40 triệu đồng/năm
+- 💻 **Hệ thống thông tin** (7480104C) - 40 triệu đồng/năm
+- 💻 **Công nghệ thông tin** (7480201C) - 40 triệu đồng/năm
+
+### 3.3. NGÀNH KỸ THUẬT
+
+Câu hỏi: Các ngành kỹ thuật trong CTCLC có những ngành nào?
+Trả lời: Các ngành kỹ thuật CTCLC gồm:
+- ⚙️ **Công nghệ kỹ thuật hóa học** (7510401C) - 40 triệu đồng/năm
+- ⚡ **Kỹ thuật điện** (7520201C) - 40 triệu đồng/năm  
+- 🤖 **Kỹ thuật điều khiển và tự động hóa** (7520216C) - **37 triệu đồng/năm**
+- 🍎 **Công nghệ thực phẩm** (7540101C) - 40 triệu đồng/năm
+- 🏗️ **Kỹ thuật xây dựng** (7580201C) - 40 triệu đồng/năm
+
+### 3.4. NGÀNH SINH HỌC VÀ NÔNG NGHIỆP
+
+Câu hỏi: Các ngành sinh học - nông nghiệp có chương trình tiên tiến không?
+Trả lời: Có các ngành:
+- 🧬 **Công nghệ sinh học** (7420201T) - CTTT - 40 triệu đồng/năm
+- 🐟 **Nuôi trồng thủy sản** (7620301T) - CTTT - 40 triệu đồng/năm
+- 🐾 **Thú y** (7640101C) - CTCLC - 40 triệu đồng/năm
+
+## 4. PHÂN BIỆT CTTT VÀ CTCLC
+
+### 4.1. CHƯƠNG TRÌNH TIÊN TIẾN (CTTT)
+
+Câu hỏi: Có bao nhiêu ngành chương trình tiên tiến?
+Trả lời: Có 2 ngành chương trình tiên tiến (CTTT):
+- 🧬 **Công nghệ sinh học** (7420201T)
+- 🐟 **Nuôi trồng thủy sản** (7620301T)
+
+### 4.2. CHƯƠNG TRÌNH CHẤT LƯỢNG CAO (CTCLC)
+
+Câu hỏi: Có bao nhiêu ngành chất lượng cao?
+Trả lời: Có 15 ngành chương trình chất lượng cao (CTCLC), phủ khắp các lĩnh vực từ kinh tế, CNTT đến kỹ thuật.
+
+## 5. BẢNG TÓM TẮT HỌC PHÍ
+
+Câu hỏi: Tóm tắt học phí các chương trình đặc biệt?
+Trả lời:
+
+| Mức học phí | Số lượng ngành | Chương trình | Ghi chú |
+|-------------|----------------|--------------|---------|
+| **37 triệu đồng/năm** | 1 ngành | CTCLC | Kỹ thuật điều khiển và tự động hóa |
+| **40 triệu đồng/năm** | 16 ngành | CTTT + CTCLC | Cố định suốt khóa học |
+
+## 6. ƯU ĐIỂM CỦA HỌC PHÍ CỐ ĐỊNH
+
+Câu hỏi: Học phí cố định có lợi ích gì?
+Trả lời: Học phí cố định trong suốt khóa học mang lại các lợi ích:
+- ✅ **Dễ dàng lập kế hoạch tài chính** cho gia đình
+- ✅ **Không lo tăng giá** trong quá trình học
+- ✅ **Minh bạch chi phí** từ khi nhập học
+- ✅ **Ổn định nguồn thu** cho chương trình chất lượng cao
+
+## 7. SO SÁNH VỚI CHƯƠNG TRÌNH ĐẠI TRÀ
+
+Câu hỏi: Học phí CTTT/CTCLC cao hơn đại trà bao nhiêu lần?
+Trả lời: 
+- **Chương trình đại trà**: 22,9 - 25,9 triệu đồng/năm
+- **CTTT/CTCLC**: 37 - 40 triệu đồng/năm
+- **Chênh lệch**: Cao hơn khoảng 1,5 - 1,8 lần
+
+## 8. CÁC NGÀNH HOT TRONG CTCLC
+
+Câu hỏi: Những ngành nào đang được quan tâm nhiều trong CTCLC?
+Trả lời: Các ngành được quan tâm nhiều:
+- 💻 **Công nghệ thông tin** - Nhu cầu cao của thị trường
+- 💼 **Quản trị kinh doanh** - Kỹ năng quản lý hiện đại
+- ⚡ **Kỹ thuật điện** - Công nghiệp 4.0
+- 🤖 **Kỹ thuật điều khiển và tự động hóa** - Trí tuệ nhân tạo
+- 🧬 **Công nghệ sinh học** - Ngành mới, tiềm năng lớn
+
+## 9. LƯU Ý QUAN TRỌNG
+
+Câu hỏi: Sinh viên cần lưu ý gì về học phí CTTT/CTCLC?
+Trả lời:
+- 💰 **Học phí cao hơn**: Gấp 1,5-1,8 lần chương trình đại trà
+- 🔒 **Cố định**: Không thay đổi trong suốt khóa học
+- 🎯 **Chất lượng cao**: Đầu tư nhiều hơn cho cơ sở vật chất và giảng viên
+- 📝 **Yêu cầu cao hơn**: Tiêu chuẩn đầu vào và đầu ra nghiêm ngặt hơn

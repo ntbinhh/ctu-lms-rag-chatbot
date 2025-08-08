@@ -1,0 +1,259 @@
+# PHƯƠNG THỨC 5: TUYỂN CHỌN VÀO CHƯƠNG TRÌNH TIÊN TIẾN VÀ CHẤT LƯỢNG CAO
+
+## 1. TỔNG QUAN PHƯƠNG THỨC 5
+
+Câu hỏi: Phương thức 5 là gì và dành cho ai?
+Trả lời: ⭐ **Phương thức 5** tuyển chọn thí sinh **đã trúng tuyển và nhập học** vào Trường ĐHCT năm 2025 có nhu cầu chuyển sang học ngành thuộc chương trình tiên tiến (CTTT) hoặc chương trình chất lượng cao (CTCLC). Dự kiến mỗi ngành tuyển **40 chỉ tiêu**.
+
+## 2. DANH MỤC NGÀNH CTTT VÀ CTCLC
+
+### 2.1. CHƯƠNG TRÌNH NGÔN NGỮ - QUẢN TRỊ
+
+#### 2.1.1. Ngôn ngữ Anh (CTCLC)
+Câu hỏi: Chương trình Ngôn ngữ Anh CTCLC như thế nào?
+Trả lời: 🌐 **Ngôn ngữ Anh (CTCLC)**:
+- 🎯 **Tổ hợp xét tuyển**: D01, D14, D15, D66
+- ⏰ **Thời gian đào tạo**: 4 năm
+- 📚 **Tổng tín chỉ**: 141 tín chỉ (26 CT đại trà + 115 CTCLC)
+- 💰 **Học phí**: 40 triệu đồng/năm
+
+#### 2.1.2. Các ngành Quản trị - Kinh doanh (CTCLC)
+Câu hỏi: Có những ngành quản trị kinh doanh nào trong CTCLC?
+Trả lời: Các ngành quản trị - kinh doanh CTCLC:
+- 💼 **Quản trị kinh doanh** (CTCLC)
+- 🌍 **Kinh doanh quốc tế** (CTCLC) 
+- 🏨 **Quản trị dịch vụ du lịch và lữ hành** (CTCLC)
+- 💰 **Tài chính - Ngân hàng** (CTCLC)
+
+### 2.2. CHƯƠNG TRÌNH CÔNG NGHỆ THÔNG TIN
+
+#### 2.2.1. Công nghệ thông tin (CTCLC)
+Câu hỏi: Chi tiết chương trình Công nghệ thông tin CTCLC?
+Trả lời: 💻 **Công nghệ thông tin (CTCLC)**:
+- 🎯 **Tổ hợp xét tuyển**: A00, A01, D01, D07
+- ⏰ **Thời gian đào tạo**: 4,5 năm
+- 📚 **Tổng tín chỉ**: 168 tín chỉ (26 CT đại trà + 125 CTCLC + 17 Tiếng Anh tăng cường)
+- 💰 **Học phí**: 40 triệu đồng/năm
+
+#### 2.2.2. Các ngành CNTT khác (CTCLC)
+Câu hỏi: Còn những ngành CNTT nào trong CTCLC?
+Trả lời: Các ngành CNTT khác trong CTCLC:
+- 💻 **Kỹ thuật phần mềm** (CTCLC)
+- 🖥️ **Hệ thống thông tin** (CTCLC)
+- 🌐 **Mạng máy tính và truyền thông dữ liệu** (CTCLC)
+
+### 2.3. CHƯƠNG TRÌNH KỸ THUẬT
+
+#### 2.3.1. Kỹ thuật điều khiển và tự động hóa (CTCLC)
+Câu hỏi: Chi tiết ngành Kỹ thuật điều khiển và tự động hóa CTCLC?
+Trả lời: 🤖 **Kỹ thuật điều khiển và tự động hóa (CTCLC)**:
+- 🎯 **Tổ hợp xét tuyển**: A00, A01, D01, D07
+- ⏰ **Thời gian đào tạo**: 4,5 năm
+- 📚 **Tổng tín chỉ**: 163 tín chỉ (26 CT đại trà + 120 CTCLC + 17 Tiếng Anh tăng cường)
+- 💰 **Học phí**: 37 triệu đồng/năm (đặc biệt thấp hơn)
+
+#### 2.3.2. Công nghệ kỹ thuật hóa học (CTCLC)
+Câu hỏi: Chi tiết ngành Công nghệ kỹ thuật hóa học CTCLC?
+Trả lời: ⚗️ **Công nghệ kỹ thuật hóa học (CTCLC)**:
+- 🎯 **Tổ hợp xét tuyển**: A00, A01, B00, B08, D07
+- 💰 **Học phí**: 40 triệu đồng/năm
+
+#### 2.3.3. Các ngành kỹ thuật khác (CTCLC)
+Câu hỏi: Còn những ngành kỹ thuật nào trong CTCLC?
+Trả lời: Các ngành kỹ thuật khác:
+- ⚡ **Kỹ thuật điện** (CTCLC)
+- 🏗️ **Kỹ thuật xây dựng** (CTCLC)
+- 🍎 **Công nghệ thực phẩm** (CTCLC)
+
+### 2.4. CHƯƠNG TRÌNH TIÊN TIẾN (CTTT)
+
+#### 2.4.1. Công nghệ sinh học (CTTT)
+Câu hỏi: Chi tiết chương trình Công nghệ sinh học CTTT?
+Trả lời: 🧬 **Công nghệ sinh học (CTTT)**:
+- 🎯 **Tổ hợp xét tuyển**: A00, A01, B00, B08, D07
+- ⏰ **Thời gian đào tạo**: 4,5 năm
+- 📚 **Tổng tín chỉ**: 158 tín chỉ (26 CT đại trà + 115 CTTT + 17 Tiếng Anh tăng cường)
+- 💰 **Học phí**: 40 triệu đồng/năm
+
+#### 2.4.2. Nuôi trồng thủy sản (CTTT)
+Câu hỏi: Chi tiết chương trình Nuôi trồng thủy sản CTTT?
+Trả lời: 🐟 **Nuôi trồng thủy sản (CTTT)**:
+- 🎯 **Tổ hợp xét tuyển**: A00, A01, B00, B08, D07
+- ⏰ **Thời gian đào tạo**: 4,5 năm
+- 📚 **Tổng tín chỉ**: 163 tín chỉ (26 CT đại trà + 120 CTTT + 17 Tiếng Anh tăng cường)
+- 💰 **Học phí**: 40 triệu đồng/năm
+
+### 2.5. CHƯƠNG TRÌNH ĐẶC BIỆT - THÚ Y
+
+#### 2.5.1. Thú y (CTCLC)
+Câu hỏi: Chi tiết chương trình Thú y CTCLC?
+Trả lời: 🐾 **Thú y (CTCLC)**:
+- 🎯 **Tổ hợp xét tuyển**: A00, A01, B00, B08, D07
+- ⏰ **Thời gian đào tạo**: 5 năm (dài nhất)
+- 📚 **Tổng tín chỉ**: 173 tín chỉ (26 CT đại trà + 130 CTCLC + 17 Tiếng Anh tăng cường)
+- 💰 **Học phí**: 40 triệu đồng/năm
+
+## 3. ĐỐI TƯỢNG VÀ ĐIỀU KIỆN ĐĂNG KÝ
+
+### 3.1. ĐỐI TƯỢNG ĐĂNG KÝ
+
+Câu hỏi: Ai có thể đăng ký phương thức 5?
+Trả lời: Đối tượng đăng ký:
+- ✅ **Sinh viên đã trúng tuyển**: Đại học chính quy vào ĐHCT năm 2025
+- 📚 **Bất kỳ ngành nào**: Không giới hạn ngành trúng tuyển ban đầu
+- 🎯 **Theo phương thức 1, 2, 3, 4**: Đã trúng tuyển qua một trong các phương thức này
+- 🏫 **Đã nhập học**: Hoàn thành thủ tục nhập học vào trường
+
+### 3.2. ĐIỀU KIỆN VỀ ĐIỂM SỐ
+
+Câu hỏi: Điều kiện điểm để đăng ký CTTT/CTCLC?
+Trả lời: Điều kiện điểm số:
+- 📊 **Điểm xét tuyển theo tổ hợp**: Đã quy đổi (học bạ hoặc V-SAT)
+- ⭐ **Từ bằng đến lớn hơn**: Ngưỡng đầu vào của ngành dự tuyển
+- 🎯 **Ngưỡng đầu vào**: Bằng điểm chuẩn trúng tuyển ngành tương ứng (do Trường thông báo sau)
+
+## 4. NGUYÊN TẮC XÉT TUYỂN
+
+### 4.1. ĐĂNG KÝ NGUYỆN VỌNG
+
+Câu hỏi: Có thể đăng ký bao nhiêu ngành CTTT/CTCLC?
+Trả lời: Quy định về nguyện vọng:
+- 📝 **Được đăng ký nhiều ngành**: Không giới hạn số lượng
+- 🔢 **Xếp thứ tự ưu tiên**: Theo mong muốn của thí sinh
+- 🎯 **Chọn điểm cao nhất**: Trường chọn điểm xét tuyển cao nhất (tổ hợp, phương thức)
+- 🔄 **Quy đổi điểm**: Học bạ, V-SAT được quy đổi tương đương thi tốt nghiệp THPT
+
+### 4.2. KẾT QUẢ XÉT TUYỂN
+
+Câu hỏi: Có thể trúng tuyển bao nhiêu ngành CTTT/CTCLC?
+Trả lời: 🎯 **Mỗi thí sinh chỉ được xét trúng tuyển 1 nguyện vọng** ưu tiên cao nhất đủ điều kiện.
+
+## 5. HỒ SƠ VÀ THỜI GIAN ĐĂNG KÝ
+
+### 5.1. THỜI GIAN ĐĂNG KÝ
+
+Câu hỏi: Khi nào đăng ký phương thức 5?
+Trả lời: Lịch trình đăng ký:
+- 📅 **Thời gian dự kiến**: Từ 23/8 đến hết 31/8/2025
+- 💻 **Đăng ký trực tuyến**: Trên Website tuyển sinh ĐHCT
+- ✅ **Điều kiện**: Sau khi hoàn thành thủ tục nhập học
+- ⏰ **Lưu ý**: Chỉ 9 ngày để đăng ký
+
+### 5.2. CÔNG BỐ KẾT QUẢ
+
+Câu hỏi: Khi nào có kết quả phương thức 5?
+Trả lời: 📅 **Công bố kết quả**: Dự kiến ngày 09/9/2025.
+
+## 6. QUY TRÌNH HỌC TẬP TRONG THỜI GIAN CHỜ
+
+### 6.1. HỌC TẬP SONG SONG
+
+Câu hỏi: Làm gì trong thời gian chờ kết quả CTTT/CTCLC?
+Trả lời: Quy trình học tập:
+- 📚 **Vẫn học ngành cũ**: Học và thi các học phần ngành đã trúng tuyển
+- ⏰ **Trong thời gian chờ**: Kết quả xét tuyển và trước khi bắt đầu CTCLC/CTTT
+- 💾 **Bảo lưu kết quả**: Các học phần đã tích lũy có trong CTCLC/CTTT
+- 🔄 **Không lãng phí**: Thời gian và công sức
+
+### 6.2. XỬ LÝ KẾT QUẢ
+
+Câu hỏi: Điều gì xảy ra khi có kết quả phương thức 5?
+Trả lời: Xử lý kết quả:
+- ✅ **Nếu trúng tuyển CTTT/CTCLC**:
+  - 💾 Được bảo lưu kết quả các học phần đã tích lũy có trong CTCLC/CTTT
+  - 🎯 Chuyển sang học chương trình chất lượng cao/tiên tiến
+- ❌ **Nếu không trúng tuyển**:
+  - 📚 Tiếp tục học ngành đã trúng tuyển ban đầu
+  - 🔄 Không mất thời gian đã học
+
+## 7. ƯU ĐIỂM CỦA PHƯƠNG THỨC 5
+
+### 7.1. TÍNH LINH HOẠT CAO
+
+Câu hỏi: Phương thức 5 có ưu điểm gì?
+Trả lời: Ưu điểm nổi bật:
+- 🔄 **Cơ hội thứ hai**: Sau khi đã trúng tuyển đại học
+- 📈 **Nâng cao chất lượng**: Chuyển sang chương trình tiên tiến/chất lượng cao
+- 💾 **Không mất công**: Bảo lưu được các học phần đã học
+- 🎯 **Nhiều lựa chọn**: Đăng ký nhiều ngành, xếp thứ tự ưu tiên
+
+### 7.2. BẢO ĐẢM AN TOÀN
+
+Câu hỏi: Phương thức 5 có rủi ro gì không?
+Trả lời: Tính an toàn cao:
+- 🛡️ **Không có rủi ro**: Vẫn có ngành học nếu không trúng tuyển
+- 📚 **Tiếp tục học**: Ngành đã trúng tuyển ban đầu
+- ⏰ **Không mất thời gian**: Học song song trong thời gian chờ
+- 💰 **Không tốn thêm**: Chi phí đăng ký
+
+## 8. CHIẾN LƯỢC CHO SINH VIÊN
+
+### 8.1. CHUẨN BỊ TRƯỚC KHI ĐĂNG KÝ
+
+Câu hỏi: Cần chuẩn bị gì cho phương thức 5?
+Trả lời: Chuẩn bị cần thiết:
+- 📊 **Xem lại điểm xét tuyển**: Của các phương thức đã dự tuyển
+- 🎯 **Chọn ngành phù hợp**: Với điểm số và sở thích
+- 📚 **Tìm hiểu chương trình**: CTTT/CTCLC các ngành quan tâm
+- 💰 **Cân nhắc học phí**: 37-40 triệu đồng/năm
+
+### 8.2. CHIẾN LƯỢC ĐĂNG KÝ NGUYỆN VỌNG
+
+Câu hỏi: Đăng ký nguyện vọng CTTT/CTCLC như thế nào?
+Trả lời: Chiến lược đăng ký:
+- 🎯 **Nguyện vọng 1**: Ngành yêu thích nhất (có thể điểm cao)
+- ⚖️ **Nguyện vọng 2**: Ngành phù hợp (điểm vừa phải)
+- 🛡️ **Nguyện vọng 3**: Ngành an toàn (điểm thấp hơn)
+- 📊 **Tính toán kỹ**: Ngưỡng đầu vào dự kiến
+
+## 9. SO SÁNH CTTT VÀ CTCLC
+
+### 9.1. ĐIỂM KHÁC BIỆT
+
+Câu hỏi: CTTT và CTCLC khác nhau như thế nào?
+Trả lời: So sánh CTTT và CTCLC:
+
+| Tiêu chí | CTTT | CTCLC |
+|----------|------|-------|
+| **Số ngành** | 2 ngành | 15 ngành |
+| **Lĩnh vực** | 🧬 Sinh học, 🐟 Thủy sản | 💻 CNTT, ⚡ Kỹ thuật, 💼 Kinh tế |
+| **Đặc điểm** | 🎯 Tiên tiến trong lĩnh vực | 🏆 Chất lượng cao toàn diện |
+| **Cơ hội việc làm** | 🔬 Chuyên sâu, nghiên cứu | 🌟 Đa dạng, quản lý cao |
+
+### 9.2. LỰA CHỌN PHÙ HỢP
+
+Câu hỏi: Nên chọn CTTT hay CTCLC?
+Trả lời: Lựa chọn phù hợp:
+- 🧬 **Chọn CTTT nếu**: Yêu thích nghiên cứu sinh học, thủy sản
+- 💻 **Chọn CTCLC nếu**: Muốn chất lượng cao trong CNTT, kỹ thuật, kinh tế
+- 🎯 **Dựa trên sở thích**: Và định hướng nghề nghiệp
+- 💰 **Cân nhắc học phí**: Cả hai đều 40 triệu (trừ tự động hóa 37 triệu)
+
+## 10. LƯU Ý QUAN TRỌNG
+
+### 10.1. VỀ THỜI GIAN
+
+Câu hỏi: Cần chú ý gì về thời gian?
+Trả lời: Lưu ý về thời gian:
+- ⏰ **Chỉ 9 ngày đăng ký**: 23/8 - 31/8/2025
+- 📅 **Sau nhập học**: Phải hoàn thành thủ tục nhập học trước
+- 🕘 **Kết quả nhanh**: 09/9/2025 (chỉ sau 9 ngày)
+- 📚 **Học ngay**: Không nghỉ trong thời gian chờ
+
+### 10.2. VỀ ĐIỂM SỐ VÀ NGƯỠNG
+
+Câu hỏi: Cần lưu ý gì về điểm và ngưỡng?
+Trả lời: Lưu ý về điểm:
+- 📊 **Ngưỡng = điểm chuẩn**: Ngành tương ứng
+- 🎯 **Chọn điểm cao nhất**: Tự động từ các tổ hợp/phương thức
+- 🔄 **Quy đổi chính xác**: Học bạ, V-SAT theo chuẩn
+- 📈 **Theo dõi thông báo**: Ngưỡng đầu vào từ trường
+
+## 11. KẾT LUẬN
+
+Câu hỏi: Tổng kết về phương thức 5?
+Trả lời: Phương thức 5 là cơ hội vàng cho:
+- 🎯 **Sinh viên đã trúng tuyển**: Muốn nâng cao chất lượng đào tạo
+- 📈 **Học sinh có điểm tốt**: Đủ điều kiện vào CTTT/CTCLC
+- 🔄 **Người muốn thay đổi**: Định hướng học tập và nghề nghiệp
+- 🛡️ **Ứng viên thông minh**: Tận dụng cơ hội mà không có rủi ro

@@ -1,0 +1,112 @@
+# ĐỊNH NGHĨA HỌC PHẦN - TRƯỜNG ĐẠI HỌC CẦN THƠ
+
+## 1. KHÁI NIỆM HỌC PHẦN
+
+Câu hỏi: Học phần là gì?
+Trả lời: Học phần là lượng kiến thức tương đối trọn vẹn được dạy trong 1 học kỳ. Mỗi học phần có tên riêng và được ký hiệu bằng một mã số.
+
+Câu hỏi: Học phần có mã số không?
+Trả lời: Có, mỗi học phần đều được ký hiệu bằng một mã số riêng để phân biệt và quản lý.
+
+## 2. PHÂN LOẠI HỌC PHẦN
+
+### 2.1. HỌC PHẦN BẮT BUỘC
+
+Câu hỏi: Học phần bắt buộc là gì?
+Trả lời: Học phần bắt buộc là học phần mà sinh viên PHẢI tích lũy để hoàn thành chương trình đào tạo.
+
+### 2.2. HỌC PHẦN TỰ CHỌN
+
+Câu hỏi: Học phần tự chọn là gì?
+Trả lời: Học phần tự chọn là học phần mà sinh viên tự lựa chọn để tích lũy theo sở thích và định hướng nghề nghiệp của mình.
+
+Câu hỏi: Sinh viên có bắt buộc phải học tất cả học phần tự chọn không?
+Trả lời: Không, sinh viên chỉ cần chọn đủ số tín chỉ tự chọn theo quy định của chương trình đào tạo.
+
+## 3. QUAN HỆ GIỮA CÁC HỌC PHẦN
+
+### 3.1. HỌC PHẦN TIÊN QUYẾT
+
+Câu hỏi: Học phần tiên quyết là gì?
+Trả lời: Học phần tiên quyết của học phần HPxxx là học phần mà sinh viên PHẢI tích lũy (hoàn thành) trước khi được phép đăng ký học học phần HPxxx.
+
+Câu hỏi: Có thể đăng ký học phần mà chưa hoàn thành học phần tiên quyết không?
+Trả lời: KHÔNG, sinh viên bắt buộc phải tích lũy (pass) học phần tiên quyết trước mới được đăng ký học phần tiếp theo.
+
+### 3.2. HỌC PHẦN SONG HÀNH
+
+Câu hỏi: Học phần song hành là gì?
+Trả lời: Học phần song hành của học phần HPxxx là học phần mà sinh viên phải học TRƯỚC hoặc học CÙNG LÚC với học phần HPxxx.
+
+Câu hỏi: Khác biệt giữa học phần tiên quyết và song hành là gì?
+Trả lời: 
+- **Tiên quyết**: Phải hoàn thành TRƯỚC khi đăng ký học phần mới
+- **Song hành**: Có thể học CÙNG LÚC hoặc trước học phần chính
+
+## 4. HỌC PHẦN ĐIỀU KIỆN
+
+Câu hỏi: Học phần điều kiện là gì?
+Trả lời: Học phần điều kiện là học phần mà sinh viên phải hoàn thành nhưng kết quả học phần KHÔNG được dùng để tính điểm trung bình chung tích lũy (ĐTBCTL).
+
+Câu hỏi: Học phần điều kiện gồm những môn nào?
+Trả lời: Học phần điều kiện bao gồm:
+- Giáo dục Quốc phòng và An ninh (GDQP&AN)
+- Giáo dục Thể chất (GDTC)  
+- Ngoại ngữ căn bản
+- Tin học căn bản
+
+Câu hỏi: Học phần điều kiện có tính vào ĐTBCTL không?
+Trả lời: KHÔNG, kết quả học phần điều kiện không dùng để tính điểm trung bình chung tích lũy (ĐTBCTL).
+
+Câu hỏi: Học phần GDTC có tính vào ĐTBCHK không?
+Trả lời: KHÔNG, điểm học phần GDTC không dùng để tính:
+- ĐTBCHK (Điểm trung bình chung học kỳ)
+- ĐTBCNH (Điểm trung bình chung năm học)
+- ĐTBCTL (Điểm trung bình chung tích lũy)
+
+## 5. TỔ CHỨC LỚP HỌC
+
+### 5.1. LỚP HỌC PHẦN
+
+Câu hỏi: Lớp học phần là gì?
+Trả lời: Lớp học phần (được dạy và học trực tiếp hoặc trực tuyến) là lớp bao gồm những sinh viên đăng ký học cùng thời khóa biểu (TKB) của một học phần trong học kỳ.
+
+Câu hỏi: Một học phần có thể có nhiều lớp học phần không?
+Trả lời: Có, trong một học kỳ, mỗi học phần có thể có nhiều lớp học phần với TKB và mã số khác nhau, do các giảng viên khác nhau phụ trách.
+
+Câu hỏi: Lớp học phần có thể học trực tuyến không?
+Trả lời: Có, lớp học phần có thể được tổ chức dạy và học trực tiếp hoặc trực tuyến.
+
+### 5.2. LỚP CHUYÊN NGÀNH
+
+Câu hỏi: Lớp chuyên ngành là gì?
+Trả lời: Lớp chuyên ngành là lớp được hình thành từ đầu khóa học cho đến cuối khóa học, để duy trì sinh hoạt đoàn thể và quản lý sinh viên.
+
+Câu hỏi: Lớp chuyên ngành có tác dụng gì?
+Trả lời: Lớp chuyên ngành được tổ chức để:
+- Duy trì sinh hoạt đoàn thể
+- Tổ chức lao động
+- Xét kết quả rèn luyện
+- Xét khen thưởng
+- Phổ biến thông tin của Trường và đơn vị đào tạo đến sinh viên
+
+Câu hỏi: Lớp chuyên ngành có cố vấn học tập không?
+Trả lời: Có, mỗi lớp chuyên ngành có mã số riêng và được bố trí một Cố vấn Học tập (CVHT) để tư vấn và hỗ trợ sinh viên.
+
+## 6. TÓM TẮT CÁC LOẠI HỌC PHẦN
+
+Câu hỏi: Có những loại học phần nào?
+Trả lời: Các loại học phần chính gồm:
+
+**THEO TÍNH CHẤT:**
+- 🔸 Học phần BẮT BUỘC: Phải học
+- 🔸 Học phần TỰ CHỌN: Tùy chọn
+
+**THEO QUAN HỆ:**
+- 🔸 Học phần TIÊN QUYẾT: Phải hoàn thành trước
+- 🔸 Học phần SONG HÀNH: Học cùng lúc hoặc trước
+
+**THEO CÁCH TÍNH ĐIỂM:**
+- 🔸 Học phần THƯỜNG: Tính vào tất cả điểm TB
+- 🔸 Học phần ĐIỀU KIỆN: Không tính ĐTBCTL (GDQP&AN, GDTC, Ngoại ngữ, Tin học)
+- 🔸 Học phần GDTC: Không tính vào bất kỳ điểm TB nào

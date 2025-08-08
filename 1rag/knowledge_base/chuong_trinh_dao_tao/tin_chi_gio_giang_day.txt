@@ -1,0 +1,93 @@
+# TÍN CHỈ VÀ GIỜ GIẢNG DẠY - TRƯỜNG ĐẠI HỌC CẦN THƠ
+
+## 1. KHỐI LƯỢNG HỌC TẬP VÀ TÍN CHỈ
+
+Câu hỏi: Khối lượng học tập được tính bằng gì?
+Trả lời: Khối lượng học tập của mỗi chương trình đào tạo (CTĐT) hoặc của mỗi học phần trong CTĐT được xác định bằng số tín chỉ (TC).
+
+Câu hỏi: Khối lượng học tập tối thiểu của CTĐT phải đáp ứng tiêu chuẩn gì?
+Trả lời: Khối lượng học tập tối thiểu của một CTĐT phải phù hợp với yêu cầu của Khung trình độ quốc gia Việt Nam.
+
+## 2. ĐỊNH NGHĨA VÀ TÍNH TOÁN TÍN CHỈ
+
+Câu hỏi: 1 tín chỉ tương đương bao nhiêu giờ học tập?
+Trả lời: Một (01) tín chỉ được tính tương đương 50 giờ học tập định mức của sinh viên, bao gồm cả thời gian dự giờ giảng, giờ học có hướng dẫn, tự học, nghiên cứu, trải nghiệm và dự kiểm tra, đánh giá.
+
+## 3. QUY ĐỔI TÍN CHỈ THEO LOẠI HOẠT ĐỘNG
+
+### 3.1. HOẠT ĐỘNG DẠY HỌC LÝ THUYẾT TRÊN LỚP
+
+Câu hỏi: 1 tín chỉ lý thuyết yêu cầu bao nhiêu giờ giảng trên lớp?
+Trả lời: Đối với hoạt động dạy học lý thuyết trên lớp, một tín chỉ yêu cầu thực hiện:
+- **Tối thiểu 15 giờ giảng trên lớp**
+- **30 giờ tự học, chuẩn bị cá nhân có hướng dẫn**
+
+### 3.2. HOẠT ĐỘNG THỰC HÀNH, THÍ NGHIỆM
+
+Câu hỏi: 1 tín chỉ thực hành yêu cầu bao nhiêu giờ?
+Trả lời: Đối với hoạt động thực hành, thí nghiệm, thảo luận, một tín chỉ yêu cầu thực hiện:
+- **Tối thiểu 30 giờ thực hành, thí nghiệm, thảo luận**  
+- **15 giờ tự học, chuẩn bị cá nhân có hướng dẫn**
+
+### 3.3. HOẠT ĐỘNG ĐẶC BIỆT
+
+Câu hỏi: 1 tín chỉ thực tập, đồ án yêu cầu bao nhiêu giờ?
+Trả lời: Đối với các hoạt động đặc biệt, một tín chỉ yêu cầu thực hiện tối thiểu 45 giờ cho:
+- Thực tập tại cơ sở
+- Làm tiểu luận
+- Bài tập lớn
+- Đồ án
+- Niên luận
+- Tiểu luận tốt nghiệp
+- Luận văn tốt nghiệp
+
+## 4. ĐỊNH NGHĨA GIỜ GIẢNG
+
+Câu hỏi: Một giờ giảng trên lớp dài bao nhiêu phút?
+Trả lời: Một giờ giảng trên lớp (sau đây gọi là tiết) được tính bằng 50 phút.
+
+## 5. BẢNG TÓM TẮT QUY ĐỔI TÍN CHỈ
+
+Câu hỏi: Tóm tắt quy đổi tín chỉ theo từng loại hoạt động?
+Trả lời: 
+
+**1 TÍN CHỈ = 50 GIỜ TỔNG CỘNG**
+
+### PHÂN BỔ CHI TIẾT:
+
+**🎓 LÝ THUYẾT:**
+- 15 giờ giảng trên lớp
+- 30 giờ tự học có hướng dẫn
+- **Tổng cộng**: 45 giờ (+ 5 giờ kiểm tra, đánh giá)
+
+**🔬 THỰC HÀNH:**
+- 30 giờ thực hành/thí nghiệm/thảo luận  
+- 15 giờ tự học có hướng dẫn
+- **Tổng cộng**: 45 giờ (+ 5 giờ kiểm tra, đánh giá)
+
+**📋 ĐỒ ÁN/THỰC TẬP:**
+- 45 giờ làm việc thực tế
+- **Tổng cộng**: 45 giờ (+ 5 giờ kiểm tra, đánh giá)
+
+## 6. ỨNG DỤNG THỰC TẾ
+
+Câu hỏi: Làm sao tính được khối lượng công việc của một học phần?
+Trả lời: Ví dụ:
+- **Học phần 3 tín chỉ lý thuyết**: 3 × 15 = 45 giờ giảng + 3 × 30 = 90 giờ tự học
+- **Học phần 2 tín chỉ thực hành**: 2 × 30 = 60 giờ thực hành + 2 × 15 = 30 giờ tự học  
+- **Đồ án 4 tín chỉ**: 4 × 45 = 180 giờ làm đồ án
+
+Câu hỏi: Tại sao cần biết quy đổi này?
+Trả lời: Để sinh viên:
+- Lập kế hoạch học tập hợp lý
+- Phân bổ thời gian tự học phù hợp
+- Hiểu được khối lượng công việc thực tế của từng học phần
+- Đăng ký số tín chỉ phù hợp với khả năng
+
+## 7. LƯU Ý VỀ THỜI GIAN TỰ HỌC
+
+Câu hỏi: Thời gian tự học có quan trọng không?
+Trả lời: RẤT QUAN TRỌNG. Thời gian tự học chiếm 60-70% tổng thời gian học tập:
+- **Lý thuyết**: 30/45 giờ tự học (67%)  
+- **Thực hành**: 15/45 giờ tự học (33%)
+- Sinh viên cần chủ động trong việc tự học để đạt kết quả tốt

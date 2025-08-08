@@ -1,0 +1,113 @@
+# SỐ LẦN THI, TỔ CHỨC THI VÀ VẮNG THI - TRƯỜNG ĐẠI HỌC CẦN THƠ
+
+## 1. QUY ĐỊNH VỀ SỐ LẦN THI
+
+Câu hỏi: Mỗi học phần tổ chức thi mấy lần?
+Trả lời: Kỳ thi kết thúc học phần được tổ chức 1 lần duy nhất.
+
+Câu hỏi: Có thi lại nếu điểm thấp không?
+Trả lời: Không có thi lại trong cùng học kỳ. Nếu không đạt điểm, sinh viên phải học lại học phần đó trong các kỳ tiếp theo.
+
+## 2. TỔ CHỨC VÀ LỊCH THI
+
+### 2.1. THỜI GIAN TỔ CHỨC THI
+
+Câu hỏi: Thời gian tổ chức thi được quy định như thế nào?
+Trả lời: Thời gian tổ chức thi thực hiện theo quy định chung của nhà trường.
+
+### 2.2. HỌC PHẦN RIÊNG LẺ
+
+Câu hỏi: Học phần riêng lẻ tổ chức thi như thế nào?
+Trả lời: Đối với học phần riêng lẻ, giảng viên tự sắp xếp tổ chức thi qua hệ thống quản lý trực tuyến của Trường ĐHCT.
+
+### 2.3. HỌC PHẦN CÓ NHIỀU SINH VIÊN
+
+Câu hỏi: Học phần có nhiều sinh viên, nhiều lớp tổ chức thi như thế nào?
+Trả lời: Đối với học phần có nhiều sinh viên, nhiều lớp học phần thì có thể thi theo lịch chung do đơn vị quản lý học phần quyết định và xếp lịch.
+
+## 3. THÔNG BÁO LỊCH THI
+
+Câu hỏi: Lịch thi được thông báo ở đâu và khi nào?
+Trả lời: Lịch thi kết thúc học phần được:
+- **Công bố trên**: Hệ thống quản lý trực tuyến của Trường
+- **Thông báo bởi**: Giảng viên đến sinh viên
+- **Thời hạn**: Chậm nhất 1 tuần trước ngày thi
+
+Câu hỏi: Sinh viên cần làm gì để biết lịch thi?
+Trả lời: Sinh viên cần:
+- Thường xuyên kiểm tra hệ thống quản lý trực tuyến
+- Chú ý thông báo của giảng viên trong lớp
+- Liên hệ giảng viên nếu chưa rõ lịch thi
+
+## 4. QUY ĐỊNH VỀ VẮNG THI
+
+### 4.1. ĐIỀU KIỆN ĐƯỢC PHÉP VẮNG THI
+
+Câu hỏi: Khi nào sinh viên được phép vắng thi?
+Trả lời: Trong thời gian thi kết thúc học phần, sinh viên được phép vắng thi khi:
+- Có lý do chính đáng không thể dự thi
+- Được cố vấn học tập chấp thuận  
+- Được giảng viên chấp thuận
+
+Câu hỏi: Những lý do nào được coi là chính đáng?
+Trả lời: Lý do chính đáng thường bao gồm:
+- Ốm đau có giấy chứng nhận y tế
+- Tai nạn
+- Hoàn cảnh gia đình đột xuất
+- Các trường hợp bất khả kháng khác
+
+### 4.2. THỦ TỤC VẮNG THI
+
+Câu hỏi: Muốn vắng thi cần làm thủ tục gì?
+Trả lời: Sinh viên cần:
+1. **Báo cáo**: Với cố vấn học tập về lý do không thể dự thi
+2. **Xin phép**: Cố vấn học tập xem xét và chấp thuận
+3. **Thông báo**: Cố vấn thông báo với giảng viên
+4. **Chấp thuận cuối**: Giảng viên xem xét và chấp thuận
+
+### 4.3. HẬU QUẢ CỦA VIỆC VẮNG THI
+
+Câu hỏi: Sinh viên được phép vắng thi sẽ nhận điểm gì?
+Trả lời: Sinh viên được phép vắng thi sẽ nhận điểm I (Incomplete) theo quy định.
+
+Câu hỏi: Điểm I có ý nghĩa gì?
+Trả lời: Điểm I nghĩa là:
+- Học phần chưa hoàn thành
+- Sinh viên có cơ hội bổ sung điểm sau
+- Không tính vào ĐTBCHK của học kỳ hiện tại
+- Cần hoàn thành trong thời hạn quy định (thường là 1 năm)
+
+## 5. QUY ĐỊNH VỀ VẮNG THI KHÔNG PHÉP
+
+Câu hỏi: Chuyện gì xảy ra nếu vắng thi không phép?
+Trả lời: Sinh viên vắng thi không có lý do chính đáng hoặc không được chấp thuận sẽ nhận điểm 0 (hoặc F) cho phần thi kết thúc học phần.
+
+## 6. HƯỚNG DẪN CHO SINH VIÊN
+
+### 6.1. CHUẨN BỊ TRƯỚC KHI THI
+
+Câu hỏi: Sinh viên cần chuẩn bị gì trước khi thi?
+Trả lời: Sinh viên nên:
+- ✅ Kiểm tra lịch thi trên hệ thống
+- ✅ Xác nhận địa điểm thi
+- ✅ Chuẩn bị giấy tờ cần thiết (thẻ sinh viên, CMND/CCCD)
+- ✅ Ôn tập theo đề cương
+- ✅ Liên hệ cố vấn nếu có vấn đề bất khả kháng
+
+### 6.2. KHI GẶP KHÓ KHĂN
+
+Câu hỏi: Khi gặp khó khăn không thể dự thi, sinh viên nên làm gì?
+Trả lời: Sinh viên nên:
+1. **Liên hệ ngay**: Với cố vấn học tập
+2. **Chuẩn bị giấy tờ**: Chứng minh lý do chính đáng
+3. **Không tự ý vắng**: Phải có sự chấp thuận
+4. **Theo dõi**: Quy trình xử lý và lịch thi bù (nếu có)
+
+## 7. TÓM TẮT QUY ĐỊNH
+
+**QUY ĐỊNH CHÍNH:**
+- 🔢 **Số lần thi**: 1 lần duy nhất/học phần
+- 📅 **Thông báo lịch**: Chậm nhất 1 tuần trước thi
+- ⚠️ **Vắng thi có phép**: Điểm I, có cơ hội bổ sung
+- ❌ **Vắng thi không phép**: Điểm 0/F
+- 👨‍🏫 **Phê duyệt**: Cần sự chấp thuận của cố vấn + giảng viên

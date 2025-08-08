@@ -1,0 +1,3 @@
+Mỗi năm học được tổ chức thành 03 học kỳ, gọi là Học kỳ 1, Học kỳ 2 và Học kỳ 3.
+Mỗi học kỳ kéo dài 15 tuần, trong đó gồm có 11 tuần dạy và học, 01 tuần dự trữ và tổ chức thi những học phần thi riêng, 01 tuần tổ chức thi những học phần thi riêng còn lại, 02 tuần tổ chức thi những học phần thi chung và xử lý kết quả đánh giá học phần.
+Học kỳ 1 bắt đầu từ tuần thứ 37 đến tuần thứ 51 của năm; Học kỳ 2 bắt đầu từ tuần thứ 01 đến tuần thứ 17 của năm (bao gồm 2 tuần nghỉ Tết Nguyên Đán); Học kỳ 3 bắt đầu từ tuần thứ 20 đến tuần thứ 34 của năm. Tuần nghỉ giữa các HK là tuần thứ 18, 19, 35, 36, 52 và tuần thứ 53 (nếu có) của năm.

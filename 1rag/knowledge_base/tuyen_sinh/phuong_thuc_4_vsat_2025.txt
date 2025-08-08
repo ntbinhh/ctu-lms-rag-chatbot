@@ -1,0 +1,211 @@
+# PHƯƠNG THỨC 4: XÉT ĐIỂM THI V-SAT NĂM 2025
+
+## 1. TỔNG QUAN PHƯƠNG THỨC 4
+
+Câu hỏi: Phương thức 4 là gì và V-SAT là gì?
+Trả lời: 🎯 **Phương thức 4** xét tuyển dựa vào điểm thi V-SAT theo tổ hợp 3 môn ứng với ngành dự tuyển. V-SAT là kỳ thi đánh giá năng lực do các cơ sở giáo dục đại học tổ chức.
+
+## 2. ĐẶC ĐIỂM CỦA KỲ THI V-SAT
+
+### 2.1. TÍNH LINH HOẠT CỦA V-SAT
+
+Câu hỏi: V-SAT có ưu điểm gì so với thi tốt nghiệp THPT?
+Trả lời: Ưu điểm linh hoạt của V-SAT:
+- 🔄 **Nhiều cơ sở tổ chức**: Do các trường đại học khác nhau tổ chức
+- 📊 **Chọn điểm cao nhất**: Từng môn trong các lần thi khác nhau
+- 🎯 **Kết hợp linh hoạt**: Các môn có thể thi ở đợt/cơ sở khác nhau
+- ⏰ **Thời hạn 3 năm**: Kể từ ngày thi đến ngày xét tuyển
+
+### 2.2. THANG ĐIỂM V-SAT
+
+Câu hỏi: V-SAT có thang điểm như thế nào?
+Trả lời: Thông tin thang điểm:
+- 📊 **Thang điểm gốc**: 150 điểm (VM)
+- 🔄 **Quy đổi về**: Thang 10 điểm (VMQĐ)
+- 📏 **Theo quy tắc chuẩn**: Của Bộ GDĐT
+- 🎭 **Môn năng khiếu**: Không quy đổi tương đương
+
+## 3. CÁCH TÍNH ĐIỂM XÉT TUYỂN
+
+### 3.1. QUY TRÌNH QUY ĐỔI ĐIỂM
+
+Câu hỏi: Điểm V-SAT được quy đổi như thế nào?
+Trả lời: Quy trình quy đổi điểm:
+- 📊 **V-SAT gốc (VM)**: Thang 150 điểm
+- 🔄 **Quy đổi (VMQĐ)**: Về thang 10 điểm
+- 📏 **Theo quy tắc**: Quy đổi điểm chuẩn
+- 🎯 **Đảm bảo công bằng**: Với các phương thức khác
+
+### 3.2. CÔNG THỨC TÍNH ĐIỂM XÉT TUYỂN
+
+Câu hỏi: Điểm xét tuyển V-SAT được tính ra sao?
+Trả lời: Công thức điểm xét tuyển (ĐXT):
+
+**ĐXT = (VM_1QĐ + VM_2QĐ + VM_3QĐ) + Điểm ưu tiên**
+
+- 📊 **Thang điểm cuối**: 30 điểm
+- 🚫 **Không nhân hệ số**: Các môn trong tổ hợp
+- 🔢 **Làm tròn**: Đến hai chữ số thập phân
+- 🎯 **Tự động chọn tổ hợp cao nhất**: Trường sẽ chọn tổ hợp có ĐXT cao nhất
+
+## 4. NGÀNH VÀ ĐỐI TƯỢNG XÉT TUYỂN
+
+### 4.1. NGÀNH XÉT TUYỂN
+
+Câu hỏi: Có bao nhiêu ngành xét tuyển bằng V-SAT?
+Trả lời: 🎯 **Tất cả 121 mã ngành** đều xét tuyển theo phương thức 4, tương tự các phương thức khác.
+
+### 4.2. ĐỐI TƯỢNG DỰ TUYỂN
+
+Câu hỏi: Ai có thể dự tuyển bằng điểm V-SAT?
+Trả lời: Đối tượng được dự tuyển:
+- 🎓 **Thí sinh tốt nghiệp THPT** từ năm 2025 trở về trước
+- 🏫 **Thí sinh đã tốt nghiệp cao đẳng, đại học** có nhu cầu học liên thông
+
+## 5. ĐIỀU KIỆN CHO NGÀNH ĐÀO TẠO GIÁO VIÊN
+
+### 5.1. GIÁO DỤC THỂ CHẤT
+
+Câu hỏi: Điều kiện V-SAT cho ngành Giáo dục Thể chất?
+Trả lời: Yêu cầu cho ngành Giáo dục Thể chất:
+- 📚 **Kết quả học tập lớp 12**: Xếp loại khá trở lên
+- 🎯 **Không áp dụng ngưỡng đầu vào** nếu đạt 1 trong 2 điều kiện:
+  - 🏆 **Điểm thi môn Năng khiếu TDTT**: Từ 9,0 trở lên (thang 10)
+  - 🥇 **Vận động viên cấp 1, kiện tướng** hoặc đoạt huy chương thể thao quốc gia/quốc tế
+
+### 5.2. CÁC NGÀNH GIÁO VIÊN KHÁC
+
+Câu hỏi: Điều kiện cho các ngành sư phạm khác khi dùng V-SAT?
+Trả lời: 🏆 **Kết quả học tập cả năm lớp 12**: Xếp loại giỏi trở lên cho tất cả các ngành đào tạo giáo viên khác.
+
+## 6. ĐIỀU KIỆN CHO NGÀNH KHÔNG PHẢI ĐÀO TẠO GIÁO VIÊN
+
+### 6.1. NGƯỠNG ĐIỂM ĐẦU VÀO
+
+Câu hỏi: Điều kiện điểm V-SAT cho ngành thường?
+Trả lời: Điều kiện điểm số:
+- 📊 **Đạt ngưỡng đầu vào**: Do ĐHCT xác định và công bố trước 17g00 ngày 23/7/2025
+- 🔄 **Điểm đã quy đổi**: Từ thang 150 về thang 10
+- 🎯 **Tương ứng từng ngành**: Mỗi ngành có ngưỡng riêng
+
+### 6.2. YÊU CẦU ĐIỂM TỪNG MÔN
+
+Câu hỏi: Yêu cầu điểm tối thiểu cho từng môn V-SAT?
+Trả lời: Yêu cầu điểm từng môn:
+- 🚫 **Không có môn ≤ 1,0 điểm**: Trong tổ hợp xét tuyển (đã quy đổi)
+- 🎭 **Môn năng khiếu ≥ 5,0 điểm**: Cho các ngành:
+  - ⚽ **Giáo dục Thể chất**
+  - 👶 **Giáo dục Mầm non**
+  - 🏗️ **Kiến trúc**
+
+## 7. ĐĂNG KÝ XÉT TUYỂN
+
+### 7.1. HÌNH THỨC ĐĂNG KÝ
+
+Câu hỏi: Đăng ký xét tuyển V-SAT ở đâu?
+Trả lời: Thông tin đăng ký:
+- 💻 **Đăng ký trực tuyến**: Trên Cổng tuyển sinh của Bộ GDĐT  
+- 🌐 **Website**: https://thisinh.thitotnghiepthpt.edu.vn
+- 🔄 **Không giới hạn**: Số lần đăng ký, điều chỉnh nguyện vọng
+- 📱 **Dễ dàng thay đổi**: Linh hoạt trong việc điều chỉnh
+
+### 7.2. THỜI GIAN ĐĂNG KÝ
+
+Câu hỏi: Lịch trình đăng ký V-SAT như thế nào?
+Trả lời: Lịch trình đăng ký:
+- 📅 **Thời gian đăng ký**: Từ 16/7 đến 17g00 ngày 28/7/2025
+- 💰 **Nộp lệ phí**: Từ 29/7 đến 17g00 ngày 5/8/2025
+- 💻 **Nộp phí trực tuyến**: Theo hướng dẫn trên Cổng tuyển sinh
+- ⏰ **Đúng giờ quy định**: Không nộp trễ
+
+## 8. ƯU ĐIỂM ĐẶC BIỆT CỦA V-SAT
+
+### 8.1. TÍNH LINH HOẠT CAO
+
+Câu hỏi: V-SAT linh hoạt như thế nào?
+Trả lời: Tính linh hoạt vượt trội của V-SAT:
+- 🔄 **Thi nhiều lần**: Chọn điểm cao nhất từng môn
+- 🏫 **Nhiều cơ sở tổ chức**: Không phụ thuộc vào một trường
+- 📅 **Kết hợp đợt khác nhau**: Môn 1 thi đợt này, môn 2 thi đợt khác
+- ⏰ **Thời hạn dài**: 3 năm sử dụng kết quả
+
+### 8.2. CHIẾN LƯỢC TỐI ƯU
+
+Câu hỏi: Làm sao để tận dụng tối đa V-SAT?
+Trả lời: Chiến lược tận dụng V-SAT:
+- 📊 **Chọn điểm cao nhất**: Từng môn trong nhiều lần thi
+- 🎯 **Thi theo thế mạnh**: Các môn mạnh thi trước
+- 🔄 **Cải thiện điểm yếu**: Thi lại môn điểm thấp
+- ⏰ **Quản lý thời gian**: Tận dụng thời hạn 3 năm
+
+## 9. SO SÁNH VỚI CÁC PHƯƠNG THỨC KHÁC
+
+### 9.1. SO VỚI THI TỐT NGHIỆP THPT
+
+Câu hỏi: V-SAT khác gì với thi tốt nghiệp THPT?
+Trả lời: So sánh V-SAT và thi tốt nghiệp:
+
+| Tiêu chí | V-SAT | Thi tốt nghiệp THPT |
+|----------|-------|---------------------|
+| **Số lần thi** | 🔄 Nhiều lần | 📝 Một lần |
+| **Chọn điểm** | 🎯 Điểm cao nhất từng môn | 📊 Điểm của lần thi duy nhất |
+| **Cơ sở tổ chức** | 🏫 Nhiều trường | 🏛️ Tập trung theo khu vực |
+| **Thời hạn sử dụng** | ⏰ 3 năm | 📅 Theo quy định Bộ |
+
+### 9.2. ĐIỂM MẠNH ĐỘC ĐÁO
+
+Câu hỏi: Điểm mạnh độc đáo nào của V-SAT?
+Trả lời: Điểm mạnh độc đáo:
+- 🎯 **Chiến lược "mix and match"**: Kết hợp điểm từ nhiều lần thi
+- 🔄 **Cơ hội cải thiện**: Thi lại môn yếu nhiều lần
+- 📈 **Tối ưu hóa kết quả**: Chọn điểm tốt nhất từng môn
+- ⚡ **Giảm áp lực**: Không phụ thuộc vào một lần thi duy nhất
+
+## 10. CHIẾN LƯỢC CHO THÍ SINH
+
+### 10.1. CHIẾN LƯỢC CHO HỌC SINH YẾU
+
+Câu hỏi: Học sinh yếu nên sử dụng V-SAT như thế nào?
+Trả lời: Chiến lược cho học sinh yếu:
+- 🎯 **Tập trung từng môn**: Ôn một môn, thi một môn
+- 🔄 **Thi nhiều lần**: Cải thiện dần từng môn
+- 📈 **Học và thi song song**: Vừa học vừa thi để cải thiện
+- ⏰ **Tận dụng thời gian**: 3 năm để nâng cao điểm số
+
+### 10.2. CHIẾN LƯỢC CHO HỌC SINH MẠNH
+
+Câu hỏi: Học sinh giỏi nên dùng V-SAT như thế nào?
+Trả lời: Chiến lược cho học sinh giỏi:
+- 🎯 **Thi sớm môn mạnh**: Bảo đảm điểm cao sớm
+- 🔄 **Cải thiện môn yếu**: Tập trung vào điểm yếu
+- 📊 **Backup an toàn**: Có điểm dự phòng tốt
+- 🏆 **Tối ưu tổ hợp**: Tìm tổ hợp điểm cao nhất
+
+## 11. LƯU Ý QUAN TRỌNG
+
+### 11.1. VỀ THỜI HẠN SỬ DỤNG
+
+Câu hỏi: Cần chú ý gì về thời hạn V-SAT?
+Trả lời: Lưu ý về thời hạn:
+- ⏰ **3 năm tối đa**: Kể từ ngày thi đến ngày xét tuyển
+- 📅 **Tính toán kỹ**: Thời điểm thi và thời điểm xét tuyển
+- 📋 **Lưu trữ kết quả**: Các lần thi để so sánh
+- 🎯 **Lập kế hoạch**: Thi các môn theo thứ tự hợp lý
+
+### 11.2. VỀ CHỌN ĐIỂM VÀ TỔNG HỢP
+
+Câu hỏi: Cần lưu ý gì khi chọn điểm V-SAT?
+Trả lời: Lưu ý khi chọn điểm:
+- 🎯 **Điểm cao nhất từng môn**: Tự động được chọn
+- 🔄 **Các cơ sở khác nhau**: Được phép kết hợp
+- 📊 **Quy đổi chính xác**: Từ thang 150 về thang 10
+- 🎭 **Môn năng khiếu đặc biệt**: Không quy đổi
+
+## 12. KẾT LUẬN
+
+Câu hỏi: Tổng kết về phương thức V-SAT?
+Trả lời: Phương thức V-SAT là lựa chọn tuyệt vời cho:
+- 🎯 **Thí sinh muốn cải thiện**: Có cơ hội thi nhiều lần
+- 🔄 **Học sinh cần thời gian**: Để nâng cao từng môn
+- 📈 **Ứng viên chiến lược**: Biết tận dụng tính linh hoạt
+- 🏆 **Thí sinh thông minh**: Biết tối ưu hóa kết quả qua nhiều lần thi

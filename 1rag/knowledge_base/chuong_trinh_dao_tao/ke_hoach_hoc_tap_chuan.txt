@@ -1,0 +1,112 @@
+# KẾ HOẠCH HỌC TẬP CHUẨN - TRƯỜNG ĐẠI HỌC CẦN THƠ
+
+## 1. KHÁI NIỆM VÀ THỜI GIAN HỌC TẬP
+
+Câu hỏi: Kế hoạch học tập chuẩn toàn khóa là gì?
+Trả lời: Kế hoạch học tập chuẩn toàn khóa có thời gian thiết kế cho một chương trình đào tạo (CTĐT) tùy theo ngành học.
+
+## 2. BẢNG THỜI GIAN HỌC TẬP TỐI ĐA
+
+Câu hỏi: Thời gian học tập tối đa để sinh viên hoàn thành CTĐT được quy định như thế nào?
+Trả lời: Thời gian học tập tối đa được xác định theo bảng sau:
+
+| Thời gian thiết kế CTĐT | Thời gian học tập tối đa |
+|------------------------|--------------------------|
+| **4 năm** | **8 năm** |
+| **4,5 năm** | **9 năm** |
+| **5 năm** | **10 năm** |
+
+Câu hỏi: Chương trình 4 năm có tối đa bao lâu để hoàn thành?
+Trả lời: Chương trình thiết kế 4 năm có thời gian tối đa 8 năm để sinh viên hoàn thành.
+
+Câu hỏi: Chương trình 5 năm có tối đa bao lâu để hoàn thành?
+Trả lời: Chương trình thiết kế 5 năm có thời gian tối đa 10 năm để sinh viên hoàn thành.
+
+## 3. SINH VIÊN LIÊN THÔNG VÀ CHUYỂN ĐỔI TÍN CHỈ
+
+### 3.1. ĐỐI TƯỢNG SINH VIÊN LIÊN THÔNG
+
+Câu hỏi: Sinh viên nào được xem xét công nhận, chuyển đổi tín chỉ?
+Trả lời: Các đối tượng sau được xem xét công nhận, chuyển đổi tín chỉ:
+- Sinh viên học liên thông (người có bằng tốt nghiệp trình độ cao đẳng hình thức chính quy trở lên)
+- Người đã có bằng tốt nghiệp trình độ đại học trở lên
+- Sinh viên có kết quả học tập đã tích lũy từ một ngành đào tạo khác
+- Sinh viên có kết quả học tập từ một CTĐT khác
+- Sinh viên có kết quả học tập từ một khóa học khác
+- Sinh viên có kết quả học tập từ một cơ sở đào tạo khác
+
+Câu hỏi: Việc công nhận được thực hiện theo quy định nào?
+Trả lời: Việc công nhận, chuyển đổi được thực hiện theo "Quy định xét miễn và công nhận điểm học phần trong CTĐT trình độ đại học hình thức chính quy của Trường ĐHCT".
+
+## 4. QUY ĐỊNH ĐẶC BIỆT CHO KHÓA 47 TRỞ VỀ SAU
+
+### 4.1. GIỚI HẠN KHỐI LƯỢNG CÔNG NHẬN
+
+Câu hỏi: Sinh viên từ Khóa 47 trở về sau có giới hạn gì về việc công nhận tín chỉ?
+Trả lời: Đối với sinh viên tuyển sinh đào tạo từ năm học 2021-2022 (Khóa 47) trở về sau, khối lượng tín chỉ tối đa được công nhận, chuyển đổi không vượt quá **50% khối lượng học tập tối thiểu** của CTĐT.
+
+### 4.2. TÍNH THỜI GIAN HỌC TẬP TỐI ĐA
+
+Câu hỏi: Thời gian học tập tối đa cho sinh viên được miễn tín chỉ được tính như thế nào?
+Trả lời: Thời gian tối đa để sinh viên hoàn thành khóa học được xác định trên cơ sở thời gian theo kế hoạch học tập chuẩn toàn khóa giảm tương ứng với khối lượng tín chỉ được miễn trừ.
+
+## 5. QUY TẮC GIẢM THỜI GIAN HỌC TẬP
+
+### 5.1. ĐỐI VỚI KHÓA 49 TRỞ VỀ TRƯỚC
+
+Câu hỏi: Khóa 49 trở về trước được giảm thời gian học tập như thế nao?
+Trả lời: **Mỗi 9 tín chỉ** được công nhận và chuyển đổi thì thời gian học tập tối đa giảm tương ứng **1 học kỳ**.
+
+**CHI TIẾT:**
+- **Dưới 9 TC**: Không giảm thời gian học tập tối đa
+- **9 TC → 17 TC**: Giảm 1 học kỳ
+- **18 TC → 26 TC**: Giảm 2 học kỳ
+- **27 TC → 35 TC**: Giảm 3 học kỳ
+- (Và tương tự...)
+
+### 5.2. ĐỐI VỚI KHÓA 50 TRỞ VỀ SAU
+
+Câu hỏi: Khóa 50 trở về sau được giảm thời gian học tập như thế nào?
+Trả lời: **Mỗi 6 tín chỉ** được công nhận và chuyển đổi thì thời gian học tập tối đa giảm tương ứng **1 học kỳ**.
+
+**CHI TIẾT:**
+- **Dưới 6 TC**: Không giảm thời gian học tập tối đa
+- **6 TC → 11 TC**: Giảm 1 học kỳ  
+- **12 TC → 17 TC**: Giảm 2 học kỳ
+- **18 TC → 23 TC**: Giảm 3 học kỳ
+- (Và tương tự...)
+
+## 6. VÍ DỤ TÍNH TOÁN THỰC TẾ
+
+### 6.1. VÍ DỤ CHO KHÓA 49
+
+Câu hỏi: Sinh viên Khóa 49 được miễn 15 tín chỉ, thời gian học sẽ như thế nào?
+Trả lời: 
+- **Tín chỉ miễn**: 15 TC
+- **Giảm thời gian**: 15 TC ÷ 9 = 1,67 → **1 học kỳ** (15 TC nằm trong khoảng 9-17 TC)
+- **Thời gian tối đa mới**: 8 năm - 0,5 năm = **7,5 năm**
+
+### 6.2. VÍ DỤ CHO KHÓA 50
+
+Câu hỏi: Sinh viên Khóa 50 được miễn 20 tín chỉ, thời gian học sẽ như thế nào?
+Trả lời:
+- **Tín chỉ miễn**: 20 TC  
+- **Giảm thời gian**: 20 TC ÷ 6 = 3,33 → **3 học kỳ** (18-23 TC)
+- **Thời gian tối đa mới**: 8 năm - 1,5 năm = **6,5 năm**
+
+## 7. TÓM TẮT QUY ĐỊNH
+
+**⏰ THỜI GIAN HỌC TẬP TỐI ĐA:**
+- 4 năm → 8 năm
+- 4,5 năm → 9 năm  
+- 5 năm → 10 năm
+
+**📚 CÔNG NHẬN TÍN CHỈ (≥ KHÓA 47):**
+- Tối đa 50% khối lượng CTĐT
+- Áp dụng quy định miễn học của trường
+
+**⚡ GIẢM THỜI GIAN HỌC TẬP:**
+- **Khóa ≤49**: 9 TC = 1 học kỳ
+- **Khóa ≥50**: 6 TC = 1 học kỳ
+
+**🎯 ĐỐI TƯỢNG:** Sinh viên liên thông, chuyển ngành, chuyển trường, có bằng cấp trước đó
