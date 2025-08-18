@@ -1,5 +1,4 @@
 import React from "react";
-import { Card } from "primereact/card";
 import { Button } from "primereact/button";
 
 const IntroductionSection = () => {
@@ -69,15 +68,15 @@ const IntroductionSection = () => {
         <Button 
           label="Tìm hiểu thêm" 
           icon="pi pi-arrow-right" 
-          className="modern-btn"
+          className="intro-btn intro-btn-learn"
           onClick={() => window.location.href = '/about'}
         />
-        <Button 
+        {/* <Button 
           label="Xem chương trình đào tạo" 
           icon="pi pi-book" 
-          className="modern-btn modern-btn-outline"
+          className="intro-btn intro-btn-programs"
           onClick={() => window.location.href = '/programs'}
-        />
+        /> */}
       </div>
 
       <style jsx>{`
@@ -243,36 +242,42 @@ const IntroductionSection = () => {
           animation: fadeInUp 0.8s ease-out 0.6s forwards;
         }
 
-        .intro-actions .modern-btn {
-          background: #0c4da2;
-          color: white;
-          border: 2px solid #0c4da2;
-          padding: 0.75rem 1.5rem;
-          border-radius: 8px;
-          font-weight: 600;
-          transition: all 0.3s ease;
-          text-decoration: none;
-          display: inline-flex;
-          align-items: center;
-          gap: 0.5rem;
+        .intro-btn {
+          padding: 0.75rem 1.5rem !important;
+          border-radius: 8px !important;
+          font-weight: 600 !important;
+          transition: all 0.3s ease !important;
+          text-decoration: none !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          gap: 0.5rem !important;
+          border: 2px solid transparent !important;
         }
 
-        .intro-actions .modern-btn:hover {
-          background: #2196F3;
-          border-color: #2196F3;
-          transform: translateY(-2px);
-          box-shadow: 0 4px 15px rgba(12, 77, 162, 0.3);
+        .intro-btn-learn {
+          background: linear-gradient(135deg, #0c4da2, #1976d2) !important;
+          color: white !important;
+          border-color: #0c4da2 !important;
         }
 
-        .intro-actions .modern-btn-outline {
-          background: transparent;
-          color: #0c4da2;
-          border: 2px solid #0c4da2;
+        .intro-btn-learn:hover {
+          background: linear-gradient(135deg, #0a3d82, #1565c0) !important;
+          border-color: #0a3d82 !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 4px 15px rgba(12, 77, 162, 0.3) !important;
         }
 
-        .intro-actions .modern-btn-outline:hover {
-          background: #0c4da2;
-          color: white;
+        .intro-btn-programs {
+          background: linear-gradient(135deg, #2e7d32, #388e3c) !important;
+          color: white !important;
+          border-color: #2e7d32 !important;
+        }
+
+        .intro-btn-programs:hover {
+          background: linear-gradient(135deg, #1b5e20, #2e7d32) !important;
+          border-color: #1b5e20 !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3) !important;
         }
 
         @keyframes fadeInUp {
@@ -359,9 +364,9 @@ const IntroductionSection = () => {
             margin-top: 2rem;
           }
 
-          .intro-actions .modern-btn {
-            padding: 0.6rem 1.2rem;
-            font-size: 0.9rem;
+          .intro-actions .intro-btn {
+            padding: 0.6rem 1.2rem !important;
+            font-size: 0.9rem !important;
           }
         }
 
@@ -410,11 +415,11 @@ const IntroductionSection = () => {
             gap: 0.7rem;
           }
 
-          .intro-actions .modern-btn {
+          .intro-actions .intro-btn {
             width: 100%;
             max-width: 280px;
             justify-content: center;
-            padding: 0.7rem 1rem;
+            padding: 0.7rem 1rem !important;
           }
         }
 

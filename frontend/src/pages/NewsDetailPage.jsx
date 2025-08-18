@@ -3,7 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "./NewsDetailPage.css";
+import "./NewsDetailPage.css"; 
 const NewsDetailPage = () => {
   const { id } = useParams();
   const [news, setNews] = useState(null);

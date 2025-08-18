@@ -63,7 +63,7 @@ export default function DashboardAdmin() {
       description: "Quản lý thông tin giảng viên"
     },
     {
-      label: "Quản lý khóa học",
+      label: "Quản lý học phần",
       icon: "pi pi-book",
       color: "warning",
       path: "/admin/courses",
@@ -444,11 +444,11 @@ export default function DashboardAdmin() {
       <AdminHeader />
       <Toast ref={toast} />
       
-      <main className="dashboard-admin-content">
-        <div className="dashboard-header-section">
+      <main className="ctu-dashboard-admin-content">
+        <div className="ctu-dashboard-header-section">
           <div>
             <h2>🛠️ Dashboard Admin</h2>
-            <div className="connection-status">
+            <div className="ctu-connection-status">
               {connectionStatus === 'online' && (
                 <Badge value="🟢 Kết nối thành công" severity="success" />
               )}
@@ -460,11 +460,11 @@ export default function DashboardAdmin() {
               )}
             </div>
           </div>
-          <div className="dashboard-controls">
+          <div className="ctu-dashboard-controls">
             <Button 
               icon="pi pi-refresh" 
               label="Tải lại dữ liệu"
-              className="p-button-outlined p-button-secondary"
+              className="ctu-refresh-button"
               onClick={fetchDashboardData}
               loading={loading}
               style={{ marginRight: '1rem' }}
@@ -473,103 +473,97 @@ export default function DashboardAdmin() {
               value={selectedTimeRange} 
               options={timeRanges} 
               onChange={(e) => setSelectedTimeRange(e.value)}
-              className="time-range-dropdown"
+              className="ctu-time-range-dropdown"
               placeholder="Chọn khoảng thời gian"
             />
           </div>
         </div>
 
         {/* Statistics Cards */}
-        <div className="stats-grid">
-          <Card className="stat-card stat-primary">
-            <div className="stat-content">
-              <div className="stat-icon">
+        <div className="ctu-stats-grid">
+          <Card className="ctu-stat-card ctu-stat-primary">
+            <div className="ctu-stat-content">
+              <div className="ctu-stat-icon">
                 <i className="pi pi-users"></i>
               </div>
-              <div className="stat-info">
+              <div className="ctu-stat-info">
                 <h3>{stats.totalStudents.toLocaleString()}</h3>
                 <p>Tổng học viên</p>
-                <ProgressBar value={75} className="stat-progress" />
               </div>
             </div>
           </Card>
 
-          <Card className="stat-card stat-success">
-            <div className="stat-content">
-              <div className="stat-icon">
+          <Card className="ctu-stat-card ctu-stat-success">
+            <div className="ctu-stat-content">
+              <div className="ctu-stat-icon">
                 <i className="pi pi-id-card"></i>
               </div>
-              <div className="stat-info">
+              <div className="ctu-stat-info">
                 <h3>{stats.totalTeachers.toLocaleString()}</h3>
                 <p>Tổng giảng viên</p>
-                <ProgressBar value={60} className="stat-progress" />
               </div>
             </div>
           </Card>
 
-          <Card className="stat-card stat-info">
-            <div className="stat-content">
-              <div className="stat-icon">
+          <Card className="ctu-stat-card ctu-stat-info">
+            <div className="ctu-stat-content">
+              <div className="ctu-stat-icon">
                 <i className="pi pi-book"></i>
               </div>
-              <div className="stat-info">
+              <div className="ctu-stat-info">
                 <h3>{stats.totalCourses.toLocaleString()}</h3>
                 <p>Tổng khóa học</p>
-                <ProgressBar value={85} className="stat-progress" />
               </div>
             </div>
           </Card>
 
-          <Card className="stat-card stat-warning">
-            <div className="stat-content">
-              <div className="stat-icon">
+          <Card className="ctu-stat-card ctu-stat-warning">
+            <div className="ctu-stat-content">
+              <div className="ctu-stat-icon">
                 <i className="pi pi-calendar"></i>
               </div>
-              <div className="stat-info">
+              <div className="ctu-stat-info">
                 <h3>{stats.totalClasses.toLocaleString()}</h3>
                 <p>Tổng lớp học</p>
-                <ProgressBar value={70} className="stat-progress" />
               </div>
             </div>
           </Card>
 
-          <Card className="stat-card stat-secondary">
-            <div className="stat-content">
-              <div className="stat-icon">
+          <Card className="ctu-stat-card ctu-stat-secondary">
+            <div className="ctu-stat-content">
+              <div className="ctu-stat-icon">
                 <i className="pi pi-building"></i>
               </div>
-              <div className="stat-info">
+              <div className="ctu-stat-info">
                 <h3>{stats.totalFacilities.toLocaleString()}</h3>
                 <p>Cơ sở đào tạo</p>
-                <ProgressBar value={90} className="stat-progress" />
               </div>
             </div>
           </Card>
 
-          <Card className="stat-card stat-help">
-            <div className="stat-content">
-              <div className="stat-icon">
+          <Card className="ctu-stat-card ctu-stat-help">
+            <div className="ctu-stat-content">
+              <div className="ctu-stat-icon">
                 <i className="pi pi-users"></i>
               </div>
-              <div className="stat-info">
+              <div className="ctu-stat-info">
                 <h3>{stats.totalManagers.toLocaleString()}</h3>
                 <p>Quản lý</p>
-                <ProgressBar value={50} className="stat-progress" />
               </div>
             </div>
           </Card>
         </div>
 
         {/* Quick Actions */}
-        <Panel header="🚀 Thao tác nhanh" className="quick-actions-panel">
-          <div className="quick-actions-grid">
+        <Panel header="🚀 Thao tác nhanh" className="ctu-quick-actions-panel">
+          <div className="ctu-quick-actions-grid">
             {quickActions.map((action, index) => (
-              <Card key={index} className="quick-action-card">
-                <div className="action-content" onClick={() => handleQuickAction(action.path)}>
-                  <div className={`action-icon action-${action.color}`}>
+              <Card key={index} className="ctu-quick-action-card">
+                <div className="ctu-action-content" onClick={() => handleQuickAction(action.path)}>
+                  <div className={`ctu-action-icon ctu-action-${action.color}`}>
                     <i className={action.icon}></i>
                   </div>
-                  <div className="action-info">
+                  <div className="ctu-action-info">
                     <h4>{action.label}</h4>
                     <p>{action.description}</p>
                   </div>
@@ -580,15 +574,15 @@ export default function DashboardAdmin() {
         </Panel>
 
         {/* Data Tables */}
-        <div className="dashboard-tables">
-          <div className="table-section">
-            <Panel header="👥 Học viên gần đây" className="recent-students-panel">
+        <div className="ctu-dashboard-tables">
+          <div className="ctu-table-section">
+            <Panel header="👥 Học viên gần đây" className="ctu-recent-students-panel">
               <DataTable 
                 value={recentStudents} 
                 responsiveLayout="scroll"
                 loading={loading}
                 emptyMessage="Chưa có dữ liệu"
-                className="modern-table"
+                className="ctu-modern-table"
               >
                 <Column field="student_code" header="Mã SV" />
                 <Column field="full_name" header="Họ tên" />
@@ -602,12 +596,12 @@ export default function DashboardAdmin() {
             </Panel>
           </div>
 
-          <div className="table-section">
-            <Panel header="🔔 Hoạt động gần đây" className="recent-activities-panel">
+          <div className="ctu-table-section">
+            <Panel header="🔔 Hoạt động gần đây" className="ctu-recent-activities-panel">
               <DataTable 
                 value={recentActivities} 
                 responsiveLayout="scroll"
-                className="modern-table"
+                className="ctu-modern-table"
               >
                 <Column field="action" header="Hoạt động" />
                 <Column field="user" header="Người thực hiện" />

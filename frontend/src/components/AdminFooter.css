@@ -1,0 +1,82 @@
+/* CTU Admin Footer Styling */
+.ctu-admin-footer {
+  background: linear-gradient(135deg, #0c4da2, #1976d2);
+  color: white;
+  padding: 2rem 1rem;
+  margin-top: auto;
+  box-shadow: 0 -4px 20px rgba(12, 77, 162, 0.2);
+}
+
+.ctu-footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ctu-footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ctu-footer-section h4 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffa726;
+  font-size: 1.1rem;
+  border-bottom: 2px solid rgba(255, 167, 38, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.ctu-footer-section p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ctu-footer-section p + p {
+  margin-top: 0.75rem;
+}
+
+.ctu-footer-section .pi {
+  margin-right: 0.5rem;
+  color: #ffa726;
+  width: 16px;
+}
+
+.ctu-footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.ctu-footer-bottom small {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ctu-admin-footer {
+    padding: 1.5rem 1rem;
+  }
+  
+  .ctu-footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .ctu-footer-section h4 {
+    font-size: 1rem;
+  }
+  
+  .ctu-footer-section p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Hover effects for links */
+.ctu-footer-section p:hover {
+  color: #ffa726;
+  transition: color 0.3s ease;
+}

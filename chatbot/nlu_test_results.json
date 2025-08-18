@@ -1,0 +1,559 @@
+{
+  "intent_classification": {
+    "total_tests": 53,
+    "correct": 52,
+    "incorrect": 1,
+    "details": [
+      {
+        "text": "xin chào",
+        "expected": "greet",
+        "predicted": "greet",
+        "confidence": 0.9999974966049194,
+        "correct": true
+      },
+      {
+        "text": "chào bạn",
+        "expected": "greet",
+        "predicted": "greet",
+        "confidence": 0.9999895095825195,
+        "correct": true
+      },
+      {
+        "text": "hello",
+        "expected": "greet",
+        "predicted": "greet",
+        "confidence": 0.9999991655349731,
+        "correct": true
+      },
+      {
+        "text": "hi",
+        "expected": "greet",
+        "predicted": "greet",
+        "confidence": 0.9999990463256836,
+        "correct": true
+      },
+      {
+        "text": "chào buổi sáng",
+        "expected": "greet",
+        "predicted": "greet",
+        "confidence": 0.9999953508377075,
+        "correct": true
+      },
+      {
+        "text": "good morning",
+        "expected": "greet",
+        "predicted": "greet",
+        "confidence": 0.9999960660934448,
+        "correct": true
+      },
+      {
+        "text": "hế lô",
+        "expected": "greet",
+        "predicted": "greet",
+        "confidence": 0.9999988079071045,
+        "correct": true
+      },
+      {
+        "text": "tạm biệt",
+        "expected": "goodbye",
+        "predicted": "goodbye",
+        "confidence": 0.9729424715042114,
+        "correct": true
+      },
+      {
+        "text": "bye",
+        "expected": "goodbye",
+        "predicted": "goodbye",
+        "confidence": 0.9951683282852173,
+        "correct": true
+      },
+      {
+        "text": "goodbye",
+        "expected": "goodbye",
+        "predicted": "goodbye",
+        "confidence": 0.9975687861442566,
+        "correct": true
+      },
+      {
+        "text": "chào tạm biệt",
+        "expected": "goodbye",
+        "predicted": "goodbye",
+        "confidence": 0.8153020143508911,
+        "correct": true
+      },
+      {
+        "text": "see you later",
+        "expected": "goodbye",
+        "predicted": "goodbye",
+        "confidence": 0.8048977851867676,
+        "correct": true
+      },
+      {
+        "text": "chúc ngủ ngon",
+        "expected": "goodbye",
+        "predicted": "goodbye",
+        "confidence": 0.8879508972167969,
+        "correct": true
+      },
+      {
+        "text": "hẹn gặp lại",
+        "expected": "goodbye",
+        "predicted": "goodbye",
+        "confidence": 0.8216073513031006,
+        "correct": true
+      },
+      {
+        "text": "thông tin học bổng",
+        "expected": "general_question",
+        "predicted": "general_question",
+        "confidence": 0.9999997615814209,
+        "correct": true
+      },
+      {
+        "text": "học phí một học kỳ là bao nhiêu?",
+        "expected": "general_question",
+        "predicted": "general_question",
+        "confidence": 0.9999995231628418,
+        "correct": true
+      },
+      {
+        "text": "quy định về điểm số như thế nào?",
+        "expected": "general_question",
+        "predicted": "general_question",
+        "confidence": 0.9999995231628418,
+        "correct": true
+      },
+      {
+        "text": "thủ tục xin học bổng",
+        "expected": "general_question",
+        "predicted": "general_question",
+        "confidence": 0.9999996423721313,
+        "correct": true
+      },
+      {
+        "text": "địa chỉ trường",
+        "expected": "general_question",
+        "predicted": "general_question",
+        "confidence": 0.9999998807907104,
+        "correct": true
+      },
+      {
+        "text": "chương trình đào tạo",
+        "expected": "general_question",
+        "predicted": "ask_student_program",
+        "confidence": 0.8885908722877502,
+        "correct": false
+      },
+      {
+        "text": "điều kiện tốt nghiệp",
+        "expected": "general_question",
+        "predicted": "general_question",
+        "confidence": 0.9999996423721313,
+        "correct": true
+      },
+      {
+        "text": "quy chế đào tạo",
+        "expected": "general_question",
+        "predicted": "general_question",
+        "confidence": 0.999997615814209,
+        "correct": true
+      },
+      {
+        "text": "yes",
+        "expected": "affirm",
+        "predicted": "affirm",
+        "confidence": 0.9999681711196899,
+        "correct": true
+      },
+      {
+        "text": "đúng",
+        "expected": "affirm",
+        "predicted": "affirm",
+        "confidence": 0.9999580383300781,
+        "correct": true
+      },
+      {
+        "text": "ok",
+        "expected": "affirm",
+        "predicted": "affirm",
+        "confidence": 0.9999188184738159,
+        "correct": true
+      },
+      {
+        "text": "được",
+        "expected": "affirm",
+        "predicted": "affirm",
+        "confidence": 0.9999704360961914,
+        "correct": true
+      },
+      {
+        "text": "chắc chắn",
+        "expected": "affirm",
+        "predicted": "affirm",
+        "confidence": 0.9999440908432007,
+        "correct": true
+      },
+      {
+        "text": "no",
+        "expected": "deny",
+        "predicted": "deny",
+        "confidence": 0.9998327493667603,
+        "correct": true
+      },
+      {
+        "text": "không",
+        "expected": "deny",
+        "predicted": "deny",
+        "confidence": 0.999554455280304,
+        "correct": true
+      },
+      {
+        "text": "không muốn",
+        "expected": "deny",
+        "predicted": "deny",
+        "confidence": 0.9997856020927429,
+        "correct": true
+      },
+      {
+        "text": "thôi",
+        "expected": "deny",
+        "predicted": "deny",
+        "confidence": 0.999923586845398,
+        "correct": true
+      },
+      {
+        "text": "tuyệt vời",
+        "expected": "mood_great",
+        "predicted": "mood_great",
+        "confidence": 0.9999678134918213,
+        "correct": true
+      },
+      {
+        "text": "perfect",
+        "expected": "mood_great",
+        "predicted": "mood_great",
+        "confidence": 0.9999618530273438,
+        "correct": true
+      },
+      {
+        "text": "quá tuyệt",
+        "expected": "mood_great",
+        "predicted": "mood_great",
+        "confidence": 0.9999186992645264,
+        "correct": true
+      },
+      {
+        "text": "tôi rất vui",
+        "expected": "mood_great",
+        "predicted": "mood_great",
+        "confidence": 0.9997747540473938,
+        "correct": true
+      },
+      {
+        "text": "tôi buồn",
+        "expected": "mood_unhappy",
+        "predicted": "mood_unhappy",
+        "confidence": 0.9998989105224609,
+        "correct": true
+      },
+      {
+        "text": "không vui",
+        "expected": "mood_unhappy",
+        "predicted": "mood_unhappy",
+        "confidence": 0.9998742341995239,
+        "correct": true
+      },
+      {
+        "text": "my day was horrible",
+        "expected": "mood_unhappy",
+        "predicted": "mood_unhappy",
+        "confidence": 0.999950647354126,
+        "correct": true
+      },
+      {
+        "text": "stress",
+        "expected": "mood_unhappy",
+        "predicted": "mood_unhappy",
+        "confidence": 0.9999669790267944,
+        "correct": true
+      },
+      {
+        "text": "bạn là ai?",
+        "expected": "bot_challenge",
+        "predicted": "bot_challenge",
+        "confidence": 0.9989846348762512,
+        "correct": true
+      },
+      {
+        "text": "are you a bot?",
+        "expected": "bot_challenge",
+        "predicted": "bot_challenge",
+        "confidence": 0.9992377758026123,
+        "correct": true
+      },
+      {
+        "text": "bạn có phải là bot không?",
+        "expected": "bot_challenge",
+        "predicted": "bot_challenge",
+        "confidence": 0.998691976070404,
+        "correct": true
+      },
+      {
+        "text": "lịch học hôm nay",
+        "expected": "ask_today_schedule",
+        "predicted": "ask_today_schedule",
+        "confidence": 0.999563992023468,
+        "correct": true
+      },
+      {
+        "text": "hôm nay tôi có môn gì",
+        "expected": "ask_today_schedule",
+        "predicted": "ask_today_schedule",
+        "confidence": 0.9992161989212036,
+        "correct": true
+      },
+      {
+        "text": "lịch học tuần này",
+        "expected": "ask_schedule_week",
+        "predicted": "ask_schedule_week",
+        "confidence": 0.9944169521331787,
+        "correct": true
+      },
+      {
+        "text": "thời khóa biểu tuần này",
+        "expected": "ask_schedule_week",
+        "predicted": "ask_schedule_week",
+        "confidence": 0.9942489862442017,
+        "correct": true
+      },
+      {
+        "text": "lịch học ngày mai",
+        "expected": "ask_schedule_tomorrow",
+        "predicted": "ask_schedule_tomorrow",
+        "confidence": 0.9983320832252502,
+        "correct": true
+      },
+      {
+        "text": "mai có lớp không",
+        "expected": "ask_schedule_tomorrow",
+        "predicted": "ask_schedule_tomorrow",
+        "confidence": 0.9975605010986328,
+        "correct": true
+      },
+      {
+        "text": "tiết học tiếp theo",
+        "expected": "ask_next_class",
+        "predicted": "ask_next_class",
+        "confidence": 0.9937560558319092,
+        "correct": true
+      },
+      {
+        "text": "môn tiếp theo là gì",
+        "expected": "ask_next_class",
+        "predicted": "ask_next_class",
+        "confidence": 0.991064190864563,
+        "correct": true
+      },
+      {
+        "text": "ctdt",
+        "expected": "ask_student_program",
+        "predicted": "ask_student_program",
+        "confidence": 0.9997153878211975,
+        "correct": true
+      },
+      {
+        "text": "chương trình học của tôi",
+        "expected": "ask_student_program",
+        "predicted": "ask_student_program",
+        "confidence": 0.9996104836463928,
+        "correct": true
+      },
+      {
+        "text": "xem chương trình học của mình",
+        "expected": "ask_student_program",
+        "predicted": "ask_student_program",
+        "confidence": 0.9994434714317322,
+        "correct": true
+      }
+    ],
+    "accuracy": 0.9811320754716981
+  },
+  "confidence_analysis": {
+    "min_confidence": 0.5,
+    "total_tests": 53,
+    "low_confidence_count": 0,
+    "low_confidence_rate": 0.0,
+    "low_confidence_cases": []
+  },
+  "intent_distribution": {
+    "greet": {
+      "total": 7,
+      "correct": 7,
+      "accuracy": 1.0,
+      "predictions": [
+        "greet",
+        "greet",
+        "greet",
+        "greet",
+        "greet",
+        "greet",
+        "greet"
+      ]
+    },
+    "goodbye": {
+      "total": 7,
+      "correct": 7,
+      "accuracy": 1.0,
+      "predictions": [
+        "goodbye",
+        "goodbye",
+        "goodbye",
+        "goodbye",
+        "goodbye",
+        "goodbye",
+        "goodbye"
+      ]
+    },
+    "general_question": {
+      "total": 8,
+      "correct": 7,
+      "accuracy": 0.875,
+      "predictions": [
+        "general_question",
+        "general_question",
+        "general_question",
+        "general_question",
+        "general_question",
+        "ask_student_program",
+        "general_question",
+        "general_question"
+      ]
+    },
+    "affirm": {
+      "total": 5,
+      "correct": 5,
+      "accuracy": 1.0,
+      "predictions": [
+        "affirm",
+        "affirm",
+        "affirm",
+        "affirm",
+        "affirm"
+      ]
+    },
+    "deny": {
+      "total": 4,
+      "correct": 4,
+      "accuracy": 1.0,
+      "predictions": [
+        "deny",
+        "deny",
+        "deny",
+        "deny"
+      ]
+    },
+    "mood_great": {
+      "total": 4,
+      "correct": 4,
+      "accuracy": 1.0,
+      "predictions": [
+        "mood_great",
+        "mood_great",
+        "mood_great",
+        "mood_great"
+      ]
+    },
+    "mood_unhappy": {
+      "total": 4,
+      "correct": 4,
+      "accuracy": 1.0,
+      "predictions": [
+        "mood_unhappy",
+        "mood_unhappy",
+        "mood_unhappy",
+        "mood_unhappy"
+      ]
+    },
+    "bot_challenge": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "predictions": [
+        "bot_challenge",
+        "bot_challenge",
+        "bot_challenge"
+      ]
+    },
+    "ask_today_schedule": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "predictions": [
+        "ask_today_schedule",
+        "ask_today_schedule"
+      ]
+    },
+    "ask_schedule_week": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "predictions": [
+        "ask_schedule_week",
+        "ask_schedule_week"
+      ]
+    },
+    "ask_schedule_tomorrow": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "predictions": [
+        "ask_schedule_tomorrow",
+        "ask_schedule_tomorrow"
+      ]
+    },
+    "ask_next_class": {
+      "total": 2,
+      "correct": 2,
+      "accuracy": 1.0,
+      "predictions": [
+        "ask_next_class",
+        "ask_next_class"
+      ]
+    },
+    "ask_student_program": {
+      "total": 3,
+      "correct": 3,
+      "accuracy": 1.0,
+      "predictions": [
+        "ask_student_program",
+        "ask_student_program",
+        "ask_student_program"
+      ]
+    }
+  },
+  "summary": {
+    "overall_accuracy": 0.9811320754716981,
+    "total_tests": 53,
+    "correct_predictions": 52,
+    "incorrect_predictions": 1,
+    "low_confidence_rate": 0.0,
+    "best_performing_intent": {
+      "intent": "greet",
+      "accuracy": 1.0
+    },
+    "worst_performing_intent": {
+      "intent": "general_question",
+      "accuracy": 0.875
+    },
+    "pass_criteria": {
+      "accuracy_threshold": 0.85,
+      "confidence_threshold": 0.5,
+      "max_low_confidence_rate": 0.1
+    },
+    "test_status": {
+      "accuracy_pass": true,
+      "confidence_pass": true,
+      "overall_pass": true
+    }
+  }
+}

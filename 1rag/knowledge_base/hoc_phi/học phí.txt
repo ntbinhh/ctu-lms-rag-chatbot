@@ -1,0 +1,240 @@
+học phí ngành Ngôn ngữ Anh (CTCLC) : 40 triệu/năm
+học phí ngành ngôn ngữ anh (ctclc): 40 triệu/năm
+học phí ngành Quản trị kinh doanh (CTCLC) : 40 triệu/năm
+học phí ngành quản trị kinh doanh (ctclc): 40 triệu/năm
+học phí ngành Kinh doanh quốc tế (CTCLC) : 40 triệu/năm
+học phí ngành kinh doanh quốc tế (ctclc): 40 triệu/năm
+học phí ngành Tài chính – Ngân hàng (CTCLC) : 40 triệu/năm
+học phí ngành tài chính – ngân hàng (ctclc): 40 triệu/năm
+học phí ngành Công nghệ sinh học (CTCLC) : 40 triệu/năm
+học phí ngành công nghệ sinh học (ctclc): 40 triệu/năm
+học phí ngành Kỹ thuật máy tính và truyền thông dữ liệu (CTCLC) : 40 triệu/năm
+học phí ngành kỹ thuật máy tính và truyền thông dữ liệu (ctclc): 40 triệu/năm
+học phí ngành Kỹ thuật phần mềm (CTCLC) : 40 triệu/năm
+học phí ngành kỹ thuật phần mềm (ctclc): 40 triệu/năm
+học phí ngành Hệ thống thông tin (CTCLC) : 40 triệu/năm
+học phí ngành hệ thống thông tin (ctclc): 40 triệu/năm
+học phí ngành Công nghệ thông tin (CTCLC) : 40 triệu/năm
+học phí ngành công nghệ thông tin (ctclc): 40 triệu/năm
+học phí ngành Công nghệ kỹ thuật hóa học (CTCLC) : 40 triệu/năm
+học phí ngành công nghệ kỹ thuật hóa học (ctclc): 40 triệu/năm
+học phí ngành Kỹ thuật điện (CTCLC) : 40 triệu/năm
+học phí ngành kỹ thuật điện (ctclc): 40 triệu/năm
+học phí ngành Kỹ thuật điều khiển và tự động hóa (CTCLC) : 37 triệu/năm
+học phí ngành kỹ thuật điều khiển và tự động hóa (ctclc): 37 triệu/năm
+học phí ngành Công nghệ thực phẩm (CTCLC) : 40 triệu/năm
+học phí ngành công nghệ thực phẩm (ctclc): 40 triệu/năm
+học phí ngành Kỹ thuật xây dựng (CTCLC) : 40 triệu/năm
+học phí ngành kỹ thuật xây dựng (ctclc): 40 triệu/năm
+học phí ngành Nuôi trồng thủy sản (CTTT) : 40 triệu/năm
+học phí ngành nuôi trồng thủy sản (cttt): 40 triệu/năm
+học phí ngành Thú y (CTCLC) : 40 triệu/năm
+học phí ngành thú y (ctclc): 40 triệu/năm
+học phí ngành Quản trị dịch vụ du lịch và lữ hành (CTCLC) : 40 triệu/năm
+học phí ngành quản trị dịch vụ du lịch và lữ hành (ctclc): 40 triệu/năm
+học phí ngành Giáo dục Mầm non : 22,2 triệu/năm
+học phí ngành giáo dục mầm non: 22,2 triệu/năm
+học phí ngành Giáo dục Tiểu học : 22,2 triệu/năm
+học phí ngành giáo dục tiểu học: 22,2 triệu/năm
+học phí ngành Giáo dục Công dân : 22,2 triệu/năm
+học phí ngành giáo dục công dân: 22,2 triệu/năm
+học phí ngành Giáo dục Thể chất : 22,2 triệu/năm
+học phí ngành giáo dục thể chất: 22,2 triệu/năm
+học phí ngành Sư phạm Toán học : 22,2 triệu/năm
+học phí ngành sư phạm toán học: 22,2 triệu/năm
+học phí ngành Sư phạm Vật lý : 22,2 triệu/năm
+học phí ngành sư phạm vật lý: 22,2 triệu/năm
+học phí ngành Sư phạm Hóa học : 22,2 triệu/năm
+học phí ngành sư phạm hóa học: 22,2 triệu/năm
+học phí ngành Sư phạm Sinh học : 22,2 triệu/năm
+học phí ngành sư phạm sinh học: 22,2 triệu/năm
+học phí ngành Sư phạm Ngữ văn : 22,2 triệu/năm
+học phí ngành sư phạm ngữ văn: 22,2 triệu/năm
+học phí ngành Sư phạm Lịch sử : 22,2 triệu/năm
+học phí ngành sư phạm lịch sử: 22,2 triệu/năm
+học phí ngành Sư phạm Địa lý : 22,2 triệu/năm
+học phí ngành sư phạm địa lý: 22,2 triệu/năm
+học phí ngành Sư phạm Tiếng Anh : 22,2 triệu/năm
+học phí ngành sư phạm tiếng anh: 22,2 triệu/năm
+học phí ngành Sư phạm Tiếng Pháp : 22,2 triệu/năm
+học phí ngành sư phạm tiếng pháp: 22,2 triệu/năm
+học phí ngành Sư phạm Khoa học tự nhiên : 22,2 triệu/năm
+học phí ngành sư phạm khoa học tự nhiên: 22,2 triệu/năm
+học phí ngành Sư phạm Lịch sử – Địa lý : 22,2 triệu/năm
+học phí ngành sư phạm lịch sử – địa lý: 22,2 triệu/năm
+học phí ngành Ngôn ngữ Anh : 22,9 triệu/năm
+học phí ngành ngôn ngữ anh: 22,9 triệu/năm
+học phí ngành Ngôn ngữ Anh (Khu Hòa An) : 22,9 triệu/năm
+học phí ngành ngôn ngữ anh (khu hòa an): 22,9 triệu/năm
+học phí ngành Ngôn ngữ Pháp : 22,9 triệu/năm
+học phí ngành ngôn ngữ pháp: 22,9 triệu/năm
+học phí ngành Triết học : 22,9 triệu/năm
+học phí ngành triết học: 22,9 triệu/năm
+học phí ngành Văn học : 22,9 triệu/năm
+học phí ngành văn học: 22,9 triệu/năm
+học phí ngành Kinh tế : 22,9 triệu/năm
+học phí ngành kinh tế: 22,9 triệu/năm
+học phí ngành Chính trị học : 22,9 triệu/năm
+học phí ngành chính trị học: 22,9 triệu/năm
+học phí ngành Xã hội học : 22,9 triệu/năm
+học phí ngành xã hội học: 22,9 triệu/năm
+học phí ngành Tâm lý học giáo dục : 22,9 triệu/năm
+học phí ngành tâm lý học giáo dục: 22,9 triệu/năm
+học phí ngành Báo chí : 22,9 triệu/năm
+học phí ngành báo chí: 22,9 triệu/năm
+học phí ngành Truyền thông đa phương tiện : 23,3 triệu/năm
+học phí ngành truyền thông đa phương tiện: 23,3 triệu/năm
+học phí ngành Thông tin - Thư viện : 22,9 triệu/năm
+học phí ngành thông tin - thư viện: 22,9 triệu/năm
+học phí ngành Quản trị kinh doanh : 22,9 triệu/năm
+học phí ngành quản trị kinh doanh: 22,9 triệu/năm
+học phí ngành Quản trị kinh doanh (Khu Hòa An) : 22,9 triệu/năm
+học phí ngành quản trị kinh doanh (khu hòa an): 22,9 triệu/năm
+học phí ngành Marketing : 22,9 triệu/năm
+học phí ngành marketing: 22,9 triệu/năm
+học phí ngành Kinh doanh quốc tế : 22,9 triệu/năm
+học phí ngành kinh doanh quốc tế: 22,9 triệu/năm
+học phí ngành Kinh doanh thương mại : 22,9 triệu/năm
+học phí ngành kinh doanh thương mại: 22,9 triệu/năm
+học phí ngành Thương mại điện tử : 22,9 triệu/năm
+học phí ngành thương mại điện tử: 22,9 triệu/năm
+học phí ngành Tài chính – Ngân hàng : 22,9 triệu/năm
+học phí ngành tài chính – ngân hàng: 22,9 triệu/năm
+học phí ngành Kế toán : 22,9 triệu/năm
+học phí ngành kế toán: 22,9 triệu/năm
+học phí ngành Kế toán (Sóc Trăng) : 22,9 triệu/năm
+học phí ngành kế toán (sóc trăng): 22,9 triệu/năm
+học phí ngành Kiểm toán : 22,9 triệu/năm
+học phí ngành kiểm toán: 22,9 triệu/năm
+học phí ngành Luật : 22,9 triệu/năm
+học phí ngành luật: 22,9 triệu/năm
+học phí ngành Luật (Khu Hòa An) : 22,9 triệu/năm
+học phí ngành luật (khu hòa an): 22,9 triệu/năm
+học phí ngành Luật (Sóc Trăng) : 22,9 triệu/năm
+học phí ngành luật (sóc trăng): 22,9 triệu/năm
+học phí ngành Luật dân sự và tố tụng dân sự : 22,9 triệu/năm
+học phí ngành luật dân sự và tố tụng dân sự: 22,9 triệu/năm
+học phí ngành Luật kinh tế : 22,9 triệu/năm
+học phí ngành luật kinh tế: 22,9 triệu/năm
+học phí ngành Sinh học : 23,3 triệu/năm
+học phí ngành sinh học: 23,3 triệu/năm
+học phí ngành Công nghệ sinh học : 23,3 triệu/năm
+học phí ngành công nghệ sinh học: 23,3 triệu/năm
+học phí ngành Sinh học ứng dụng : 23,3 triệu/năm
+học phí ngành sinh học ứng dụng: 23,3 triệu/năm
+học phí ngành Hóa học : 23,4 triệu/năm
+học phí ngành hóa học: 23,4 triệu/năm
+học phí ngành Khoa học môi trường : 23,9 triệu/năm
+học phí ngành khoa học môi trường: 23,9 triệu/năm
+học phí ngành Toán ứng dụng : 25,4 triệu/năm
+học phí ngành toán ứng dụng: 25,4 triệu/năm
+học phí ngành Thống kê : 25,4 triệu/năm
+học phí ngành thống kê: 25,4 triệu/năm
+học phí ngành Khoa học máy tính : 25,9 triệu/năm
+học phí ngành khoa học máy tính: 25,9 triệu/năm
+học phí ngành Mạng máy tính và truyền thông dữ liệu : 25,9 triệu/năm
+học phí ngành mạng máy tính và truyền thông dữ liệu: 25,9 triệu/năm
+học phí ngành Kỹ thuật phần mềm : 25,9 triệu/năm
+học phí ngành kỹ thuật phần mềm: 25,9 triệu/năm
+học phí ngành Hệ thống thông tin : 25,9 triệu/năm
+học phí ngành hệ thống thông tin: 25,9 triệu/năm
+học phí ngành Kỹ thuật máy tính : 25,9 triệu/năm
+học phí ngành kỹ thuật máy tính: 25,9 triệu/năm
+học phí ngành Trí tuệ nhân tạo : 25,9 triệu/năm
+học phí ngành trí tuệ nhân tạo: 25,9 triệu/năm
+học phí ngành Công nghệ thông tin : 25,9 triệu/năm
+học phí ngành công nghệ thông tin: 25,9 triệu/năm
+học phí ngành Công nghệ thông tin (Khu Hòa An) : 25,9 triệu/năm
+học phí ngành công nghệ thông tin (khu hòa an): 25,9 triệu/năm
+học phí ngành An toàn thông tin : 25,9 triệu/năm
+học phí ngành an toàn thông tin: 25,9 triệu/năm
+học phí ngành công nghệ kỹ thuật hóa học : 25,9 triệu/năm
+học phí ngành công nghệ kỹ thuật hóa học: 25,9 triệu/năm
+học phí ngành Quản lý công nghiệp : 25,9 triệu/năm
+học phí ngành quản lý công nghiệp: 25,9 triệu/năm
+học phí ngành Logistics và Quản lý chuỗi cung ứng : 25,4 triệu/năm
+học phí ngành logistics và quản lý chuỗi cung ứng: 25,4 triệu/năm
+học phí ngành Logistics và Quản lý chuỗi cung ứng (Sóc Trăng) : 25,4 triệu/năm
+học phí ngành logistics và quản lý chuỗi cung ứng (sóc trăng): 25,4 triệu/năm
+học phí ngành Kỹ thuật cơ khí : 25,9 triệu/năm
+học phí ngành kỹ thuật cơ khí: 25,9 triệu/năm
+học phí ngành Kỹ thuật cơ điện tử : 25,9 triệu/năm
+học phí ngành kỹ thuật cơ điện tử: 25,9 triệu/năm
+học phí ngành Kỹ thuật ô tô : 25,9 triệu/năm
+học phí ngành kỹ thuật ô tô: 25,9 triệu/năm
+học phí ngành Kỹ thuật điện : 25,9 triệu/năm
+học phí ngành kỹ thuật điện: 25,9 triệu/năm
+học phí ngành Kỹ thuật điện tử – viễn thông : 25,9 triệu/năm
+học phí ngành kỹ thuật điện tử – viễn thông: 25,9 triệu/năm
+học phí ngành Kỹ thuật y sinh : 25,9 triệu/năm
+học phí ngành kỹ thuật y sinh: 25,9 triệu/năm
+học phí ngành Kỹ thuật điều khiển và tự động hóa : 25,9 triệu/năm
+học phí ngành kỹ thuật điều khiển và tự động hóa: 25,9 triệu/năm
+học phí ngành Kỹ thuật vật liệu : 25,9 triệu/năm
+học phí ngành kỹ thuật vật liệu: 25,9 triệu/năm
+học phí ngành Kỹ thuật môi trường : 25,9 triệu/năm
+học phí ngành kỹ thuật môi trường: 25,9 triệu/năm
+học phí ngành Vật lý kỹ thuật : 25,4 triệu/năm
+học phí ngành vật lý kỹ thuật: 25,4 triệu/năm
+học phí ngành Công nghệ thực phẩm : 25,9 triệu/năm
+học phí ngành công nghệ thực phẩm: 25,9 triệu/năm
+học phí ngành Công nghệ sau thu hoạch : 25,9 triệu/năm
+học phí ngành công nghệ sau thu hoạch: 25,9 triệu/năm
+học phí ngành Công nghệ chế biến thủy sản : 25,9 triệu/năm
+học phí ngành công nghệ chế biến thủy sản: 25,9 triệu/năm
+học phí ngành Đảm bảo chất lượng và an toàn thực phẩm : 25,9 triệu/năm
+học phí ngành đảm bảo chất lượng và an toàn thực phẩm: 25,9 triệu/năm
+học phí ngành Kiến trúc : 24,8 triệu/năm
+học phí ngành kiến trúc: 24,8 triệu/năm
+học phí ngành Quy hoạch vùng và đô thị : 25,9 triệu/năm
+học phí ngành quy hoạch vùng và đô thị: 25,9 triệu/năm
+học phí ngành Kỹ thuật xây dựng : 25,9 triệu/năm
+học phí ngành kỹ thuật xây dựng: 25,9 triệu/năm
+học phí ngành Kỹ thuật xây dựng công trình thủy : 25,9 triệu/năm
+học phí ngành kỹ thuật xây dựng công trình thủy: 25,9 triệu/năm
+học phí ngành Kỹ thuật xây dựng công trình giao thông : 25,9 triệu/năm
+học phí ngành kỹ thuật xây dựng công trình giao thông: 25,9 triệu/năm
+học phí ngành Kỹ thuật cấp thoát nước : 25,9 triệu/năm
+học phí ngành kỹ thuật cấp thoát nước: 25,9 triệu/năm
+học phí ngành Khoa học đất : 25,9 triệu/năm
+học phí ngành khoa học đất: 25,9 triệu/năm
+học phí ngành Chăn nuôi : 25,9 triệu/năm
+học phí ngành chăn nuôi: 25,9 triệu/năm
+học phí ngành Nông học : 25,9 triệu/năm
+học phí ngành nông học: 25,9 triệu/năm
+học phí ngành Khoa học cây trồng : 25,9 triệu/năm
+học phí ngành khoa học cây trồng: 25,9 triệu/năm
+học phí ngành Bảo vệ thực vật : 25,9 triệu/năm
+học phí ngành bảo vệ thực vật: 25,9 triệu/năm
+học phí ngành Công nghệ rau hoa quả và cảnh quan : 25,9 triệu/năm
+học phí ngành công nghệ rau hoa quả và cảnh quan: 25,9 triệu/năm
+học phí ngành Kinh doanh nông nghiệp (Khu Hòa An) : 22,9 triệu/năm
+học phí ngành kinh doanh nông nghiệp (khu hòa an): 22,9 triệu/năm
+học phí ngành Kinh tế nông nghiệp : 22,9 triệu/năm
+học phí ngành kinh tế nông nghiệp: 22,9 triệu/năm
+học phí ngành Kinh tế nông nghiệp (Khu Hòa An) : 22,9 triệu/năm
+học phí ngành kinh tế nông nghiệp (khu hòa an): 22,9 triệu/năm
+học phí ngành Nuôi trồng thủy sản : 25,9 triệu/năm
+học phí ngành nuôi trồng thủy sản: 25,9 triệu/năm
+học phí ngành Bệnh học thủy sản : 25,9 triệu/năm
+học phí ngành bệnh học thủy sản: 25,9 triệu/năm
+học phí ngành Quản lý thủy sản : 25,9 triệu/năm
+học phí ngành quản lý thủy sản: 25,9 triệu/năm
+học phí ngành Thú y : 24,8 triệu/năm
+học phí ngành thú y: 24,8 triệu/năm
+học phí ngành Hóa dược : 25,4 triệu/năm
+học phí ngành hóa dược: 25,4 triệu/năm
+học phí ngành Du lịch : 22,9 triệu/năm
+học phí ngành du lịch: 22,9 triệu/năm
+học phí ngành Du lịch (Khu Hòa An) : 22,9 triệu/năm
+học phí ngành du lịch (khu hòa an): 22,9 triệu/năm
+học phí ngành Du lịch (Sóc Trăng) : 22,9 triệu/năm
+học phí ngành du lịch (sóc trăng): 22,9 triệu/năm
+học phí ngành Quản trị dịch vụ du lịch và lữ hành : 22,9 triệu/năm
+học phí ngành quản trị dịch vụ du lịch và lữ hành: 22,9 triệu/năm
+học phí ngành Quản lý tài nguyên và môi trường : 23,3 triệu/năm
+học phí ngành quản lý tài nguyên và môi trường: 23,3 triệu/năm
+học phí ngành Kinh tế tài nguyên thiên nhiên : 22,9 triệu/năm
+học phí ngành kinh tế tài nguyên thiên nhiên: 22,9 triệu/năm
+học phí ngành Quản lý đất đai : 23,3 triệu/năm
+học phí ngành quản lý đất đai: 23,3 triệu/năm

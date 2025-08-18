@@ -8,21 +8,40 @@ import { Message } from "primereact/message";
 import { Badge } from "primereact/badge";
 import { Chip } from "primereact/chip";
 import { Button } from "primereact/button";
-import { Dialog } from "primereact/dialog";
-import TeacherHeader from "../components/TeacherHeader";
+import TeacherHeader from "../components/TeacherHeader.jsx";
 import ChatbotWidget from "../components/ChatbotWidget";
 import "./TeacherScheduleView.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
 const days = ["Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy", "CN"];
+const periods = ["Sáng", "Chiều", "Tối"];
 const hocKyOptions = ["HK1", "HK2", "HK3"];
+
+const formatDate = (dateString) => {
+  const d = new Date(dateString);
+  return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
+};
+
+const formatDateShort = (dateStr) => {
+  const d = new Date(dateStr);
+  return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`;
+};
+
+const getWeekDates = (startDate) => {
+  const base = new Date(startDate);
+  return Array.from({ length: 7 }, (_, i) => {
+    const d = new Date(base);
+    d.setDate(base.getDate() + i);
+    return formatDateShort(d);
+  });
+};
 
 const TeacherScheduleView = () => {
   const [hocKy, setHocKy] = useState("");
-  const [namHoc, setNamHoc] = useState("");
-  const [semesters, setSemesters] = useState([]);
-  const [selectedSemester, setSelectedSemester] = useState("");
+  const [namHoc, setNamHoc] = useState(null);
+  const [selectedClass, setSelectedClass] = useState(null);
+  const [classList, setClassList] = useState([]);
   const [weekList, setWeekList] = useState([]);
   const [scheduleItems, setScheduleItems] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
@@ -30,432 +49,617 @@ const TeacherScheduleView = () => {
   const [error, setError] = useState("");
   const [teacherInfo, setTeacherInfo] = useState(null);
   const [todaySchedule, setTodaySchedule] = useState([]);
-  const [roomDetails, setRoomDetails] = useState({});
-  const [showDebug, setShowDebug] = useState(false);
-  const [debugInfo, setDebugInfo] = useState(null);
+  const [roomCache, setRoomCache] = useState({}); // Cache để lưu thông tin phòng
 
-  const itemsPerPage = 5;
-  const startIndex = currentPage * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
-  const paginatedItems = scheduleItems.slice(startIndex, endIndex);
+  const yearNow = new Date().getFullYear();
+  const academicYears = Array.from({ length: 5 }, (_, i) => {
+    const start = yearNow - i;
+    return { label: `${start}-${start + 1}`, value: start };
+  });
 
+  // Tự động thiết lập năm học và học kỳ hiện tại
   useEffect(() => {
-    const initializeData = async () => {
-      await fetchTeacherInfo();
-      await fetchSemesters();
-      await fetchWeeks();
-    };
-    initializeData();
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth() + 1; // getMonth() trả về 0-11
+    const currentYear = currentDate.getFullYear();
+    
+    // Xác định học kỳ dựa trên tháng hiện tại
+    let currentSemester = "";
+    let academicYear = currentYear;
+    
+    if (currentMonth >= 9 || currentMonth <= 1) {
+      // Tháng 9-12 và tháng 1: HK1
+      currentSemester = "HK1";
+      if (currentMonth >= 9) {
+        academicYear = currentYear; // Năm học bắt đầu từ tháng 9
+      } else {
+        academicYear = currentYear - 1; // Tháng 1 thuộc năm học trước
+      }
+    } else if (currentMonth >= 2 && currentMonth <= 6) {
+      // Tháng 2-6: HK2
+      currentSemester = "HK2";
+      academicYear = currentYear - 1;
+    } else {
+      // Tháng 7-8: HK3 (học hè)
+      currentSemester = "HK3";
+      academicYear = currentYear - 1;
+    }
+    
+    // Fix: Hiện tại là tháng 8/2025, nên sẽ set thành HK1-2025
+    if (currentMonth === 8 && currentYear === 2025) {
+      currentSemester = "HK1";
+      academicYear = 2025;
+    }
+    
+    console.log(`Auto-detect: Month=${currentMonth}, Year=${currentYear} => Semester=${currentSemester}, Academic Year=${academicYear}`);
+    
+    setNamHoc(academicYear);
+    setHocKy(currentSemester);
   }, []);
 
-  useEffect(() => {
-    if (selectedSemester) {
-      const semester = semesters.find(s => s.label === selectedSemester);
-      if (semester) {
-        setHocKy(semester.hoc_ky);
-        setNamHoc(semester.nam_hoc);
-        fetchSchedule(semester.hoc_ky, semester.nam_hoc);
-      }
-    }
-  }, [selectedSemester, semesters]);
-
-  const fetchTeacherInfo = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      if (!token) {
-        setError("Vui lòng đăng nhập lại");
-        return;
-      }
-
-      const response = await axios.get("/me", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      
-      // Kiểm tra role
-      if (response.data.role !== "teacher") {
-        setError("Bạn không có quyền truy cập trang này. Chỉ dành cho giảng viên.");
-        return;
-      }
-      
-      setTeacherInfo(response.data);
-      console.log("Teacher info loaded:", response.data);
-    } catch (error) {
-      console.error("Error fetching teacher info:", error);
-      if (error.response?.status === 401) {
-        setError("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
-        localStorage.removeItem("token");
-      } else if (error.response?.status === 403) {
-        setError("Bạn không có quyền truy cập vào trang này.");
-      } else {
-        setError("Không thể tải thông tin giảng viên.");
-      }
-    }
+  // Get today's day in Vietnamese
+  const getTodayVietnamese = () => {
+    const today = new Date();
+    const dayIndex = today.getDay();
+    const dayNames = ["CN", "Thứ Hai", "Thứ Ba", "Thứ Tư", "Thứ Năm", "Thứ Sáu", "Thứ Bảy"];
+    return dayNames[dayIndex];
   };
 
-  const fetchSemesters = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      if (!token) return;
+  // Check if it's current day
+  const isToday = (day) => {
+    return day === getTodayVietnamese();
+  };
 
-      const response = await axios.get("/teacher/semesters", {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      
-      console.log("Semesters loaded:", response.data);
-      setSemesters(response.data);
-      
-      // Auto select latest semester
-      if (response.data.length > 0) {
-        setSelectedSemester(response.data[0].label);
+  // Get current week number
+  const getCurrentWeek = () => {
+    if (weekList.length === 0) return null;
+    const today = new Date();
+    const currentWeek = weekList.find(week => {
+      const startDate = new Date(week.start_date);
+      const endDate = new Date(week.end_date);
+      return today >= startDate && today <= endDate;
+    });
+    return currentWeek?.week || null;
+  };
+
+  // Get room display name
+  const getRoomDisplayName = (item) => {
+    // Nếu có thông tin phòng trong cache
+    if (item.room_id && roomCache[item.room_id]) {
+      const room = roomCache[item.room_id];
+      if (room.building && room.room_number) {
+        return `${room.building}/${room.room_number}`;
       }
-    } catch (error) {
-      console.error("Error fetching semesters:", error);
+      if (room.room_number) {
+        return `P.${room.room_number}`;
+      }
     }
-  };
-
-  const fetchWeeks = async () => {
-    try {
-      const response = await axios.get("/weeks/weeks");
-      setWeekList(response.data);
-      console.log("Weeks loaded:", response.data.length);
-    } catch (error) {
-      console.error("Error fetching weeks:", error);
-    }
-  };
-
-  const fetchSchedule = async (semester_hoc_ky = null, semester_nam_hoc = null) => {
-    const useHocKy = semester_hoc_ky || hocKy;
-    const useNamHoc = semester_nam_hoc || namHoc;
     
-    if (!useHocKy || !useNamHoc) {
-      console.log("No semester selected, skipping schedule fetch");
-      return;
+    // Fallback: hiển thị room_id nếu chưa có thông tin chi tiết
+    if (item.room_id) {
+      return `P.${item.room_id}`;
     }
+    
+    return null;
+  };
 
-    setLoading(true);
-    setError("");
+  // Fetch room details by room_id
+  const fetchRoomDetails = async (roomId) => {
+    if (!roomId || roomCache[roomId]) return;
+    
     try {
-      const token = localStorage.getItem("token");
-      const params = {
-        hoc_ky: useHocKy,
-        nam_hoc: useNamHoc
-      };
+      // Thử endpoint public trước (không cần authentication)
+      const response = await axios.get(`http://localhost:8000/manager/rooms/public/${roomId}`);
+      const roomData = response.data;
       
-      console.log("Fetching schedule with params:", params);
+      console.log(`Fetched room ${roomId}:`, roomData);
       
-      const response = await axios.get("/teacher/schedules", {
-        params,
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      
-      console.log("Schedule loaded:", response.data);
-      setScheduleItems(response.data);
-      
-      // Filter today's schedule
-      const today = new Date();
-      const todayDay = today.getDay() === 0 ? "7" : today.getDay().toString();
-      const todayScheduleItems = response.data.filter(item => item.day === todayDay);
-      setTodaySchedule(todayScheduleItems);
-      
+      // Cập nhật cache
+      setRoomCache(prev => ({
+        ...prev,
+        [roomId]: roomData
+      }));
     } catch (error) {
-      console.error("Error fetching schedule:", error);
+      console.error(`Không thể tải thông tin phòng ${roomId}:`, error);
       
-      if (error.response?.status === 401) {
-        setError("Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại.");
-      } else if (error.response?.status === 404) {
-        setError("Không tìm thấy lịch dạy cho học kỳ này.");
-      } else if (error.response?.status === 403) {
-        setError("Bạn không có quyền truy cập thông tin này.");
-      } else {
-        setError("Không thể tải lịch dạy. Vui lòng thử lại.");
+      // Fallback: thử endpoint có authentication
+      try {
+        const token = localStorage.getItem("token");
+        const headers = { Authorization: `Bearer ${token}` };
+        
+        const response = await axios.get(`http://localhost:8000/manager/rooms/${roomId}`, { headers });
+        const roomData = response.data;
+        
+        console.log(`Fetched room ${roomId} (authenticated):`, roomData);
+        
+        setRoomCache(prev => ({
+          ...prev,
+          [roomId]: roomData
+        }));
+      } catch (authError) {
+        console.error(`Không thể tải thông tin phòng ${roomId} (cả 2 endpoint):`, authError);
+        // Cache với thông tin cơ bản
+        setRoomCache(prev => ({
+          ...prev,
+          [roomId]: { room_number: roomId.toString(), building: null }
+        }));
       }
-      setScheduleItems([]);
-      setTodaySchedule([]);
-    } finally {
-      setLoading(false);
     }
   };
 
-  const fetchRoomDetails = async (roomIds) => {
-    try {
-      const roomPromises = roomIds.map(id => 
-        axios.get(`/api/rooms/${id}`).catch(() => null)
-      );
-      const roomResponses = await Promise.all(roomPromises);
-      
-      const roomData = {};
-      roomResponses.forEach((response, index) => {
-        if (response) {
-          roomData[roomIds[index]] = response.data;
+  // Lấy thông tin giáo viên
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const headers = { Authorization: `Bearer ${token}` };
+    
+    axios.get("http://localhost:8000/teacher/profile", { headers })
+      .then(res => {
+        setTeacherInfo({
+          name: res.data.name,
+          code: res.data.code,
+          faculty: res.data.faculty_name,
+          id: res.data.user_id
+        });
+      })
+      .catch(err => {
+        console.error("Không thể tải thông tin giáo viên:", err);
+        if (err.response?.status === 403) {
+          setError("Bạn không có quyền truy cập trang này. Chỉ dành cho giáo viên.");
+        } else {
+          setError("Không thể tải thông tin giáo viên");
         }
       });
-      setRoomDetails(roomData);
-    } catch (error) {
-      console.error("Error fetching room details:", error);
-    }
-  };
+  }, []);
 
-  const fetchDebugInfo = async () => {
-    try {
-      const token = localStorage.getItem("token");
-      const response = await axios.get("/teacher/debug", {
-        headers: { Authorization: `Bearer ${token}` },
+  // Lấy danh sách tuần học
+  useEffect(() => {
+    if (!hocKy || !namHoc) return;
+    setLoading(true);
+    axios
+      .get("http://localhost:8000/weeks/", {
+        params: { hoc_ky: hocKy, nam_hoc: namHoc },
+      })
+      .then((res) => {
+        if (Array.isArray(res.data)) {
+          setWeekList(res.data);
+          
+          // Tự động chuyển đến tuần hiện tại
+          const today = new Date();
+          const currentWeekIndex = res.data.findIndex(week => {
+            const startDate = new Date(week.start_date);
+            const endDate = new Date(week.end_date);
+            return today >= startDate && today <= endDate;
+          });
+          
+          if (currentWeekIndex >= 0) {
+            setCurrentPage(currentWeekIndex);
+          } else {
+            setCurrentPage(0);
+          }
+        }
+      })
+      .catch(() => setError("Không thể tải danh sách tuần học"))
+      .finally(() => setLoading(false));
+  }, [hocKy, namHoc]);
+
+  // Lấy danh sách lớp mà giáo viên đang dạy
+  useEffect(() => {
+    if (!hocKy || !namHoc) return;
+    const token = localStorage.getItem("token");
+    const headers = { Authorization: `Bearer ${token}` };
+
+    axios
+      .get("http://localhost:8000/teacher/classes", {
+        params: {
+          hoc_ky: hocKy,
+          nam_hoc: namHoc,
+        },
+        headers,
+      })
+      .then((res) => {
+        if (Array.isArray(res.data)) {
+          setClassList(res.data);
+          // Nếu chỉ có 1 lớp thì tự động chọn
+          if (res.data.length === 1) {
+            setSelectedClass(res.data[0].id);
+          } else if (res.data.length === 0) {
+            setError("Bạn chưa được phân công dạy lớp nào trong học kỳ này");
+          }
+        }
+      })
+      .catch((err) => {
+        console.error("Lỗi khi tải danh sách lớp:", err);
+        if (err.response?.status === 404) {
+          setError("Bạn chưa được phân công dạy lớp nào trong học kỳ này");
+        } else {
+          setError("Không thể tải danh sách lớp. Vui lòng thử lại sau.");
+        }
+        setClassList([]);
       });
-      setDebugInfo(response.data);
-      setShowDebug(true);
-    } catch (error) {
-      console.error("Error fetching debug info:", error);
-    }
-  };
+  }, [hocKy, namHoc]);
 
-  const getPeriodLabel = (period) => {
-    const periodNum = parseInt(period);
-    switch (periodNum) {
-      case 1: return "Sáng (7:00-11:00)";
-      case 2: return "Chiều (13:00-17:00)";
-      case 3: return "Tối (18:00-21:00)";
-      default: return `Ca ${period}`;
-    }
-  };
+  // Lấy lịch giảng dạy của giáo viên
+  useEffect(() => {
+    if (!hocKy || !namHoc || !selectedClass) return;
+    setLoading(true);
+    const token = localStorage.getItem("token");
+    const headers = { Authorization: `Bearer ${token}` };
 
-  const getPeriodColor = (period) => {
-    const periodNum = parseInt(period);
-    switch (periodNum) {
-      case 1: return "primary";
-      case 2: return "success";
-      case 3: return "warning";
-      default: return "info";
-    }
-  };
-
-  const formatDate = (dateString) => {
-    const d = new Date(dateString);
-    return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
-  };
-
-  const formatDateShort = (dateStr) => {
-    const d = new Date(dateStr);
-    return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}`;
-  };
-
-  const getWeekDates = (startDate) => {
-    const base = new Date(startDate);
-    return Array.from({ length: 7 }, (_, i) => {
-      const d = new Date(base);
-      d.setDate(base.getDate() + i);
-      return formatDateShort(d);
-    });
-  };
-
-  const renderScheduleCard = (item) => {
-    const week = weekList.find(w => w.hoc_ky_week === item.week);
-    const weekDates = week ? getWeekDates(week.start_date) : [];
-    const dayIndex = parseInt(item.day) - 1;
-    const dayDate = weekDates[dayIndex] || "";
-
-    return (
-      <Card key={`${item.week}-${item.day}-${item.period}`} className="schedule-card">
-        <div className="schedule-header">
-          <div className="schedule-time">
-            <h4>
-              {days[dayIndex]} - {dayDate}
-            </h4>
-            <Tag 
-              value={getPeriodLabel(item.period)} 
-              severity={getPeriodColor(item.period)}
-              className="period-tag"
-            />
-          </div>
-          <div className="schedule-week">
-            <Badge value={`Tuần ${item.week}`} severity="info" />
-          </div>
-        </div>
-        
-        <div className="schedule-content">
-          <div className="subject-info">
-            <h3>{item.subject?.name || "Chưa có môn học"}</h3>
-            <p className="subject-code">{item.subject?.code || ""}</p>
-            <p className="subject-credits">{item.subject?.credits || 0} tín chỉ</p>
-          </div>
+    axios
+      .get("http://localhost:8000/teacher/schedules", {
+        params: {
+          hoc_ky: hocKy,
+          nam_hoc: namHoc,
+          class_id: selectedClass,
+        },
+        headers,
+      })
+      .then(async (res) => {
+        if (Array.isArray(res.data)) {
+          setScheduleItems(res.data);
           
-          <div className="class-info">
-            <Chip 
-              label={item.class?.name || "Chưa có lớp"} 
-              icon="pi pi-users"
-              className="class-chip"
-            />
-          </div>
+          // Debug: Log dữ liệu để xem cấu trúc
+          console.log("Teacher schedule data:", res.data);
           
-          {item.room && item.room.name && (
-            <div className="room-info">
-              <i className="pi pi-map-marker"></i>
-              <span>{item.room.name}</span>
-              {item.room.location && <span> - {item.room.location}</span>}
-            </div>
-          )}
+          // Fetch thông tin phòng cho tất cả các lịch học
+          const roomIds = [...new Set(res.data.map(item => item.room_id).filter(Boolean))];
+          console.log("Room IDs to fetch:", roomIds);
           
-          <div className="schedule-details">
-            <span className="hinh-thuc">{item.hinh_thuc || "Lý thuyết"}</span>
-            <span className="semester-info">{item.hoc_ky} - {item.nam_hoc}</span>
-          </div>
-        </div>
-      </Card>
-    );
-  };
+          // Fetch thông tin chi tiết cho từng phòng
+          await Promise.all(roomIds.map(roomId => fetchRoomDetails(roomId)));
+          
+          // Lọc lịch học hôm nay
+          const today = getTodayVietnamese();
+          const currentWeek = getCurrentWeek();
+          const todayClasses = res.data.filter(item => 
+            item.day === today && item.week === currentWeek
+          );
+          
+          // Debug: Log today's classes
+          console.log("Today's classes:", todayClasses);
+          
+          setTodaySchedule(todayClasses);
+          
+          setError("");
+        }
+      })
+      .catch((err) => {
+        console.error("Lỗi khi tải lịch giảng dạy:", err);
+        if (err.response?.status === 404) {
+          setError("Không có lịch giảng dạy cho lớp này trong học kỳ đã chọn");
+        } else {
+          setError("Không thể tải lịch giảng dạy. Vui lòng thử lại sau.");
+        }
+        setScheduleItems([]);
+      })
+      .finally(() => setLoading(false));
+  }, [hocKy, namHoc, selectedClass]);
 
-  const renderTodaySchedule = () => {
-    if (todaySchedule.length === 0) {
-      return (
-        <Message 
-          severity="info" 
-          text="Hôm nay bạn không có lịch dạy" 
-          className="no-schedule-message"
-        />
+  // Cập nhật lịch giảng dạy hôm nay khi dữ liệu thay đổi
+  useEffect(() => {
+    if (scheduleItems.length > 0 && weekList.length > 0) {
+      const today = getTodayVietnamese();
+      const currentWeek = getCurrentWeek();
+      const todayClasses = scheduleItems.filter(item => 
+        item.day === today && item.week === currentWeek
       );
+      setTodaySchedule(todayClasses);
     }
+  }, [scheduleItems, weekList, roomCache]); // Thêm roomCache vào dependencies để cập nhật khi có thông tin phòng mới
 
-    return (
-      <div className="today-schedule">
-        <h3>
-          <i className="pi pi-calendar"></i>
-          Lịch dạy hôm nay ({todaySchedule.length} tiết)
-        </h3>
-        <div className="today-items">
-          {todaySchedule.map(item => renderScheduleCard(item))}
-        </div>
-      </div>
-    );
+  // Hàm chuyển về tuần hiện tại
+  const goToCurrentWeek = () => {
+    if (weekList.length === 0) return;
+    
+    const today = new Date();
+    const currentWeekIndex = weekList.findIndex(week => {
+      const startDate = new Date(week.start_date);
+      const endDate = new Date(week.end_date);
+      return today >= startDate && today <= endDate;
+    });
+    
+    if (currentWeekIndex >= 0) {
+      setCurrentPage(currentWeekIndex);
+    }
   };
+
+  // Kiểm tra xem có đang hiển thị tuần hiện tại không
+  const isCurrentWeek = () => {
+    if (weekList.length === 0 || !weekList[currentPage]) return false;
+    const today = new Date();
+    const displayedWeek = weekList[currentPage];
+    const startDate = new Date(displayedWeek.start_date);
+    const endDate = new Date(displayedWeek.end_date);
+    return today >= startDate && today <= endDate;
+  };
+
+  const currentLabel = weekList[currentPage]
+    ? `Tuần ${weekList[currentPage].hoc_ky_week} (${formatDate(weekList[currentPage].start_date)} – ${formatDate(weekList[currentPage].end_date)})`
+    : "";
+
+  const weekDates = weekList[currentPage]?.start_date
+    ? getWeekDates(weekList[currentPage].start_date)
+    : [];
 
   return (
-    <div className="teacher-schedule-view">
+    <div className="teacher-schedule-container">
       <TeacherHeader />
-      
-      <div className="schedule-container">
-        <div className="schedule-header-section">
-          <h1>
-            <i className="pi pi-calendar"></i>
-            Lịch dạy của tôi
-          </h1>
+      <main className="teacher-schedule-main">
+        <div className="teacher-schedule-content">
+          <h2 className="teacher-schedule-title">
+            Lịch giảng dạy
+          </h2>
+
           {teacherInfo && (
-            <div className="teacher-info">
-              <p>Giảng viên: <strong>{teacherInfo.name}</strong></p>
-              <p>Mã GV: <strong>{teacherInfo.code}</strong></p>
-              <p>Khoa: <strong>{teacherInfo.faculty}</strong></p>
-            </div>
-          )}
-          <div className="debug-actions">
-            <Button 
-              label="Debug Info" 
-              icon="pi pi-info-circle" 
-              className="p-button-outlined"
-              onClick={fetchDebugInfo}
-              size="small"
-            />
-          </div>
-        </div>
-
-        <div className="filters">
-          <div className="filter-group">
-            <label htmlFor="semester">Học kỳ:</label>
-            <Dropdown
-              id="semester"
-              value={selectedSemester}
-              options={semesters.map(sem => ({ label: sem.label, value: sem.label }))}
-              onChange={(e) => setSelectedSemester(e.value)}
-              placeholder="Chọn học kỳ"
-              className="filter-dropdown"
-              disabled={semesters.length === 0}
-            />
-          </div>
-          
-          <div className="filter-group">
-            <Button 
-              label="Tải lại" 
-              icon="pi pi-refresh" 
-              onClick={() => fetchSchedule()}
-              className="p-button-outlined"
-              disabled={loading || !selectedSemester}
-            />
-          </div>
-        </div>
-
-        {error && (
-          <Message 
-            severity="error" 
-            text={error} 
-            className="error-message"
-          />
-        )}
-
-        {loading && (
-          <div className="loading-container">
-            <i className="pi pi-spin pi-spinner"></i>
-            <span>Đang tải lịch dạy...</span>
-          </div>
-        )}
-
-        {!loading && hocKy && namHoc && (
-          <>
-            {renderTodaySchedule()}
-            
-            <div className="schedule-list">
-              <h3>
-                <i className="pi pi-list"></i>
-                Toàn bộ lịch dạy ({scheduleItems.length} tiết)
-              </h3>
-              
-              {scheduleItems.length === 0 ? (
-                <Message 
-                  severity="info" 
-                  text="Không có lịch dạy trong học kỳ này" 
-                  className="no-schedule-message"
-                />
-              ) : (
-                <>
-                  <div className="schedule-cards">
-                    {paginatedItems.map(item => renderScheduleCard(item))}
-                  </div>
-                  
-                  {scheduleItems.length > itemsPerPage && (
-                    <Paginator
-                      first={startIndex}
-                      rows={itemsPerPage}
-                      totalRecords={scheduleItems.length}
-                      onPageChange={(e) => setCurrentPage(e.page)}
-                      className="schedule-paginator"
-                    />
+            <Card className="teacher-info-card">
+              <div className="teacher-info-content">
+                <div className="teacher-info-avatar">
+                  <i className="pi pi-graduation-cap" style={{ fontSize: '2rem', color: '#0c4da2' }}></i>
+                </div>
+                <div className="teacher-info-details">
+                  <h3>{teacherInfo.name}</h3>
+                  <p>Mã giáo viên: <strong>{teacherInfo.code}</strong></p>
+                  {teacherInfo.faculty && (
+                    <p>Khoa: <strong>{teacherInfo.faculty}</strong></p>
                   )}
-                </>
-              )}
-            </div>
-          </>
-        )}
-      </div>
+                </div>
+              </div>
+            </Card>
+          )}
 
-      {/* Debug Dialog */}
-      <Dialog 
-        header="Debug Information" 
-        visible={showDebug} 
-        style={{ width: '50vw' }} 
-        onHide={() => setShowDebug(false)}
-      >
-        {debugInfo && (
-          <div>
-            <h4>User Info:</h4>
-            <pre>{JSON.stringify(debugInfo.user, null, 2)}</pre>
-            
-            <h4>Teacher Profile:</h4>
-            <pre>{JSON.stringify(debugInfo.teacher_profile, null, 2)}</pre>
-            
-            <h4>Schedule Stats:</h4>
-            <p>Schedule Items: {debugInfo.schedule_items_count}</p>
-            <p>Classes: {debugInfo.distinct_classes}</p>
-            <p>Class IDs: {JSON.stringify(debugInfo.class_ids)}</p>
-          </div>
-        )}
-      </Dialog>
+          {/* Today's Schedule */}
+          {hocKy && namHoc && selectedClass && todaySchedule.length > 0 && (
+            <Card className="teacher-today-schedule-card">
+              <div className="teacher-today-header">
+                <h3>
+                  <i className="pi pi-calendar-plus" style={{ marginRight: '0.5rem', color: '#0c4da2' }}></i>
+                  Lịch dạy hôm nay ({getTodayVietnamese()})
+                </h3>
+                <Badge value={`${todaySchedule.length} tiết`} severity="info" />
+              </div>
+              
+              <div className="teacher-today-classes">
+                {todaySchedule
+                  .sort((a, b) => {
+                    const periodOrder = { "Sáng": 1, "Chiều": 2, "Tối": 3 };
+                    return periodOrder[a.period] - periodOrder[b.period];
+                  })
+                  .map((item, index) => (
+                    <div key={index} className="teacher-today-class-item">
+                      <div className="teacher-class-time">
+                        <Tag value={item.period} severity="info" />
+                      </div>
+                      <div className="teacher-class-details">
+                        <div className="teacher-subject-name">
+                          {item.subject_name || item.subject?.name || item.subject_id}
+                        </div>
+                        <div className="teacher-class-meta">
+                          <span className="teacher-class-name">
+                            <i className="pi pi-users" style={{ marginRight: '0.3rem' }}></i>
+                            {item.class_obj?.name || `Lớp ${item.class_id}`}
+                          </span>
+                          {getRoomDisplayName(item) && (
+                            <Chip 
+                              label={getRoomDisplayName(item)} 
+                              className="teacher-room-chip"
+                            />
+                          )}
+                          <span className="teacher-format-info">
+                            {item.hinh_thuc === "truc_tiep" ? "🏫 Trực tiếp" : "💻 Trực tuyến"}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </Card>
+          )}
+
+          {/* Show message when no classes today */}
+          {hocKy && namHoc && selectedClass && todaySchedule.length === 0 && scheduleItems.length > 0 && (
+            <Card className="teacher-no-today-schedule">
+              <div className="teacher-no-today-content">
+                <i className="pi pi-calendar-times" style={{ fontSize: '2rem', color: '#6b7280', marginBottom: '0.5rem' }}></i>
+                <h4>Không có lịch dạy hôm nay</h4>
+                <p>Hôm nay ({getTodayVietnamese()}) bạn không có lịch dạy nào.</p>
+              </div>
+            </Card>
+          )}
+
+          {error && (
+            <Message 
+              severity="warn" 
+              text={error} 
+              style={{ marginBottom: "1rem", width: "100%" }}
+            />
+          )}
+
+          <Card className="teacher-schedule-form">
+            <div className="teacher-form-row">
+              <div className="teacher-form-field">
+                <label>Năm học</label>
+                <Dropdown 
+                  value={namHoc} 
+                  options={academicYears} 
+                  onChange={(e) => setNamHoc(e.value)} 
+                  placeholder="Chọn năm học"
+                  className="teacher-dropdown"
+                />
+              </div>
+              <div className="teacher-form-field">
+                <label>Học kỳ</label>
+                <Dropdown 
+                  value={hocKy} 
+                  options={hocKyOptions} 
+                  onChange={(e) => setHocKy(e.value)} 
+                  placeholder="Chọn học kỳ"
+                  className="teacher-dropdown"
+                />
+              </div>
+              <div className="teacher-form-field">
+                <label>Lớp học</label>
+                <Dropdown 
+                  value={selectedClass} 
+                  options={classList.map(cls => ({ label: cls.name, value: cls.id }))} 
+                  onChange={(e) => setSelectedClass(e.value)} 
+                  placeholder="Chọn lớp"
+                  className="teacher-dropdown"
+                  disabled={classList.length === 0}
+                />
+              </div>
+            </div>
+          </Card>
+
+          {hocKy && namHoc && selectedClass && weekList.length > 0 && (
+            <>
+              <Card className="teacher-week-selector">
+                <div className="teacher-week-header">
+                  <h3>{currentLabel}</h3>
+                  <div className="teacher-week-controls">
+                    <Dropdown
+                      value={currentPage}
+                      options={weekList.map((w, i) => ({ 
+                        label: `Tuần ${w.hoc_ky_week} (${formatDateShort(w.start_date)} - ${formatDateShort(w.end_date)})`, 
+                        value: i 
+                      }))}
+                      onChange={(e) => setCurrentPage(e.value)}
+                      placeholder="Chọn tuần"
+                      className="teacher-week-dropdown"
+                    />
+                    {!isCurrentWeek() && (
+                      <Button 
+                        label="Tuần hiện tại" 
+                        icon="pi pi-calendar" 
+                        onClick={goToCurrentWeek}
+                        className="p-button-sm p-button-success current-week-btn"
+                        style={{ marginLeft: '0.5rem' }}
+                      />
+                    )}
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="teacher-timetable-card">
+                <div className="teacher-timetable-container">
+                  {loading ? (
+                    <div className="teacher-loading">
+                      <i className="pi pi-spin pi-spinner" style={{ fontSize: '2rem' }}></i>
+                      <p>Đang tải lịch giảng dạy...</p>
+                    </div>
+                  ) : (
+                    <table className="teacher-timetable">
+                      <thead>
+                        <tr>
+                          <th className="period-header">Ca dạy</th>
+                          {days.map((day, i) => (
+                            <th key={day} className={`day-header ${isToday(day) ? 'today-column' : ''}`}>
+                              <div className="day-name">{day}</div>
+                              <small className="day-date">{weekDates[i] || ""}</small>
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {periods.map((period) => (
+                          <tr key={period}>
+                            <td className="period-cell">
+                              <strong>{period}</strong>
+                            </td>
+                            {days.map((day) => {
+                              const entry = scheduleItems.find(
+                                (item) =>
+                                  item.week === weekList[currentPage]?.week &&
+                                  item.day === day &&
+                                  item.period === period
+                              );
+                              return (
+                                <td key={day + period} className={`schedule-cell ${entry ? "has-class" : "empty-cell"} ${isToday(day) ? 'today-column' : ''}`}>
+                                  {entry && (
+                                    <div className="class-info">
+                                      <div className="subject-info">
+                                        <div className="subject-name">
+                                          {entry.subject_name || entry.subject?.name || entry.subject_id}
+                                        </div>
+                                        {entry.subject?.code && (
+                                          <div className="subject-code">
+                                            ({entry.subject.code})
+                                          </div>
+                                        )}
+                                      </div>
+                                      
+                                      <div className="class-info-detail">
+                                        <div className="class-content">
+                                          <i className="pi pi-users"></i>
+                                          <span className="class-text">{entry.class_obj?.name || `Lớp ${entry.class_id}`}</span>
+                                        </div>
+                                      </div>
+                                      
+                                      {getRoomDisplayName(entry) && (
+                                        <div className="room-info">
+                                          <i className="pi pi-home" style={{ fontSize: '0.6rem', marginRight: '0.2rem' }}></i>
+                                          {getRoomDisplayName(entry)}
+                                        </div>
+                                      )}
+                                    </div>
+                                  )}
+                                </td>
+                              );
+                            })}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  )}
+                </div>
+              </Card>
+
+              {weekList.length > 1 && (
+                <Card className="teacher-pagination-card">
+                  <Paginator
+                    first={currentPage}
+                    rows={1}
+                    totalRecords={weekList.length}
+                    onPageChange={(e) => setCurrentPage(e.first)}
+                    template="PrevPageLink CurrentPageReport NextPageLink"
+                    currentPageReportTemplate={`Tuần ${weekList[currentPage]?.hoc_ky_week || (currentPage + 1)} / ${weekList.length} tuần`}
+                    className="teacher-paginator"
+                  />
+                </Card>
+              )}
+            </>
+          )}
+
+          {hocKy && namHoc && selectedClass && weekList.length === 0 && !loading && (
+            <Card className="teacher-no-data">
+              <div className="teacher-no-data-content">
+                <i className="pi pi-calendar-times" style={{ fontSize: '3rem', color: '#6c757d' }}></i>
+                <h3>Chưa có lịch giảng dạy</h3>
+                <p>Không có dữ liệu lịch giảng dạy cho lớp và học kỳ đã chọn.</p>
+              </div>
+            </Card>
+          )}
+
+          {!hocKy || !namHoc ? (
+            <Card className="teacher-welcome-card">
+              <div className="teacher-welcome-content">
+                <i className="pi pi-calendar" style={{ fontSize: '3rem', color: '#0c4da2' }}></i>
+                <h3>Chào mừng đến với hệ thống xem lịch giảng dạy</h3>
+                <p>Vui lòng chọn năm học, học kỳ và lớp để xem lịch giảng dạy của bạn.</p>
+              </div>
+            </Card>
+          ) : classList.length === 0 && !loading ? (
+            <Card className="teacher-no-classes">
+              <div className="teacher-no-classes-content">
+                <i className="pi pi-users" style={{ fontSize: '3rem', color: '#6c757d' }}></i>
+                <h3>Chưa có lớp được phân công</h3>
+                <p>Bạn chưa được phân công dạy lớp nào trong học kỳ này.</p>
+              </div>
+            </Card>
+          ) : null}
+        </div>
+      </main>
       
+      {/* Chatbot Widget */}
       <ChatbotWidget />
     </div>
   );

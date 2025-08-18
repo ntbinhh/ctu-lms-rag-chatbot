@@ -8,7 +8,7 @@ import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 import AdminHeader from "../AdminHeader";
 import Footer from "../Footer";
-// import "./AddTrainingFacilityForm.css"; // Tái sử dụng luôn style cũ
+import "./AddManagerForm.css";
 
 const AddManagerForm = () => {
   const [fullName, setFullName] = useState("");
@@ -65,50 +65,85 @@ const AddManagerForm = () => {
   };
 
   return (
-    <>    <AdminHeader />
-    <div className="facility-form-wrapper">
-      <h2 className="form-title">Thêm người quản lý</h2>
-      {success && <div className="alert success">{success}</div>}
-      {error && <div className="alert error">{error}</div>}
+    <div className="add-manager-page">
+      <AdminHeader />
+      <main className="layout-main">
+        <div className="manager-form-container">
+          {/* Page Header */}
+          <div className="page-header">
+            <h1 className="page-title">
+              <i className="pi pi-user-plus"></i>
+              Thêm người quản lý
+            </h1>
+            <p className="page-subtitle">
+              Tạo tài khoản quản lý mới cho cơ sở liên kết đào tạo
+            </p>
+          </div>
 
-      <form onSubmit={handleSubmit} className="facility-form">
-        <div className="form-group">
-          <FloatLabel>
-            <InputText id="fullname" value={fullName} onChange={(e) => setFullName(e.target.value)} />
-            <label htmlFor="fullname">Họ tên</label>
-          </FloatLabel>
+          {/* Form Card */}
+          <div className="manager-form-card">
+            {success && <div className="alert success">{success}</div>}
+            {error && <div className="alert error">{error}</div>}
+
+            <form onSubmit={handleSubmit} className="manager-form">
+              <div className="form-grid">
+                <div className="form-group">
+                  <FloatLabel>
+                    <InputText 
+                      id="fullname" 
+                      value={fullName} 
+                      onChange={(e) => setFullName(e.target.value)}
+                      required
+                    />
+                    <label htmlFor="fullname">Họ và tên *</label>
+                  </FloatLabel>
+                </div>
+
+                <div className="form-group">
+                  <FloatLabel>
+                    <InputText 
+                      id="phone" 
+                      value={phone} 
+                      onChange={(e) => setPhone(e.target.value)}
+                      required
+                    />
+                    <label htmlFor="phone">Số điện thoại *</label>
+                  </FloatLabel>
+                </div>
+
+                <div className="form-group full-width">
+                  <FloatLabel>
+                    <Dropdown
+                      id="facility"
+                      value={facilityId}
+                      options={facilities}
+                      onChange={(e) => setFacilityId(e.value)}
+                      optionLabel="name"
+                      optionValue="id"
+                      placeholder="Chọn cơ sở liên kết"
+                      filter
+                      filterBy="name"
+                      emptyMessage="Không tìm thấy cơ sở nào"
+                      required
+                    />
+                    <label htmlFor="facility">Cơ sở liên kết *</label>
+                  </FloatLabel>
+                </div>
+              </div>
+
+              <Button 
+                type="submit"
+                label="Tạo tài khoản quản lý" 
+                icon="pi pi-save"
+                className="submit-button"
+                disabled={!fullName || !phone || !facilityId}
+              />
+            </form>
+          </div>
         </div>
-
-        <div className="form-group">
-          <FloatLabel>
-            <InputText id="phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
-            <label htmlFor="phone">Số điện thoại</label>
-          </FloatLabel>
-        </div>
-
-        <div className="form-group">
-          <FloatLabel>
-            <Dropdown
-              id="facility"
-              value={facilityId}
-              options={facilities}
-              onChange={(e) => setFacilityId(e.value)}
-              optionLabel="name"
-              optionValue="id"
-              placeholder="Chọn cơ sở liên kết"
-              style={{ width: "100%" }}
-              filter  //  Cho phép lọc
-              filterBy="name"  //  Cho phép lọc theo tên
-            />
-            <label htmlFor="facility">Cơ sở liên kết</label>
-          </FloatLabel>
-        </div>
-
-        <Button label="Lưu thông tin" className="submit-btn p-button-sm p-button-outlined" />
-      </form>
+      </main>
+      <Footer />
     </div>
-    <Footer />
-  </>
   );
 };
 

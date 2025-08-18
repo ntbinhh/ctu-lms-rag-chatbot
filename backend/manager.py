@@ -12,7 +12,7 @@ def get_db():
         yield db
     finally:
         db.close()
-
+        
 @router.post("/admin/users/managers")
 def create_manager(manager: schemas.ManagerCreate, db: Session = Depends(get_db)):
     # Tạo username tự động ID001, ID002, ...

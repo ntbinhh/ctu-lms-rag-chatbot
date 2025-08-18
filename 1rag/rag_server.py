@@ -246,8 +246,13 @@ def rag_status():
             'status': 'ready',
             'type': 'advanced' if hasattr(rag_manager, 'generate_response') else 'simple',
             'knowledge_base': str(current_dir / "knowledge_base"),
-            'documents_loaded': getattr(rag_manager, 'documents', None) is not None
+            'documents_loaded': getattr(rag_manager, 'documents', None) is not None or getattr(rag_manager, 'vector_store', None) is not None
         }
+        
+        # Add index stats for advanced manager
+        if hasattr(rag_manager, 'get_index_stats'):
+            status_info['index_stats'] = rag_manager.get_index_stats()
+        
         return jsonify(status_info)
     else:
         return jsonify({
@@ -255,6 +260,81 @@ def rag_status():
             'type': 'none',
             'error': 'RAG manager not available'
         })
+
+@app.route('/rag/rebuild', methods=['POST'])
+def rebuild_knowledge_base():
+    """Rebuild knowledge base index"""
+    global rag_manager
+    try:
+        if not rag_manager:
+            return jsonify({
+                'status': 'error',
+                'message': 'RAG manager not initialized'
+            }), 503
+        
+        # Check if it's advanced manager with reload capability
+        if hasattr(rag_manager, 'reload_knowledge_base'):
+            logger.info("🔄 Rebuilding knowledge base index...")
+            success = rag_manager.reload_knowledge_base(force_rebuild=True)
+            
+            if success:
+                # Get updated stats
+                stats = rag_manager.get_index_stats() if hasattr(rag_manager, 'get_index_stats') else {}
+                
+                return jsonify({
+                    'status': 'success',
+                    'message': 'Knowledge base rebuilt successfully',
+                    'stats': stats
+                }), 200
+            else:
+                return jsonify({
+                    'status': 'error',
+                    'message': 'Failed to rebuild knowledge base'
+                }), 500
+        else:
+            # For simple manager, reinitialize
+            logger.info("🔄 Reinitializing simple RAG manager...")
+            rag_manager.load_documents()
+            
+            return jsonify({
+                'status': 'success',
+                'message': 'Simple RAG manager reloaded',
+                'type': 'simple'
+            }), 200
+            
+    except Exception as e:
+        logger.error(f"❌ Error rebuilding knowledge base: {e}")
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 500
+
+@app.route('/rag/check', methods=['GET'])
+def check_knowledge_changes():
+    """Check if knowledge base has changes without rebuilding"""
+    try:
+        if not rag_manager or not hasattr(rag_manager, 'check_knowledge_base_changes'):
+            return jsonify({
+                'status': 'error',
+                'message': 'Change detection not available for current RAG manager'
+            }), 400
+        
+        has_changes = rag_manager.check_knowledge_base_changes()
+        stats = rag_manager.get_index_stats()
+        
+        return jsonify({
+            'status': 'success',
+            'has_changes': has_changes,
+            'message': 'Knowledge base changed' if has_changes else 'Knowledge base unchanged',
+            'stats': stats
+        }), 200
+        
+    except Exception as e:
+        logger.error(f"❌ Error checking knowledge changes: {e}")
+        return jsonify({
+            'status': 'error',
+            'message': str(e)
+        }), 500
 
 if __name__ == '__main__':
     # Initialize RAG system
@@ -271,5 +351,7 @@ if __name__ == '__main__':
     print("🔍 Health check: http://localhost:5001/health")
     print("❓ RAG query: POST http://localhost:5001/rag/query")
     print("📊 RAG status: http://localhost:5001/rag/status")
+    print("🔄 Rebuild index: POST http://localhost:5001/rag/rebuild")
+    print("🔍 Check changes: GET http://localhost:5001/rag/check")
     
     app.run(host='0.0.0.0', port=5001, debug=True)

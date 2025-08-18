@@ -24,6 +24,8 @@ import NewsListPage from "./components/homepage/NewsListPage";
 import NewsDetailPage from "./pages/NewsDetailPage";
 import HomeNewsListPage from "./pages/HomeNewsListPage";
 import PublicProgramView from "./pages/PublicProgramView";
+import AdmissionsPage from "./pages/AdmissionsPage";
+import ContactPage from "./pages/ContactPage";
 import ProtectedRoute from "./components/ProtectedRoute";
 import "./index.css";
 import DashboardManager from "./pages/DashboardManager";
@@ -39,6 +41,9 @@ import AddStudentForm from "./components/AddStudentForm";
 import StudentList from "./components/StudentList";
 import StudentProgramView from "./pages/StudentProgramView";
 import StudentScheduleView from "./pages/StudentScheduleView";
+import TeacherScheduleView from "./pages/TeacherScheduleView";
+import TeacherClassesView from "./pages/TeacherClassesView";
+
 
 function App() {
   return (
@@ -51,6 +56,8 @@ function App() {
         <Route path="/news_home" element={<HomeNewsListPage />} />
         <Route path="/news/:id" element={<NewsDetailPage />} />
         <Route path="/programs" element={<PublicProgramView />} />
+        <Route path="/admissions" element={<AdmissionsPage />} />
+        <Route path="/contact" element={<ContactPage />} />
 
         {/* Protected routes */}
         <Route
@@ -187,6 +194,22 @@ function App() {
           element={
             <ProtectedRoute allowedRoles={["teacher"]}>
               <DashboardTeacher />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/teacher/schedule"
+          element={
+            <ProtectedRoute allowedRoles={["teacher"]}>
+              <TeacherScheduleView />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/teacher/classes"
+          element={
+            <ProtectedRoute allowedRoles={["teacher"]}>
+              <TeacherClassesView />
             </ProtectedRoute>
           }
         />

@@ -130,6 +130,10 @@ class Class(Base):
     facility = relationship("CoSoLienKet")
     major = relationship("TrainingMajor")
     
+    @property
+    def name(self):
+        return self.ma_lop
+    
 class ScheduleItem(Base):
     __tablename__ = "schedule_items"
     id = Column(Integer, primary_key=True, index=True)
@@ -146,7 +150,7 @@ class ScheduleItem(Base):
     subject = relationship("Course", backref="schedules", lazy="joined")
     teacher = relationship("User", backref="teaching_schedule", lazy="joined")
     classroom = relationship("Room", backref="schedules", lazy="joined")
-    lop = relationship("Class", backref="schedule_items", lazy="joined")
+    class_obj = relationship("Class", backref="schedule_items", lazy="joined")
     teacher_profile = relationship(
         "Teacher",
         primaryjoin="foreign(ScheduleItem.teacher_id) == Teacher.user_id",

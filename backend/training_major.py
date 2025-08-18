@@ -11,7 +11,7 @@ def get_db():
         yield db
     finally:
         db.close()
-
+        
 @router.post("/admin/majors", response_model=schemas.TrainingMajorOut)
 def create_major(major: schemas.TrainingMajorCreate, db: Session = Depends(get_db)):
     if db.query(models.TrainingMajor).filter(models.TrainingMajor.name == major.name).first():

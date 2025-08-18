@@ -35,4 +35,3 @@ def create_course(course: schemas.CourseCreate, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(new_course)
     return new_course
-

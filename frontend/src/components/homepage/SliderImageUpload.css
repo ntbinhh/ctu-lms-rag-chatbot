@@ -1,182 +1,259 @@
+/* CTU Slider Admin - Isolated CSS Classes */
+
 .slider-admin-container {
   padding: 2rem;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
   min-height: calc(100vh - 120px);
 }
 
-/* Header Section */
+/* Header Section with CTU Styling */
 .slider-admin-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   margin-bottom: 2rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
   padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(12, 77, 162, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.header-info h1 {
+.slider-header-info h1 {
   margin: 0 0 0.5rem 0;
   color: #0c4da2;
   font-size: 2.2rem;
   font-weight: 700;
+  background: linear-gradient(135deg, #0c4da2, #1976d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.header-info p {
+.slider-header-info p {
   margin: 0;
-  color: #666;
+  color: #64748b;
   font-size: 1.1rem;
+  line-height: 1.5;
 }
 
-.header-stats {
+.slider-header-stats {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.stat-card {
-  background: linear-gradient(135deg, #0c4da2 0%, #1a5bb8 100%);
-  border: none;
-  border-radius: 10px;
+.slider-stat-card {
+  border: none !important;
+  border-radius: 16px !important;
   overflow: hidden;
+  min-width: 140px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: linear-gradient(135deg, #0c4da2 0%, #1976d2 100%) !important;
 }
 
-.stat-card .p-card-body {
-  padding: 1.5rem;
+.slider-stat-card .p-card {
+  background: linear-gradient(135deg, #0c4da2 0%, #1976d2 100%) !important;
+  border: none !important;
+  border-radius: 16px !important;
 }
 
-.stat-content {
+.slider-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(12, 77, 162, 0.2) !important;
+}
+
+.slider-stat-card .p-card-body {
+  padding: 1.8rem 1.5rem !important;
+  background: transparent !important;
+}
+
+.slider-stat-content {
   text-align: center;
-  color: white;
+  color: white !important;
 }
 
-.stat-number {
-  font-size: 1.8rem;
-  font-weight: 700;
+.slider-stat-number {
+  font-size: 2rem !important;
+  font-weight: 700 !important;
   margin-bottom: 0.5rem;
+  line-height: 1;
+  color: white !important;
 }
 
-.stat-label {
-  font-size: 0.9rem;
-  opacity: 0.9;
+.slider-stat-label {
+  font-size: 0.95rem !important;
+  opacity: 0.95;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  color: white !important;
 }
 
-/* Upload Section */
-.upload-panel {
+/* Upload Section with CTU Styling */
+.slider-upload-panel {
   margin-bottom: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: none;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
 
-.upload-panel .p-panel-header {
+.slider-upload-panel .p-panel-header {
   background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
   color: white;
   font-weight: 600;
+  padding: 1.5rem 2rem;
+  border: none;
 }
 
-.upload-section {
-  padding: 1rem 0;
+.slider-upload-section {
+  padding: 2rem;
 }
 
-.modern-upload {
+.slider-modern-upload {
   margin-bottom: 1.5rem;
 }
 
-.modern-upload .p-fileupload-content {
+.slider-modern-upload .p-fileupload-content {
   border: 2px dashed #28a745;
-  border-radius: 10px;
-  background: #f8fff9;
-  padding: 2rem;
+  border-radius: 12px;
+  background: rgba(248, 255, 249, 0.8);
+  padding: 2.5rem;
   text-align: center;
+  transition: all 0.3s ease;
 }
 
-.upload-progress {
-  margin: 1rem 0;
-  text-align: center;
+.slider-modern-upload .p-fileupload-content:hover {
+  border-color: #20c997;
+  background: rgba(248, 255, 249, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.1);
 }
 
-.upload-progress span {
+.slider-upload-progress {
+  margin: 1.5rem 0;
+  text-align: center;
+  padding: 1rem;
+  background: rgba(248, 255, 249, 0.5);
+  border-radius: 8px;
+}
+
+.slider-upload-progress span {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   color: #28a745;
   font-weight: 600;
+  font-size: 1rem;
 }
 
-.upload-hints {
+.slider-upload-hints {
   display: flex;
   gap: 2rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-.hint-item {
+.slider-hint-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #666;
-  font-size: 0.9rem;
+  gap: 0.75rem;
+  color: #64748b;
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  border: 1px solid rgba(40, 167, 69, 0.2);
 }
 
-.hint-item i {
+.slider-hint-item i {
   color: #28a745;
+  font-size: 1.1rem;
 }
 
-/* Gallery Section */
-.gallery-panel .p-panel-header {
+.slider-hint-item strong {
+  color: #0c4da2;
+}
+
+/* Gallery Section with CTU Styling */
+.slider-gallery-panel {
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: none;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.slider-gallery-panel .p-panel-header {
   background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
   color: white;
   font-weight: 600;
+  padding: 1.5rem 2rem;
+  border: none;
 }
 
-.loading-state, .empty-state {
+.slider-loading-state, .slider-empty-state {
   text-align: center;
-  padding: 3rem;
-  color: #666;
+  padding: 4rem 2rem;
+  color: #64748b;
 }
 
-.empty-state i {
+.slider-empty-state i {
   font-size: 4rem;
-  color: #ddd;
-  margin-bottom: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
 }
 
-.empty-state h3 {
+.slider-empty-state h3 {
   margin: 1rem 0 0.5rem 0;
-  color: #666;
+  color: #475569;
+  font-size: 1.4rem;
 }
 
-/* Images Grid */
-.images-grid {
+.slider-empty-state p {
+  color: #64748b;
+  font-size: 1rem;
+}
+
+/* Images Grid with CTU Styling */
+.slider-images-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 2rem;
-  padding: 1rem 0;
+  padding: 2rem;
 }
 
-.image-card {
+.slider-image-card {
   border: none;
   border-radius: 16px;
   overflow: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   background: white;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.image-card:hover {
+.slider-image-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
 
-.image-container {
+.slider-image-container {
   position: relative;
   overflow: hidden;
   height: 280px;
-  background: #f8f9fa;
+  background: #f8fafc;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.slider-image {
+.slider-preview-image {
   width: 100% !important;
   height: 280px !important;
   position: relative;
@@ -184,7 +261,7 @@
   display: block !important;
 }
 
-.slider-image img {
+.slider-preview-image img {
   width: 100% !important;
   height: 280px !important;
   object-fit: cover !important;
@@ -193,11 +270,11 @@
   display: block !important;
 }
 
-.image-card:hover .slider-image img {
+.slider-image-card:hover .slider-preview-image img {
   transform: scale(1.08);
 }
 
-.image-overlay {
+.slider-image-overlay {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -209,12 +286,12 @@
   z-index: 4;
 }
 
-.image-card:hover .image-overlay {
+.slider-image-card:hover .slider-image-overlay {
   opacity: 1;
   transform: translateY(0);
 }
 
-.image-overlay .p-button {
+.slider-image-overlay .p-button {
   width: 44px;
   height: 44px;
   background: rgba(255, 255, 255, 0.95);
@@ -222,33 +299,37 @@
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: #333;
   transition: all 0.2s ease;
+  border-radius: 50%;
 }
 
-.image-overlay .p-button:hover {
+.slider-image-overlay .p-button:hover {
   background: rgba(255, 255, 255, 1);
   transform: scale(1.1);
 }
 
-.image-overlay .p-button.p-button-danger:hover {
+.slider-image-overlay .p-button.p-button-danger:hover {
   background: #dc3545;
   color: white;
   border-color: #dc3545;
 }
 
-.image-info {
-  padding: 1rem;
+.slider-image-info {
+  padding: 1.5rem;
   background: white;
   text-align: center;
 }
 
-.image-id {
+.slider-image-id {
   margin-bottom: 0;
 }
 
-.image-id .p-badge {
+.slider-image-id .p-badge {
   font-size: 0.8rem;
-  padding: 0.4rem 0.6rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 20px;
+  background: linear-gradient(135deg, #0c4da2, #1976d2);
+  color: white;
+  border: none;
 }
 
 /* Delete Confirmation Dialog */
@@ -280,7 +361,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* Responsive Design */
+/* Responsive Design for Slider Admin */
 @media (max-width: 768px) {
   .slider-admin-container {
     padding: 1rem;
@@ -288,48 +369,67 @@
   
   .slider-admin-header {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
   
-  .header-stats {
+  .slider-header-stats {
     width: 100%;
     justify-content: center;
   }
   
-  .images-grid {
+  .slider-images-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 1.5rem;
+    padding: 1.5rem;
   }
   
-  .upload-hints {
+  .slider-upload-hints {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 0.75rem;
   }
   
-  .image-container {
+  .slider-upload-section {
+    padding: 1.5rem;
+  }
+  
+  .slider-image-container {
     height: 250px;
+  }
+  
+  .slider-preview-image img {
+    height: 250px !important;
   }
 }
 
 @media (max-width: 480px) {
-  .images-grid {
+  .slider-images-grid {
     grid-template-columns: 1fr;
+    padding: 1rem;
   }
   
-  .header-info h1 {
+  .slider-header-info h1 {
     font-size: 1.8rem;
   }
   
-  .stat-number {
-    font-size: 1.5rem;
+  .slider-stat-number {
+    font-size: 1.6rem;
+  }
+  
+  .slider-admin-container {
+    padding: 0.5rem;
+  }
+  
+  .slider-admin-header {
+    padding: 1rem;
   }
 }
 
 /* Animation for loading */
-@keyframes fadeIn {
+@keyframes sliderFadeInUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
   to {
     opacity: 1;
@@ -337,8 +437,26 @@
   }
 }
 
-.image-card {
-  animation: fadeIn 0.5s ease-out;
+@keyframes sliderPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.slider-image-card {
+  animation: sliderFadeInUp 0.6s ease-out;
+}
+
+.slider-stat-card:hover {
+  animation: sliderPulse 0.6s ease-in-out;
+}
+
+/* Loading spinner for slider admin */
+.slider-loading-state .p-progressbar {
+  margin-bottom: 1rem;
 }
 
 /* Panel styling */

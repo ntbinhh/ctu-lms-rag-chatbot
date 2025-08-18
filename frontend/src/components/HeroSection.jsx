@@ -14,7 +14,7 @@ const HeroSection = () => {
       setCurrentText((prev) => (prev + 1) % texts.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [texts.length]);
 
   return (
     <div className="hero-section">
@@ -41,14 +41,14 @@ const HeroSection = () => {
                 <Button 
                   label="Khám phá ngay" 
                   icon="pi pi-arrow-right" 
-                  className="hero-btn primary"
+                  className="hero-btn hero-btn-explore"
                   onClick={() => window.location.href = '/programs'}
                 />
                 <Button 
-                  label="Xem thêm" 
-                  icon="pi pi-play" 
-                  className="hero-btn secondary"
-                  onClick={() => window.location.href = '/about'}
+                  label="Xem chương trình đào tạo" 
+                  icon="pi pi-book" 
+                  className="hero-btn hero-btn-programs"
+                  onClick={() => window.location.href = '/programs'}
                 />
               </div>
             </div>
@@ -110,6 +110,7 @@ const HeroSection = () => {
         }
 
         .hero-text-container {
+          
           position: relative;
           height: 120px;
           margin-bottom: 1.5rem;
@@ -153,6 +154,7 @@ const HeroSection = () => {
         }
 
         .hero-actions {
+        
           display: flex;
           gap: 1rem;
           justify-content: center;
@@ -170,28 +172,26 @@ const HeroSection = () => {
           box-shadow: 0 4px 15px rgba(0,0,0,0.2) !important;
         }
 
-        .hero-btn.primary {
-          background: linear-gradient(135deg, #ffffff, #f0f0f0) !important;
-          color: #0c4da2 !important;
-        }
-
-        .hero-btn.primary:hover {
-          transform: translateY(-3px) !important;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.25) !important;
-          background: linear-gradient(135deg, #f8f9fa, #e9ecef) !important;
-        }
-
-        .hero-btn.secondary {
-          background: transparent !important;
+        .hero-btn-explore {
+          background: linear-gradient(135deg, #0c4da2, #1976d2) !important;
           color: white !important;
-          border: 2px solid rgba(255,255,255,0.8) !important;
         }
 
-        .hero-btn.secondary:hover {
+        .hero-btn-explore:hover {
           transform: translateY(-3px) !important;
-          background: rgba(255,255,255,0.1) !important;
-          border-color: white !important;
-          box-shadow: 0 8px 25px rgba(0,0,0,0.25) !important;
+          box-shadow: 0 8px 25px rgba(12, 77, 162, 0.4) !important;
+          background: linear-gradient(135deg, #0a3d82, #1565c0) !important;
+        }
+
+        .hero-btn-programs {
+          background: linear-gradient(135deg, #0c4da2, #1976d2) !important;
+          color: white !important;
+        }
+
+        .hero-btn-programs:hover {
+          transform: translateY(-3px) !important;
+          background: linear-gradient(135deg, #0a3d82, #1565c0) !important;
+          box-shadow: 0 8px 25px rgba(12, 77, 162, 0.4) !important;
         }
 
         @media (max-width: 1024px) {

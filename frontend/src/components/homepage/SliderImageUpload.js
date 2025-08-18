@@ -165,30 +165,30 @@ const handleUpload = async (event) => {
         
         {/* Header Section */}
         <div className="slider-admin-header">
-          <div className="header-info">
-            <h1>🖼️ Quản lý Slider Homepage</h1>
+          <div className="slider-header-info">
+            <h1>Quản lý Slider Homepage</h1>
             <p>Quản lý hình ảnh slideshow hiển thị trên trang chủ website</p>
           </div>
           
-          <div className="header-stats">
-            <Card className="stat-card">
-              <div className="stat-content">
-                <div className="stat-number">{stats.total}</div>
-                <div className="stat-label">Tổng ảnh</div>
+          <div className="slider-header-stats">
+            <Card className="slider-stat-card">
+              <div className="slider-stat-content">
+                <div className="slider-stat-number">{stats.total}</div>
+                <div className="slider-stat-label">Tổng ảnh</div>
               </div>
             </Card>
-            <Card className="stat-card">
-              <div className="stat-content">
-                <div className="stat-number">{stats.totalSize.toFixed(1)}MB</div>
-                <div className="stat-label">Dung lượng</div>
+            <Card className="slider-stat-card">
+              <div className="slider-stat-content">
+                <div className="slider-stat-number">{stats.totalSize.toFixed(1)}MB</div>
+                <div className="slider-stat-label">Dung lượng</div>
               </div>
             </Card>
           </div>
         </div>
 
         {/* Upload Section */}
-        <Panel header="📤 Tải lên ảnh mới" className="upload-panel">
-          <div className="upload-section">
+        <Panel header="📤 Tải lên ảnh mới" className="slider-upload-panel">
+          <div className="slider-upload-section">
             <FileUpload
               name="files"
               multiple
@@ -200,27 +200,27 @@ const handleUpload = async (event) => {
               chooseLabel="Chọn ảnh"
               uploadLabel="Tải lên"
               cancelLabel="Hủy"
-              className="modern-upload"
+              className="slider-modern-upload"
               disabled={loading}
             />
             
             {uploadProgress > 0 && uploadProgress < 100 && (
-              <div className="upload-progress">
+              <div className="slider-upload-progress">
                 <ProgressBar value={uploadProgress} />
                 <span>{uploadProgress.toFixed(0)}% hoàn thành</span>
               </div>
             )}
             
-            <div className="upload-hints">
-              <div className="hint-item">
+            <div className="slider-upload-hints">
+              <div className="slider-hint-item">
                 <i className="pi pi-info-circle"></i>
                 <span>Kích thước khuyến nghị: <strong>2560 x 734px</strong></span>
               </div>
-              <div className="hint-item">
+              <div className="slider-hint-item">
                 <i className="pi pi-file"></i>
                 <span>Định dạng: JPG, PNG, WebP</span>
               </div>
-              <div className="hint-item">
+              <div className="slider-hint-item">
                 <i className="pi pi-cloud"></i>
                 <span>Dung lượng tối đa: <strong>10MB/ảnh</strong></span>
               </div>
@@ -229,30 +229,30 @@ const handleUpload = async (event) => {
         </Panel>
 
         {/* Images Gallery */}
-        <Panel header={`📁 Thư viện ảnh (${images.length})`} className="gallery-panel">
+        <Panel header={`📁 Thư viện ảnh (${images.length})`} className="slider-gallery-panel">
           {loading && images.length === 0 ? (
-            <div className="loading-state">
+            <div className="slider-loading-state">
               <ProgressBar mode="indeterminate" />
               <p>Đang tải ảnh...</p>
             </div>
           ) : images.length === 0 ? (
-            <div className="empty-state">
+            <div className="slider-empty-state">
               <i className="pi pi-image"></i>
               <h3>Chưa có ảnh nào</h3>
               <p>Hãy tải lên ảnh đầu tiên cho slider homepage</p>
             </div>
           ) : (
-            <div className="images-grid">
+            <div className="slider-images-grid">
               {images.map((img) => (
-                <Card key={img.id} className="image-card">
-                  <div className="image-container">
+                <Card key={img.id} className="slider-image-card">
+                  <div className="slider-image-container">
                     <Image
                       src={`http://localhost:8000${img.url}?v=${img.id}`}
                       alt="Slider"
                       width="100%"
                       height="280px"
                       preview
-                      className="slider-image"
+                      className="slider-preview-image"
                       imageStyle={{ 
                         width: '100%', 
                         height: '280px', 
@@ -267,7 +267,7 @@ const handleUpload = async (event) => {
                       }}
                     />
                     
-                    <div className="image-overlay">
+                    <div className="slider-image-overlay">
                       <Button
                         icon="pi pi-trash"
                         className="p-button-rounded p-button-danger p-button-sm"
@@ -277,8 +277,8 @@ const handleUpload = async (event) => {
                     </div>
                   </div>
                   
-                  <div className="image-info">
-                    <div className="image-id">
+                  <div className="slider-image-info">
+                    <div className="slider-image-id">
                       <Badge value={`ID: ${img.id}`} severity="info" />
                     </div>
                   </div>

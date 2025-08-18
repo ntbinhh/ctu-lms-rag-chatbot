@@ -1,0 +1,1492 @@
+[
+  {
+    "text": "hey",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hello",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hi",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hello there",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "good morning",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "good evening",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "moin",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hey there",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hey dude",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "goodmorning",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "goodevening",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "good afternoon",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "xin chào",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào bạn",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào em",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào anh",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào chị",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "xin chào bạn",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào buổi sáng",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào buổi chiều",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chào buổi tối",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chúc buổi sáng tốt lành",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chúc buổi chiều vui vẻ",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "chúc buổi tối an lành",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "bạn khỏe không",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hôm nay thế nào",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hello bạn",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hi bạn",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "yo",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "hế lô",
+    "intent": "greet",
+    "entities": []
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "good by",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "cee you later",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "bye",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "goodbye",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "see you around",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "bye bye",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "see you later",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "tạm biệt",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "chào tạm biệt",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "hẹn gặp lại",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "bye bạn",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "see you",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "chúc ngủ ngon",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "chúc buổi tối vui vẻ",
+    "intent": "goodbye",
+    "entities": []
+  },
+  {
+    "text": "thông tin học bổng",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "có mấy phương thức tuyển sinh",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "có mấy phương thức xts tuyển",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy định về điểm số như thế nào?",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thủ tục xin học bổng",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "lịch thi cuối kỳ",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy định về vắng mặt",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "cách tính điểm trung bình",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thủ tục chuyển ngành",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy định về đăng ký học phần",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "học phí một học kỳ là bao nhiêu?",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "làm thế nào để xin nghỉ học?",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "điều kiện tốt nghiệp",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thông tin liên hệ phòng đào tạo",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "địa chỉ trường",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "số điện thoại phòng ban",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "email liên hệ",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "giờ làm việc của các phòng ban",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy chế đào tạo",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy định về thi cử",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thủ tục xin miễn giảm học phí",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "chính sách học bổng",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "điều kiện xét học bổng",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "cách nộp hồ sơ xin học bổng",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy định về thực tập",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "yêu cầu làm đồ án tốt nghiệp",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thủ tục chuyển lớp",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy định về đăng ký tín chỉ",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "học phí",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "chi phí học tập",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "mức phí",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "tiền học",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "cost",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "fee",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "tuition",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "học bổng",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "scholarship",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "hỗ trợ tài chính",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "miễn giảm",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy định",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "quy chế",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "regulation",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "rule",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "luật",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "chương trình đào tạo",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "curriculum",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "môn học",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "subject",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "course",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "ngành học",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "major",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "liên hệ",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "contact",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "địa chỉ",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "address",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "phone",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "email",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "điện thoại",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "chào tạm biệt",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "bye bạn",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "hẹn gặp lại",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "gặp lại sau nhé",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "chúc bạn ngủ ngon",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "chúc ngủ ngon",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "chúc buổi tối tốt lành",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thôi tôi đi đây",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "cảm ơn và tạm biệt",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "cảm ơn bạn",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "ok bye",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thoát",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "kết thúc",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "đóng chat",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "không cần nữa",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "thôi đủ rồi",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "see you later",
+    "intent": "general_question",
+    "entities": []
+  },
+  {
+    "text": "yes",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "y",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "indeed",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "of course",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "that sounds good",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "correct",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "có",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "đúng",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "đúng rồi",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "tất nhiên",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "chắc chắn",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ok",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "oke",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "okie",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ok bạn",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ok anh",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ok chị",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ok em",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ok rồi",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ok nhé",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "uk",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "uh",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "sure",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ukie",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "được",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "đồng ý",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "yes bạn",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "ừ",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "uh huh",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "phải",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "right",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "exactly",
+    "intent": "affirm",
+    "entities": []
+  },
+  {
+    "text": "no",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "n",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "never",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "I don't think so",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "don't like that",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "no way",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "not really",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "không",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "không phải",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "ko",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "k",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "sai",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "sai rồi",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "không đúng",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "không chính xác",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "thôi",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "bỏ qua",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "cancel",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "hủy",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "không cần",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "không muốn",
+    "intent": "deny",
+    "entities": []
+  },
+  {
+    "text": "perfect",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "great",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "amazing",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "feeling like a king",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "wonderful",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "I am feeling very good",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "I am great",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "I am amazing",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "I am going to save the world",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "super stoked",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "extremely good",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "so so perfect",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "so good",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "so perfect",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "tuyệt vời",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "rất tốt",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "hoàn hảo",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "tuyệt",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "xuất sắc",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "tôi cảm thấy rất tốt",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "tôi rất khỏe",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "hôm nay tuyệt vời",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "mọi thứ đều tốt",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "tôi rất vui",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "cảm thấy tuyệt vời",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "tốt lắm",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "quá tuyệt",
+    "intent": "mood_great",
+    "entities": []
+  },
+  {
+    "text": "my day was horrible",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "I am sad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "I don't feel very well",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "I am disappointed",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "super sad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "I'm so sad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "sad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "very sad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "unhappy",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "not good",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "not very good",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "extremly sad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "so saad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "so sad",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "tôi buồn",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "cảm thấy buồn",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "hôm nay tệ quá",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "tôi không khỏe",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "tôi thất vọng",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "rất buồn",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "cảm thấy không tốt",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "tâm trạng không tốt",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "stress",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "mệt mỏi",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "chán nản",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "khó chịu",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "tệ",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "không vui",
+    "intent": "mood_unhappy",
+    "entities": []
+  },
+  {
+    "text": "are you a bot?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "are you a human?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "am I talking to a bot?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "am I talking to a human?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "bạn có phải là bot không?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "bạn có phải robot không?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "bạn là ai?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "tôi đang nói chuyện với ai?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "bạn là con người à?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "bạn là máy tính à?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "bạn là ai vậy?",
+    "intent": "bot_challenge",
+    "entities": []
+  },
+  {
+    "text": "lịch học hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "hôm nay tôi có môn gì",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "có lớp nào hôm nay không",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "lịch học của tôi hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "môn học hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "thời khóa biểu hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "hôm nay học gì",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "lịch hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "tôi có lịch học gì hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "cho tôi xem lịch học hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "lịch học ngày hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "hôm nay tôi có tiết nào",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "có tiết học nào hôm nay",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "môn gì hôm nay vậy",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "lịch học của mình hôm nay thế nào",
+    "intent": "ask_today_schedule",
+    "entities": []
+  },
+  {
+    "text": "lịch học tuần này",
+    "intent": "ask_schedule_week",
+    "entities": []
+  },
+  {
+    "text": "thời khóa biểu tuần này",
+    "intent": "ask_schedule_week",
+    "entities": []
+  },
+  {
+    "text": "lịch học cả tuần",
+    "intent": "ask_schedule_week",
+    "entities": []
+  },
+  {
+    "text": "tuần này tôi học gì",
+    "intent": "ask_schedule_week",
+    "entities": []
+  },
+  {
+    "text": "lịch tuần này như thế nào",
+    "intent": "ask_schedule_week",
+    "entities": []
+  },
+  {
+    "text": "cho tôi xem lịch học tuần này",
+    "intent": "ask_schedule_week",
+    "entities": []
+  },
+  {
+    "text": "lịch học ngày mai",
+    "intent": "ask_schedule_tomorrow",
+    "entities": []
+  },
+  {
+    "text": "ngày mai tôi có môn gì",
+    "intent": "ask_schedule_tomorrow",
+    "entities": []
+  },
+  {
+    "text": "lịch mai",
+    "intent": "ask_schedule_tomorrow",
+    "entities": []
+  },
+  {
+    "text": "thời khóa biểu ngày mai",
+    "intent": "ask_schedule_tomorrow",
+    "entities": []
+  },
+  {
+    "text": "ngày mai học gì",
+    "intent": "ask_schedule_tomorrow",
+    "entities": []
+  },
+  {
+    "text": "mai có lớp không",
+    "intent": "ask_schedule_tomorrow",
+    "entities": []
+  },
+  {
+    "text": "tiết học tiếp theo",
+    "intent": "ask_next_class",
+    "entities": []
+  },
+  {
+    "text": "môn tiếp theo là gì",
+    "intent": "ask_next_class",
+    "entities": []
+  },
+  {
+    "text": "tiết sau học gì",
+    "intent": "ask_next_class",
+    "entities": []
+  },
+  {
+    "text": "lớp tiếp theo",
+    "intent": "ask_next_class",
+    "entities": []
+  },
+  {
+    "text": "sau này học môn gì",
+    "intent": "ask_next_class",
+    "entities": []
+  },
+  {
+    "text": "ctdt",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "ctdt của tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "chương trình học của tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "chương trình học của sinh viên",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "chương trình đào tạo của tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "xem chương trình học của mình",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "chương trình đào tạo",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "môn học trong chương trình",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "tôi học những môn gì",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "xem curriculum",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "danh sách môn học",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "chương trình học",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "các môn tôi phải học",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "môn học bắt buộc",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "xem syllabus",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "kế hoạch học tập",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "chương trình của lớp tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "môn học theo khóa",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "khht",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "kế hoạch học tập của tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "khht của tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "xem kế hoạch học tập của tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  },
+  {
+    "text": "xem chương trình học của tôi",
+    "intent": "ask_student_program",
+    "entities": []
+  }
+]

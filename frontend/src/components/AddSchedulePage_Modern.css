@@ -30,33 +30,66 @@
   backdrop-filter: blur(10px);
 }
 
-.card-header {
+/* CTU Schedule Card Header Styling */
+.schedule-card-header {
   text-align: center;
-  padding: 2rem 2rem 1rem;
+  padding: 2.5rem 2rem 1.5rem;
+  background: linear-gradient(135deg, #0c4da2 0%, #1976d2 100%);
+  color: white;
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.page-title {
-  color: #0c4da2;
+.schedule-card-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  pointer-events: none;
+}
+
+.schedule-card-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ffab00);
+}
+
+.schedule-page-title {
+  color: white;
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 0 0 0.5rem 0;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  margin: 0 0 0.75rem 0;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
-.page-title i {
+.schedule-page-title i {
   font-size: 2.2rem;
-  color: #ffa726;
+  color: #ffd700;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
 }
 
-.page-subtitle {
-  color: #666;
+.schedule-page-subtitle {
+  color: rgba(255, 255, 255, 0.95);
   font-size: 1.1rem;
   margin: 0;
-  font-weight: 400;
+  opacity: 0.95;
+  position: relative;
+  z-index: 1;
+  font-weight: 500;
 }
 
 /* Panel Styles */
@@ -389,10 +422,18 @@
 }
 
 @media (max-width: 768px) {
-  .page-title {
+  .schedule-card-header {
+    padding: 2rem 1.5rem 1.25rem;
+  }
+  
+  .schedule-page-title {
     font-size: 2rem;
     flex-direction: column;
     gap: 0.5rem;
+  }
+  
+  .schedule-page-subtitle {
+    font-size: 1rem;
   }
   
   .schedule-grid {
@@ -425,8 +466,20 @@
     padding: 0.5rem;
   }
   
-  .page-title {
-    font-size: 1.5rem;
+  .schedule-card-header {
+    padding: 1.5rem 1rem 1rem;
+  }
+  
+  .schedule-page-title {
+    font-size: 1.6rem;
+  }
+  
+  .schedule-page-title i {
+    font-size: 1.4rem;
+  }
+  
+  .schedule-page-subtitle {
+    font-size: 0.95rem;
   }
   
   .modern-timetable {
@@ -437,6 +490,7 @@
   .teacher-tag {
     font-size: 0.7rem;
     padding: 0.2rem 0.3rem;
+  }
   }
   
   .form-grid {
@@ -449,7 +503,7 @@
   .schedule-panel .p-panel-content {
     padding: 1rem;
   }
-}
+  
 
 /* Custom PrimeReact Component Overrides */
 .p-dropdown {

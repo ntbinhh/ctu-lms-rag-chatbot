@@ -196,30 +196,47 @@
   padding: 0.75rem 1.5rem;
   font-weight: 500;
   transition: all 0.3s ease;
-  border: 2px solid var(--ctu-light);
-  background: white;
-  color: var(--ctu-primary);
+  border: 2px solid var(--ctu-primary);
+  background: var(--ctu-gradient) !important;
+  color: white !important;
   box-shadow: 0 2px 8px rgba(12, 90, 166, 0.1);
+}
+
+.faculty-btn .p-button-label,
+.major-btn .p-button-label {
+  color: white !important;
 }
 
 .faculty-btn:hover,
 .major-btn:hover {
-  background: var(--ctu-light);
-  border-color: var(--ctu-primary);
+  background: var(--ctu-secondary) !important;
+  border-color: var(--ctu-secondary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(12, 90, 166, 0.2);
+  box-shadow: 0 4px 15px rgba(12, 90, 166, 0.3);
+  color: white !important;
+}
+
+.faculty-btn:hover .p-button-label,
+.major-btn:hover .p-button-label {
+  color: white !important;
 }
 
 .faculty-btn.selected,
 .major-btn.selected {
-  background: var(--ctu-gradient);
-  color: white;
+  background: var(--ctu-primary) !important;
+  color: white !important;
   border-color: var(--ctu-primary);
   box-shadow: 0 4px 15px rgba(12, 90, 166, 0.3);
 }
 
+.faculty-btn.selected .p-button-label,
+.major-btn.selected .p-button-label {
+  color: white !important;
+}
+
 .faculty-btn.selected:hover,
 .major-btn.selected:hover {
+  background: var(--ctu-secondary) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(12, 90, 166, 0.4);
 }
@@ -652,6 +669,28 @@
 .p-button:focus {
   outline: 2px solid #2196f3;
   outline-offset: 2px;
+}
+
+/* Force blue background for faculty buttons */
+.faculty-btn.p-button,
+.major-btn.p-button {
+  background: var(--ctu-gradient) !important;
+  background-color: var(--ctu-primary) !important;
+  color: white !important;
+}
+
+.faculty-btn.p-button:not(:disabled):hover,
+.major-btn.p-button:not(:disabled):hover {
+  background: var(--ctu-secondary) !important;
+  background-color: var(--ctu-secondary) !important;
+  color: white !important;
+}
+
+.faculty-btn.p-button.selected,
+.major-btn.p-button.selected {
+  background: var(--ctu-primary) !important;
+  background-color: var(--ctu-primary) !important;
+  color: white !important;
 }
 
 /* High contrast mode */

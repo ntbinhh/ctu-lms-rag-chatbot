@@ -65,18 +65,18 @@ const Footer = () => {
           <div className="footer-section social-media">
             <h4>Theo dõi chúng tôi</h4>
             <div className="social-links">
-              <a href="#" aria-label="Facebook" className="social-link">
+              <button type="button" aria-label="Facebook" className="social-link" onClick={() => window.open('https://facebook.com/ctu.edu.vn', '_blank')}>
                 <i className="pi pi-facebook"></i>
-              </a>
-              <a href="#" aria-label="YouTube" className="social-link">
+              </button>
+              <button type="button" aria-label="YouTube" className="social-link" onClick={() => window.open('https://youtube.com/@ctuuniversity', '_blank')}>
                 <i className="pi pi-youtube"></i>
-              </a>
-              <a href="#" aria-label="LinkedIn" className="social-link">
+              </button>
+              <button type="button" aria-label="LinkedIn" className="social-link" onClick={() => window.open('https://linkedin.com/company/can-tho-university', '_blank')}>
                 <i className="pi pi-linkedin"></i>
-              </a>
-              <a href="#" aria-label="Twitter" className="social-link">
+              </button>
+              <button type="button" aria-label="Twitter" className="social-link" onClick={() => window.open('https://twitter.com/ctu_edu_vn', '_blank')}>
                 <i className="pi pi-twitter"></i>
-              </a>
+              </button>
             </div>
             <div className="back-to-top">
               <button 
@@ -122,7 +122,9 @@ const Footer = () => {
           left: 0;
           right: 0;
           bottom: 0;
-          background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footer-pattern" width="40" height="40" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23footer-pattern)"/></svg>');
+          background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%),
+                      radial-gradient(circle at 40% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
           pointer-events: none;
         }
 
@@ -139,6 +141,18 @@ const Footer = () => {
           grid-template-columns: 2fr 1.5fr 1fr 1fr;
           gap: 3rem;
           margin-bottom: 2rem;
+        }
+
+        .footer-section {
+          position: relative;
+          z-index: 2;
+        }
+
+        .footer-section.contact-info {
+          background: rgba(255, 255, 255, 0.02);
+          padding: 1.5rem;
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .footer-section h4 {
@@ -198,13 +212,22 @@ const Footer = () => {
           gap: 0.75rem;
           margin-bottom: 1rem;
           align-items: flex-start;
+          padding: 0.75rem;
+          background: rgba(255, 255, 255, 0.03);
+          border-radius: 8px;
+          transition: background 0.3s ease;
+        }
+
+        .contact-item:hover {
+          background: rgba(255, 255, 255, 0.08);
         }
 
         .contact-item i {
           font-size: 1.1rem;
           margin-top: 0.2rem;
-          color: #ffffff;
+          color: #f97316;
           min-width: 16px;
+          flex-shrink: 0;
         }
 
         .contact-item a {
@@ -334,6 +357,14 @@ const Footer = () => {
           .footer-content {
             grid-template-columns: 1fr;
             gap: 2rem;
+          }
+
+          .footer-section.contact-info {
+            padding: 1rem;
+          }
+
+          .contact-item {
+            padding: 0.5rem;
           }
 
           .footer-logo {

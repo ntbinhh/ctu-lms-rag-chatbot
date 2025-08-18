@@ -58,34 +58,195 @@ nlu:
 
 - intent: general_question
   examples: |
+    # Học phí và chi phí
+    - học phí ngành <ngành học> là bao nhiêu?
+    - học phí một học kỳ là bao nhiêu?
+    - học phí một năm học bao nhiêu tiền?
+    - chi phí học tập tại trường
+    - mức phí đóng hàng kỳ
+    - tiền học của sinh viên
+    - phí dịch vụ giáo dục
+    - các khoản phí phải đóng
+    - học phí năm học 2024-2025
+    - cách tính học phí theo tín chỉ
+    - học phí ngành công nghệ thông tin
+    - học phí ngành kinh tế
+    - học phí ngành sư phạm
+    - học phí cao đẳng
+    - học phí đại học
+    - học phí thạc sĩ
+    - phí ghi danh
+    - phí thi lại
+    - phí làm thẻ sinh viên
+    - phí ký túc xá
+    - cost of study
+    - tuition fee
+    - study cost
+    - educational fee
+    
+    # Học bổng và hỗ trợ tài chính
     - thông tin học bổng
+    - học bổng khuyến khích học tập
+    - học bổng cho sinh viên nghèo
+    - học bổng tài năng
+    - học bổng toàn phần
+    - học bổng bán phần
+    - thủ tục xin học bổng
+    - điều kiện xét học bổng
+    - cách nộp hồ sơ xin học bổng
+    - hồ sơ xin học bổng cần gì
+    - thời gian nộp hồ sơ học bổng
+    - kết quả xét học bổng
+    - danh sách sinh viên được học bổng
+    - hỗ trợ tài chính cho sinh viên
+    - miễn giảm học phí
+    - thủ tục xin miễn giảm học phí
+    - chính sách học bổng của trường
+    - học bổng doanh nghiệp
+    - học bổng chính phủ
+    - học bổng quốc tế
+    - scholarship information
+    - financial aid
+    - tuition assistance
+    
+    # Tuyển sinh và nhập học
     - có mấy phương thức tuyển sinh
     - có mấy phương thức xts tuyển
+    - thông tin tuyển sinh đại học
+    - thông tin tuyển sinh cao đẳng
+    - điều kiện tuyển sinh
+    - hồ sơ nhập học cần gì
+    - thủ tục nhập học
+    - lịch tuyển sinh
+    - đăng ký xét tuyển
+    - phương thức xét tuyển học bạ
+    - phương thức xét tuyển kết hợp
+    - xét tuyển thẳng
+    - thi đánh giá năng lực
+    - điểm chuẩn các ngành
+    - điểm chuẩn năm trước
+    - chỉ tiêu tuyển sinh
+    - ngành đào tạo của trường
+    - mã ngành tuyển sinh
+    - tổ hợp môn xét tuyển
+    - thời gian nhập học
+    - admission information
+    - enrollment
+    - entrance exam
+    
+    # Quy chế và quy định học vụ
     - quy định về điểm số như thế nào?
-    - thủ tục xin học bổng
-    - lịch thi cuối kỳ
+    - quy chế đào tạo
+    - quy định về thi cử
     - quy định về vắng mặt
+    - quy định vắng học tối đa
+    - số buổi được phép vắng
+    - quy định về điểm danh
     - cách tính điểm trung bình
-    - thủ tục chuyển ngành
-    - quy định về đăng ký học phần
-    - học phí một học kỳ là bao nhiêu?
-    - làm thế nào để xin nghỉ học?
+    - thang điểm đánh giá
+    - điều kiện lên lớp
     - điều kiện tốt nghiệp
+    - quy định về thực tập
+    - quy định về đồ án tốt nghiệp
+    - quy định về luận văn
+    - quy định về thi lại
+    - quy định về học lại
+    - quy định về bảo lưu kết quả
+    - quy định chuyển ngành
+    - quy định chuyển lớp
+    - quy định về đăng ký học phần
+    - quy định về đăng ký tín chỉ
+    - số tín chỉ tối thiểu một kỳ
+    - số tín chỉ tối đa một kỳ
+    - academic regulations
+    - study regulations
+    - examination rules
+    
+    # Thủ tục học vụ
+    - thủ tục chuyển ngành
+    - thủ tục chuyển lớp
+    - làm thế nào để xin nghỉ học?
+    - thủ tục xin nghỉ học
+    - thủ tục bảo lưu kết quả
+    - thủ tục xin thi lại
+    - thủ tục đăng ký học lại
+    - thủ tục xin cấp bảng điểm
+    - thủ tục xin giấy xác nhận sinh viên
+    - thủ tục làm thẻ sinh viên
+    - thủ tục khiếu nại điểm
+    - thủ tục xin phúc khảo
+    - cách đăng ký môn học
+    - cách hủy đăng ký môn học
+    - administrative procedures
+    - student procedures
+    
+    # Chương trình đào tạo và môn học
+    - chương trình đào tạo
+    - curriculum
+    - môn học
+    - subject
+    - course
+    - ngành học
+    - major
+    - danh sách môn học trong chương trình
+    - môn học bắt buộc
+    - môn học tự chọn
+    - môn học điều kiện
+    - môn tiên quyết
+    - số tín chỉ của chương trình
+    - thời gian đào tạo
+    - kế hoạch đào tạo
+    - khung chương trình
+    - mô tả môn học
+    - program curriculum
+    - course description
+    
+    # Lịch học và thời khóa biểu
+    - lịch thi cuối kỳ
+    - lịch thi giữa kỳ
+    - lịch học lý thuyết
+    - lịch học thực hành
+    - thời khóa biểu chung
+    - lịch nghỉ lễ
+    - lịch học bù
+    - lịch bảo vệ đồ án
+    - lịch bảo vệ luận văn
+    - exam schedule
+    - class schedule
+    - academic calendar
+    
+    # Thông tin liên hệ và cơ sở vật chất
     - thông tin liên hệ phòng đào tạo
     - địa chỉ trường
     - số điện thoại phòng ban
     - email liên hệ
     - giờ làm việc của các phòng ban
-    - quy chế đào tạo
-    - quy định về thi cử
-    - thủ tục xin miễn giảm học phí
-    - chính sách học bổng
-    - điều kiện xét học bổng
-    - cách nộp hồ sơ xin học bổng
-    - quy định về thực tập
-    - yêu cầu làm đồ án tốt nghiệp
-    - thủ tục chuyển lớp
-    - quy định về đăng ký tín chỉ
+    - địa chỉ các khoa
+    - thông tin phòng tài chính
+    - phòng công tác sinh viên
+    - thư viện trường
+    - ký túc xá
+    - căng tin
+    - sân thể thao
+    - phòng máy tính
+    - phòng thí nghiệm
+    - contact information
+    - campus facilities
+    
+    # Dịch vụ sinh viên
+    - dịch vụ y tế cho sinh viên
+    - hoạt động ngoại khóa
+    - câu lạc bộ sinh viên
+    - đoàn thanh niên
+    - hội sinh viên
+    - tư vấn học tập
+    - tư vấn tâm lý
+    - hỗ trợ việc làm
+    - kết nối doanh nghiệp
+    - student services
+    - extracurricular activities
+    
+    # Các từ khóa chung
     - học phí
     - chi phí học tập
     - mức phí
@@ -102,13 +263,6 @@ nlu:
     - regulation
     - rule
     - luật
-    - chương trình đào tạo
-    - curriculum
-    - môn học
-    - subject
-    - course
-    - ngành học
-    - major
     - liên hệ
     - contact
     - địa chỉ
@@ -116,23 +270,16 @@ nlu:
     - phone
     - email
     - điện thoại
-    - chào tạm biệt
-    - bye bạn
-    - hẹn gặp lại
-    - gặp lại sau nhé
-    - chúc bạn ngủ ngon
-    - chúc ngủ ngon
-    - chúc buổi tối tốt lành
-    - thôi tôi đi đây
-    - cảm ơn và tạm biệt
-    - cảm ơn bạn
-    - ok bye
-    - thoát
-    - kết thúc
-    - đóng chat
-    - không cần nữa
-    - thôi đủ rồi
-    - see you later
+    - thông tin
+    - information
+    - hướng dẫn
+    - guide
+    - thủ tục
+    - procedure
+    - điều kiện
+    - condition
+    - yêu cầu
+    - requirement
 
 - intent: affirm
   examples: |
@@ -286,6 +433,29 @@ nlu:
     - có tiết học nào hôm nay
     - môn gì hôm nay vậy
     - lịch học của mình hôm nay thế nào
+    - today schedule
+    - what class today
+    - class today
+    - today's schedule
+    - my schedule today
+    - hôm nay có lớp gì không
+    - kiểm tra lịch học hôm nay
+    - xem lịch hôm nay
+    - thời khóa biểu ngày hôm nay
+    - lịch học ngày {CURRENT_DATE}
+    - hôm nay học mấy tiết
+    - mấy giờ học hôm nay
+    - tôi có bao nhiêu tiết hôm nay
+    - lịch học chi tiết hôm nay
+    - danh sách môn học hôm nay
+    - các tiết học hôm nay
+    - giờ học hôm nay
+    - có gì trong lịch hôm nay
+    - hôm nay có tiết nào không
+    - lịch của tôi hôm nay
+    - schedule for today
+    - today class schedule
+    - check today schedule
 
 - intent: ask_schedule_week
   examples: |
@@ -295,6 +465,26 @@ nlu:
     - tuần này tôi học gì
     - lịch tuần này như thế nào
     - cho tôi xem lịch học tuần này
+    - xem lịch cả tuần
+    - thời khóa biểu cả tuần
+    - lịch học từ thứ 2 đến chủ nhật
+    - tuần này có môn gì
+    - lịch học của tuần
+    - các môn học trong tuần
+    - tuần này học những gì
+    - weekly schedule
+    - this week schedule
+    - show me week schedule
+    - lịch học 7 ngày
+    - môn học cả tuần
+    - thời gian biểu tuần này
+    - lịch học từ đầu tuần
+    - tuần này có lớp nào
+    - xem thời khóa biểu tuần
+    - lịch của cả tuần này
+    - check weekly schedule
+    - week timetable
+    - full week schedule
 
 - intent: ask_schedule_tomorrow
   examples: |
@@ -304,6 +494,25 @@ nlu:
     - thời khóa biểu ngày mai
     - ngày mai học gì
     - mai có lớp không
+    - tomorrow schedule
+    - what class tomorrow
+    - schedule for tomorrow
+    - mai có tiết nào
+    - ngày mai có lớp gì
+    - lịch học của mai
+    - môn học ngày mai
+    - xem lịch mai
+    - thời khóa biểu mai
+    - mai tôi học gì
+    - mai có lịch học không
+    - kiểm tra lịch mai
+    - cho tôi xem lịch ngày mai
+    - tomorrow's schedule
+    - class tomorrow
+    - mai học mấy tiết
+    - ngày mai mấy giờ học
+    - lịch học chi tiết ngày mai
+    - mai có những môn gì
 
 - intent: ask_next_class
   examples: |
@@ -312,6 +521,26 @@ nlu:
     - tiết sau học gì
     - lớp tiếp theo
     - sau này học môn gì
+    - next class
+    - what's next
+    - tiết sau là môn gì
+    - lớp học tiếp theo của tôi
+    - môn học kế tiếp
+    - sau đó tôi học gì
+    - tiết kế tiếp
+    - lớp sau học môn gì
+    - tôi có tiết gì sau đây
+    - giờ học tiếp theo
+    - what is my next class
+    - next subject
+    - sau tiết này học gì
+    - tiết học sắp tới
+    - lịch học tiếp theo
+    - môn học sắp tới
+    - tiết kế tiếp là gì
+    - what comes next
+    - lớp học sau
+    - môn sau đó
 
 - intent: ask_student_program
   examples: |

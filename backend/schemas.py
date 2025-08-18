@@ -127,7 +127,7 @@ class NewsResponse(BaseModel):
     created_at: datetime
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class RoomCreate(BaseModel):
     room_number: str
@@ -144,7 +144,7 @@ class RoomOut(BaseModel):
     building: Optional[str] = None
 
     class Config:
-        orm_mode = True
+        from_attributes = True
 
 class TeacherCreate(BaseModel):
     name: str
@@ -183,7 +183,10 @@ class ScheduleCreate(BaseModel):
     schedule_items: List[ScheduleItemCreate]
 
 class SubjectOut(BaseModel):
+    code: str
     name: str
+    credit: int
+    
     class Config:
         orm_mode = True
         
@@ -195,14 +198,27 @@ class TeacherOut(BaseModel):
     class Config:
         orm_mode = True
 
+class ClassOut(BaseModel):
+    id: int
+    name: str
+
+    class Config:
+        orm_mode = True
+
 class ScheduleItemOut(BaseModel):
     id: int 
     week: int
     day: str
     period: str
     hinh_thuc: str
+    hoc_ky: str
+    nam_hoc: int
+    class_id: int
+    subject_id: str
+    teacher_id: int
     subject: Optional[SubjectOut] = None
     teacher_profile: Optional[TeacherOut] = None
+    class_obj: Optional[ClassOut] = None
     room_id: Optional[int] = None
 
     class Config:

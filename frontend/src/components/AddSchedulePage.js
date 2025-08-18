@@ -11,7 +11,6 @@ import { Divider } from "primereact/divider";
 import { ProgressSpinner } from "primereact/progressspinner";
 import { Toast } from "primereact/toast";
 import { Chip } from "primereact/chip";
-import { Tooltip } from "primereact/tooltip";
 import { ConfirmDialog, confirmDialog } from "primereact/confirmdialog";
 import AdminHeader from "../components/AdminHeader";
 import AdminFooter from "../components/AdminFooter";
@@ -709,12 +708,12 @@ const AddSchedulePage = () => {
       <div className="schedule-container">
         <div className="schedule-content">
           <Card className="main-card">
-            <div className="card-header">
-              <h1 className="page-title">
+            <div className="schedule-card-header">
+              <h1 className="schedule-page-title">
                 <i className="pi pi-calendar-plus"></i>
                 Thêm Thời Khóa Biểu
               </h1>
-              <p className="page-subtitle">Tạo và quản lý lịch học cho các lớp</p>
+              <p className="schedule-page-subtitle">Tạo và quản lý lịch học cho các lớp</p>
             </div>
 
             <Divider />

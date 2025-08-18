@@ -1,0 +1,554 @@
+/* NewsListPage CTU Style - Based on Programs Page */
+
+:root {
+  --ctu-primary: #0c5aa6;
+  --ctu-secondary: #1976d2;
+  --ctu-accent: #00acc1;
+  --ctu-success: #2e7d32;
+  --ctu-warning: #f57c00;
+  --ctu-danger: #d32f2f;
+  --ctu-light: #e3f2fd;
+  --ctu-dark: #263238;
+  --ctu-gradient: linear-gradient(135deg, #0c5aa6 0%, #1976d2 100%);
+}
+
+.news-list-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 2rem 0;
+}
+
+.news-list-page .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Hero Section - CTU Style */
+.news-list-page .hero-section {
+  background: var(--ctu-gradient);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(12, 90, 166, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.news-list-page .hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  pointer-events: none;
+}
+
+.news-list-page .hero-content .page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  color: white !important;
+}
+
+.news-list-page .hero-content .page-title i {
+  font-size: 2.2rem;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.news-list-page .hero-content .page-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  margin: 0 0 2rem 0;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+  color: white !important;
+}
+
+.news-list-page .news-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.news-list-page .stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.news-list-page .stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffd700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.news-list-page .stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* Action Bar - CTU Style */
+.news-list-page .action-bar {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(12, 90, 166, 0.15);
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.news-list-page .action-bar .section-title {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--ctu-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.news-list-page .action-bar .section-title i {
+  color: var(--ctu-secondary);
+}
+
+.news-list-page .action-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.news-list-page .add-button {
+  background: var(--ctu-gradient) !important;
+  border: none !important;
+  color: white !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 12px rgba(12, 90, 166, 0.3) !important;
+}
+
+.news-list-page .add-button:hover {
+  background: var(--ctu-secondary) !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(12, 90, 166, 0.4) !important;
+}
+
+.news-list-page .refresh-button {
+  background: transparent !important;
+  border: 2px solid var(--ctu-primary) !important;
+  color: var(--ctu-primary) !important;
+  padding: 0.75rem 1.5rem !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.news-list-page .refresh-button:hover {
+  background: var(--ctu-primary) !important;
+  color: white !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 15px rgba(12, 90, 166, 0.3) !important;
+}
+
+/* News Grid - CTU Style */
+.news-list-page .news-container {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(12, 90, 166, 0.15);
+  border: none;
+}
+
+.news-list-page .news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.news-list-page .news-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(12, 90, 166, 0.1);
+  border: 1px solid rgba(12, 90, 166, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.news-list-page .news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(12, 90, 166, 0.2);
+  border-color: var(--ctu-primary);
+}
+
+.news-list-page .news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background: var(--ctu-light);
+}
+
+.news-list-page .news-content {
+  padding: 1.5rem;
+}
+
+.news-list-page .news-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ctu-primary);
+  margin: 0 0 1rem 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-list-page .news-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.news-list-page .news-date {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.news-list-page .news-date i {
+  color: var(--ctu-accent);
+}
+
+.news-list-page .news-excerpt {
+  color: var(--ctu-dark);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.news-list-page .news-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #f0f0f0;
+}
+
+.news-list-page .view-button {
+  background: transparent !important;
+  border: 2px solid var(--ctu-accent) !important;
+  color: var(--ctu-accent) !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 0.85rem !important;
+}
+
+.news-list-page .view-button:hover {
+  background: var(--ctu-accent) !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+}
+
+.news-list-page .edit-button {
+  background: transparent !important;
+  border: 2px solid var(--ctu-warning) !important;
+  color: var(--ctu-warning) !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 0.85rem !important;
+}
+
+.news-list-page .edit-button:hover {
+  background: var(--ctu-warning) !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+}
+
+.news-list-page .delete-button {
+  background: transparent !important;
+  border: 2px solid var(--ctu-danger) !important;
+  color: var(--ctu-danger) !important;
+  padding: 0.5rem 1rem !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  transition: all 0.3s ease !important;
+  font-size: 0.85rem !important;
+}
+
+.news-list-page .delete-button:hover {
+  background: var(--ctu-danger) !important;
+  color: white !important;
+  transform: translateY(-1px) !important;
+}
+
+/* Empty State - CTU Style */
+.news-list-page .empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--ctu-dark);
+}
+
+.news-list-page .empty-icon {
+  font-size: 4rem;
+  color: var(--ctu-light);
+  margin-bottom: 1rem;
+}
+
+.news-list-page .empty-state h3 {
+  color: var(--ctu-primary);
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.news-list-page .empty-state p {
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ctu-dark);
+}
+
+.news-list-page .empty-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Loading State */
+.news-list-page .loading-container {
+  background: white;
+  border-radius: 16px;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(12, 90, 166, 0.1);
+}
+
+.news-list-page .loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--ctu-dark);
+}
+
+/* Search and Filter */
+.news-list-page .search-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.news-list-page .search-input {
+  min-width: 300px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.news-list-page .search-input:focus {
+  border-color: var(--ctu-primary);
+  box-shadow: 0 0 0 3px rgba(12, 90, 166, 0.1);
+  outline: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .news-list-page .container {
+    padding: 0 1.5rem;
+  }
+  
+  .news-list-page .news-grid {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-list-page .container {
+    padding: 0 1rem;
+  }
+  
+  .news-list-page {
+    padding: 1rem 0;
+  }
+  
+  .news-list-page .hero-section {
+    padding: 2rem 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .news-list-page .hero-content .page-title {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .news-list-page .news-stats {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .news-list-page .stat-item {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .news-list-page .action-bar {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  
+  .news-list-page .action-buttons {
+    flex-direction: column;
+  }
+  
+  .news-list-page .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .news-list-page .news-actions {
+    flex-direction: column;
+  }
+  
+  .news-list-page .search-input {
+    min-width: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .news-list-page .hero-content .page-title {
+    font-size: 1.5rem;
+  }
+  
+  .news-list-page .hero-content .page-subtitle {
+    font-size: 1rem;
+  }
+  
+  .news-list-page .stat-number {
+    font-size: 1.5rem;
+  }
+  
+  .news-list-page .action-bar {
+    padding: 1rem;
+  }
+  
+  .news-list-page .news-container {
+    padding: 1rem;
+  }
+  
+  .news-list-page .news-content {
+    padding: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.news-list-page .hero-section,
+.news-list-page .action-bar,
+.news-list-page .news-container,
+.news-list-page .news-card {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.news-list-page .news-card:nth-child(2) { animation-delay: 0.1s; }
+.news-list-page .news-card:nth-child(3) { animation-delay: 0.2s; }
+.news-list-page .news-card:nth-child(4) { animation-delay: 0.3s; }
+
+/* Accessibility */
+.news-list-page .add-button:focus,
+.news-list-page .delete-button:focus,
+.news-list-page .edit-button:focus,
+.news-list-page .view-button:focus {
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .news-list-page .hero-section {
+    background: #000;
+    color: #fff;
+  }
+  
+  .news-list-page .news-card {
+    border-width: 3px;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .news-list-page .hero-section,
+  .news-list-page .action-bar,
+  .news-list-page .news-container,
+  .news-list-page .news-card {
+    animation: none;
+  }
+  
+  .news-list-page .news-card:hover {
+    transform: none;
+  }
+  
+  .news-list-page .add-button:hover,
+  .news-list-page .delete-button:hover {
+    transform: none;
+  }
+}

@@ -1,0 +1,172 @@
+1.2.1 Mạng nơ-ron tích chập (CNN)
+ 
+Hình 3: Sơ đồ tổng quát CNN
+Mạng nơ-ron tích chập (Convolutional Neural Network - CNN) là một dạng ANN được thiết kế đặc biệt để xử lý dữ liệu có cấu trúc không gian, chẳng hạn như hình ảnh hoặc chuỗi thời gian. CNN được lấy cảm hứng từ cách mắt người xử lý thông tin thị giác, với khả năng trích xuất và phân tích các đặc trưng quan trọng từ dữ liệu đầu vào.
+•	Cấu trúc của CNN bao gồm:
+o	Tầng tích chập (Convolutional Layer): Áp dụng các bộ lọc (filters) để trích xuất các đặc trưng, chẳng hạn như đường biên, góc cạnh hoặc họa tiết từ dữ liệu đầu vào.
+o	Tầng hợp nhất (Pooling Layer): Giảm kích thước không gian của đặc trưng để giảm độ phức tạp tính toán và hạn chế quá khớp.
+o	Tầng kích hoạt (Activation Layer): Sử dụng các hàm phi tuyến, như ReLU, để tạo ra các đặc trưng phi tuyến từ dữ liệu.
+o	Tầng fully connected: Kết hợp toàn bộ các đặc trưng được trích xuất và đưa ra kết quả cuối cùng.
+CNN đã trở thành tiêu chuẩn trong các bài toán nhận diện hình ảnh, do khả năng tự động học và tối ưu hóa các đặc trưng mà không cần sự can thiệp của con người.
+1.2.1.1 Kiến trúc DenseNet121
+ 
+Hình 4: Kiến trúc DenseNet121
+DenseNet121 [2] (Densely Connected Convolutional Network) là một trong những kiến trúc mạng nơ-ron tích chập tiên tiến nhất, được giới thiệu bởi Gao Huang và cộng sự vào năm 2017. Điểm nổi bật của DenseNet là sử dụng kết nối dày đặc (dense connections), trong đó mỗi tầng được kết nối trực tiếp với tất cả các tầng trước đó, giúp tối ưu hóa việc truyền thông tin và giảm sự mất mát thông tin qua các tầng.
+DenseNet121 [2] gồm 121 lớp với các thành phần chính:
+-	Tầng đầu vào: Nhận dữ liệu hình ảnh đã được chuẩn hóa, thường là các biểu đồ spectrogram chuyển đổi từ dữ liệu âm thanh.
+-	Các Dense Blocks: Mỗi Dense Block bao gồm nhiều lớp tích chập với kết nối dày đặc. Đặc điểm này cho phép tái sử dụng các đặc trưng đã học, giảm số lượng tham số cần thiết.
+-	Tầng Transition: Đặt giữa các Dense Blocks, thực hiện phép pooling để giảm kích thước dữ liệu, duy trì tính hiệu quả trong tính toán.
+-	Tầng fully connected: Kết nối toàn bộ các đặc trưng được trích xuất, đưa ra dự đoán cuối cùng, chẳng hạn phân loại phát âm thành các mức độ "bad", "average", "good".
+Ưu điểm của DenseNet121 [2]:
+-	Giảm số lượng tham số: Nhờ vào kết nối dày đặc, DenseNet121 [2] tái sử dụng các đặc trưng và hạn chế số lượng tham số cần thiết, giúp giảm nguy cơ quá khớp.
+-	Cải thiện truyền dẫn thông tin: Mọi tầng trong mô hình đều kết nối trực tiếp với nhau, đảm bảo không mất mát thông tin.
+-	Hiệu quả với dữ liệu hạn chế: DenseNet121 [2] hoạt động tốt ngay cả khi dữ liệu huấn luyện không lớn, phù hợp với bài toán nghiên cứu của bạn.
+1.2.1.2 Kiến trúc InceptionV3
+ 
+Hình 5: Kiến trúc InceptionV3
+InceptionV3 [4] là một trong những phiên bản cải tiến nổi bật của dòng mạng Inception, được phát triển bởi Google và giới thiệu vào năm 2015. Kiến trúc này nổi bật nhờ khả năng học đặc trưng từ dữ liệu ở nhiều mức độ khác nhau, thông qua các khối Inception Modules đa nhánh.
+•	  Các thành phần chính của InceptionV3 [4]:
+o	Tầng đầu vào: Tiếp nhận hình ảnh đầu vào, chẳng hạn như biểu đồ spectrogram, đã được chuẩn hóa về kích thước và giá trị pixel.
+o	Các khối Inception Modules: Mỗi khối gồm nhiều nhánh tích chập với các kích thước kernel khác nhau (1x1, 3x3, 5x5), cho phép mô hình học được cả các đặc trưng cục bộ và đặc trưng toàn cục.
+o	Tầng Reduction: Được sử dụng để giảm kích thước của dữ liệu, đồng thời tăng chiều sâu của các đặc trưng, giúp giảm thiểu chi phí tính toán.
+o	Tầng Fully Connected: Tổng hợp tất cả các đặc trưng đã học, đầu ra là dự đoán về mức độ phát âm (bad, average, good).
+•	Ưu điểm của InceptionV3 [4]:
+o	Học đa cấp độ đặc trưng: Inception Modules cho phép học được các đặc trưng ở nhiều mức độ chi tiết khác nhau.
+o	Tối ưu tính toán: Sử dụng "factorized convolutions" giúp giảm số lượng tham số và tăng hiệu suất tính toán.
+o	Độ chính xác cao: Phù hợp với các bài toán nhận diện và phân loại phức tạp, như phát âm tiếng Anh của người Việt.
+1.2.1.3 Kiến trúc MobileNetV2
+ 
+Hình 6: Kiến trúc MobileNetV2
+MobileNetV2 [3] là một mô hình học sâu nhẹ, được thiết kế để tối ưu hóa hiệu suất trên các thiết bị có tài nguyên tính toán hạn chế. Được giới thiệu bởi Google vào năm 2018, MobileNetV2 [3] ứng dụng các kỹ thuật tiên tiến như Depthwise Separable Convolution và Inverted Residuals     .
+
+•	Các thành phần chính của MobileNetV2 [3]:
+o	Tầng đầu vào: Nhận dữ liệu hình ảnh spectrogram đã chuẩn hóa, tối ưu hóa cho tốc độ xử lý và độ chính xác.
+o	Depthwise Separable Convolution: Áp dụng tích chập riêng biệt trên từng kênh đặc trưng, sau đó sử dụng pointwise convolution để gộp các kênh, giảm số lượng tham số và chi phí tính toán.
+o	Inverted Residuals: Sử dụng các kết nối tắt (skip connections) để bảo toàn thông tin và giảm độ phức tạp trong tính toán.
+o	Tầng Fully Connected: Tích hợp tất cả các đặc trưng và dự đoán kết quả phân loại phát âm (bad, average, good).
+•	Ưu điểm của MobileNetV2 [3]:
+o	Nhẹ và nhanh: Phù hợp với các thiết bị di động và hệ thống có tài nguyên hạn chế.
+o	Tiết kiệm tài nguyên: Sử dụng ít tham số nhưng vẫn đảm bảo độ chính xác cao.
+o	Hiệu quả với dữ liệu đa dạng: MobileNetV2 [3] hoạt động tốt trong các bài toán yêu cầu tính toán nhanh mà không làm giảm đáng kể chất lượng dự đoán.
+ 
+1.2.2 Silero model
+ 
+
+Hình 7: Sơ đồ hoạt động của Silero model
+	Silero Models là một nhóm các mô hình học sâu được tối ưu hóa cao, chuyên dùng cho các ứng dụng như nhận dạng giọng nói, tổng hợp giọng nói và phát hiện từ khóa. Những mô hình này dựa trên nền tảng toán học mạnh mẽ của mạng nơ-ron, một phương pháp giúp các mô hình học tập từ các bộ dữ liệu lớn và đưa ra kết quả đầu ra chính xác.
+Nói một cách đơn giản, Silero Models có thể chuyển đổi giọng nói thành văn bản hoặc văn bản thành giọng nói một cách tự nhiên, nhanh chóng và chính xác. Ví dụ, nếu mô hình được huấn luyện trên dữ liệu tiếng Anh, nó có thể phiên âm giọng nói tiếng Anh thành văn bản hoặc tạo ra giọng nói tiếng Anh từ văn bản.
+Những mô hình này tận dụng các nghiên cứu tiên tiến trong lĩnh vực học sâu và tối ưu hóa. Nhờ sử dụng mạng nơ-ron phức tạp, Silero Models có khả năng phân tích và dự đoán tín hiệu âm thanh hoặc dữ liệu ngôn ngữ, tương tự như cách con người xử lý ngôn ngữ tự nhiên. Điều này khiến chúng trở thành công cụ mạnh mẽ cho nhiều ứng dụng, từ trợ lý ảo đến sách nói và thiết bị điều khiển bằng giọng nói. 
+Silero Models hoạt động dựa trên 2 bước chính:
+-	Phân tích tín hiệu: Tiền xử lý tín hiệu âm thanh, bao gồm loại bỏ tiếng ồn và chuẩn hóa tín hiệu. Sau đó tách các đặc trưng quan trọng (như phổ tần số) để đưa vào mô hình.
+-	Dự đoán và chuyển đổi: Dựa trên đặc trưng đã trích xuất, mô hình thực hiện các dự đoán. Kết quả đầu ra được tối ưu hóa để khớp với ngữ cảnh hoặc đặc điểm của dữ liệu đầu vào.
+ 
+1.2.3 Constraint Programming
+ 
+Hình 8: Sơ đồ thuật toán Constraint Programming
+	Constraint Programming [8] (CP) là một phương pháp lập trình khai báo, được thiết kế để giải các bài toán tối ưu hóa và ra quyết định phức tạp. CP sử dụng một tập hợp các ràng buộc (constraints) để biểu diễn các điều kiện mà một lời giải hợp lệ phải thỏa mãn, thay vì chỉ định rõ cách thức để tính toán lời giải. Đây là một công cụ mạnh mẽ trong các lĩnh vực như lập lịch, ánh xạ tối ưu, và phân bổ tài nguyên, nơi mà các ràng buộc thường phức tạp và đòi hỏi sự tối ưu hóa.
+1.2.3.1 Lớp biểu diễn ràng buộc (Constraint Representation Layer)
+Trong Constraint Programming [8], bài toán được biểu diễn bằng các biến (variables), miền giá trị (domains), và ràng buộc (constraints):
+-	Biến (Variables): Đại diện cho các đối tượng hoặc yếu tố cần được tối ưu hóa, ví dụ như chỉ số ánh xạ trong một bài toán phân loại.
+-	Miền giá trị (Domains): Miền giá trị của các biến là tập hợp các giá trị có thể nhận, ví dụ: vị trí ánh xạ trong một chuỗi hoặc phạm vi thời gian.
+-	Ràng buộc (Constraints): Là các điều kiện mà các biến phải thỏa mãn. Các ràng buộc có thể là tuyến tính (linear), phi tuyến (non-linear), hoặc tổ hợp (combinatorial).
+Lớp biểu diễn ràng buộc giúp định nghĩa rõ ràng cấu trúc bài toán, giảm thiểu việc phải xử lý thủ công các điều kiện ràng buộc.
+1.2.3.2 Hàm lan truyền ràng buộc (Constraint Propagation Function)
+Constraint Programming [8] sử dụng kỹ thuật lan truyền ràng buộc để giảm không gian tìm kiếm và tăng hiệu quả giải quyết bài toán. Quá trình này bao gồm:
+-	Giảm miền giá trị: Các giá trị không thỏa mãn ràng buộc sẽ bị loại bỏ khỏi miền giá trị của biến. Ví dụ, nếu một ánh xạ không hợp lệ dựa trên ràng buộc thứ tự, giá trị đó sẽ bị loại trừ.
+-	Lan truyền ràng buộc: Khi một ràng buộc được áp dụng, các miền giá trị liên quan được cập nhật, và quá trình này được tiếp tục cho đến khi không còn thay đổi nào xảy ra.
+Hàm lan truyền ràng buộc đảm bảo rằng các biến và miền giá trị luôn nhất quán với nhau trước khi áp dụng thuật toán tìm kiếm.
+1.2.3.3 Thuật toán tìm kiếm (Search Algorithm)
+Sau khi lan truyền ràng buộc, Constraint Programming [8] sử dụng các thuật toán tìm kiếm để tìm lời giải tối ưu hoặc tất cả các lời giải hợp lệ. Một số phương pháp tìm kiếm phổ biến bao gồm:
+-	Tìm kiếm toàn cục (Global Search): Duyệt toàn bộ không gian lời giải bằng cách thử các giá trị khả dĩ, đảm bảo tìm được lời giải tối ưu.
+-	Tìm kiếm heuristic: Ưu tiên các biến hoặc giá trị có khả năng dẫn đến lời giải nhanh hơn, dựa trên các chiến lược heuristic như "most constrained variable" hoặc "least constraining value".
+-	Tìm kiếm nhánh và cận (Branch and Bound): Kỹ thuật này sử dụng một giới hạn (bound) để loại bỏ các nhánh không cần thiết, giảm đáng kể không gian tìm kiếm.
+1.2.3.4 Hàm tối ưu hóa (Optimization Function)
+	Constraint Programming [8] có thể kết hợp với các hàm mục tiêu để tối ưu hóa bài toán. Hàm tối ưu hóa thường được biểu diễn dưới dạng một hàm số mà giá trị của nó cần được tối thiểu hóa hoặc tối đa hóa. Các bước cơ bản bao gồm:
+-	Xác định hàm mục tiêu: Ví dụ, tổng khoảng cách giữa các ánh xạ cần được tối thiểu hóa.
+-	Giải bài toán ràng buộc: Tìm lời giải phù hợp với tất cả các ràng buộc.
+-	Tối ưu hóa dần dần: Điều chỉnh giá trị của hàm mục tiêu cho đến khi đạt được mức tối ưu.
+1.2.4 Dynamic Time Warping (DTW)
+ 
+Hình 9: Biểu đồ thuật toán DTW
+	Dynamic Time Warping [9] (DTW) là một thuật toán được thiết kế để đo lường sự tương đồng giữa hai chuỗi dữ liệu có thể khác nhau về độ dài hoặc tốc độ. Đây là một phương pháp tối ưu hóa trong lĩnh vực nhận diện mẫu và xử lý tín hiệu, đặc biệt hữu ích trong việc so sánh các chuỗi thời gian, chẳng hạn như tín hiệu âm thanh, dữ liệu cảm biến, hoặc các mẫu phát âm.
+DTW hoạt động bằng cách tìm một ánh xạ tối ưu giữa hai chuỗi, sao cho tổng khoảng cách giữa các phần tử được ánh xạ là nhỏ nhất. Điều này được thực hiện thông qua việc tính toán một "đường đi tối ưu" trong ma trận khoảng cách giữa các phần tử của hai chuỗi.
+1.2.4.1 Lớp biểu diễn ma trận khoảng cách (Distance Matrix Representation Layer)
+Trong DTW, hai chuỗi dữ liệu được biểu diễn dưới dạng một ma trận khoảng cách. Cấu trúc này bao gồm:
+•	 Ma trận khoảng cách (Distance Matrix): Mỗi ô trong ma trận biểu thị khoảng cách giữa một phần tử trong chuỗi thứ nhất và một phần tử trong chuỗi thứ hai. Khoảng cách có thể được tính bằng nhiều phương pháp, như:
+o	Khoảng cách Euclidean (Euclidean Distance): Được sử dụng phổ biến để đo độ tương tự.
+o	Khoảng cách Manhattan (Manhattan Distance): Thích hợp cho dữ liệu phân tán.
+•	Trục thời gian (Time Axes): Các trục của ma trận đại diện cho thời gian của chuỗi đầu vào, cho phép ánh xạ linh hoạt giữa các phần tử.
+Ma trận này cung cấp cơ sở để tìm đường đi tối ưu giữa hai chuỗi và đảm bảo rằng mỗi phần tử trong một chuỗi đều được ánh xạ với một hoặc nhiều phần tử trong chuỗi còn lại.
+1.2.4.2 Hàm ánh xạ tối ưu (Optimal Path Mapping Function)
+DTW sử dụng một thuật toán động để tìm đường đi tối ưu trong ma trận khoảng cách. Các bước cơ bản của quá trình này bao gồm:
+•	Xây dựng đường đi: Bắt đầu từ ô (0,0) của ma trận (tương ứng với phần tử đầu tiên của hai chuỗi) và kết thúc tại ô (m,n) (tương ứng với phần tử cuối cùng của hai chuỗi).
+•	Tuân theo quy tắc ánh xạ:
+o	Liên tục (Continuity): Đường đi chỉ được di chuyển theo các hướng: dọc, ngang, hoặc chéo.
+o	Đơn điệu (Monotonicity): Đường đi phải giữ nguyên thứ tự của các phần tử, đảm bảo rằng không có bước lùi trong chuỗi.
+•	Tối thiểu hóa tổng khoảng cách: Chọn đường đi sao cho tổng khoảng cách giữa các phần tử được ánh xạ là nhỏ nhất.
+Hàm ánh xạ tối ưu giúp tìm sự tương đồng cao nhất giữa hai chuỗi, ngay cả khi các chuỗi này có tốc độ khác nhau hoặc bị kéo dài/nén lại.
+1.2.4.3 Hàm tối ưu hóa chi phí (Cost Optimization Function)
+	Quá trình tối ưu hóa trong DTW liên quan đến việc tính toán hàm chi phí tối thiểu, được xác định thông qua các bước:
+•	 Công thức hàm chi phí (Cost Function):
+ 
+o	D(i,j): Chi phí tích lũy tại ô (i, j) của ma trận.
+o	d(i,j): Khoảng cách giữa phần tử i của chuỗi đầu tiên và phần tử j của chuỗi thứ hai.
+o	min(): Hàm chọn đường đi tối ưu từ ba ô liền kề.
+•	Tối ưu hóa toàn cục: Lặp lại cho đến khi đạt đến ô (m, n) trong ma trận, đảm bảo rằng tổng chi phí từ điểm đầu đến điểm cuối là nhỏ nhất.
+1.2.5 Edit Distance
+ 
+Hình 10: Ví dụ minh họa Edit Distance giữa hai chuỗi 
+Edit Distance là một phương pháp đo lường sự khác biệt giữa hai chuỗi ký tự bằng cách tính toán số lượng thao tác tối thiểu cần thiết để biến đổi chuỗi này thành chuỗi kia. Các thao tác cơ bản bao gồm:
+-	Chèn (Insertion): Thêm một ký tự mới vào chuỗi.
+-	Xóa (Deletion): Loại bỏ một ký tự khỏi chuỗi.
+-	Thay thế (Substitution): Thay một ký tự trong chuỗi này bằng một ký tự khác.
+Edit Distance được sử dụng rộng rãi trong các lĩnh vực như xử lý ngôn ngữ tự nhiên NLP [10], nhận diện giọng nói, kiểm tra chính tả, và đánh giá phát âm. Nó cung cấp một cách định lượng để đo lường mức độ tương đồng giữa hai chuỗi.
+1.2.5.1 Levenshtein Distance
+Levenshtein Distance là một dạng cụ thể của Edit Distance, trong đó mỗi thao tác (chèn, xóa, thay thế) đều có chi phí cố định bằng 1. Đây là một phương pháp phổ biến, đơn giản nhưng mạnh mẽ, phù hợp để đo lường sự khác biệt giữa hai chuỗi ký tự.
+Quy tắc chuyển đổi:
+-	Xóa (Deletion): Loại bỏ một ký tự khỏi chuỗi đầu vào.
+-	Chèn (Insertion): Thêm một ký tự vào chuỗi đầu ra.
+-	Thay thế (Substitution): Thay một ký tự của chuỗi đầu vào bằng một ký tự khác.
+Công thức tổng quát:
+ 
+Kết quả: Giá trị tại ô cuối cùng của ma trận D(m,n) là khoảng cách Levenshtein giữa hai chuỗi, trong đó m và n lần lượt là độ dài của hai chuỗi.
+1.2.6 Sentence Transformer
+ 
+Hình 11: Kiến trúc mô hình Sentence Transformer
+Sentence Transformer [6] là một mô hình học sâu mạnh mẽ, được thiết kế để tạo ra các biểu diễn ngữ nghĩa (semantic embeddings) của các câu và đoạn văn. Nó là phần mở rộng của BERT và các biến thể transformer khác, được tối ưu hóa để so sánh các câu về ý nghĩa. Sentence Transformer [6] giúp ánh xạ các câu có ngữ nghĩa tương tự vào cùng một vùng trong không gian vector.	
+1.2.6.1 Hoạt động của Sentence Transformer
+•	 Kiến trúc mô hình:
+o	Sentence Transformer [6] áp dụng cấu trúc mạng Siamese hoặc Triplet để huấn luyện các vector biểu diễn.
+o	Hai câu được đưa qua cùng một mô hình, tạo ra hai vector, sau đó khoảng cách giữa các vector này được tối ưu hóa để phản ánh mức độ tương đồng ngữ nghĩa.
+•	 Tạo vector ngữ nghĩa:
+o	Mỗi câu hoặc đoạn văn được ánh xạ thành một vector trong không gian nhiều chiều. Vector này chứa thông tin ngữ nghĩa sâu sắc hơn, thay vì chỉ dựa trên các từ đơn lẻ.
+o	Ví dụ: Các câu "I like apples" và "I enjoy fruits" sẽ được ánh xạ đến các vector gần nhau.
+•	 Fine-tuning (Tối ưu hóa):
+o	Sentence Transformer [6] được huấn luyện trên các nhiệm vụ cụ thể như so sánh câu, truy xuất thông tin, hoặc phân loại văn bản, sử dụng dữ liệu dạng cặp hoặc triplet (ví dụ: câu gốc, câu tương tự, và câu không liên quan).
+1.2.6.2 Cosine Similarity
+Sau khi các vector biểu diễn được tạo bởi Sentence Transformer [6], Cosine Similarity [7] được sử dụng để đo lường mức độ tương đồng giữa chúng.
+a.	 Khái niệm Cosine Similarity [7]:
+•	 Là một phép đo định lượng đánh giá góc giữa hai vector trong không gian nhiều chiều.
+•	 Giá trị cosine similarity [7] nằm trong khoảng [−1,1], phản ánh mức độ tương đồng:
+o	1: Hai vector hoàn toàn giống nhau.
+o	0: Hai vector không liên quan.
+o	−1: Hai vector hoàn toàn đối lập.
+b.	Công thức:
+ 
+•	Trong đó:
+o	A⃗⋅ B⃗: Tích vô hướng giữa hai vector.
+o	∥A⃗∥ và ∥B⃗∥: Độ lớn (norm) của hai vector.
+c.	Ứng dụng Cosine Similarity [7] trong Sentence Transformer [6]:
+•	Được sử dụng để tính mức độ tương đồng giữa các vector biểu diễn ngữ nghĩa.
+•	Ví dụ: Đo lường sự giống nhau giữa các câu trong hệ thống truy xuất thông tin hoặc tìm kiếm.
+1.2.7 Các thư viện
+TensorFlow là một trong những thư viện học sâu phổ biến nhất, cung cấp các công cụ mạnh mẽ để phát triển và huấn luyện các mô hình AI [1] phức tạp. Trong dự án, TensorFlow được sử dụng để xây dựng và huấn luyện mô hình DenseNet121 [2] dựa trên dữ liệu hình ảnh spectrogram, một dạng biểu diễn âm thanh trực quan. Với khả năng tính toán hiệu quả trên GPU, TensorFlow tối ưu hóa tốc độ và hiệu suất trong quá trình huấn luyện. Thư viện này cũng đảm nhiệm vai trò quản lý toàn bộ pipeline học sâu, từ tiền xử lý dữ liệu đến triển khai mô hình, giúp đảm bảo tính liên tục và nhất quán trong quá trình phát triển hệ thống.
+Keras, tích hợp sẵn trong TensorFlow, là một API học sâu cấp cao với giao diện đơn giản và thân thiện. Trong dự án, Keras hỗ trợ thiết lập và cấu hình kiến trúc DenseNet121 [2], đảm bảo quá trình xây dựng mô hình diễn ra thuận lợi và hiệu quả. Ngoài ra, Keras giúp thực hiện các tác vụ huấn luyện và đánh giá mô hình với sự hỗ trợ liền mạch từ TensorFlow, mang lại sự linh hoạt và dễ dàng trong việc thử nghiệm các cấu hình khác nhau.
+Librosa là một thư viện mạnh mẽ chuyên xử lý âm thanh và tín hiệu số. Trong dự án, Librosa được sử dụng để trích xuất các đặc trưng âm thanh quan trọng như phổ tần số và MFCC. Những đặc trưng này sau đó được chuyển đổi thành hình ảnh spectrogram, đóng vai trò làm đầu vào cho các mô hình học sâu. Ngoài ra, Librosa còn hỗ trợ xử lý các tín hiệu âm thanh không đồng nhất, giúp chuẩn bị dữ liệu đầu vào phù hợp với các yêu cầu của hệ thống.
+Silero là một thư viện hiện đại trong lĩnh vực chuyển đổi âm thanh thành văn bản (ASR - Automatic Speech Recognition) [13]. Trong dự án, Silero giúp chuyển đổi trực tiếp giọng nói của người dùng thành văn bản một cách nhanh chóng và chính xác. Thư viện này đóng vai trò quan trọng trong việc tích hợp dữ liệu văn bản vào các bước phân tích phát âm và ngữ nghĩa, hỗ trợ hệ thống xử lý và đánh giá phát âm hiệu quả.
+eng-to-IPA cung cấp các công cụ để chuyển đổi từ tiếng Anh sang ký hiệu âm vị quốc tế (IPA). Trong dự án, thư viện này được sử dụng để biểu diễn các từ tiếng Anh dưới dạng IPA, giúp chuẩn hóa phát âm và tạo điều kiện thuận lợi cho việc so sánh. Sự chuẩn hóa này hỗ trợ hệ thống đánh giá mức độ tương đồng giữa phát âm của người dùng và mẫu chuẩn một cách chính xác và khách quan.
+OR-Tools là một thư viện tối ưu hóa được phát triển bởi Google, hỗ trợ giải quyết các bài toán Constraint Programming [8]. Trong dự án, OR-Tools được áp dụng để tìm kiếm ánh xạ tối ưu giữa từ phát âm và từ chuẩn, đảm bảo các kết quả đánh giá đạt độ chính xác cao. Ngoài ra, thư viện này giúp giải quyết các bài toán tối ưu hóa có nhiều ràng buộc, góp phần cải thiện hiệu suất của hệ thống.
+DTWAlign cung cấp thuật toán Dynamic Time Warping [9] (DTW), được sử dụng để đo lường và so khớp các chuỗi tín hiệu âm thanh có độ dài hoặc tốc độ khác nhau. Trong dự án, DTWAlign hỗ trợ so khớp linh hoạt giữa chuỗi phát âm của người dùng và chuỗi chuẩn, giúp phân tích sự khác biệt về tốc độ hoặc độ dài của tín hiệu âm thanh một cách chính xác.
+Sentence Transformers [6] là một thư viện học sâu dựa trên mô hình BERT, được thiết kế để tạo ra các vector biểu diễn ngữ nghĩa của câu hoặc đoạn văn. Trong dự án, thư viện này giúp biểu diễn các câu thành các vector ngữ nghĩa sâu sắc, từ đó cho phép hệ thống phân tích ý nghĩa của chúng. Mức độ tương đồng giữa các câu được tính toán thông qua Cosine Similarity [7], hỗ trợ hiệu quả trong các bước đánh giá và phân tích ngữ nghĩa.
+Pandas là một thư viện mạnh mẽ để quản lý và phân tích dữ liệu dạng bảng. Trong dự án, Pandas được sử dụng để quản lý dữ liệu đầu vào và đầu ra, thực hiện các thao tác tiền xử lý như chuẩn hóa và lọc dữ liệu. Nhờ vào Pandas, hệ thống có thể xử lý và tổ chức dữ liệu một cách linh hoạt và hiệu quả, đảm bảo các bước xử lý dữ liệu được thực hiện chính xác.
+NumPy là một thư viện cơ bản cho các tính toán số học, chuyên xử lý mảng và ma trận. Trong dự án, NumPy hỗ trợ thực hiện các phép toán ma trận nhanh chóng và hiệu quả, đồng thời giúp tính toán các đặc trưng âm thanh cần thiết. Thư viện này cũng đóng vai trò quan trọng trong việc xử lý dữ liệu đầu vào cho các mô hình học sâu.
