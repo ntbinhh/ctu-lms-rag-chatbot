@@ -77,7 +77,7 @@ chatbot/.rasa/
 chatbot/models/*.tar.gz
 chatbot/models/*.pkl
 chatbot/models/*.json
-!chatbot/models/vinallama-7b-chat_q5_0.gguf
+chatbot/models/*.gguf
 
 # RAG system specific
 1rag/models/*.gguf
